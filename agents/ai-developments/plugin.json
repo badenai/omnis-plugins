@@ -1,0 +1,7 @@
+{
+  "name": "omnis-ai-developments",
+  "version": "1",
+  "description": "Knowledge agent for ai-developments",
+  "author": "Omnis",
+  "hooks": "./hooks/hooks.json"
+}
