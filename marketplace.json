@@ -1,0 +1,25 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "omnis",
+  "description": "Omnis knowledge agents",
+  "owner": {
+    "name": "Omnis"
+  },
+  "plugins": [
+    {
+      "name": "ai-developments",
+      "description": "I monitor the latest developments in Artificial Intelligence and Large Language Models.",
+      "version": "1",
+      "author": {
+        "name": "Omnis"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/badenai/omnis-plugins.git",
+        "path": "agents/ai-developments",
+        "ref": "main"
+      }
+    }
+  ]
+}
