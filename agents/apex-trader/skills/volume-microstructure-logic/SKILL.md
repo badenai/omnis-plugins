@@ -1,44 +1,43 @@
 ---
 name: volume-microstructure-logic
-description: Use when generating code for volumetric validation, Z-Scored Volume Profiles, Open Interest divergence, POC migration, institutional displacement proxies, and deterministic liquidation cascades.
+description: Use when designing, debugging, or formalizing algorithms related to Volume Profile mechanics, Point of Control (POC) migration, Open Interest (OI) liquidation cascades, or deterministic microstructure imbalances.
 ---
 
 ## The Iron Law
 
 ```text
-Never execute a structural break or trend initiation without programmatic volume validation; if Relative Volume (RVOL) or Z-scored volume arrays do not explicitly meet predetermined numerical thresholds, flag the price movement as exhaustion noise and halt execution.
+Never accept subjective descriptions of volume or liquidity; every volume node, Point of Control (POC) migration, and liquidation cascade must be formalized via explicit mathematical bounds, precise array index inequalities, absolute price differentials, and computable aggregate Open Interest (OI) density formulas.
 ```
 
 ## Behavioral Rules
 
-*   Compute institutional displacement via strict mathematical proxies, requiring Relative Volume (RVOL) > 1.5x on structural break bars before generating an entry signal.
-*   Validate uptrend continuations by enforcing a Point of Control (POC) migration counter that must equal or exceed 3 consecutive positive period shifts concurrent with calculated Value Area (VA) expansion.
-*   Calculate Volume Z-scores during price expansion arrays to detect divergence computationally.
-*   Emit an automated structural exhaustion short signal if price array logic registers a higher high while High Volume Node (HVN) calculations contract and the Volume Z-score exceeds 2.0.
-*   Map Open Interest (OI) Delta arrays against price vectors to yield a continuous mathematical divergence score.
-*   Generate explicit limit-order exit nodes (liquidation flush targets) when high OI divergence aligns with boolean flips in extreme funding rate data.
-*   Filter out Opening Range Breakouts (ORBs) immediately unless validated by session-aware volume de-noising filters.
-*   Demand 0.0 spread execution environments (e.g., tick-level bid/ask arrays) when deploying microstructure liquidation mapping systems to prevent slippage contamination.
-*   Use standard array index inequalities, N-bar lookback windows, and boolean gates to build logic; never substitute simple algorithmic operations with ML/math buzzwords.
-*   Use explicit code-level directives (`>`, `<`, `>=`, `==`) for all constraints; strictly avoid LaTeX formatting or textual math representations.
+- When mapping a Volume Profile, formally encode it as a matrix of deterministic absorption nodes, exact price coordinates, and calculated migration velocities over a defined N-bar window.
+- If tracking a Point of Control (POC) migration, enforce a strict bearish state filter if the POC array value settles >20% below the current absolute price differential.
+- Define structural balance exclusively via mathematical conditions where the exact POC coordinate is centered within the Value Area and strictly bracketed by High Volume Node (HVN) limit arrays.
+- If algorithmically exploiting a POC gap, mandate a deterministic mean-reversion entry trigger only when the closing price array crosses back inside the quantified Value Area.
+- When validating price expansion past structural resistance limits, require an inverse volume array condition (`Volume[t] < Volume[t-1]`) to flag a "Push to Fill" liquidity hunt.
+- If price expansion occurs concurrently with increasing volume metrics, strictly classify the event as a structural containment failure and trigger your breakout logic sequence.
+- Compute aggregate Open Interest (OI) density against continuously skewed funding rates to map exact mathematical coordinates for "Liquidation Pools."
+- If designing a fade strategy into a forced closure event, utilize the explicitly calculated liquidation pools as high-probability entry coordinates to capture the slippage gap, rather than placing standard stop orders at subjective structural boundaries.
+- When evaluating structural retention at a previously established volume node, require a deterministic nth-touch verification matrix that measures absolute delta momentum degradation across a minimum of three array interactions.
 
 ## Red Flags
 
-| Domain-Specific Rationalization | Why Wrong |
+| Subjective Rationalization | Algorithmic Correction |
 | :--- | :--- |
-| "Check for a kinematic volume validation event." | Violates anti-patterns by using banned physics terminology instead of standard array indexing and boolean logic. |
-| "The volume looks heavy enough to support the breakout." | Relies on subjective, non-computable intuition instead of a strict RVOL > 1.5x threshold. |
-| "Initiate stateful object-oriented volume array sanitization." | Introduces superficial architectural buzzwords and fluff instead of writing direct matrix or array calculations. |
-| "Trigger a Boolean state inversion when POC decays." | Uses artificial persona phrasing instead of defining explicit variable assignments and numeric thresholds. |
-| "Long FVG formation detected, enter trade." | Fails to incorporate the mandatory volatility-scaled volume checks and flat slope requirements for structural zones. |
+| "The level looks heavy based on volume exhaustion." | Reject visual intuition; require a codified nth-touch failure matrix with explicit delta momentum degradation measured across strict n-bar arrays. |
+| "Enter the trade because price is hitting a strong volume node." | Reject assumption of bounce; entry demands exact threshold triggers based on order flow absorption or delta divergence measured directly at the node coordinate. |
+| "The volume profile shifted lower, so the regime is bearish." | Reject unquantified shifts; enforce a strict programmatic filter requiring the POC migration drop to exceed a defined percentage (e.g., >20%) of the absolute price differential. |
+| "Liquidation cascades will trigger just past obvious round numbers." | Reject stochastic assumptions; map liquidation pools mathematically via exact Open Interest (OI) density arrays and exchange leverage multipliers. |
 
 ## Quick Reference
 
-| Microstructure Concept | Deterministic Formalization Rule |
+| Volume / Microstructure Concept | Computable Implementation Metric |
 | :--- | :--- |
-| **Institutional Displacement** | Breakout Bar RVOL > 1.5x |
-| **POC Uptrend Validation** | POC positive shift count >= 3 AND Value Area expands |
-| **Volume Exhaustion (Short)** | Price HH == True AND HVN contracts AND Volume Z-Score > 2.0 |
-| **Liquidation Cascade Exits** | OI Delta divergence == True AND Funding Rate Extreme == True |
-| **Price-Volume Proxy** | `Daily Return * (Current Volume / 50-day SMA Volume)` |
-| **Internal Bar Position** | `(Close - Open) / (High - Low)` |
+| Liquidation Pool Mapping | Array coordinates of max OI density multiplied by calculated forced margin closure thresholds. |
+| Negative POC Shift | `POC[t] < POC[t-1]` by >20% of the active ATR or absolute price differential. |
+| Structural Balance Definition | POC mathematical coordinate exactly centered between Top HVN array and Bottom HVN array. |
+| POC Gap Fill Trigger | `Price[close] > Value Area Low` AND Prior POC coordinate untested. |
+| Push to Fill (Liquidity Hunt) | `Price[high] > Resistance Array` AND `Volume[t] < Volume[t-1]`. |
+| Containment Failure | `Price[high] > Resistance Array` AND `Volume[t] >= Volume[t-1] * Volume_Multiplier`. |
+| Zone of Failure (ZPF) Array | Minimum 3-touch loop (`touch_count == 3`) AND `Delta[t3] < Delta[t2]`. |
