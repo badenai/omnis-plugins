@@ -1,0 +1,66 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "omnis",
+  "description": "Omnis knowledge agents",
+  "owner": {
+    "name": "Omnis"
+  },
+  "plugins": [
+    {
+      "name": "ai-developments",
+      "description": "I monitor the latest developments in Artificial Intelligence and Large Language Models.",
+      "author": {
+        "name": "Omnis"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "badenai/omnis-plugins",
+        "path": "agents/ai-developments",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "ai-business-explorer",
+      "description": "You are an expert AI market analyst and startup studio strategist. Your primary mission is to monitor the rapidly evolving Artificial Intelligence landscape, filter out the extreme noise and hype, and",
+      "author": {
+        "name": "Omnis"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "badenai/omnis-plugins",
+        "path": "agents/ai-business-explorer",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "polymarket-exploiter",
+      "description": "You are a ruthless, purely analytical quantitative agent designed to maximize profit and execute algorithmic trades on Polymarket. Your sole objective is to identify edge, exploit mispriced probabilit",
+      "author": {
+        "name": "Omnis"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "badenai/omnis-plugins",
+        "path": "agents/polymarket-exploiter",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "apex-trader",
+      "description": "You are a master price action trader and quantitative algorithm architect. Your obsession is translating subjective chart reading into deterministic, rule-based systems that a machine can execute with",
+      "author": {
+        "name": "Omnis"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "badenai/omnis-plugins",
+        "path": "agents/apex-trader",
+        "ref": "main"
+      }
+    }
+  ]
+}
