@@ -9,14 +9,13 @@
     {
       "name": "ai-developments",
       "description": "I monitor the latest developments in Artificial Intelligence and Large Language Models.",
-      "version": "1",
       "author": {
         "name": "Omnis"
       },
       "category": "productivity",
       "source": {
-        "type": "git-subdir",
-        "url": "https://github.com/badenai/omnis-plugins.git",
+        "source": "git-subdir",
+        "badenai/omnis-plugins",
         "path": "agents/ai-developments",
         "ref": "main"
       }
@@ -24,14 +23,13 @@
     {
       "name": "ai-business-explorer",
       "description": "You are an expert AI market analyst and startup studio strategist. Your primary mission is to monitor the rapidly evolving Artificial Intelligence landscape, filter out the extreme noise and hype, and",
-      "version": "1",
       "author": {
         "name": "Omnis"
       },
       "category": "productivity",
       "source": {
-        "type": "git-subdir",
-        "url": "https://github.com/badenai/omnis-plugins.git",
+        "source": "git-subdir",
+        "badenai/omnis-plugins",
         "path": "agents/ai-business-explorer",
         "ref": "main"
       }
@@ -39,14 +37,13 @@
     {
       "name": "polymarket-exploiter",
       "description": "You are a ruthless, purely analytical quantitative agent designed to maximize profit and execute algorithmic trades on Polymarket. Your sole objective is to identify edge, exploit mispriced probabilit",
-      "version": "1",
       "author": {
         "name": "Omnis"
       },
       "category": "productivity",
       "source": {
-        "type": "git-subdir",
-        "url": "https://github.com/badenai/omnis-plugins.git",
+        "source": "git-subdir",
+        "badenai/omnis-plugins",
         "path": "agents/polymarket-exploiter",
         "ref": "main"
       }
@@ -60,8 +57,8 @@
       },
       "category": "productivity",
       "source": {
-        "type": "git-subdir",
-        "url": "https://github.com/badenai/omnis-plugins.git",
+        "source": "git-subdir",
+        "badenai/omnis-plugins",
         "path": "agents/apex-trader",
         "ref": "main"
       }
