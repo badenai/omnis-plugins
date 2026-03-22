@@ -15,7 +15,7 @@
       },
       "category": "productivity",
       "source": {
-        "source": "git-subdir",
+        "type": "git-subdir",
         "url": "https://github.com/badenai/omnis-plugins.git",
         "path": "agents/ai-developments",
         "ref": "main"
@@ -30,7 +30,7 @@
       },
       "category": "productivity",
       "source": {
-        "source": "git-subdir",
+        "type": "git-subdir",
         "url": "https://github.com/badenai/omnis-plugins.git",
         "path": "agents/ai-business-explorer",
         "ref": "main"
@@ -45,7 +45,7 @@
       },
       "category": "productivity",
       "source": {
-        "source": "git-subdir",
+        "type": "git-subdir",
         "url": "https://github.com/badenai/omnis-plugins.git",
         "path": "agents/polymarket-exploiter",
         "ref": "main"
@@ -60,7 +60,7 @@
       },
       "category": "productivity",
       "source": {
-        "source": "git-subdir",
+        "type": "git-subdir",
         "url": "https://github.com/badenai/omnis-plugins.git",
         "path": "agents/apex-trader",
         "ref": "main"
