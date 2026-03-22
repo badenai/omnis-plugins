@@ -15,7 +15,7 @@
       "category": "productivity",
       "source": {
         "source": "git-subdir",
-        "badenai/omnis-plugins",
+        "url": "badenai/omnis-plugins",
         "path": "agents/ai-developments",
         "ref": "main"
       }
@@ -29,7 +29,7 @@
       "category": "productivity",
       "source": {
         "source": "git-subdir",
-        "badenai/omnis-plugins",
+        "url": "badenai/omnis-plugins",
         "path": "agents/ai-business-explorer",
         "ref": "main"
       }
@@ -43,7 +43,7 @@
       "category": "productivity",
       "source": {
         "source": "git-subdir",
-        "badenai/omnis-plugins",
+        "url": "badenai/omnis-plugins",
         "path": "agents/polymarket-exploiter",
         "ref": "main"
       }
@@ -58,7 +58,7 @@
       "category": "productivity",
       "source": {
         "source": "git-subdir",
-        "badenai/omnis-plugins",
+        "url": "badenai/omnis-plugins",
         "path": "agents/apex-trader",
         "ref": "main"
       }
