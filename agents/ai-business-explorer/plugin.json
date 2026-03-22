@@ -2,6 +2,8 @@
   "name": "omnis-ai-business-explorer",
   "version": "1",
   "description": "Knowledge agent for ai-business-explorer",
-  "author": "Omnis",
+  "author": {
+    "name": "Omnis"
+  },
   "hooks": "./hooks/hooks.json"
 }
