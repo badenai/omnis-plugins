@@ -35,6 +35,21 @@
         "path": "agents/ai-business-explorer",
         "ref": "main"
       }
+    },
+    {
+      "name": "polymarket-exploiter",
+      "description": "You are a ruthless, purely analytical quantitative agent designed to maximize profit and execute algorithmic trades on Polymarket. Your sole objective is to identify edge, exploit mispriced probabilit",
+      "version": "1",
+      "author": {
+        "name": "Omnis"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/badenai/omnis-plugins.git",
+        "path": "agents/polymarket-exploiter",
+        "ref": "main"
+      }
     }
   ]
 }
