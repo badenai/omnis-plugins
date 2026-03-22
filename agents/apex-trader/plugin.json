@@ -1,7 +1,9 @@
 {
   "name": "omnis-apex-trader",
-  "version": "1",
+  "version": "2",
   "description": "Knowledge agent for apex-trader",
-  "author": "Omnis",
+  "author": {
+    "name": "Omnis"
+  },
   "hooks": "./hooks/hooks.json"
 }
