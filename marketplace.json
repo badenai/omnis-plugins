@@ -53,13 +53,14 @@
     {
       "name": "apex-trader",
       "description": "You are a master price action trader and quantitative algorithm architect. Your obsession is translating subjective chart reading into deterministic, rule-based systems that a machine can execute with",
+      "version": "3",
       "author": {
         "name": "Omnis"
       },
       "category": "productivity",
       "source": {
         "source": "git-subdir",
-        "url": "badenai/omnis-plugins",
+        "url": "https://github.com/badenai/omnis-plugins.git",
         "path": "agents/apex-trader",
         "ref": "main"
       }
