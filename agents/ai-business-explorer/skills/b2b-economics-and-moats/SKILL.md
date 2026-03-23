@@ -1,44 +1,41 @@
 ---
 name: b2b-economics-and-moats
-description: 'Use when evaluating B2B AI startup ideas, analyzing defensibility moats, transitioning from seat-based SaaS to outcome-based Autopilot economics, assessing intelligence arbitrage buyouts, or applying Regulatory Darwinism to vertical AI workflows.'
+description: Use when analyzing SaaS pricing models, venture-scale AI business ideas, private equity roll-ups, intelligence arbitrage, vertical market moats, or outcome-based Autopilot strategies.
 ---
 
 ## The Iron Law
 
 ```text
-If evaluating a B2B AI concept, strictly reject thin generalist application layers and mandate a concrete defensibility moat consisting of deeply embedded workflow execution, proprietary data exposure via MCP, or compliance-driven liability moats.
+Never evaluate or propose B2B AI ideas as per-seat SaaS subscriptions or generic "copilots"; you must exclusively focus on outcome-based "Autopilots" that replace linear human headcount, capture margin through Intelligence Arbitrage, or use high-liability regulatory compliance as a defensive moat.
 ```
 
 ## Behavioral Rules
 
-*   When analyzing pricing models, pivot immediately from Copilot economics (charging per seat for assistance) to Autopilot economics (selling the completed work product/outcome).
-*   If assessing legacy, low-margin service businesses (e.g., accounting, logistics), apply the "intelligence arbitrage buyout" thesis to decouple their revenue from human headcount.
-*   When designing enterprise system integrations, expose proprietary data exclusively through Model Context Protocol (MCP) servers rather than building bespoke agent-to-tool connections.
-*   If the target market is a highly regulated, "unsexy" industry (e.g., MedTech, legal, compliance), embrace Regulatory Darwinism to build a Liability Moat that generalist foundation models refuse to cross.
-*   When scaling enterprise infrastructure, deploy Hybrid Routing (routing 90-95% of queries to local/edge SLMs) to enforce zero-waste FinOps and survive the Infrastructure Inversion.
-*   If managing large enterprise datasets, implement Agentic RAG pipelines with semantic caching to prevent redundant API calls.
-*   When orchestrating agent-web interactions, strictly utilize WebMCP for structured client-side DOM execution instead of fragile visual screen scraping.
-*   If defining horizontal agent-to-agent negotiations, structure monetization around middleware micro-transactions over A2A protocols.
+*   If evaluating a software pricing model, reject per-seat SaaS mechanics and mandate unit-based pricing for AI-orchestrated outcomes (Autopilots).
+*   When generating venture ideas, target legacy, labor-heavy service firms (e.g., accounting, legal discovery, healthcare RCM) for Intelligence Arbitrage roll-ups.
+*   Prioritize "Regulatory Darwinism" over technological novelty by intentionally embracing legal liability for automated compliance (e.g., MDR/IVDR, HIPAA, EU AI Act) to create insurmountable moats against generic wrappers.
+*   If assessing B2B infrastructure opportunities, propose A2A (Agent-to-Agent) Middleware Toll Roads that monetize secure machine-to-machine API routing via $0.01 micro-transactions.
+*   Frame self-hosted local B2B AI deployments as "Turnkey Local RAG" hardware/software appliances targeting data-sovereign environments to achieve a sub-four-month ROI.
+*   When addressing B2B customer discovery and acquisition, pivot away from traditional SEO and prioritize Agent Experience Optimization (AXO) to cater to machine-led discovery and continuous background workflow agents.
+*   If analyzing a highly automated B2B process, account for the 2-6 month B2B sales cycles required to pass compliance audits and secure legal liability insurance.
+*   Reject proposed solutions targeting saturated horizontal applications (e.g., generic AI scribes) and immediately pivot the focus to unsexy backend systems of action.
 
 ## Red Flags
 
-| Domain-Specific Rationalization | Why Wrong / Required Correction |
+| Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "Our moat is our highly tuned system prompts and UI." | Thin wrappers lack defensibility; demand proprietary data layers or complex workflow integrations. |
-| "We charge $30/month per user for our AI assistant." | Copilot economics are fading; mandate Autopilot economics that charge per verified outcome or unit of intelligence. |
-| "We are building custom, proprietary agent integrations." | Bespoke integrations are obsolete; adopt Agentic AI Foundation (AAIF) MCP standards. |
-| "We avoid regulated industries to ship faster." | Avoidance destroys defensibility; target regulated workflows to build mandatory Liability Moats. |
-| "We hit frontier cloud models for every RAG query." | Fails zero-waste FinOps; require semantic caching or local SLMs to maintain SaaS gross margins. |
-| "We rely on visual screen scraping for our web agents." | Visual scraping is brittle and token-heavy; implement WebMCP for structured integration. |
+| "This generic chat-with-PDF wrapper has a highly optimized UI." | UI is no longer a moat; true defensibility requires complex workflow integrations or high-liability Regulatory Darwinism. |
+| "We will charge a predictable monthly subscription per user." | AI Autopilots replace users; you must price based on the completed work/outcome unit to capture true margin. |
+| "Let's build an AI copilot for doctors to write notes." | Saturated horizontal markets are inevitably absorbed by EHR incumbents; capital must target unsexy backend workflows like RCM or claims denials. |
+| "We should launch quickly and worry about legal compliance later." | Compliance is the primary moat; ignoring regulatory liability surrenders all defensibility against low-effort competitors. |
+| "Our micro-SaaS will bypass enterprise procurement for quick sales." | Scaling high-liability Autopilots strictly requires enduring long B2B sales cycles to clear critical audit and insurance thresholds. |
 
 ## Quick Reference
 
-| Concept | Execution Strategy |
-| :--- | :--- |
-| **Autopilot Economics** | Sell completed work products or outcomes instead of software seats. |
-| **Intelligence Arbitrage** | Acquire traditional service agencies and retrofit with AI to unlock high-margin scalability. |
-| **Liability Moats** | Assume workflow compliance and legal liability in verticals that base models explicitly avoid. |
-| **Regulatory Darwinism** | Utilize compliance frameworks (HIPAA, MDR/IVDR) as structural shields against horizontal AI competitors. |
-| **Infrastructure Inversion** | Route bulk traffic to local, consumer-GPU hosted SLMs to preserve margins against cloud API costs. |
-| **Zero-Waste FinOps** | Demand semantic caching and context engineering to eliminate redundant LLM API calls. |
-| **Headless SaaS via MCP** | Build backend utility and structured tools, allowing AI clients (like Claude) to render the UI components. |
+| Concept | Definition | Strategic Moat Application |
+| :--- | :--- | :--- |
+| **Intelligence Arbitrage** | Acquiring legacy service firms to replace linear human labor with agentic workflows. | Breaks headcount scaling limits to boost EBITDA by 30-35%. |
+| **Autopilots** | Systems that execute and deliver completed outcomes rather than assisting human workers. | Enables unit-based pricing models akin to service agencies. |
+| **Regulatory Darwinism** | Building AI workflows around high-liability, heavily regulated environments (e.g., HIPAA). | Uses legal and audit requirements to block generic AI clones. |
+| **A2A Toll Roads** | Infrastructure for horizontal, peer-to-peer negotiation between multi-agent frameworks. | Monetizes massive volumes of machine-to-machine micro-transactions. |
+| **Turnkey Local RAG** | Edge AI hardware/software appliances utilizing consumer GPUs (e.g., Blackwell) for local inference. | Provides data-sovereign environments with a highly defensible, rapid-ROI local solution. |
