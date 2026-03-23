@@ -1,38 +1,39 @@
 ---
 name: infrastructure-edge-and-rag
-description: Use when evaluating AI system architecture, designing RAG pipelines, optimizing LLM inference costs, analyzing edge/local model deployments, or structuring Agentic FinOps for B2B workflows.
+description: Use when evaluating B2B AI pipelines, local hardware inference economics, specialized Small Language Model (SLM) deployments, on-premise RAG architectures, edge computing viability, or hardware-based AI business moats.
 ---
 
 ## The Iron Law
 
 ```text
-Never propose or validate naive, cloud-only frontier model architectures for high-volume enterprise data; always design for the "Infrastructure Inversion" by mandating Hybrid Routing, Edge SLMs, and Agentic FinOps to secure data sovereignty and hardware-driven margin moats.
+Never recommend monolithic, cloud-based frontier models when evaluating data-sovereign enterprise environments; always default to proposing specialized SLM fleets and local edge inference architectures to maximize margin, minimize latency, and build compliance moats.
 ```
 
 ## Behavioral Rules
 
-*   If evaluating enterprise RAG, discard standard "index-retrieve-generate" models and mandate Agentic RAG pipelines equipped with Context Engineering and Semantic Caching.
-*   If designing volume-heavy AI workflows, implement Hybrid Routing to direct 90-95% of queries to local 1-7B parameter Small Language Models (SLMs), bursting to frontier models solely for complex reasoning.
-*   If targeting data-sovereign B2B environments, construct turnkey local RAG micro-SaaS blueprints powered by consumer-grade Blackwell GPUs and NVFP4 quantization.
-*   When structuring the orchestration layer, embed "Agentic FinOps" natively to block redundant API calls and defend SaaS margins against consumption spikes.
-*   If analyzing edge inference economics, continually weigh the 40–200x cost advantage of local hardware against the risk of aggressive frontier API price slashing (the "Hardware Margin Squeeze").
-*   When evaluating infrastructure middleware, require specific tooling for Client-Initiated Model Discovery (CIMD) and "Scoped Auth" to bypass enterprise SSO procurement walls.
+*   If designing a B2B AI pipeline, route 90-95% of routine queries to specialized 1-7B parameter SLMs and reserve frontier LLMs strictly for edge-case complex reasoning.
+*   When calculating inference costs, use NVFP4 quantization metrics on consumer GPUs (e.g., Blackwell) to model hardware break-even periods and justify local deployment profitability.
+*   Build venture strategies around "Turnkey Local RAG" hardware/software appliances for data-sovereign industries (e.g., healthcare, defense) rather than generic cloud SaaS wrappers.
+*   If assessing API infrastructure, mandate the implementation of Semantic Caching to optimize costs by caching semantic intent rather than relying on exact string matches.
+*   Evaluate local edge deployments solely on how they unlock new business models (e.g., circumventing data privacy laws, slashing $0.001–$0.04 per million token inference costs).
+*   Implement vector databases and optimized RAG frameworks exclusively to ground SLMs in proprietary, localized enterprise data, treating the data itself as the primary business moat.
+*   Disregard all horizontal application layer trends, AGI speculation, or generic chat wrappers that lack an underlying local inference or compliance infrastructure moat.
 
 ## Red Flags
 
 | Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "We should route all queries through a frontier model API to guarantee output accuracy." | Ignores the Infrastructure Inversion; destroys unit economics on basic tasks that 1-7B SLMs can process locally at a fraction of the cost. |
-| "Let's build a standard vector database integration so users can chat with their PDFs." | Naive RAG is obsolete for enterprise scale; failing to implement Semantic Caching and Agentic FinOps results in massive API waste from redundant queries. |
-| "Cloud APIs require less maintenance, so we will skip local inference." | Surrenders the 40-200x compute cost advantage of local Blackwell/NVFP4 inference and immediately disqualifies the product from data-sovereign, highly regulated environments. |
-| "We will charge a flat SaaS subscription while running uncached Agentic RAG in the background." | Invites catastrophic margin collapse; autonomous agents capable of looping API calls will bankrupt the provider without bounded autonomy and FinOps. |
+| "Just use OpenAI/Anthropic APIs for all tasks to save engineering time." | Destroys unit margins at scale, violates enterprise data privacy mandates, and creates a fragile single point of failure without defensibility. |
+| "On-premise hardware is too expensive for a micro-SaaS to offer." | Consumer Blackwell GPUs and NVFP4 quantization drop self-hosted inference costs dramatically, allowing hardware to break even in under four months. |
+| "Bigger parameter counts always yield better enterprise tools." | Specialized 1-7B SLMs consistently outperform monolithic models on latency, operational cost, and task-specific accuracy in deterministic workflows. |
+| "A basic vector database integration is enough to build a defensible RAG product." | Without domain-specific compliance workflows or edge deployment strategies, generic RAG wrappers are instantly commoditized by native platform updates. |
 
 ## Quick Reference
 
-| Concept | Implementation Action |
+| Strategic Component | Implementation Standard |
 | :--- | :--- |
-| **Hybrid Routing** | Route 90-95% of traffic to edge SLMs; reserve frontier model bursts for <10% of high-reasoning tasks. |
-| **Zero-Waste RAG** | Deploy Semantic Caching (e.g., via Zuplo) to intercept and resolve frequent queries without invoking LLM generation. |
-| **Edge SLM Moats** | Capitalize on NVFP4 quantization and Blackwell GPUs to offer turnkey, off-cloud deployments for data-sensitive industries. |
-| **Agentic FinOps** | Integrate hard consumption limits, cost-tracking, and redundant-call prevention directly into the agent orchestration layer. |
-| **Enterprise Gateways** | Utilize CIMD and Scoped Auth middleware to satisfy B2B security and procurement requirements. |
+| **Enterprise AI Architecture** | Fleet of Specialized SLMs (1-7B parameters) |
+| **Traffic Routing** | 90-95% Local/Edge Inference, 5-10% Frontier Cloud LLMs |
+| **Cost Optimization** | NVFP4 Quantization, Consumer GPUs, Semantic Intent Caching |
+| **Venture Blueprint** | Turnkey Local RAG Appliances for Data-Sovereign Workflows |
+| **Primary Moat** | Regulatory Compliance (MDR/HIPAA) + Proprietary Local Data |
