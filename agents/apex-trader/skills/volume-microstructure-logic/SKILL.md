@@ -1,43 +1,42 @@
 ---
 name: volume-microstructure-logic
-description: Use when designing, debugging, or formalizing algorithms related to Volume Profile mechanics, Point of Control (POC) migration, Open Interest (OI) liquidation cascades, or deterministic microstructure imbalances.
+description: Use when designing deterministic algorithms for volume profile mechanics, POC migration, liquidation cascade mapping, session-specific liquidity sweeps, and mathematical validation of expansions using absolute price differentials and ATR volatility thresholds.
 ---
 
 ## The Iron Law
 
 ```text
-Never accept subjective descriptions of volume or liquidity; every volume node, Point of Control (POC) migration, and liquidation cascade must be formalized via explicit mathematical bounds, precise array index inequalities, absolute price differentials, and computable aggregate Open Interest (OI) density formulas.
+You must formalize all volume and liquidity concepts using explicit programmatic logic—such as N-bar window loops, exact array index inequalities, absolute price differentials, and ATR volatility thresholds—strictly forbidding the use of subjective chart reading, cross-domain physics metaphors, or vague ML/math buzzwords.
 ```
 
 ## Behavioral Rules
 
-- When mapping a Volume Profile, formally encode it as a matrix of deterministic absorption nodes, exact price coordinates, and calculated migration velocities over a defined N-bar window.
-- If tracking a Point of Control (POC) migration, enforce a strict bearish state filter if the POC array value settles >20% below the current absolute price differential.
-- Define structural balance exclusively via mathematical conditions where the exact POC coordinate is centered within the Value Area and strictly bracketed by High Volume Node (HVN) limit arrays.
-- If algorithmically exploiting a POC gap, mandate a deterministic mean-reversion entry trigger only when the closing price array crosses back inside the quantified Value Area.
-- When validating price expansion past structural resistance limits, require an inverse volume array condition (`Volume[t] < Volume[t-1]`) to flag a "Push to Fill" liquidity hunt.
-- If price expansion occurs concurrently with increasing volume metrics, strictly classify the event as a structural containment failure and trigger your breakout logic sequence.
-- Compute aggregate Open Interest (OI) density against continuously skewed funding rates to map exact mathematical coordinates for "Liquidation Pools."
-- If designing a fade strategy into a forced closure event, utilize the explicitly calculated liquidation pools as high-probability entry coordinates to capture the slippage gap, rather than placing standard stop orders at subjective structural boundaries.
-- When evaluating structural retention at a previously established volume node, require a deterministic nth-touch verification matrix that measures absolute delta momentum degradation across a minimum of three array interactions.
+- Define structural volume expansions using explicit array comparisons where N-bar breakout volume strictly exceeds the 50-bar Simple Moving Average volume by a defined programmatic multiplier (e.g., `RVOL > 1.5`).
+- Categorize 'Push to Fill' volume traps programmatically by triggering a Boolean invalidation state if an N-bar price expansion corresponds with a negative volume array slope over the exact same time-series window.
+- Compute Negative POC (Point of Control) Distributions using exact numerical threshold checks where the rolling 24-hour POC migrates a specific absolute price differential below the current array index price.
+- Construct Microstructure Liquidation Cascades by mapping Open Interest (OI) density arrays against consecutive funding rate skews, utilizing Boolean gates to trigger margin exhaustion signals at explicit leverage thresholds.
+- Format session liquidity boundaries using strict Unix timestamp arrays to fence NY and London macro windows, rejecting any structural sweep validation outside these explicit temporal brackets.
+- Calculate institutional displacement proxies utilizing strictly computable mathematical statements: `Daily Return * (Current Bar Volume / 50-bar SMA Volume)`.
+- Validate Fair Value Gap (FVG) and structural retention dynamically by binding the zone's active lifespan to an N-bar ATR (Average True Range) volatility threshold computed at the precise array index of formation.
+- Demand specific mathematical operations (e.g., arithmetic comparisons, array index offsets) instead of LaTeX-style math formatting to represent actionable code-level directives.
 
 ## Red Flags
 
-| Subjective Rationalization | Algorithmic Correction |
+| Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "The level looks heavy based on volume exhaustion." | Reject visual intuition; require a codified nth-touch failure matrix with explicit delta momentum degradation measured across strict n-bar arrays. |
-| "Enter the trade because price is hitting a strong volume node." | Reject assumption of bounce; entry demands exact threshold triggers based on order flow absorption or delta divergence measured directly at the node coordinate. |
-| "The volume profile shifted lower, so the regime is bearish." | Reject unquantified shifts; enforce a strict programmatic filter requiring the POC migration drop to exceed a defined percentage (e.g., >20%) of the absolute price differential. |
-| "Liquidation cascades will trigger just past obvious round numbers." | Reject stochastic assumptions; map liquidation pools mathematically via exact Open Interest (OI) density arrays and exchange leverage multipliers. |
+| Validating entries using "kinematic momentum" or "velocity variance" | Contaminates vocabulary with cross-domain physics terminology instead of relying on executable array index logic. |
+| Utilizing "Tick-Level RANSAC flat slopes" or "ML-classified confidence" | Replaces practical programming concepts (N-bar window logic, Boolean gates) with over-engineered, uncomputable ML buzzwords. |
+| Formatting conditions with `$\ge$` or `$\rightarrow$` notations | Abstracts away explicit Python/MQL code-level directives required for algorithmic implementation. |
+| Employing "stateful object-oriented sanitization protocols" for sizing | Masks simple position sizing arithmetic with superficial programming jargon and unactionable filler. |
+| Mandating complex Finite State Machines (FSM) for volume calculation | Over-specializes execution architecture into contexts that only require basic arithmetic and array iteration. |
 
 ## Quick Reference
 
-| Volume / Microstructure Concept | Computable Implementation Metric |
+| Liquidity Concept | Programmatic Definition |
 | :--- | :--- |
-| Liquidation Pool Mapping | Array coordinates of max OI density multiplied by calculated forced margin closure thresholds. |
-| Negative POC Shift | `POC[t] < POC[t-1]` by >20% of the active ATR or absolute price differential. |
-| Structural Balance Definition | POC mathematical coordinate exactly centered between Top HVN array and Bottom HVN array. |
-| POC Gap Fill Trigger | `Price[close] > Value Area Low` AND Prior POC coordinate untested. |
-| Push to Fill (Liquidity Hunt) | `Price[high] > Resistance Array` AND `Volume[t] < Volume[t-1]`. |
-| Containment Failure | `Price[high] > Resistance Array` AND `Volume[t] >= Volume[t-1] * Volume_Multiplier`. |
-| Zone of Failure (ZPF) Array | Minimum 3-touch loop (`touch_count == 3`) AND `Delta[t3] < Delta[t2]`. |
+| **Negative POC Distribution** | `current_price > (POC_price + absolute_price_offset) AND POC_migrated_down == True` |
+| **Volume-Validated Expansion** | `(close[i] - close[i-N]) > (ATR[i] * threshold) AND (volume[i] / SMA_volume) > 1.5` |
+| **Liquidation Cascade Proxy** | `OI_density_array[i] > density_threshold AND consecutive_funding_skew >= N_bars` |
+| **Volume Trap (Push to Fill)** | `price_slope_array > 0 AND volume_slope_array < 0` |
+| **Session Boundary Fence** | `NY_start_timestamp <= current_tick_timestamp <= NY_end_timestamp` |
+| **ATR-Scaled Zone Memory** | `max_zone_lifespan_bars = base_bars * (current_ATR / baseline_ATR)` |
