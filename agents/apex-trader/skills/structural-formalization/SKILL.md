@@ -1,43 +1,48 @@
 ---
 name: structural-formalization
-description: Use when generating, evaluating, or formalizing quantitative algorithms, converting subjective price action into deterministic mathematical rules, implementing Tick-Level RANSAC Regression, Zero-Phase Filters, or translating market structure into strictly computable state machines using array indexing and absolute mathematical thresholds.
+description: Use when formalizing subjective price action, volume profiles, liquidations, and market structure into deterministic code, array logic, and execution state machines.
 ---
 
 ## The Iron Law
 
 ```text
-Every structural concept or signal filter must be codified as an explicit mathematical threshold, discrete array index inequality, absolute price differential, or deterministic Boolean gate. Never substitute concrete programmatic operations with abstract physics terminology, complex machine-learning buzzwords, or superficial object-oriented wrappers that decouple signal logic from exact time-series array management.
+You must translate subjective market structure into computable boolean gates, exact array index inequalities, absolute price differentials, and programmatic risk constraints; never output descriptive chart logic, over-engineered statistical buzzwords, or abstract architectural frameworks without their explicit, executable mathematical equations and execution functions.
 ```
 
 ## Behavioral Rules
 
-- When formalizing Fair Value Gaps (FVGs), compute creation velocity strictly using absolute slope (|β1|) via Tick-Level RANSAC Regression and scale gap memory dynamically against concurrent Average True Range (ATR).
-- If smoothing time-series tick data, mandate the use of bi-directional Zero-Phase Filters (ZPF) to eliminate phase distortion entirely, strictly forbidding the use of lagging moving averages for execution triggers.
-- Construct structural boundaries using explicit array index inequalities, N-bar window logic, and precise absolute price arithmetic (e.g., exact 50% Consequent Encroachment coordinates) to define irrefutable mathematical limits.
-- When evaluating volume structure, programmatically quantify Point of Control (POC) distribution, verify Value Area containment boundaries, and measure High Volume Node (HVN) absorption using deterministic matrix mapping.
-- Strictly prohibit cross-domain physics terminology (e.g., "kinematic validation") in all logic definitions, forcing all conditions to map directly to programmatic arithmetic, array logic, and Boolean state transitions.
-- If designing finite state machines (FSM) for execution, explicitly couple all structural state transitions to absolute price differentials and quantified array metrics to guarantee mathematical closure and prevent decoupling from raw data.
-- Enforce an explicit nth-touch verification matrix combined with programmed delta momentum degradation to mathematically formalize and trigger "Retention Failure" or "Zone of Failure" states.
-- Execute Walk-Forward Analysis (WFA) to continuously dynamically adjust algorithmic sensitivity thresholds out-of-sample when validating liquidity sweeps against lookback arrays.
-- Utilize K-Nearest Neighbors (KNN) algorithms to translate chart structure into computable multi-dimensional coordinates solely for pure binary classification, avoiding subjective pattern interpretation.
+- Define Fair Value Gaps (FVGs) and Order Blocks exclusively through array index inequalities, N-bar window logic, and absolute price differentials.
+- Scale structural zone memory dynamically by computing the exact True Range (ATR) threshold at the specific time of the formation.
+- Calculate structural boundaries and liquidity sweeps using explicit mathematical thresholds and multi-timeframe pivot arrays rather than subjective support/resistance zones.
+- Formalize institutional orderflow proxies into computable features using strict mathematical operators (e.g., `Daily_Return * (Current_Volume / 50-day_SMA_Volume)`) and enforce a boolean gate of `RVOL > 1.5` for validation.
+- Govern breakout signal generation by computing absolute volume disparities, requiring strictly increasing volume for breakouts and programmatically tagging decreasing volume expansions as traps.
+- Detect Microstructure Liquidation Cascades by executing array multiplications of aggregated Open Interest (OI) density against persistently skewed funding rates.
+- Trigger a bearish regime algorithmically when a Negative POC Distribution occurs, defined strictly as POC migration settling >20% below current price while price remains under the AVWAP.
+- Format multi-timeframe structures recursively, enforcing a higher-timeframe condition as a rigid boolean filter for any lower-timeframe execution trigger.
+- Encode trade lifecycles strictly as Finite State Machines (FSM) with mathematically closed state spaces, embedding error-aware rollback logic for asynchronous exchange API drops.
+- Implement explicit programmatic risk constraints directly alongside execution logic, hardcoding risk between 0.1% and 1.0% per trade.
+- Enforce a minimum mathematically defined 1:3 Risk-to-Reward ratio using internal liquidity markers (e.g., Consequent Encroachment calculations) as target constraints.
+- Process time-series data both forward and backward using Zero-Phase Filters (ZPF) via basic array management to establish zero-lag structural baselines.
+- Execute a midpoint scaling algorithm starting exactly at the 0.5 range retracement, proportionally increasing position sizing as absolute price approaches the hard-stop array boundary.
 
 ## Red Flags
 
-| Rationalization | Why Wrong |
+| Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "The structural boundary is validated by kinematic velocity and momentum variance." | Utilizes cross-domain physics terminology that pollutes vocabulary instead of demanding concrete absolute price differentials and ATR thresholds. |
-| "We abstract price action into stateful object-oriented data structures for sanitization." | Replaces explicit mathematical operations, exact array indexing, and hard numeric thresholds with superficial programming jargon. |
-| "The algorithm models Fair Value Gap validity purely via robust finite state architecture." | Decouples execution logic from essential mathematical generation rules like Tick-Level RANSAC slope logic and volatility scaling. |
-| "A 200 EMA structural crossover indicates a phase shift and triggers the execution flow." | Employs a lagging indicator inherently burdened by phase delay as an execution trigger rather than enforcing a zero-lag ZPF or closed-candle microstructural shift. |
+| "Utilize K-Nearest Neighbors or Tick-Level RANSAC flat slopes to model structural equilibrium." | Replaces fundamental programming concepts (array indices, boolean gates, N-bar windows) with over-engineered ML buzzwords that reduce algorithmic determinism. |
+| "The entry is validated by a structural push $\ge$ the previous swing." | Uses LaTeX-style math formatting (`$\ge$`) inside instructions, which abstracts away explicit code-level array management and variable logic. |
+| "Observe the kinematic variance and volume velocity of the liquidity sweep." | Contaminates the model with physics-adjacent jargon, producing meaningless, unactionable filler instead of pure quantitative logic. |
+| "The system utilizes stateful object-oriented proxy classes to manage execution gracefully." | Replaces precise mathematical operations and asynchronous lifecycle rollbacks with generic object-oriented buzzwords. |
+| "Only use the FSM architecture to abstract the trade states." | Over-specializes into pure state management, deleting the critical absolute price differentials and ATR volatility thresholds required for signal generation. |
 
 ## Quick Reference
 
-| Concept | Mathematical Implementation | Output |
-| :--- | :--- | :--- |
-| **FVG Determinism** | Compute absolute slope (\|β1\|) via 1-sec Tick-Level RANSAC | Quantified creation velocity / Bounce expectancy |
-| **Signal Smoothing** | Process tick arrays forwards and backwards via ZPF | Phase-distortion-free baseline tracking |
-| **Dynamic Gap Memory** | Scale active gap boundary tracking against concurrent ATR | Volatility-adjusted trailing structural containment |
-| **Volume Validation** | Bracket Value Area POC explicitly between quantified HVNs | Deterministic structural balance / Overhead supply |
-| **Structural Breakdown** | Evaluate N-bar lookback windows via discrete index inequalities | Binary containment validation / Reversal triggers |
-| **Retention Failure** | Enforce an nth-touch matrix against volume delta degradation logic | Absolute structural failure confirmation |
-| **Microstructure Target** | Compute exact 50% Consequent Encroachment of mapped Order Blocks | Pure mathematical execution coordinate |
+| Concept | Computable Formalization |
+| :--- | :--- |
+| **Fair Value Gap (FVG)** | 3-bar absolute price differential + ATR-scaled dynamic memory threshold |
+| **Liquidation Cascade** | Aggregate OI density array `*` sustained funding rate skew coefficient |
+| **Orderflow Displacement** | `[Daily_Return * (Current_Volume / SMA_Volume_50)] && RVOL > 1.5` |
+| **Negative Distribution** | `(POC_Current < POC_Prev * 0.8) && (Price < AVWAP)` |
+| **Risk Enforcement** | `0.001 <= risk_per_trade <= 0.01` && `target_dist >= (3 * stop_dist)` |
+| **Fractal Alignment** | HTF Pivot Array State `== TRUE` strictly gates LTF CHoCH execution |
+| **FSM Trade Lifecycle** | Rigid state closures (Entry -> Partial -> Trail) with API drop rollbacks |
