@@ -42,3 +42,6 @@ Trade lifecycles must be formalized as deterministically closed Finite State Mac
 | **Error Handling** | Program deterministic rollbacks for all asynchronous API/network failures. |
 | **Multi-Timeframe Structure** | Deploy concurrent FSMs where HTF booleans filter LTF order execution. |
 | **Risk Encoding** | Hardcode exact dynamic sizing logic into the 'Active/Entry' state transition. |
+
+## Knowledge Base
+When detailed knowledge context is needed, read `references/digest.md` for the full knowledge digest.
