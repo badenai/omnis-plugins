@@ -1,43 +1,41 @@
 ---
 name: ai-business-explorer
-description: Use when analyzing B2B AI business models, evaluating startup studio ideas, assessing AI market trends, reviewing agentic architecture (MCP, SLMs, RAG), or determining the defensibility and moats of new AI-driven software products.
+description: Use when analyzing AI market trends, evaluating startup ideas, filtering AI news, architecting micro-SaaS business models, or assessing defensibility for B2B AI software, agency roll-ups, edge AI deployments, and agentic workflows.
 ---
 
 ## The Iron Law
 
 ```text
-Evaluate AI business models based on the "Liability Moat" and "Autopilot Economics" (selling completed work outcomes), rejecting any model reliant on "Copilots" (selling software seats) or fragile foundational model wrappers.
+You MUST reject generic prompt-wrappers, "chat with your data" copilots, and per-seat SaaS models; mandate "autopilot economics" (unit-based pricing for outcomes) protected by a distinct workflow, data, or regulatory liability moat.
 ```
 
 ## Behavioral Rules
 
-*   When analyzing architectural defensibility, verify the use of standardized protocols (MCP, A2A, WebMCP) rather than custom web-scrapers, because proprietary integrations are no longer a moat.
-*   Before validating a micro-SaaS or B2B idea, confirm it utilizes "Hybrid Routing" (SLMs taking the bulk of queries) or Agentic RAG with semantic caching to protect profit margins against exorbitant cloud API costs.
-*   If evaluating customer acquisition or discoverability, discard traditional SEO assumptions and pivot to Agent Experience Optimization (AXO) to ensure the product is structured for machine comfort and autonomous AI citations.
-*   When examining products in regulated verticals (legal, healthcare, logistics), favor startups that embrace compliance (HIPAA, Verifiable Intent via SD-JWT) because foundation model providers refuse to take on legal liability.
-*   Before assessing UI/UX as a competitive advantage, consider "Headless SaaS" dynamics where the entire application interface is abstracted away into an MCP App running inside an AI chat client.
+*   **Evaluate Autopilot Economics:** When assessing business models, prioritize "Intelligence Arbitrage" buyouts over standard software subscriptions because replacing linear human OPEX in legacy businesses (accounting, RCM) with agentic workflows boosts EBITDA far more effectively than selling SaaS.
+*   **Enforce SLM/Edge Economics:** Before recommending frontier models (GPT-4/Claude 3.5) for high-volume B2B tasks, demand justification over specialized SLM fleets (1-7B parameters) or Edge AI (e.g., consumer Blackwell inference) to ensure viable API margins and data privacy compliance.
+*   **Scrutinize Integration Protocols:** If designing agent architectures, specify Model Context Protocol (MCP), WebMCP, or A2A over custom "pixel guessing" web automation, but verify context window limits because dynamic schemas consume up to 50% of an LLM's context before execution in heavy deterministic pipelines.
+*   **Mandate Liability Moats:** When targeting regulated industries (healthcare, legal), build business ideas around a "liability moat" (Regulatory Darwinism, verifiable intent via SD-JWT) because surviving requires taking legal liability for automated regulatory compliance rather than building horizontal tools.
+*   **Design for AXO (Agent Experience Optimization):** If evaluating search or discovery businesses, optimize for Machine-Led Discovery and AI crawlers (e.g., HTML-to-Markdown conversion) rather than traditional human SEO.
 
 ## Red Flags
 
 | Rationalization | Why It's Wrong |
 | :--- | :--- |
-| "Our moat is a highly proprietary, custom-built integration with this obscure legacy software." | MCP and WebMCP standardize tool usage; bespoke point-to-point integrations are fragile and rapidly commoditized. |
-| "This AI assistant saves users 10 hours a week, so we can easily charge $50 per user per month." | Copilot per-seat economics are dying; B2B capital has shifted to "Autopilot" models where you sell the final completed outcome. |
-| "We just pass all user queries directly to the smartest frontier model to ensure high quality." | This destroys SaaS margins; viable enterprise architectures use an "Infrastructure Inversion" (90% SLMs, 10% frontier bursts). |
-| "We will build a massive index-retrieve-generate RAG pipeline to search all the enterprise data." | Naive RAG is obsolete and costly; modern deployments require Agentic RAG pipelines with strict semantic caching (FinOps). |
-| "Our web app has a beautiful interface that drives incredible user engagement." | "Headless SaaS" means UI layers are increasingly housed natively inside AI clients; brand defensibility cannot rely solely on frontend design. |
+| "We can build an AI scribe for doctors; it's a huge, proven market." | The market is saturated and absorbed by EHR incumbents; defensible healthcare AI requires tackling unsexy backend workflows like Agentic RCM or claims denials. |
+| "Let's build a platform where AIs analyze PDFs and charge $20/month per seat." | The per-seat pricing model is collapsing; profitable AI businesses use unit-based pricing to sell the completed work/outcome itself (Autopilots). |
+| "We should use dynamic MCP schemas for all our backend enterprise pipelines to stay flexible." | Dynamic MCP schemas cause severe context bloat; heavy deterministic pipelines require hardcoded CLIs or highly regulated managed MCP environments. |
+| "We will use the largest frontier model for all database queries to ensure maximum reasoning quality." | Brutal API economics will destroy the margin; route 90-95% of routine queries to specialized, local SLM fleets to remain competitive. |
 
 ## Quick Reference
 
-| Architecture / Business Focus | Allowed (Defensible) | Forbidden (Vulnerable) |
-| :--- | :--- | :--- |
-| **Business Model** | Autopilot (Selling outcomes/services) | Copilot (Selling seats/assistance) |
-| **Integrations** | MCP / WebMCP / Hosted MCP Servers | Bespoke screen scrapers / brittle APIs |
-| **Enterprise Defensibility** | Liability Moats / Compliance Navigation | Generalist horizontal LLM wrappers |
-| **Inference Economics** | Hybrid Routing (Local SLMs + Frontier) | 100% Frontier Model API usage |
-| **Discoverability** | Agent Experience Optimization (AXO) | Traditional Search Engine Optimization (SEO) |
-| **Agent Authentication** | Verifiable Intent / Agent-first SD-JWT | Legacy App-first OAuth |
-| **Data Retrieval** | Agentic RAG / Semantic Caching | Naive Index-Retrieve-Generate |
+| Allowed / Required | Forbidden / Rejected |
+| :--- | :--- |
+| Intelligence Arbitrage (Service Buyouts) | Traditional Per-Seat SaaS Subscriptions |
+| Unit-based Pricing (Autopilots) | Generic Copilots / Broad Horizontal Scribes |
+| Specialized SLM Fleets & Edge Inference | Defaulting to Frontier Models for everything |
+| Regulatory/Liability Moats (Agentic RCM) | Thin Wrappers / "Chat with PDF" |
+| WebMCP / A2A Protocol Routing | Brittle "Pixel Guessing" UI Automation |
+| Agent Experience Optimization (AXO) | Traditional Keyword SEO Landing Pages |
 
 ## Knowledge Base
 When detailed knowledge context is needed, read `references/digest.md` for the full knowledge digest.
