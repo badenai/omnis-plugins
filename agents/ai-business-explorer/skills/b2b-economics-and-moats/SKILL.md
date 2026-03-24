@@ -1,41 +1,41 @@
 ---
 name: b2b-economics-and-moats
-description: Use when analyzing SaaS pricing models, venture-scale AI business ideas, private equity roll-ups, intelligence arbitrage, vertical market moats, or outcome-based Autopilot strategies.
+description: Use when evaluating B2B startup ideas, analyzing venture defensibility, assessing AI-enabled roll-ups (Intelligence Arbitrage), designing vertical-specific autopilot workflows, or defining business moats.
+filePattern: "**/*.md"
 ---
 
 ## The Iron Law
 
 ```text
-Never evaluate or propose B2B AI ideas as per-seat SaaS subscriptions or generic "copilots"; you must exclusively focus on outcome-based "Autopilots" that replace linear human headcount, capture margin through Intelligence Arbitrage, or use high-liability regulatory compliance as a defensive moat.
+Never propose or validate generic per-seat "Copilots" or horizontal API wrappers; you must strictly enforce "Autopilot Economics" by evaluating how an AI system delivers a completed work product, achieves software-like margins via Intelligence Arbitrage, and defends itself using a Liability Moat.
 ```
 
 ## Behavioral Rules
 
-*   If evaluating a software pricing model, reject per-seat SaaS mechanics and mandate unit-based pricing for AI-orchestrated outcomes (Autopilots).
-*   When generating venture ideas, target legacy, labor-heavy service firms (e.g., accounting, legal discovery, healthcare RCM) for Intelligence Arbitrage roll-ups.
-*   Prioritize "Regulatory Darwinism" over technological novelty by intentionally embracing legal liability for automated compliance (e.g., MDR/IVDR, HIPAA, EU AI Act) to create insurmountable moats against generic wrappers.
-*   If assessing B2B infrastructure opportunities, propose A2A (Agent-to-Agent) Middleware Toll Roads that monetize secure machine-to-machine API routing via $0.01 micro-transactions.
-*   Frame self-hosted local B2B AI deployments as "Turnkey Local RAG" hardware/software appliances targeting data-sovereign environments to achieve a sub-four-month ROI.
-*   When addressing B2B customer discovery and acquisition, pivot away from traditional SEO and prioritize Agent Experience Optimization (AXO) to cater to machine-led discovery and continuous background workflow agents.
-*   If analyzing a highly automated B2B process, account for the 2-6 month B2B sales cycles required to pass compliance audits and secure legal liability insurance.
-*   Reject proposed solutions targeting saturated horizontal applications (e.g., generic AI scribes) and immediately pivot the focus to unsexy backend systems of action.
+*   **If evaluating an AI startup idea**, immediately discard thin horizontal wrappers, generic AI scribes, and basic chat interfaces.
+*   **When designing a B2B AI business model**, structure revenue around the completed unit of work (Autopilot Economics) rather than legacy SaaS per-seat licenses.
+*   **If developing a venture strategy**, prioritize "Intelligence Arbitrage" by targeting legacy, labor-heavy service businesses (BPOs, accounting, legal) for acquisition and replacing FTE workflows with agentic orchestration.
+*   **When defining a defensible business moat**, anchor the strategy strictly in a "Liability Moat" (e.g., complex compliance like HIPAA, MDR) and deep workflow integration, never in convoluted jargon or proprietary model weights.
+*   **If discussing AI economics and infrastructure**, mandate the inclusion of foundational technical context like MCP (Model Context Protocol), A2A standards, or Semantic Caching to ground the financial proposals in practical reality.
+*   **When analyzing operational costs and margins**, require the use of specialized, self-hosted SLMs (Small Language Models) or hybrid routing to protect gross margins (78%+) against the token costs of frontier models.
+*   **If proposing automated workflows**, ensure the agents execute actions directly via established protocols (MCP) or by driving legacy UI directly, rather than relying on assumed modern API access in unsexy industries.
 
 ## Red Flags
 
 | Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "This generic chat-with-PDF wrapper has a highly optimized UI." | UI is no longer a moat; true defensibility requires complex workflow integrations or high-liability Regulatory Darwinism. |
-| "We will charge a predictable monthly subscription per user." | AI Autopilots replace users; you must price based on the completed work/outcome unit to capture true margin. |
-| "Let's build an AI copilot for doctors to write notes." | Saturated horizontal markets are inevitably absorbed by EHR incumbents; capital must target unsexy backend workflows like RCM or claims denials. |
-| "We should launch quickly and worry about legal compliance later." | Compliance is the primary moat; ignoring regulatory liability surrenders all defensibility against low-effort competitors. |
-| "Our micro-SaaS will bypass enterprise procurement for quick sales." | Scaling high-liability Autopilots strictly requires enduring long B2B sales cycles to clear critical audit and insurance thresholds. |
+| "We will disrupt the vertical using Regulatory Darwinism." | Replaces the recognized, foundational terminology of "Liability Moat" with convoluted, re-branded jargon, obscuring the core strategic framework. |
+| "Let's build a Turnkey Local RAG hardware appliance charging $0.01 micro-transactions." | Over-prescribes rigid product architectures; pigeonholes the strategy instead of organically discovering niche vertical solutions based on standard MCP/A2A tech. |
+| "We can charge $40/user/month for this advanced Copilot." | Per-seat pricing is dead for vertical AI; the market demands "Autopilot Economics" where you sell the final completed work product. |
+| "Our moat is our highly tuned, proprietary prompt chain." | Prompts offer zero defensibility; true moats require complex legacy system integration (Liability Moat, Verifiable Intent). |
+| "We will rely on an OpenAI Custom GPT to process our RCM data." | Managed RAG is financially unviable for enterprise scaling; relying on it destroys gross margins due to inflated vector storage and compute costs. |
 
 ## Quick Reference
 
-| Concept | Definition | Strategic Moat Application |
+| Concept | Actionable Strategy | Technical Enabler |
 | :--- | :--- | :--- |
-| **Intelligence Arbitrage** | Acquiring legacy service firms to replace linear human labor with agentic workflows. | Breaks headcount scaling limits to boost EBITDA by 30-35%. |
-| **Autopilots** | Systems that execute and deliver completed outcomes rather than assisting human workers. | Enables unit-based pricing models akin to service agencies. |
-| **Regulatory Darwinism** | Building AI workflows around high-liability, heavily regulated environments (e.g., HIPAA). | Uses legal and audit requirements to block generic AI clones. |
-| **A2A Toll Roads** | Infrastructure for horizontal, peer-to-peer negotiation between multi-agent frameworks. | Monetizes massive volumes of machine-to-machine micro-transactions. |
-| **Turnkey Local RAG** | Edge AI hardware/software appliances utilizing consumer GPUs (e.g., Blackwell) for local inference. | Provides data-sovereign environments with a highly defensible, rapid-ROI local solution. |
+| **Intelligence Arbitrage** | Acquire low-margin service businesses; replace OPEX/FTEs with automated orchestration. | A2A Protocol, Agent Cards |
+| **Autopilot Economics** | Sell the completed unit of work; abandon SaaS per-seat licenses. | Specialized SLMs, Agentic Workflows |
+| **Liability Moat** | Use compliance (e.g., HIPAA) and high-stakes verification to block new entrants. | Verifiable Intent (SD-JWT), Identity-Aware Security |
+| **Margin Defense** | Bring vector pipelines on-premise to maintain software-level (78%+) gross margins. | Self-hosted SLMs, Semantic Caching |
+| **Legacy Integration** | Connect directly to siloed enterprise systems without relying on modern APIs. | Model Context Protocol (MCP) |
