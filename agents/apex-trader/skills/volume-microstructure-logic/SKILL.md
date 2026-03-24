@@ -1,42 +1,43 @@
 ---
 name: volume-microstructure-logic
-description: Use when designing deterministic algorithms for volume profile mechanics, POC migration, liquidation cascade mapping, session-specific liquidity sweeps, and mathematical validation of expansions using absolute price differentials and ATR volatility thresholds.
+description: Use when processing order book depth arrays, mapping open interest liquidation cascades, analyzing order flow imbalance (OFI), or building session-normalized volume profile and POC mean-reversion rules.
+filePattern: "**/*.py"
+bashPattern: "pytest|unittest"
 ---
 
 ## The Iron Law
 
 ```text
-You must formalize all volume and liquidity concepts using explicit programmatic logic—such as N-bar window loops, exact array index inequalities, absolute price differentials, and ATR volatility thresholds—strictly forbidding the use of subjective chart reading, cross-domain physics metaphors, or vague ML/math buzzwords.
+You must formalize all volume and market microstructure logic into strict, deterministic arrays, replacing visual profile concepts and subjective tape reading with explicitly defined array index inequalities, absolute price differentials, and N-bar mathematical windows.
 ```
 
 ## Behavioral Rules
 
-- Define structural volume expansions using explicit array comparisons where N-bar breakout volume strictly exceeds the 50-bar Simple Moving Average volume by a defined programmatic multiplier (e.g., `RVOL > 1.5`).
-- Categorize 'Push to Fill' volume traps programmatically by triggering a Boolean invalidation state if an N-bar price expansion corresponds with a negative volume array slope over the exact same time-series window.
-- Compute Negative POC (Point of Control) Distributions using exact numerical threshold checks where the rolling 24-hour POC migrates a specific absolute price differential below the current array index price.
-- Construct Microstructure Liquidation Cascades by mapping Open Interest (OI) density arrays against consecutive funding rate skews, utilizing Boolean gates to trigger margin exhaustion signals at explicit leverage thresholds.
-- Format session liquidity boundaries using strict Unix timestamp arrays to fence NY and London macro windows, rejecting any structural sweep validation outside these explicit temporal brackets.
-- Calculate institutional displacement proxies utilizing strictly computable mathematical statements: `Daily Return * (Current Bar Volume / 50-bar SMA Volume)`.
-- Validate Fair Value Gap (FVG) and structural retention dynamically by binding the zone's active lifespan to an N-bar ATR (Average True Range) volatility threshold computed at the precise array index of formation.
-- Demand specific mathematical operations (e.g., arithmetic comparisons, array index offsets) instead of LaTeX-style math formatting to represent actionable code-level directives.
+- Extract Order Flow Imbalance (OFI) strictly from Depth-5 (L=5) limit order arrays to bypass L=1 spoofing noise using programmed boolean gates.
+- Calculate forced-closure liquidation entry proxies by correlating Open Interest (OI) density arrays against funding rate extremes using strict arithmetic thresholds.
+- Normalize all volume feature arrays by exact session time boundaries (e.g., 09:30-10:30 EST) to programmatically filter idiosyncratic execution volume spikes.
+- Require boolean validation of positive volume delta expansion when coding structural breakouts; if an N-bar array shows price expansion paired with decreasing volume arrays, flag the event immediately as an exhaustion/absorption failure.
+- Set mean-reversion algorithmic limits strictly to the dynamic Point of Control (POC) baseline if a price array registers a confirmed closing index inside the Value Area from a previously unshaded excess zone.
+- Manage volume thresholds and microstructure invalidation levels dynamically using an ATR volatility multiplier to scale absolute price differentials, ensuring stops are mathematically tied to true market depth.
+- Prevent structural array pollution by explicitly stripping all ML/AI classification buzzwords (like K-Nearest Neighbors or RANSAC) from your order flow algorithms, relying instead on unambiguous boolean states and strict array slicing.
 
 ## Red Flags
 
-| Domain-Specific Rationalization | Why Wrong |
+| Red Flag | Why Wrong |
 | :--- | :--- |
-| Validating entries using "kinematic momentum" or "velocity variance" | Contaminates vocabulary with cross-domain physics terminology instead of relying on executable array index logic. |
-| Utilizing "Tick-Level RANSAC flat slopes" or "ML-classified confidence" | Replaces practical programming concepts (N-bar window logic, Boolean gates) with over-engineered, uncomputable ML buzzwords. |
-| Formatting conditions with `$\ge$` or `$\rightarrow$` notations | Abstracts away explicit Python/MQL code-level directives required for algorithmic implementation. |
-| Employing "stateful object-oriented sanitization protocols" for sizing | Masks simple position sizing arithmetic with superficial programming jargon and unactionable filler. |
-| Mandating complex Finite State Machines (FSM) for volume calculation | Over-specializes execution architecture into contexts that only require basic arithmetic and array iteration. |
+| Writing "price exhibits upward kinematic velocity." | Contaminates code with physics jargon; strictly use absolute price differentials and N-bar array index inequalities. |
+| Relying on top-of-book (L=1) tape reading logic. | L=1 is highly susceptible to spoofing; mandate Depth-5 volumetric arrays for OFI evaluation. |
+| Utilizing "ML-based volume confidence clusters." | Replaces computable deterministic logic with opaque machine learning buzzwords; use standard deviation thresholds and boolean gates. |
+| Building variables like `MarketPanic = True`. | Assumes subjective emotional states; use explicit Open Interest limits and absolute mathematical slippage constraints. |
+| Hardcoding static volume limits globally. | Fails to account for session-specific variance; always apply Time-Indexed Volume Array Normalization. |
 
 ## Quick Reference
 
-| Liquidity Concept | Programmatic Definition |
+| Concept | Deterministic Implementation |
 | :--- | :--- |
-| **Negative POC Distribution** | `current_price > (POC_price + absolute_price_offset) AND POC_migrated_down == True` |
-| **Volume-Validated Expansion** | `(close[i] - close[i-N]) > (ATR[i] * threshold) AND (volume[i] / SMA_volume) > 1.5` |
-| **Liquidation Cascade Proxy** | `OI_density_array[i] > density_threshold AND consecutive_funding_skew >= N_bars` |
-| **Volume Trap (Push to Fill)** | `price_slope_array > 0 AND volume_slope_array < 0` |
-| **Session Boundary Fence** | `NY_start_timestamp <= current_tick_timestamp <= NY_end_timestamp` |
-| **ATR-Scaled Zone Memory** | `max_zone_lifespan_bars = base_bars * (current_ATR / baseline_ATR)` |
+| **Liquidation Targets** | OI Density Array × Funding Rate Minimum Arithmetic Threshold |
+| **Order Flow Imbalance** | Depth-5 Volumetric Delta Boolean Comparison |
+| **HVN Mean Reversion** | Value Area Bounds Array Check (Strict `True`/`False` gate) |
+| **POC Gap Target** | Session-Validated 98.5% Mean Reversion Price Constant |
+| **Volume Exhaustion** | N-Bar Price Array Breakout + Decreasing Volume Array Index |
+| **Volatility Scaling** | ATR Volatility Threshold × Absolute Price Differential |
