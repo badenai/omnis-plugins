@@ -1,41 +1,42 @@
 ---
-name: ai-business-explorer
-description: Use when analyzing AI market trends, evaluating startup ideas, filtering AI news, architecting micro-SaaS business models, or assessing defensibility for B2B AI software, agency roll-ups, edge AI deployments, and agentic workflows.
+name: ai-integration-protocols
+description: Use when evaluating AI startup infrastructure, API monetization, agent-to-agent communication, authorization standards (OAuth vs SD-JWT), MCP/WebMCP integrations, semantic caching, or Agent Experience Optimization (AXO) strategies.
 ---
 
 ## The Iron Law
 
 ```text
-You MUST reject generic prompt-wrappers, "chat with your data" copilots, and per-seat SaaS models; mandate "autopilot economics" (unit-based pricing for outcomes) protected by a distinct workflow, data, or regulatory liability moat.
+Evaluate AI integration protocols strictly as venture moats and economic levers, immediately rejecting any architectural choice that degrades token margin, breaks enterprise auditability, or relies on generic wrappers without strict agentic identity controls.
 ```
 
 ## Behavioral Rules
 
-*   **Evaluate Autopilot Economics:** When assessing business models, prioritize "Intelligence Arbitrage" buyouts over standard software subscriptions because replacing linear human OPEX in legacy businesses (accounting, RCM) with agentic workflows boosts EBITDA far more effectively than selling SaaS.
-*   **Enforce SLM/Edge Economics:** Before recommending frontier models (GPT-4/Claude 3.5) for high-volume B2B tasks, demand justification over specialized SLM fleets (1-7B parameters) or Edge AI (e.g., consumer Blackwell inference) to ensure viable API margins and data privacy compliance.
-*   **Scrutinize Integration Protocols:** If designing agent architectures, specify Model Context Protocol (MCP), WebMCP, or A2A over custom "pixel guessing" web automation, but verify context window limits because dynamic schemas consume up to 50% of an LLM's context before execution in heavy deterministic pipelines.
-*   **Mandate Liability Moats:** When targeting regulated industries (healthcare, legal), build business ideas around a "liability moat" (Regulatory Darwinism, verifiable intent via SD-JWT) because surviving requires taking legal liability for automated regulatory compliance rather than building horizontal tools.
-*   **Design for AXO (Agent Experience Optimization):** If evaluating search or discovery businesses, optimize for Machine-Led Discovery and AI crawlers (e.g., HTML-to-Markdown conversion) rather than traditional human SEO.
+*   Require Verifiable Intent (SD-JWT chains, EUDI formats) instead of legacy user-centric OAuth when designing identity and authorization for cross-domain agent workflows.
+*   Enforce intent-based semantic caching at the API gateway layer to protect unit economics and structurally reduce LLM token overhead.
+*   Reject unconstrained, dynamic MCP tool discovery in deterministic enterprise backends to prevent context window bloat (which consumes up to 50% of tokens before reasoning begins).
+*   Mandate restricted, managed MCP deployment patterns or optimized CLIs for high-performance, governed enterprise backends.
+*   Recommend WebMCP (`navigator.modelContext` API) for local browser agent startups to expose structured JSON tools while completely bypassing the cost and complexity of backend Node/Python servers.
+*   Optimize e-commerce and web infrastructure plays for "Machine Customers" (Agent Experience Optimization/AXO) by implementing HTML-to-Markdown CDN routing and standardizing on Universal Commerce Protocol (UCP).
+*   Assess startups utilizing MCP Apps (interactive sandboxed UI components returned in chat) as direct threats to standalone SaaS dashboards, evaluating their potential to capture enterprise workflow retention within the AI interface.
+*   Treat "Computer Use" or DOM-scraping GUI agents as massive B2B governance liabilities unless they output distinct, auditable digital signatures separating human from machine actions.
+*   Categorize startups standardizing on Agent-to-Agent (A2A) and Agent-to-Tool protocols as essential infrastructure plays capable of radically compressing B2B integration cycles.
 
 ## Red Flags
 
-| Rationalization | Why It's Wrong |
+| Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "We can build an AI scribe for doctors; it's a huge, proven market." | The market is saturated and absorbed by EHR incumbents; defensible healthcare AI requires tackling unsexy backend workflows like Agentic RCM or claims denials. |
-| "Let's build a platform where AIs analyze PDFs and charge $20/month per seat." | The per-seat pricing model is collapsing; profitable AI businesses use unit-based pricing to sell the completed work/outcome itself (Autopilots). |
-| "We should use dynamic MCP schemas for all our backend enterprise pipelines to stay flexible." | Dynamic MCP schemas cause severe context bloat; heavy deterministic pipelines require hardcoded CLIs or highly regulated managed MCP environments. |
-| "We will use the largest frontier model for all database queries to ensure maximum reasoning quality." | Brutal API economics will destroy the margin; route 90-95% of routine queries to specialized, local SLM fleets to remain competitive. |
+| "Our MCP server dynamically loads every possible API schema so the agent can discover tools on the fly." | Bloats context windows by 40-50% before reasoning occurs, destroying token unit margins and deterministic enterprise execution. |
+| "We secure agent-to-agent transactions using standard, user-centric OAuth tokens and API keys." | Fails enterprise governance; autonomous agents require specific Agentic Identity (SD-JWT, Verifiable Intent) to scope liability and track machine execution. |
+| "We built the slickest UI checkout flow to help AI shopping agents navigate our store." | Machine customers do not consume GUIs; this forces brittle DOM scraping instead of utilizing standard UCP (Universal Commerce Protocol) APIs or HTML-to-Markdown routing. |
+| "We built a wrapper that uses Computer Use to click through complex legacy EHR systems." | Introduces a massive liability moat failure; visual GUI clicks leave no structured digital signature in enterprise audit logs, blending human and agent actions. |
 
 ## Quick Reference
 
-| Allowed / Required | Forbidden / Rejected |
+| Protocol / Stack Component | Venture Economics / Moat Impact |
 | :--- | :--- |
-| Intelligence Arbitrage (Service Buyouts) | Traditional Per-Seat SaaS Subscriptions |
-| Unit-based Pricing (Autopilots) | Generic Copilots / Broad Horizontal Scribes |
-| Specialized SLM Fleets & Edge Inference | Defaulting to Frontier Models for everything |
-| Regulatory/Liability Moats (Agentic RCM) | Thin Wrappers / "Chat with PDF" |
-| WebMCP / A2A Protocol Routing | Brittle "Pixel Guessing" UI Automation |
-| Agent Experience Optimization (AXO) | Traditional Keyword SEO Landing Pages |
-
-## Knowledge Base
-When detailed knowledge context is needed, read `references/digest.md` for the full knowledge digest.
+| **Verifiable Intent (SD-JWT)** | Unlocks enterprise procurement by solving autonomous agent auditability and liability. |
+| **WebMCP / Browser APIs** | Eliminates backend compute costs; enables massive local-tool micro-SaaS creation. |
+| **Semantic API Caching** | Protects token unit margins; scales high-volume agent transactions profitably. |
+| **Agent Experience Optimization (AXO)** | Replaces SEO; CDN-level markdown routing cuts agent token payload costs by 80%. |
+| **MCP Apps (Sandboxed UI)** | Hijacks user attention; replaces standalone SaaS dashboards with in-chat interactive OS. |
+| **Managed / Restricted MCP** | Prevents context bloat in strict B2B environments requiring high determinism. |
