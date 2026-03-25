@@ -1,41 +1,37 @@
 ---
-name: infrastructure-edge-and-slms
-description: Use when evaluating, designing, or analyzing B2B architectures involving local AI inference, Small Language Models (SLMs), self-hosted Retrieval-Augmented Generation (RAG), edge computing economics, or on-premise LLMOps.
-filePattern: "**/*.md"
+name: infrastructure-edge-and-rag
+description: Use when evaluating AI infrastructure startups, edge compute deployments, hybrid LLM/SLM routing strategies, self-hosted hardware economics, RAG architectures, and data-sovereign enterprise AI models.
 ---
 
 ## The Iron Law
 
 ```text
-Never default to monolithic, cloud-based LLMs or managed RAG services for enterprise workflows; you must strictly enforce Hybrid Routing, self-hosted vector pipelines, and localized Small Language Models (SLMs) to build a structural Liability Moat around data privacy and inference margins.
+Never evaluate infrastructure, edge computing, or RAG architectures purely on technical capability; always anchor the analysis in venture economics—specifically calculating how SLM hybrid routing protects operating margins and how self-hosted local RAG provides a definitive "Liability Moat" for data-sovereign B2B verticals.
 ```
 
 ## Behavioral Rules
 
-*   When designing enterprise inference architectures, route the vast majority (up to 95%) of routine queries to specialized, self-hosted Small Language Models (SLMs) to bypass frontier model token costs.
-*   If a client proposes relying on managed RAG infrastructure (e.g., Custom GPTs) for scalable production, instantly redirect them to on-premise LLMOps (e.g., AWS/EKS deployments) to prevent unviable vector storage markups and black-box chunking limitations.
-*   Always baseline local inference economics against modern consumer hardware advancements (e.g., Blackwell GPUs with NVFP4 quantization) to validate the financial viability of local deployment.
-*   When evaluating defensibility for offline-heavy or highly regulated industries, mandate local SLMs to construct a strict "Liability Moat" that eliminates third-party API data leakage.
-*   If developing local infrastructure strategies, integrate foundational technological context like semantic caching, specific quantization methods, and vector pipeline ownership rather than relying on abstract pricing models.
-*   Focus architectural proposals on adaptable software and workflow infrastructure rather than pigeonholing solutions into hyper-specific, rigid hardware appliances.
-*   When optimizing multi-step AI pipelines, utilize specific SLMs for targeted tasks (e.g., extraction, classification, structured output) instead of forcing a single massive model to handle the entire workflow context.
+*   **Enforce Hybrid Routing Economics:** When analyzing enterprise AI architectures, mandate hybrid routing strategies that push 90-95% of volume to specialized Small Language Models (SLMs, 1B-7B parameters) to defend gross margins, strictly reserving expensive frontier LLMs for multi-step reasoning.
+*   **Evaluate Hardware Arbitrage:** Assess local edge AI ventures by their capacity to leverage consumer Blackwell revolution economics (e.g., NVFP4 quantization) to slash RAG token costs and achieve hardware break-even within months.
+*   **Demand Data Sovereignty Moats:** Prioritize "Turnkey Local AI" infrastructure that absorbs compliance risk and establishes a strong Liability Moat for unsexy, highly regulated verticals (e.g., legal, finance, healthcare).
+*   **Reject Thin Wrappers:** Immediately discard any generic "chat with your data" RAG application or horizontal copilot that lacks proprietary data access, complex workflow integration, or a vertical-specific compliance moat.
+*   **Mitigate Context Bloat:** When recommending API gateways or orchestration layers, require the inclusion of intent-based semantic caching and managed routing to counteract the massive context window bloat caused by dynamic tool discovery schemas.
+*   **Focus on OPEX Replacement:** If reviewing an infrastructure buyout or AI-enabled service roll-up, calculate the venture's viability based on how effectively deterministic RAG agents and SLM fleets replace human operational expenditure (OPEX) rather than just selling software seats.
 
 ## Red Flags
 
-| Domain-Specific Rationalization | Why Wrong |
+| Domain-Specific Rationalization | Why It's Wrong (Economic & Strategic Reality) |
 | :--- | :--- |
-| "Use managed cloud RAG for faster enterprise deployment." | Incurs severe margin penalties (up to 300x raw storage costs) and enforces black-box chunking that prevents critical pipeline fine-tuning. |
-| "Deploy a frontier LLM for all B2B workflow tasks." | Overkills routine tasks, generating brutal token costs and unnecessary data privacy liabilities when a localized SLM can handle it efficiently. |
-| "Local inference is too expensive and slow for B2B SaaS." | Ignores the economics of modern consumer GPUs and quantization techniques that drive local RAG inference costs to fractions of a cent per million tokens. |
-| "Build a turnkey local RAG hardware appliance to sell to businesses." | Violates the rule against over-prescribing rigid product mechanics; focus on the underlying Liability Moat and software-defined LLMOps strategy instead. |
-| "Rely on OAuth to secure autonomous agent access to local databases." | Applies user-centric, app-first security to agentic systems that require capability-first, scoped permissions and cryptographic intent verification. |
+| "This RAG startup allows enterprise users to seamlessly chat with their internal PDF documents." | It represents a defenseless "thin wrapper" that completely lacks a vertical System of Action or Liability Moat, easily killed by native platform updates. |
+| "For maximum accuracy, the infrastructure routes all prompts and tool calls directly to the largest frontier model." | It ignores SLM margin protection and hybrid routing economics; running high-volume, low-complexity queries on frontier models destroys B2B unit economics. |
+| "The platform differentiates by exposing massive, dynamic tool discovery schemas to maximize agent flexibility." | Dynamic tool schemas severely bloat context windows (consuming up to 50% of tokens before reasoning begins); enterprise backends require highly optimized, deterministic routing. |
+| "The infrastructure business model relies on marking up cloud LLM API credits for small businesses." | It ignores the localized edge revolution and hardware cost-arbitrage; API reselling is highly vulnerable to rapid price compression from frontier labs. |
 
 ## Quick Reference
 
-| Infrastructure Concept | Actionable Rule |
-| :--- | :--- |
-| **Hybrid Routing** | Default to routing 95% of enterprise queries to self-hosted SLMs; reserve expensive frontier APIs strictly for edge-case reasoning. |
-| **Self-Hosted RAG** | Pull vector storage and chunking pipelines on-premise to control algorithmic quality and avoid managed-service markups. |
-| **Edge Economics** | Capitalize on hardware quantization (e.g., NVFP4) to drive local inference costs down to $0.001–$0.04 per million tokens. |
-| **Data Defensibility** | Enforce local deployment to establish a "Liability Moat" around sensitive, offline, or highly regulated enterprise data. |
-| **Technological Context** | Anchor all architectural proposals in concrete mechanisms like semantic caching, open-source weights, and specific deployment environments (EKS). |
+| Infrastructure Strategy | Economic Heuristic | Venture Moat / Defensibility |
+| :--- | :--- | :--- |
+| **Hybrid Routing** | Push 90-95% of queries to 1B-7B SLMs | Absolute gross margin protection |
+| **Self-Hosted Edge** | Capitalize on NVFP4 $0.001/1M token RAG | Turnkey data sovereignty & compliance |
+| **Semantic Caching** | Deduplicate queries by intent at the gateway | Token consumption control & latency limits |
+| **Vertical Autopilot RAG** | Replace human OPEX with specialized AI action | Strong B2B Liability Moat in regulated sectors |
