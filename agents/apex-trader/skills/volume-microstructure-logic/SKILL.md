@@ -1,47 +1,49 @@
 ---
 name: volume-microstructure-logic
-description: Use when formalizing high-frequency order flow, Volume Profile mechanics, Numba JIT compiled imbalance bars, Programmatic OI divergence, or Level 5 Order Flow Imbalance into deterministic array logic and computable signals.
+description: Use when building, debugging, or optimizing trading algorithms that analyze order flow imbalance (OFI), microstructure liquidation mechanics, volume profiles, open interest (OI) divergence, and high-frequency tick data.
 filePattern: "**/*.py"
-bashPattern: "pytest|python"
 ---
 
 ## The Iron Law
 
 ```text
-Never abstract volume or order flow into lagging indicators or physics jargon; you must encode microstructure dynamically using absolute price differentials, programmatic array index inequalities, and tick-level volume binning compiled via Numba JIT.
+Enforce all microstructure and liquidity events as exact programmatic variables utilizing strict array index inequalities, absolute price differentials, and explicitly calculated volumetric thresholds. Never substitute explicit mathematical definitions with generic object-oriented buzzwords, physics analogies, retail acronyms, or qualitative descriptions of price action.
 ```
 
 ## Behavioral Rules
 
-*   Calculate Order Flow Imbalance (OFI) exclusively at Level 5 depth to eliminate L=1 spoofing noise, scaling the output to a bounds-checked `[-1.0, 1.0]` scalar vector.
-*   Compile raw tick streams into Imbalance Bars and Run Bars using Numba Just-In-Time (JIT) processing to ensure low-latency atomic operations.
-*   Map Numba-compiled OFI directly into lock-free atomic queue structures to enable sub-microsecond array evaluation and threshold checks.
-*   Define Point of Control (POC) dynamically by binning tick data into precise quintiles using standard Pandas and NumPy array indexing.
-*   Track POC migration algorithmically by measuring consecutive exact array index shifts in the highest volume node to calculate the absolute price differential of the consensus shift.
-*   Invalidate structural breakout entries if a boolean gate detects price expansion combined with a mathematical decrease in relative volume arrays (Push to Fill detection).
-*   Compute an Open Interest Rate of Change (OI ROC) array and apply a boolean gate to strictly invalidate breakouts when price array differentials increase while OI ROC arrays simultaneously decrease.
-*   Apply the Chu-Stinchcombe-White CUSUM test on tick-level arrays to detect mathematically rigorous threshold breaches instead of relying on subjective visual structure.
-*   Process time-series vectors using Zero-Phase Filters to eliminate phase delay when computing real-time cross-track errors and baseline states.
-*   Enforce absolute risk boundaries using Average True Range (ATR) multiplier arrays mapped to programmatic risk-adjusted position sizing math, strictly avoiding hardcoded arbitrary percentage heuristics.
+*   Calculate Order Flow Imbalance (OFI) strictly as a bounded float between -1.0 and 1.0.
+*   Aggregate volumetric imbalance across exactly 5 order book levels (Depth=5) to strip spoofing noise before extracting features.
+*   Accelerate high-frequency tick data parsing and array operations exclusively via Numba JIT compilation to eliminate execution latency.
+*   Map liquidation cascades programmatically by tracking simultaneous open interest (OI) drops and price vector changes within the exact same millisecond timestamp.
+*   Detect forced-closure squeeze events using boolean gates: require offshore derivative OI to increase concurrently with negative funding rates and positive spot premiums.
+*   Compute Fair Value Gap (FVG) velocity by extracting the absolute slope of its tick-level linear regression line (`abs(beta)`), avoiding lagging indicators entirely.
+*   Define true structural displacement by enforcing a maximum absolute slope threshold (e.g., `<= 0.00015` units/sec) on tick-level voids.
+*   Ignore high-degree price gaps (`abs(beta) > 0.0004` units/sec) algorithmically by tagging them as false stop-hunts.
+*   Define High Volume Nodes (HVNs) strictly as the 80th percentile volume quantiles within an explicitly defined N-bar rolling array.
+*   Validate breakout execution vectors only if the current price array traverses an HVN-bounded coordinate state concurrently with a strictly positive Cumulative Volume Delta (CVD).
+*   Compute Point of Control (POC) gaps by assigning them explicit `[Lower_Bound, Upper_Bound]` array coordinates.
+*   Determine structural failure (Retention Failure) by enforcing simultaneous volume expansion thresholds (`> 1.5 * RVOL`) alongside rolling N-period min/max array overlaps.
+*   Enforce capital preservation by hardcoding programmatic minimum 1:3 R-multiple boundaries and deterministic execution closures over arbitrary retail percentage rules.
 
 ## Red Flags
 
-| Rationalization | Why Wrong |
+| Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "Use Top-of-Book L=1 for fastest latency response." | Level 1 is highly polluted by spoofing and transient noise; predictive validity requires L=5 depth arrays. |
-| "Calculate volume momentum using RSI overlays." | Replaces deterministic volume binning and algorithmic array indexing with lagging phase-distorted derivatives. |
-| "Set Stop-Loss (SL) to 1% of account size." | Uses retail jargon and arbitrary percentage heuristics instead of programmatic volatility-scaled ATR array logic. |
-| "Deploy ML models to predict POC shifts." | Replaces explicit programmatic mathematical breakdowns and array inequalities with black-box probabilistic buzzwords. |
-| "Wait for a kinematic pullback to the high volume node." | Contaminates algorithmic logic with physics jargon instead of defining explicit array index threshold pullbacks. |
+| "Implementing SL/TP parameters to manage the liquidity sweep trade." | Introduces retail jargon; algorithm must rely on deterministic state transitions and explicitly computed R-multiple array evaluations. |
+| "The algorithm detects kinematic momentum variance to validate the volume profile." | Contaminates vocabulary with physics terminology instead of utilizing standard deviation bounds or strict array indexing. |
+| "Using an RSI overbought threshold to detect the liquidation cascade." | Relies on lagging indicators instead of mapping explicit microstructure order flow imbalance and derivative open interest divergences. |
+| "Structuring the trade state via a generic object-oriented array matrix." | Replaces precise mathematical operations and boolean logic with unactionable, superficial programming buzzwords. |
+| "Executing the order because the FVG looks like a high-probability displacement." | Discretionary and vague; requires explicit tick-level linear regression slope calculations and absolute threshold gating. |
 
 ## Quick Reference
 
-| Concept | Action |
+| Microstructure Concept | Programmatic Implementation |
 | :--- | :--- |
-| **Order Flow Imbalance** | Compute at L=5 depth and normalize to a `[-1.0, 1.0]` scalar array. |
-| **Tick Compilation** | Use Numba JIT to generate Imbalance and Run Bars into lock-free queues. |
-| **Point of Control (POC)** | Bin tick data into explicit quintiles via NumPy array indexing. |
-| **Breakout Invalidation** | Use boolean gates: if price expands and OI ROC or volume arrays decrease, abort. |
-| **Structure Breaks** | Execute Chu-Stinchcombe-White CUSUM tests on absolute price differentials. |
-| **Phase Synchronization** | Apply Zero-Phase Filters over vectors to compute baseline states without lag. |
-| **Risk Encoding** | Map ATR volatility thresholds to programmatic position sizing functions. |
+| **Order Flow Imbalance (OFI)** | `Float [-1.0, 1.0] calculated via L2 order book aggregated to Depth=5` |
+| **Squeeze Divergence FSM** | `if OI[i] > OI[i-1] and FundingRate < 0 and SpotPremium > 0:` |
+| **High Volume Node (HVN)** | `Volume >= 80th percentile of rolling N-bar volume array` |
+| **Liquidation Vector Stop** | `Trigger immediately upon Total OI and Price declining in the same ms` |
+| **Valid Structural Displacement** | `abs(linear_regression_slope) <= 0.00015` |
+| **Volume Retention Failure** | `Current Volume > (1.5 * RVOL) AND Price intersects N-period overlap` |
+| **High-Frequency Parsing** | `@njit` compilation over multi-dimensional tick data numpy arrays |
