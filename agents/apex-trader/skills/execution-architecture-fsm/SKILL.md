@@ -1,47 +1,43 @@
 ---
-name: execution-architecture-fsm
-description: Use when designing high-performance event-driven algorithmic execution systems, building finite state machines (FSM) for trade lifecycles, or implementing error-aware state rollbacks in quantitative trading environments like NautilusTrader.
-filePattern: "**/*.py"
-bashPattern: "pytest|unittest|python"
+name: apex-trader
+description: Activates when translating price action or order flow into deterministic code, designing automated trade execution logic, building quantitative event-driven trading engines, or architecting programmatic risk and state management protocols.
 ---
 
 ## The Iron Law
 
 ```text
-Trade lifecycles must be formalized as deterministically closed Finite State Machines (FSM) executing concrete programmatic logic—specifically array index inequalities, absolute price differentials, and boolean gates—mandating error-aware rollbacks for asynchronous failures while strictly rejecting subjective state management.
+Subjective market theories must be translated into explicit, computable definitions using exact programmatic constructs—array index inequalities, absolute mathematical thresholds, boolean gates, and bounded Finite State Machines (FSM)—to guarantee unambiguous automated execution.
 ```
 
 ## Behavioral Rules
 
-*   **Implement Event-Driven Execution:** Build automated trading pipelines using high-performance, event-driven architectures (e.g., NautilusTrader) to process microstructure-level ticks and enforce zero logic drift between backtesting and live production.
-*   **Enforce FSM State Closures:** Formalize every discrete phase of a trade (entry routing, partial take-profits, trailing stop activation) as an explicit FSM state.
-*   **Mandate Mathematical Transitions:** Trigger state transitions strictly using explicit, computable numeric thresholds, such as absolute price differentials, N-bar window logic, or Average True Range (ATR) volatility thresholds.
-*   **Program Error-Aware Rollbacks:** Construct error-handling logic to immediately revert to mathematically safe FSM states when confronting asynchronous exchange API drops, partial fills, or disconnected websockets to prevent execution deadlocks.
-*   **Align Multi-Timeframe Logic:** Utilize concurrent state machines to enforce fractal structural alignment, ensuring higher-timeframe states function as rigid boolean directional filters for lower-timeframe execution triggers.
-*   **Synchronize Signals and Execution:** Couple your mathematical signal generation directly with your FSM architecture; never decouple the quantitative arrays that detect a setup from the specific execution state that routes the order.
-*   **Filter Phase Lag Deterministically:** Process time-series data using structural baseline tracking that eliminates phase lag, but rely on generalized deterministic logic and boolean structures rather than over-constraining the model to hyper-specific mathematical indicator formulas.
-*   **Encode Risk into Transitions:** Bind strict programmatic risk and position-sizing variables directly into the entry execution state logic, enforcing maximum risk ceilings via concrete numeric boundaries.
+*   **Execution Architecture Integration:** When constructing automated trade lifecycles, encase the logic in closed Finite State Machines (FSMs) deployed on event-driven engines (like NautilusTrader), ensuring that every environmental state (e.g., partial fills, API drops) maps to a strictly defined rollback or reactive state.
+*   **Mathematical Risk Encoding:** Before calculating position size, enforce a hardcoded fixed equity risk bounds (0.1% to 1.0% per trade) and require an algorithmically calculated minimum 1:3 Risk-to-Reward matrix, defining the absolute invalidation level (stop loss) strictly by the structural range boundary.
+*   **OFI and Microstructure Validation:** When validating breakouts or identifying institutional displacement, require Depth-5 Tick-Level Order Flow Imbalance (OFI) regression calculations to confirm true displacement, filtering out top-of-book (L=1) spoofing noise.
+*   **Programmatic Signal Definition:** When mapping price structures (such as FVGs or CHoCH), define them using exact time-series array logic, mathematical >4 standard deviation bounds, and concrete 50% midpoint targeting (Consequent Encroachment) rather than abstract visual descriptors.
+*   **Volume Normalization:** Before executing any volume-based filters, normalize volume data using session-specific windows (e.g., New York Opening Range) and calculate using statistical z-scores to isolate true excess from idiosyncratic spikes.
+*   **Deterministic Exits:** Once an FSM enters an active execution state, define trade exits strictly as functions of algorithmic Stop-Loss or dynamic POC targets; never implement discretionary timeouts or undefined open loops.
 
 ## Red Flags
 
-| Domain-Specific Rationalization | Why Wrong |
+| Rationalization | Why It's Wrong |
 | :--- | :--- |
-| "Using kinematic validation to track the momentum state change." | Introduces physics-adjacent jargon that contaminates execution vocabulary; use explicit boolean gates and array indexing instead. |
-| "Abstracting the execution via stateful object-oriented sanitization." | Replaces precise mathematical operations and quantitative execution arrays with unactionable, superficial programming buzzwords. |
-| "Tracking trade progress using loosely updated global variables." | Fails to enforce mathematically closed FSM boundaries, leading to undefined system states during sudden market volatility or API disconnection. |
-| "Focusing entirely on FSM states without defining signal logic." | Over-specializes the execution architecture while starving the algorithm of the absolute price logic and ATR boundaries required to generate real trades. |
-| "Enforcing bi-directional Zero-Phase Filters for all momentum states." | Over-constrains the logic with hyper-specific mandates that conflict with broad, robust, programmatic trade lifecycle execution. |
+| "I will trigger the entry when price looks overextended on the chart." | Violates the core mandate of formalization. Exhaustion must be defined programmatically via calculated Open Interest density thresholds or precise deviation bands. |
+| "We can manage the exit manually if exchange latency spikes during the news." | Automated trade lifecycles must have mathematically closed state spaces with pre-programmed, error-aware rollback protocols to handle disconnects. |
+| "Let's use Level 1 order book data to detect institutional involvement quickly." | Top-of-book (L=1) data is heavily spoofed. Institutional displacement requires structural metrics like Depth-5 Tick-Level OFI for reliable confirmation. |
+| "If the FSM fails to hit the TP, we will rely on kinematic variance to exit." | Replaces computable array logic with meaningless buzzwords. Exits must be driven by deterministic variables, not contrived cross-domain jargon. |
+| "We will determine position sizing based on standard indicator confidence." | Risk must be quantified as an explicit absolute percentage constraint (0.1%-1.0%) with mathematical expectation matrices, not arbitrary "confidence" variables. |
 
 ## Quick Reference
 
-| Architecture Component | Formalization Mandate |
+| Allowed Pattern | Forbidden Pattern |
 | :--- | :--- |
-| **Trade Lifecycle** | Model strictly as a Finite State Machine (FSM) with closed boundaries. |
-| **Execution Infrastructure** | Utilize event-driven, low-latency queues (e.g., NautilusTrader). |
-| **State Transitions** | Trigger via array index inequalities, absolute prices, and booleans. |
-| **Error Handling** | Program deterministic rollbacks for all asynchronous API/network failures. |
-| **Multi-Timeframe Structure** | Deploy concurrent FSMs where HTF booleans filter LTF order execution. |
-| **Risk Encoding** | Hardcode exact dynamic sizing logic into the 'Active/Entry' state transition. |
+| Depth-5 Order Flow Imbalance (OFI) | Top-of-Book (L=1) signal isolation |
+| Array index inequalities & absolute math | Visual shape or chart pattern guessing |
+| Bounded FSM with rollback states | Unbounded/open execution loops |
+| Exact fixed fractional risk (0.1%-1.0%) | Discretionary / dynamic unit sizing |
+| ATR-scaled dynamic memory arrays | Static indicator values (e.g., RSI > 70) |
+| Session-normalized Volume Z-Scores | Raw / Absolute volume comparison |
 
 ## Knowledge Base
 When detailed knowledge context is needed, read `references/digest.md` for the full knowledge digest.
