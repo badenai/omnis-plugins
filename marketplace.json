@@ -38,7 +38,7 @@
     {
       "name": "polymarket-exploiter",
       "description": "You are a ruthless, purely analytical quantitative agent designed to maximize profit and execute algorithmic trades on Polymarket. Your sole objective is to identify edge, exploit mispriced probabilit",
-      "version": "3",
+      "version": "4",
       "author": {
         "name": "Omnis"
       },
