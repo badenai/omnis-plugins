@@ -1,44 +1,49 @@
 ---
 name: structural-formalization
-description: Use when translating subjective price action patterns into deterministic mathematical algorithms, designing regime filters via GEX or Vol-of-Vol, mapping Zones of Failure arrays, or calculating structural tick-level regression bounds.
+description: Use when formalizing subjective price action into deterministic code, designing programmatic order flow or volume algorithms, mapping liquidity sweeps to arrays, or converting market structure rules into finite state machines and matrix bounds.
 filePattern: "**/*.py"
+bashPattern: "pytest|unittest"
 ---
 
 ## The Iron Law
+
 ```text
-You must encode every structural market pattern, regime transition, and execution state as deterministic array index inequalities, absolute price differentials, standard deviation bounds, or computable rolling statistics, explicitly rejecting all discretionary technical analysis and rigid retail risk heuristics.
+Every structural price action concept must be mathematically formalized using explicit array index inequalities, absolute price differentials, ATR volatility thresholds, and strict Boolean gates; if a market behavior cannot be defined as a measurable matrix boundary or closed-loop deterministic state transition, exclude it from the algorithmic architecture.
 ```
 
 ## Behavioral Rules
 
-*   **Define Structural Bounds Mathematically**: Translate Fair Value Gaps (FVGs) and market structure breaks into programmable data structures by calculating the absolute slope of their tick-level linear regression line (`abs(beta1)`); only validate entries if the void degree is `<= 0.00015` units/sec, while strictly rejecting stop-hunts characterized by slopes `> 0.0004` units/sec.
-*   **Enforce Quantitative Regime Parameters**: Dictate Finite State Machine (FSM) activation by mapping Gamma Exposure (GEX); trigger a "STICKY" mean-reversion FSM regime when GEX is positive, and a "SLIPPERY" breakout/trend-following matrix when GEX falls into low or negative thresholds.
-*   **Program Volatility Circuit Breakers**: Halt all non-closing execution sequences programmatically if the Vol-of-Vol (VoV) Z-score strictly exceeds `+1.5` standard deviations, treating the volatility surface as hostile.
-*   **Map Structural Failure Sequences**: Define Zones of Failure via an explicit 3-vector rolling array sequence (`[Array 1: High]`, `[Array 2: Retracement/Secondary Pump]`, `[Array 3: Failure to Gain]`); lock short execution strictly to Array 3 overlaps concurring with volume expansion bounds exceeding `1.5x` Relative Volume (RVOL).
-*   **Encode Execution in Closed-Loop Architecture**: Decouple underlying signal generation mathematics (e.g., ATR volatility boundaries, absolute price differentials) from the FSM trade lifecycle execution; ensure all execution logic routes through explicit deterministic states (`PRE_INITIALIZED`, `READY`, `RUNNING`, `STOPPED`, `DEGRADED`, `FAULTED`).
-*   **Extract Microstructure Displacements**: Compute Order Flow Imbalance (OFI) scaled rigidly between `-1.0` and `+1.0`; aggregate volumetric imbalances to a strict Limit Order Book depth of 5 (L=5) to strip spoofing noise and elevate predictive correlation without introducing lag.
-*   **Utilize Dynamic Volatility Memory**: Filter out low-volatility structural gaps dynamically using explicit Average True Range (ATR) multipliers; encode valid volatility-scaled gaps as strict `[Lower_Bound, Upper_Bound]` state transitions for programmatic stop-trailing matrices.
-*   **Implement Error-Aware Rollbacks**: Force the FSM into a `FAULTED` state immediately upon detecting arithmetic overflow, unhandled tick latency, or partial fills, executing a deterministic state rollback to avert compounding execution errors.
+*   **Matrix Boundary Extraction:** Always translate subjective charting concepts (e.g., Fair Value Gaps, structural breaks, liquidity sweeps) strictly into computable matrix arrays and precise N-period dynamic rolling thresholds.
+*   **FVG Formalization:** If defining a Fair Value Gap (FVG), validate institutional displacement strictly by measuring the absolute slope and applying a threshold velocity (e.g., <= 0.00015 units/sec) on its tick-level regression to filter algorithmic noise.
+*   **ATR-Scaled Invalidation:** When building structural boundary arrays, scale memory buffers against dynamic Average True Range (ATR) vectors to manage dynamic invalidation trailing and trigger immediate state control flips upon breach.
+*   **FSM Gated Breakouts:** Structure breakout algorithms to require a minimum 3-candle imbalance array natively bound to an N-period dynamic rolling min/max threshold, setting extreme node array sequence invalidation as the absolute risk cutoff.
+*   **Order Flow Imbalance (OFI):** When calculating order flow dynamics, aggregate volumetric imbalance up to 5 levels deep (Depth-5 Level 2 regression) to accurately model institutional displacement and mitigate Level 1 (BBO) spoofing vulnerabilities.
+*   **Programmatic Volume Profiling:** If tracking volume distributions, strictly bin tick volume into quintiles using NumPy, isolate the 80th percentile for High-Volume Nodes (HVN), and map Point of Control (POC) migration mathematically via percentage distance arrays.
+*   **Regime State Switching:** Use quantitative baseline states—such as Gamma Exposure (GEX) polarity and Vol-of-Vol Z-Scores—to strictly toggle algorithmic execution logic (e.g., mandate range-equilibrium mean reversion during positive GEX; enable breakout finite state machines during negative GEX).
+*   **Structural Failure Encoding:** Map zones of structural failure by indexing exactly three strict programmatic attempts to breach an array maximum, triggering counter-trend execution exclusively upon the mathematical divergence of the third node.
+*   **Deterministic Risk Enforcement:** Always enforce a programmatic 1:3 R-multiple breakeven state constraint and multi-asset walk-forward validation prior to state activation; never initialize a sequence without deterministic closure logic.
+*   **High-Frequency Execution Architecture:** If processing tick-level event arrays, implement Numba JIT compilation to bypass standard data frame execution latency and enable sub-microsecond structural break evaluation via Chu-Stinchcombe-White CUSUM tests.
+*   **Event-Driven Error Handling:** Design closed-loop Finite State Machine (FSM) component lifecycles with strict fail-fast arithmetic overflow policies; cascade the execution framework immediately to a faulted state if timestamp or volumetric arrays overflow.
 
 ## Red Flags
 
-| Pattern | Why it Fails (Domain-Specific Rationalization) |
+| Rationalization / Concept | Why Wrong |
 | :--- | :--- |
-| Injecting physics buzzwords (e.g., "kinematic validation", "kinematic variance") | **Vocabulary contamination.** Replaces concrete programmatic concepts like boolean gates and array index inequalities with unactionable, meaningless jargon. |
-| Hardcoding "Stop-Loss (SL)", "Take-Profit (TP)", or arbitrary `1%` risk heuristics | **Retail jargon contamination.** Replaces programmable R-multiple matrices, ATR-bounded state transitions, and absolute mathematical position sizing with brittle discretionary retail logic. |
-| Over-specializing strategy entirely into FSM architecture while omitting numerical thresholds | **Scope over-specialization / Instruction deletion.** Starves the algorithm of necessary mathematical rigor by stripping out the concrete quantitative metrics (e.g., ATR boundaries, standard deviation bounds) needed for signal validation. |
-| Replacing L2 depth Order Flow Imbalance (OFI) with simple "N-bar swing logic" | **Quantitative logic dilution.** Severely weakens the system's ability to programmatically model complex market microstructure and institutional displacement dynamics. |
-| Masking basic arithmetic with terms like "stateful object-oriented array sanitization" | **Superficial algorithmic over-engineering.** Artificially inflates standard calculations with verbose object-oriented terminology, resulting in imprecise and bloated code directives. |
-| Defining structural shifts using formatting symbols (e.g., $\rightarrow$, $\le$) instead of operators | **Execution abstraction.** Abstracts explicit code-level directives and numerical boolean operations (`<=`, `>`, `==`) behind formatting syntax, diminishing direct machine interpretability. |
+| Using "Kinematic validation" or "velocity vectors" without price differential definitions | Contaminates vocabulary with cross-domain physics jargon; abstracts away actionable array and matrix indexing logic. |
+| Implementing "Stop-Loss (SL)" or "Take-Profit (TP)" retail heuristic variables | Relies on brittle retail jargon rather than deterministic R-multiple state scaling and programmatic extreme node sequence invalidations. |
+| Restricting position sizing to "0.1% to 1.0%" hardcoded risk parameters | Replaces dynamic correlation elasticity matrices and exposure compression protocols with arbitrary, inflexible retail percentages. |
+| Substituting array inequalities with generic "stateful object-oriented sanitization" | Employs superficial OOP buzzwords that starve the algorithm of the explicit mathematical operators needed for quantitative code. |
+| Defining breakouts via "N-bar swing logic" or simple price action crossovers | Dilutes market microstructure modeling; ignores standard deviation bounds, Order Flow Imbalance arrays, and depth regression mechanics. |
+| Executing standard lagging MACD/RSI calculations | Introduces structural phase distortions; deterministic systems require Zero-Phase Filters (ZPF) or bidirectional real-time cross-track computations. |
 
 ## Quick Reference
 
-| Concept | Deterministic Translation | Computable Threshold / Implementation |
-| :--- | :--- | :--- |
-| **FVG Structural Validation** | Tick-Level Linear Regression Slope | `abs(beta1) <= 0.00015` units/sec (Valid); `> 0.0004` (False) |
-| **Regime State Switch (GEX)** | Gamma Exposure Polarity Matrix | `GEX > 0` = STICKY (Range); `GEX <= 0` = SLIPPERY (Trend) |
-| **System Circuit Breaker** | Vol-of-Vol (VoV) Z-Score Limit | Halt non-closing executions if `VoV_Z > +1.5` sigma |
-| **Order Flow Imbalance (OFI)** | Aggregated LOB Volumetric Matrix | Compute strictly from `-1.0` to `+1.0` at Depth `L=5` |
-| **Zones of Failure** | Rolling Array Sequence + RVOL | `[High, Retrace, Fail]` vector overlap + `Volume > 1.5x RVOL` |
-| **Execution Architecture** | Decoupled Closed-Loop FSM | `READY`, `RUNNING`, `STOPPED`, `FAULTED` strict enforcements |
-| **Programmatic Stop Bounds** | Volatility-Scaled FVG Dynamic Array| `[Lower_Bound, Upper_Bound]` state transitions mapped to ATR |
+| Subjective Concept | Deterministic Algorithmic Formalization |
+| :--- | :--- |
+| **Fair Value Gaps (FVG)** | Absolute slope tick-level regression velocity bound within dynamic ATR-scaled upper/lower boundary arrays. |
+| **Structural Breakouts** | 3-candle imbalance arrays bounded by N-period dynamic rolling min/max index thresholds. |
+| **High-Volume Nodes (HVN)** | 80th percentile NumPy volume binning mapping deterministic POC percentage distance arrays. |
+| **Institutional Displacement** | Depth-5 Order Flow Imbalance (OFI) scaling from -1.0 to +1.0 concurrent with standard deviation boundary expansion. |
+| **Trend Exhaustion (ZPF)** | Indexed array sequences measuring 3 strict mathematical divergences against an N-period rolling array maximum. |
+| **Liquidation Cascades** | Instantaneous programmed absolute price drops concurrent with isolated open interest (OI) metric collapse. |
+| **Risk Encoding** | Closed-loop Finite State Machines enforcing strict 1:3 R-multiple matrix constraints and sequence bounds. |
