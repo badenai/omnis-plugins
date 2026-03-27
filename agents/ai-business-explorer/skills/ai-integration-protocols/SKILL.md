@@ -1,40 +1,39 @@
 ---
 name: ai-integration-protocols
-description: Use when evaluating B2B integration startups, Model Context Protocol (MCP) tooling, WebMCP standards, Agent-to-Agent (A2A) middleware, micro-transaction routing, and machine-to-machine orchestration business models.
+description: Use when analyzing business models, micro-SaaS opportunities, or market strategies related to multi-agent architectures, Model Context Protocol (MCP), Agent-to-Agent (A2A) frameworks, WebMCP standards, and agent API gateways.
 ---
 
 ## The Iron Law
 
 ```text
-Never evaluate an A2A or MCP integration startup strictly on its technical architecture; you must explicitly assess its economic defensibility by analyzing its micro-transaction toll-road model, its capability to replace human OPEX, and its implementation of Agentic FinOps guardrails.
+Always evaluate AI integration protocols (MCP, A2A, WebMCP) as economic catalysts for intelligence arbitrage, explicitly rejecting any architectural analysis that fails to address SLM margin protection, consumption pricing, or a strict Liability Moat.
 ```
 
 ## Behavioral Rules
 
-*   **Enforce Micro-transaction Economics:** If evaluating an A2A middleware solution, demand consumption-based micro-transaction pricing models (e.g., API toll roads charging per machine-to-machine cross-talk) over legacy per-seat SaaS licensing.
-*   **Mandate Capability-First Authorization:** When assessing agent identity and trust platforms, require cryptographic, capability-first scoped authorization (e.g., SD-JWT chains for verifiable intent) rather than legacy "app-first" OAuth.
-*   **Validate WebMCP Readiness:** If a web-automation startup relies on brittle DOM-scraping, reject the architecture and mandate a transition to native WebMCP (`navigator.modelContext`) machine-readable standards.
-*   **Require Margin Protection:** When analyzing AI API gateways (e.g., MCP Managers), verify the inclusion of intent-based semantic caching and GitOps governance to explicitly slash frontier model costs and protect B2B margins.
-*   **Enforce Agentic FinOps:** If reviewing multi-agent orchestration deployments (e.g., LangGraph delegating to CrewAI), automatically flag any architecture lacking hard spending limits and agentic observability to prevent infinite loop API credit burns.
-*   **Preserve the Liability Moat:** Reject horizontal protocol wrappers; mandate that any A2A workflow targets specific, highly regulated vertical silos (e.g., Healthcare RCM, compliance) to convert protocol integration into a defensible Compliance Moat.
-*   **Assess Headless SaaS Viability:** When evaluating B2B micro-SaaS, evaluate its backend utility purely as "Headless SaaS" operating natively within MCP Apps interfaces, rather than relying on standalone frontend acquisition.
+*   Assess MCP and A2A architectures strictly through the lens of intelligence arbitrage, focusing on how these protocols replace OPEX-heavy manual workflows in legacy service businesses.
+*   If a startup pitches a generic orchestration protocol wrapper or API connector, reject it immediately unless it demonstrates a clear Liability Moat in a complex, regulated vertical (e.g., Agentic RCM).
+*   When analyzing WebMCP and browser protocol opportunities, prioritize Agent Experience Optimization (AXO) and machine-executable data layers over traditional human-centric web development or SEO.
+*   Mandate "Agentic FinOps" (semantic caching, edge/local SLM routing, batching) when evaluating multi-agent orchestration frameworks to ensure "autopilot economics" and prevent high-frequency LLM API bankruptcy.
+*   Evaluate A2A middleware startups based on their capacity to capture micro-transactions or act as B2B API "toll roads" for autonomous machine-to-machine commerce.
+*   If assessing enterprise MCP Gateways or agent orchestration control planes, require robust agent-centric identity solutions (verifiable intent, scoped SD-JWTs) to solve the enterprise OAuth authorization gap.
+*   Anchor multi-agent graph architectures (e.g., LangGraph) to vertical systems of action that execute deterministic, end-to-end workflows rather than open-ended conversational orchestration.
 
 ## Red Flags
 
-| Rationalization | Why it Fails |
+| Rationalization | Why it indicates strategic failure |
 | :--- | :--- |
-| "We charge $30/month per seat for our agent orchestration platform." | Collapses under the deflationary pressure of Agentic AI; ignores A2A consumption-based micro-transaction economics. |
-| "Our agent relies on advanced DOM scrapers to interact with enterprise sites." | Ignorant of the WebMCP transition and Agent Experience Optimization (AXO) rendering scrapers obsolete. |
-| "We use standard OAuth to let the autonomous agent act on behalf of the user." | Lacks verifiable intent; exposes enterprises to massive security risks without capability-first scoped authorization. |
-| "We built a universal MCP router to connect any LLM to any database." | Represents a generic horizontal integration lacking a Vertical Autopilot Economics or Liability Moat. |
-| "Our agents negotiate tasks until the job is fully completed." | Highly dangerous without Agentic FinOps; invites infinite loop execution and catastrophic API billing exhaustion. |
+| "Our MCP architecture seamlessly connects 100+ standard SaaS APIs for broad applicability." | Horizontal protocol connections lack defensibility; without a Liability Moat, native platforms will immediately commoditize the integration layer. |
+| "We charge a standard $20/month per-seat SaaS license for our A2A orchestration tool." | A2A protocols unlock machine-to-machine commerce; failing to utilize consumption-based micro-transactions misaligns the business from true autopilot economics. |
+| "We are building a visually stunning, comprehensive dashboard to manage our AI agents." | WebMCP and MCP Apps (SEP-1865) push UI directly to the AI client/browser; investing heavily in standalone human UI ignores the shift toward headless agentic execution. |
+| "Routing all multi-agent A2A steps through the largest foundation models ensures optimal reasoning." | High-frequency agentic loops using massive models are financially ruinous; defensible architectures demand Agentic FinOps and heavy reliance on 1B-7B parameter SLMs. |
 
 ## Quick Reference
 
-| Integration Layer | Technical Standard | Economic / Strategic Moat |
+| Protocol / Layer | Core Function | Business Moat / Economic Heuristic |
 | :--- | :--- | :--- |
-| **Agent-to-Tool** | Model Context Protocol (MCP) | Headless SaaS backend utility; Semantic caching margins |
-| **Agent-to-Agent (A2A)** | LangGraph / Orchestration | Micro-transaction toll roads; OPEX labor replacement |
-| **Agentic Identity** | Verifiable Intent (SD-JWT) | Enterprise governance; Liability moats |
-| **Web Interaction** | WebMCP / AXO | Machine-readable API access over brittle DOM scraping |
-| **Agentic FinOps** | API Gateways / Spend Limits | Prevention of runaway execution costs; Observability |
+| **Model Context Protocol (MCP)** | Agent-to-Tool vertical communication | Liability Moats; embedding agents deeply into localized, compliance-heavy workflows. |
+| **Agent-to-Agent (A2A)** | Horizontal multi-agent collaboration | Intelligence Arbitrage; OPEX replacement via B2B micro-transactions and automated task delegation. |
+| **WebMCP / AXO** | Machine-readable website tool declaration | Agent Experience Optimization (AXO); structuring web data for ingestion and direct agentic execution. |
+| **MCP Gateways** | API management for AI consumers | Agentic FinOps & Governance; verifiable intent, identity-as-a-service, and semantic caching. |
+| **Graph Frameworks** | Deterministic multi-agent routing | Vertical Systems of Action; turning probabilistic AI into auditable, end-to-end industry workflows. |
