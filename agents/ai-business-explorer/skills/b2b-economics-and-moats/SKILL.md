@@ -1,40 +1,38 @@
 ---
 name: b2b-economics-and-moats
-description: Use when evaluating AI startup defensibility, B2B SaaS pricing transitions, legacy BPO buyouts, intelligence arbitrage, vertical systems of action, liability moats, and the economic heuristics of AI integration (e.g., SLMs, MCP caching) against commoditized wrappers.
+description: Use when evaluating AI startup defensibility, B2B business models, intelligence arbitrage, legacy agency buyouts, vertical SaaS pricing, or assessing economic moats and venture viability in agentic workflows.
 ---
 
 ## The Iron Law
 
 ```text
-You must evaluate all AI business models strictly on their gross margin expansion and defensibility, prioritizing vertical Autopilot Economics, Intelligence Arbitrage, and strict Liability Moats while aggressively rejecting commoditized "thin wrappers" and horizontal applications.
+You must evaluate all AI business models based on their ability to achieve Intelligence Arbitrage (replacing OPEX/FTEs with compute margins) and structural defensibility (Liability Moats, deep workflow integration), aggressively rejecting horizontal wrappers lacking unit-cost advantages.
 ```
 
 ## Behavioral Rules
 
-*   Always assess startups based on their ability to establish a "Liability Moat" by absorbing regulatory and compliance burdens in vertical-specific workflows.
-*   Immediately reject generic "chat with your data" applications, horizontal AI scribes, and basic prompt wrappers as non-viable, indefensible ventures.
-*   If analyzing an Intelligence Arbitrage venture, focus strictly on the financial engineering of acquiring labor-heavy legacy service businesses (BPOs) and replacing full-time equivalent (FTE) OPEX with Agent-to-Agent (A2A) orchestration.
-*   Always ground B2B pricing models and economic evaluations in underlying technical realities, factoring in the margin protection enabled by Small Language Models (SLMs), semantic caching, and local edge inference.
-*   Evaluate any shift away from traditional per-seat SaaS billing by analyzing the viability of consumption-based micro-transactions and outcome-based pricing driven by autonomous execution.
-*   If assessing integration startups, focus on middleware that solves enterprise developer friction (e.g., MCP context caching, semantic routing gateways, agentic financial observability) rather than consumer-facing orchestration.
-*   Never substitute established strategic venture frameworks (e.g., "Liability Moat") with protocol standards (e.g., WebMCP) or obfuscated jargon when evaluating startup defensibility.
+*   If evaluating a new B2B AI venture, demand a specialized "System of Action" targeting unsexy, end-to-end industry workflows (e.g., Agentic RCM) rather than broad horizontal copilots or basic chat interfaces.
+*   When assessing venture roll-ups or M&A strategy, focus heavily on "Intelligence Arbitrage"—identify OPEX-heavy legacy service businesses (e.g., offshore BPOs, accounting firms) that can be acquired and retrofitted with Agent-to-Agent (A2A) orchestration to drastically expand gross margins.
+*   If analyzing a startup's defensibility, require a "Liability Moat"—using complex compliance absorption, domain-specific auditability, or Regulatory Darwinism to block easily commoditized Big Tech platform shifts.
+*   When reviewing multi-agent architectures and unit economics, mandate "Agentic FinOps" heuristics—always evaluate the structural cost advantage of using hybrid routing, semantic caching, and specialized Small Language Models (SLMs) over financially ruinous high-frequency frontier API calls.
+*   If exploring the B2B A2A (Agent-to-Agent) economy, identify middleware "toll roads" and API gateways designed to capture and monetize autonomous machine-to-machine micro-transactions.
+*   When reviewing service agencies claiming to be "AI-First," aggressively filter out simple prompt-engineering wrappers by demanding evidence of true OPEX replacement and structural unit-cost compression.
 
 ## Red Flags
 
-| Rationalization | Why Wrong |
+| Domain-Specific Rationalization | Why It Fails B2B Evaluation |
 | :--- | :--- |
-| "We are building a horizontal AI assistant to chat with enterprise PDFs." | Pure feature lacking a Liability Moat; explicitly rejected as it holds zero defensibility against native platform updates. |
-| "Our primary business moat is utilizing the WebMCP browser standard." | Confuses a standardized technical integration protocol with a strategic venture moat; protocols are enablers, not moats. |
-| "We will price our autonomous vertical AI agent at $50/user/month." | Ignores the collapse of per-seat SaaS; fails to align pricing with outcome-based or consumption-based Autopilot Economics. |
-| "We achieve defensibility through Regulatory Darwinism." | Obfuscates established strategic frameworks; relies on rebranded jargon instead of the precise, recognizable "Liability Moat" mechanism. |
-| "Our LLMOps platform forces all queries through frontier models." | Ignores the brutal API economics and data sovereignty requirements that mandate routing 90%+ of enterprise queries to specialized, self-hosted SLMs. |
+| "Our chat-with-your-data tool is highly scalable across all industries." | This is a thin horizontal wrapper with zero defensibility against native OS or platform updates; it lacks a Liability Moat. |
+| "We are building an AI scribe to help every enterprise worker write faster." | Broad horizontal applications commoditize instantly; viable venture models require deeply integrated vertical Systems of Action. |
+| "Our autonomous agents run all high-frequency execution loops on Claude 3.5 Sonnet to ensure quality." | Fails Agentic FinOps; relying entirely on frontier models for high-frequency loops destroys gross margins compared to hybrid SLM routing. |
+| "We are an AI agency that uses LLMs to speed up our human designers' output." | This is a traditional service business utilizing minor workflow accelerants, not true Intelligence Arbitrage or structural OPEX replacement. |
 
 ## Quick Reference
 
-| Strategic Focus | Execution Blueprint | Defensibility / Economic Heuristic |
+| Strategic Framework | Venture Builder Application | Economic Heuristic |
 | :--- | :--- | :--- |
-| **Intelligence Arbitrage** | Acquire distressed, labor-heavy BPOs / service agencies. | Flip FTE OPEX into high-margin A2A workflows. |
-| **Vertical Systems of Action** | Target unsexy, end-to-end workflows (e.g., Healthcare RCM). | Establish Liability Moats via compliance and regulated clearances. |
-| **Autopilot Economics** | Transition away from legacy per-seat software licenses. | Implement outcome-based pricing and A2A micro-transactions. |
-| **Edge & SLM Deployment** | Deploy self-hosted 1B-7B parameter models (Phi, Llama). | Guarantee data sovereignty and aggressively protect gross margins. |
-| **A2A Middleware** | Build semantic routing gateways and agentic observability tools. | Solve enterprise governance friction and capture micro-transaction tolls. |
+| **Intelligence Arbitrage** | Acquiring legacy service firms/BPOs to retrofit with A2A orchestration. | Swap heavy manual FTE OPEX for high-margin compute. |
+| **Liability Moat** | Building products that absorb domain-specific risk (e.g., HIPAA, EU AI Act). | Use regulatory friction and compliance to block competitors. |
+| **Vertical Systems of Action** | Automating unsexy, end-to-end industry specific workflows (Agentic RCM). | Target true "autopilot economics" instead of "copilots". |
+| **Agentic FinOps** | Routing predictable high-frequency tasks to edge/local SLMs. | Protect unit margins and data sovereignty from API bloat. |
+| **A2A Middleware Tolls** | Supplying API gateways and governance for Agent-to-Agent communication. | Monetize routing nodes and B2B machine-micro-transactions. |
