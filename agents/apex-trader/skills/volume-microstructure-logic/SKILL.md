@@ -1,43 +1,42 @@
 ---
 name: volume-microstructure-logic
-description: Use when building deterministic volume profile matrices, order book microstructure logic, POC migration tracking, HVN absorption algorithms, and Depth 5 Order Flow Imbalance (OFI) processing.
+description: Use when designing tick-level order book algorithms, calculating Order Flow Imbalance (OFI) at specific book depths, formalizing volumetric imbalance mechanics, or vectorizing raw trade sequences for programmatic liquidity tracking and low-latency execution systems.
 filePattern: "**/*.py"
 ---
+
 ## The Iron Law
 
 ```text
-You must formalize Volume Profile and Order Book Microstructure exclusively through strict programmatic data structures: exact array index inequalities, Boolean logic gates, absolute price differentials, and N-bar window logic. Never abstract volume or depth mechanics into visual charting concepts, physics-adjacent jargon, generic object-oriented buzzwords, or retail acronyms (e.g., SL/TP). Every volume node, point of control, and order flow imbalance must be evaluated as a mathematically computable array.
+You must formalize all microstructure and order flow concepts into strictly computable multi-dimensional arrays, absolute price differentials, and threshold-gated Boolean logic. You must process top-of-book and depth-of-book events using exact array indexing and standard deviation bounds, never relying on lagging retail heuristics, subjective price action interpretations, or unquantifiable momentum approximations.
 ```
 
 ## Behavioral Rules
 
-*   When identifying High-Volume Nodes (HVNs), strictly bin tick data into quintiles using NumPy and classify the 80th percentile as the executable HVN threshold array.
-*   Compute Point of Control (POC) migration as a deterministic absolute velocity array (e.g., `df['poc_distance_pct']`) to trigger mathematically rigorous mean-reversion targets via POC Gap Determinism logic.
-*   When calculating Order Flow Imbalance (OFI), strictly process the data at Depth 5 (L=5) of the order book to generate a non-lagging probabilistic scalar.
-*   Discard Top-of-Book (L=1) order flow data unconditionally as spoofing noise; never utilize L1 for institutional displacement algorithms.
-*   Confirm institutional displacement intent at breakout vectors by computing the deterministic proxy scalar: `Daily Return * (Current Volume / 50-day SMA Volume)`.
-*   Utilize Numba Just-In-Time (JIT) compilation to bypass standard Python latency when structuring high-frequency tick data arrays and processing absolute volume matrices.
-*   Govern risk on volume-validated signals by mapping explicit R-multiple matrices, ATR volatility thresholds, and strict array-driven scale-out logic instead of hardcoding arbitrary percentage heuristics or retail stop mechanisms.
-*   Strip out all physics-adjacent terminology when describing volume dynamics; represent structural expansions explicitly through array indices and absolute numerical differentials.
-*   Define intraday volume execution regimes exclusively via Gamma Exposure (GEX) binary state flags, ensuring state changes are governed by precise mathematical boundaries, not qualitative descriptions.
+*   **Order Flow Imbalance Formulation**: When calculating Order Flow Imbalance (OFI), you must compute volumetric imbalance strictly at a depth of 5 levels (L=5) using explicit array subtraction and bid/ask queue size differentials to isolate predictive deterministic signals from top-of-book spoofing noise.
+*   **Raw Trade Vectorization**: If processing raw asynchronous trade sequences, you must utilize Numba JIT compiled functions to vectorize tick-level data directly into information-driven volume bars, completely bypassing non-deterministic, time-based pandas aggregations.
+*   **Liquidation Cascade Mapping**: When tracking exchange forced closures, you must cross-reference Open Interest (OI) destruction divergences against localized exchange reserves using explicit array inequalities to pinpoint the exact failure depths where order books mathematically break.
+*   **Volume-Validated Expansion**: If defining structural breakout states, you must algorithmically verify volumetric proof-of-work by requiring a localized Volume Z-Score acceleration strictly greater than a predefined standard deviation threshold; otherwise, you must programmatically categorize the movement as a low-conviction liquidity hunt and trigger a reversion state.
+*   **Execution Architecture Governance**: When mapping the trade lifecycle for microstructure events, you must implement a closed-loop Finite State Machine (FSM) that dictates deterministic state transitions, queue position probability modeling, and error-aware rollbacks without ever utilizing retail stop-loss abstractions.
+*   **Dynamic Volatility Scaling**: You must scale all structural boundaries, imbalance memory arrays, and risk constraints using dynamic Average True Range (ATR) threshold multipliers and R-multiple breakeven definitions rather than hardcoded percentage risk heuristics.
+*   **Point of Control (POC) Determinism**: If tracking volume profiles across multiple sessions, you must define POC migration and VWAP relative-positioning using exact coordinate arrays to construct high-probability mean-reversion anchors based on continuous out-of-sample data.
 
 ## Red Flags
 
 | Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "Using Top-of-Book volume to measure order flow pressure." | Top-of-Book (L=1) is spoofing noise; OFI must be computed strictly at Depth 5 (L=5) to form a valid, non-lagging probabilistic scalar. |
-| "The POC migrated rapidly, demonstrating high kinematic momentum." | Violates anti-patterns by using physics-adjacent jargon; POC migration must be defined strictly via a computable numeric array (e.g., `poc_distance_pct`). |
-| "Setting a trade with a 1% SL and 3% TP for the HVN bounce." | Violates the Iron Law by injecting retail jargon and arbitrary heuristics instead of enforcing programmable mathematical R-matrices and array-based risk states. |
-| "Finding the volume value area by abstracting a stateful object-oriented data array." | Utilizes empty programming buzzwords instead of defining the explicit NumPy quintile binning and 80th-percentile HVN logic required for deterministic code. |
-| "Using K-Nearest Neighbors to predict POC target zones." | Violates quantitative constraints by substituting exact mathematical array structural processing with contradictory machine-learning classifiers lacking walk-forward logic. |
+| "We can use top-of-book (L=1) flow for faster signal generation." | Top-of-book order flow is highly susceptible to spoofing and introduces computational noise, corrupting the deterministic validity of the volumetric imbalance signal. |
+| "Let's implement a standard SL/TP heuristic of 0.5% risk for this strategy." | Hardcoded percentage heuristics and retail risk acronyms replace the required programmatic position sizing, R-multiple math, and deterministic FSM rollback logic. |
+| "The algorithm detects a kinematic volatility shift and flat slope consensus." | Physics-adjacent terminology contaminates the programmatic vocabulary; strict execution requires explicit mathematical bounds, array index inequalities, and Boolean gates. |
+| "We will resample the tick data using Pandas time-based grouping for simplicity." | Non-deterministic and computationally slow Pandas aggregations introduce execution latency and destroy the pure asynchronous trade sequence needed for formalized microstructure modeling. |
+| "Use an ML-classified confidence filter to determine structural context." | Over-specifying generic ML buzzwords abstracts away the explicit absolute price differentials and computable array structures required for precise algorithm qualification. |
 
 ## Quick Reference
 
-| Concept | Implementation Standard | Rejection Criteria |
+| Microstructure Concept | Formalization Method | Algorithmic Constraint |
 | :--- | :--- | :--- |
-| **HVN Classification** | NumPy quintile binning; exact 80th percentile boolean threshold. | Visual "value area" charting or subjective bounds. |
-| **OFI Depth Execution** | Process strictly at Depth 5 (L=5) for probabilistic scalar generation. | Relying on Top-of-Book (L=1) or aggregate level limits. |
-| **POC Migration** | Tracking via absolute computed arrays (`df['poc_distance_pct']`). | Visual tracking or "kinematic" buzzwords. |
-| **Institutional Proxy** | Compute scalar: `Daily Rtn * (Cur Vol / 50-day SMA Vol)`. | Discretionary high-volume bar reading. |
-| **Microstructure Speed** | Numba JIT compilation applied directly to raw tick data feeds. | Standard Pandas DataFrame operations for HFT. |
-| **Risk Encoding** | ATR-based thresholds and exact array index scale-out matrices. | Hardcoded percentages, SL/TP retail acronyms. |
+| **Order Flow Imbalance** | L=5 bid/ask volume differential array | Must filter out L=1 top-of-book spoofing noise. |
+| **Raw Trade Processing** | Numba JIT compiled vectorized arrays | Must bypass slow time-based DataFrame aggregations. |
+| **Execution Governance** | Closed-loop Finite State Machine (FSM) | Must define strict transition logic for queue modeling and rollbacks. |
+| **Structural Expansion** | Localized Volume Z-Score > σ threshold | Must explicitly enforce volumetric proof-of-work via statistical bounds. |
+| **Liquidation Sweeps** | OI destruction divergence vs exchange reserves | Must use precise array index inequalities to trigger entry states. |
+| **Volatility Scaling** | ATR threshold multipliers applied to boundaries | Must dynamically compute boundaries instead of using fixed price ticks. |
