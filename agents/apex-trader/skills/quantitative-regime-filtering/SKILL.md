@@ -1,42 +1,40 @@
 ---
 name: quantitative-regime-filtering
-description: Use when engineering system activation flags, mapping Gamma Exposure (GEX) binary state toggles, computing Vol-of-Vol circuit breakers, calculating relative intrabar velocity via Binary-Temporal Representations, or smoothing mathematical signal arrays with zero-phase filters.
+description: Use when determining algorithm activation states, toggling execution logic between mean-reverting and trend-following environments, mapping Gamma Exposure (GEX) thresholds, calculating Vol-of-Vol (VoV) Z-Scores for circuit breakers, or implementing Zero-Phase Filter (ZPF) baseline tracking.
 filePattern: "**/*.py"
 ---
 
 ## The Iron Law
-
 ```text
-You must enforce programmatic regime states using strict Boolean gates, precise array index inequalities, and explicit volatility thresholds (e.g., GEX > 0, VoV Z-score > 1.5) rather than descriptive physics terminology; all execution logic must map to discrete mathematical arrays without relying on absolute time bounds or retail heuristics.
+Always govern trade lifecycle Finite State Machines (FSM) through computable array matrices; require strict Boolean gates derived from Gamma Exposure (GEX) polarity and Volatility-of-Volatility (VoV) standard deviation bounds to deterministically route execution logic before any signal sequence initiates.
 ```
 
 ## Behavioral Rules
 
-*   **Enforce GEX Binary States:** If calculating regime activation, map Gamma Exposure (GEX) into a boolean flag: set `is_sticky = True` (Positive GEX) to activate mean-reversion boundary arrays, and `is_slippery = True` (Negative GEX) to activate trend-following structural displacement rules.
-*   **Trigger VoV Circuit Breakers:** If Vol-of-Vol (VoV) Z-Score exceeds +1.5σ, you must immediately set a programmatic override (`halt_execution = True`) to terminate signal generation and block FSM progression.
-*   **Formalize Intrabar Velocity:** If calculating temporal structures, deploy Binary-Temporal Representation (BTR) arrays to model relative duration tempo bits instead of writing brittle logic dependent on absolute time thresholds.
-*   **Implement Zero-Phase Filtering:** When designing signal smoothing architecture, apply bi-directional Zero-Phase Filters (ZPF) strictly to eliminate phase delay; explicitly forbid the use of traditional lagging moving averages.
-*   **Define Executable Mathematics:** Design all state boundaries using exact N-bar window logic, computable array index inequalities, and absolute price differentials instead of abstract descriptive terms.
-*   **Constrain Risk Programmatically:** Require dynamic structural failure arrays and R-multiple breakeven state definitions for invalidation logic; never utilize generic retail terminology (SL/TP) or arbitrary hardcoded percentage caps.
-*   **Reject Physics Contamination:** Never substitute functional code concepts (like boolean matrices or programmatic thresholds) with cross-domain physics terminology (e.g., "kinematic validation" or "velocity kinematics") when describing price action events.
+*   Route execution logic strictly to mean-reversion arrays and range-midpoint targeting formulas if Gamma Exposure is positive (`GEX > 0`), initializing a "STICKY" FSM state.
+*   Route execution logic strictly to breakout and trend-following N-bar arrays if Gamma Exposure is negative (`GEX < 0`), initializing a "SLIPPERY" FSM state.
+*   Halt all algorithmic entry signals and trigger closed-state rollback logic if the Vol-of-Vol (VoV) Z-Score exceeds a +1.5σ threshold (`vov_zscore > 1.5`).
+*   Compute structural baseline states using Zero-Phase Filters (ZPF) running bidirectionally across time-series arrays to eliminate phase lag and supply synchronized, zero-distortion Boolean inputs.
+*   Dictate position sizing and risk constraints exclusively via ATR volatility thresholds and strict R-multiple breakeven state definitions, never utilizing arbitrary fixed percentage heuristics.
+*   Formulate Time-Series Momentum (TSMOM) inputs into rigid programmatic thresholds backed strictly by continuous out-of-sample walk-forward validation arrays.
+*   Validate all structural baseline shifts by verifying Relative Volume (RVOL) exceeds 1.5x at the precise array index breakpoint.
 
 ## Red Flags
 
-| Domain-Specific Rationalization | Why Wrong |
+| Domain-Specific Rationalizations | Why Wrong |
 | :--- | :--- |
-| "Using 'kinematic event' accurately describes the sudden price action velocity." | Contaminates the model's programmatic vocabulary; replaces actionable Boolean gates and absolute price differentials with meaningless abstract physics jargon. |
-| "We will implement a tight SL (Stop-Loss) to manage the breakout regime risk." | Submits to retail trading jargon instead of mathematically defining a strict FSM invalidation state transition or computable structural failure boundary. |
-| "We'll smooth the momentum baseline using an EMA crossover." | Introduces unacceptable algorithmic phase delay; violates the mandate to utilize Zero-Phase Filtering (ZPF) arrays for signal smoothing. |
-| "Limit exposure to a flat 1.0% per trade to control drawdown during regime switches." | Relies on arbitrary retail percentage heuristics rather than computing a rigorous volatility-scaled position sizing matrix and strict 1:3 R:R boundary. |
-| "We must wrap the GEX threshold in stateful object-oriented arrays for sanitization." | Introduces superficial algorithmic over-engineering; obscures simple programmatic variable definitions behind vague, unactionable object-oriented buzzwords. |
+| "Use RSI > 70 to detect the overbought regime." | Relies on lagging retail indicators instead of Order Flow Imbalance (OFI), VoV Z-Scoring, or empirical GEX metrics. |
+| "Set the SL to 1% for trend regimes and TP to 2% for range regimes." | Uses brittle retail jargon (SL/TP) and arbitrary heuristics instead of explicit ATR volatility threshold bounds and programmatic R-multiple state transitions. |
+| "The regime changed because of a kinematic variance event detected by the RANSAC ML slope." | Contaminates code with irrelevant physics jargon and over-engineered ML buzzwords instead of relying on explicit array index inequalities and Boolean gates. |
+| "Trigger a structural decay phase change in the object-oriented state manager." | Replaces precise mathematical operations and N-bar array tracking with superficial object-oriented programming buzzwords. |
+| "Execute the trade if the regime feels choppy or sentiment implies reversion." | Injects non-formalized, subjective human judgment and non-deterministic text inputs into an environment requiring zero ambiguity. |
 
 ## Quick Reference
 
-| Concept | Deterministic Implementation Constraint |
+| Regime Trigger / Condition | Programmatic Logic & Output State |
 | :--- | :--- |
-| **GEX Regime Matrix** | Map Positive GEX to `STICKY` arrays; map Negative GEX to `SLIPPERY` arrays. |
-| **Circuit Breaker** | `halt_execution = True` conditionally when VoV Z-Score > +1.5σ. |
-| **Velocity Modeling** | Encode tempo bit states via Binary-Temporal Representation (BTR). |
-| **Signal Smoothing** | Utilize only Zero-Phase Filters (ZPF); reject standard moving averages. |
-| **Invalidation Rules** | Define structural boundary failure arrays; avoid "SL/TP" retail jargon. |
-| **Architectural Syntax** | Use N-bar windows, array index inequalities, and Boolean gates. |
+| **Positive GEX** (`GEX > 0`) | **STICKY State FSM**: Activate mean-reversion array matrices and compute range-midpoint retest logic. |
+| **Negative GEX** (`GEX < 0`) | **SLIPPERY State FSM**: Activate breakout array matrices, trend-following logic, and trailing ATR stop limits. |
+| **VoV Z-Score** (`vov_z > 1.5`) | **Circuit Breaker Gate**: Force True; halt all new execution states and lock current capital exposure. |
+| **Relative Vol** (`RVOL > 1.5x`) | **Baseline Shift Gate**: Force True; validate structural breaks at the current array index breakpoint. |
+| **Structural Baseline Sync** | **ZPF Computation**: Execute Zero-Phase Filter bidirectionally across N-bar windows to output zero-lag logic states. |
