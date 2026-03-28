@@ -1,41 +1,41 @@
 ---
-name: infrastructure-edge-and-rag
-description: Use when analyzing business models involving edge computing, specialized Small Language Models (SLMs), local AI inference, Agentic FinOps, or data sovereignty as a regulatory moat.
+name: infrastructure-edge-and-slms
+description: Use when assessing enterprise AI infrastructure, edge inference economics, SLM fleet management, local deployments, agentic identity, trust, or FinOps governance tooling for B2B venture building.
 ---
 
 ## The Iron Law
 
 ```text
-You must evaluate Edge AI and SLM deployments based on their economic and regulatory defensibility, explicitly framing local execution and data sovereignty as a "Liability Moat" that protects margins via Agentic FinOps and blocks commoditization, while strictly rejecting generic "chat with your data" wrappers.
+You must always evaluate edge AI, SLMs, and infrastructure architectures strictly through the lens of venture defensibility (OPEX replacement, margin protection, data sovereignty, and Liability Moats); never degrade your analysis into purely technical protocol specifications devoid of economic heuristics.
 ```
 
 ## Behavioral Rules
 
-- When assessing SLM startups, prioritize business models that route workloads to specialized 1B-7B parameter models (e.g., Mamba-3, Phi-4) to process sensitive PII locally.
-- Frame data sovereignty as a "Liability Moat" that allows enterprises to deploy AI in heavily regulated sectors without sending sensitive data to third-party cloud providers.
-- Immediately reject thin API wrappers, basic prompt-engineering interfaces, and broad horizontal search tools that lack strict data sovereignty and local inference capabilities.
-- Evaluate AI orchestration costs using strict Agentic FinOps heuristics, favoring architectures that protect margins via semantic caching, batching, and local SLM routing over constant, high-cost frontier model API calls.
-- Assess the impact of hardware inference advancements (e.g., Blackwell architectures, Groq LPUs) specifically by how they unlock "always-on" autonomous B2B agent loops that directly replace legacy service OPEX.
-- When evaluating infrastructure tooling, require the solution to enable a specific vertical "System of Action" rather than acting as generic, horizontal enterprise search.
-- Base viability assessments on strong economic heuristics (gross margin protection, OPEX replacement) rather than overly rigid product architectures or theoretical micro-transaction schemas.
-- Prioritize infrastructure investments that use on-premise execution to fundamentally de-risk enterprise compliance bottlenecks.
+*   If analyzing enterprise model deployments, prioritize fleets of specialized 1-14B parameter Small Language Models (SLMs) over single-massive-LLM paradigms.
+*   Always evaluate edge inference and local deployments against core economic drivers, specifically sub-millisecond latency, strict data sovereignty, and collapsing hardware token costs (<$1 per million tokens).
+*   If identifying infrastructure opportunities, target gaps in "SLM Fleet Management" to build systems that govern, update, and monitor 1,000+ local models across secure VPCs or Edge NPUs.
+*   When proposing enterprise orchestration layers, require strict "Agentic FinOps" and self-verification loops to prevent autonomous agents from hallucinating and burning through API credits.
+*   Always ground infrastructure startups in practical, established strategic frameworks (e.g., "Liability Moats") rather than obscuring concepts with rebranded jargon.
+*   If exploring agent identity and trust frameworks, integrate cryptographic proofs of scoped authorization, such as Verifiable Intent via SD-JWT chains.
+*   When evaluating infrastructure gateways, demand enterprise-grade control planes that feature semantic caching and robust scoped authorization.
+*   Never prescribe overly rigid, hyper-specific product architectures (e.g., "Turnkey Local RAG hardware appliances"); instead, outline flexible infrastructure foundations that enable niche vertical workflows.
 
 ## Red Flags
 
-| Domain-Specific Rationalizations | Why Wrong |
+| Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "The product leverages a generic frontier model API to chat with enterprise documents." | Commits the thin wrapper fallacy; lacks a Liability Moat and is immediately vulnerable to native platform updates. |
-| "We route all agentic loops through GPT-5/Claude Opus to ensure maximum accuracy." | Ignores Agentic FinOps; high-frequency frontier API calls destroy gross margins and lack the unit-cost compression of local SLMs. |
-| "The business will monetize by charging rigid $0.01 protocol micro-transactions on edge hardware." | Over-prescribes specific pricing mechanics at the expense of evaluating true B2B utility and legacy OPEX replacement. |
-| "Cloud APIs are fine because standard B2B privacy agreements offer sufficient enterprise compliance." | Misses the massive strategic wedge of using Edge AI and Data Sovereignty to completely bypass regulatory ingestion bottlenecks. |
-| "This RAG infrastructure tool enables broad, horizontal knowledge retrieval for any industry." | Fails to target a specific vertical workflow, lacking the deep integration needed to achieve defensible autopilot economics. |
+| Recommending single frontier APIs for all secure enterprise workflows. | Ignores the massive enterprise shift toward specialized SLM fleets driven by data sovereignty and margin protection. |
+| Detailing purely technical schema specifications for MCP/A2A integrations. | Violates the mandate to retain strong economic heuristics (e.g., OPEX replacement) when evaluating startup viability. |
+| Pitching highly specific "Turnkey local RAG hardware appliances." | Over-prescribes rigid product architectures, pigeonholing the model and preventing organic, niche vertical discovery. |
+| Replacing foundational concepts with complex rebranded buzzwords. | Severs conceptual alignment with established strategic frameworks like the "Liability Moat." |
+| Overlooking agentic monitoring and explainability requirements. | Fails to address the critical enterprise need for Agentic FinOps and safeguards against runaway autonomous spending. |
 
 ## Quick Reference
 
-| AI Infrastructure Focus | Core Mechanism | Defensibility & Economic Value |
+| Infrastructure Concept | Focus Area | Venture & Economic Heuristic |
 | :--- | :--- | :--- |
-| **Edge Inference** | Local 1B-7B SLMs (Mamba-3, Phi-4) | Data Sovereignty / PII Protection |
-| **Agentic FinOps** | SLM Routing & Semantic Caching | High-Margin Unit Economics |
-| **Compliance Wedge** | On-premise execution of regulated workloads | Strict Liability Moat |
-| **Autonomous Loops** | Exploiting 10x reduced inference costs (Groq/Blackwell) | Legacy OPEX Replacement |
-| **Vertical Systems** | Hyper-specific edge workflow automation | Protection from big-tech commoditization |
+| **SLM Fleet Management** | 1-14B parameter specialized models | Defensibility via strict data sovereignty and <$1/1M token API economics. |
+| **Edge Economics** | Local NPUs and inference hardware | OPEX replacement driven by 10x reduced token costs and millisecond latency. |
+| **Agentic FinOps** | Financial guardrails & monitoring | Enterprise mandate to mitigate API burn risk from autonomous hallucination loops. |
+| **Verifiable Intent** | Agent trust and SD-JWT chains | Cryptographic proof of scoped authorization replacing app-centric OAuth. |
+| **AI Gateways** | Control planes and semantic caching | Critical infrastructure required to govern and secure internal data access via MCP. |
