@@ -1,42 +1,46 @@
 ---
 name: structural-formalization
-description: Use when translating subjective price action patterns, Fair Value Gaps (FVGs), and market structure boundaries into deterministic computational arrays, Boolean execution gates, and volatility-scaled programmatic logic.
+description: Use when building, reviewing, or translating subjective price action, market structure, Fair Value Gaps (FVG), structural containment, or fractal mapping into deterministic, computable quantitative algorithms, array index inequalities, and FSM-gated breakout logic.
 filePattern: "**/*.py"
 ---
 
 ## The Iron Law
 
 ```text
-You must formalize all Fair Value Gaps (FVGs) and market structure bounds using explicit computational data structures—specifically array index inequalities, absolute price differentials, N-bar window logic, and ATR volatility thresholds—and never substitute these mathematical definitions with subjective charting concepts, retail trading mechanics, or abstract physics jargon.
+You must strictly formalize all subjective price action and market structure concepts into deterministic array index inequalities, absolute price differentials, ATR-scaled volatility thresholds, and explicit Boolean logic gates governing Finite State Machine (FSM) transitions.
 ```
 
 ## Behavioral Rules
 
-- Define FVGs strictly as 3-candle computable imbalance logic arrays utilizing exact array index inequalities (e.g., `np.where((high.shift(1) < low.shift(-1)))`).
-- Scale all structural containment arrays and FVG memory boundaries dynamically using ATR threshold multipliers.
-- Trigger Boolean state inversions for structural shifts only when closing absolute price differentials strictly pierce programmatic standard deviation bounds.
-- Validate FSM-gated breakouts by coupling FVG array generation directly to concurrent Support/Resistance N-period rolling threshold breaks.
-- Manage position invalidation and dynamic trailing via explicit R-multiple mathematical boundaries and strict programmatic array bounds.
-- Govern trade lifecycles through closed finite state machines that evaluate exact algorithmic arithmetic and absolute price differentials for execution.
-- Discard FVG arrays programmatically if the absolute price movement fails to exceed localized order flow or N-bar window validation requirements.
-- Calculate signal invalidation thresholds using empirical microstructure metrics rather than relying on abstract machine learning buzzwords or superficial object-oriented state sanitization.
+- Define Fair Value Gaps (FVGs) and order blocks using strictly explicit 3-candle array index inequalities and absolute price differentials.
+- Filter structural node generation using programmatic ATR volatility thresholds to eliminate low-volatility algorithmic noise.
+- Construct FSM Gated Breakouts by demanding precise synchronization between FVG imbalance generation arrays and an N-period dynamic rolling min/max matrix.
+- Enforce Volatility-Scaled FVG Memory Arrays by dynamically pushing structural bounds into execution matrices and automatically popping them upon invalidation via precise price overlaps.
+- Compute Consequent Encroachment exclusively as the precise 50% arithmetic midpoint of the validated institutional node array for deterministic entry triggers.
+- Govern multi-timeframe recursive fractal mapping by utilizing major-array Boolean states to statically lock or unlock minor-array trigger execution.
+- Programmatically map "Zones of Failure" and structural retention by tracking multi-level N-bar window logic and absolute array threshold breaches.
+- Encode risk natively via FSM state closures, strict mathematical position sizing, and computed R-multiple breakeven transitions.
+- Derive structural exhaustion limits using exact array indexing limits rather than subjective visual scaling.
 
 ## Red Flags
 
-| Rationalization | Why Wrong |
+| Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "I will implement a standard SL and TP parameter to govern the FVG risk engine." | Retail trading acronyms abstract away the explicit, deterministically closed FSM state transitions and programmatic R-multiple scale-out logic required for quantitative architecture. |
-| "We should measure the structural kinematic variance using a stateful sanitization protocol." | Physics-adjacent jargon and generic object-oriented buzzwords replace the precise array index inequalities, Boolean gates, and absolute price differentials required for executable code. |
-| "Risk per trade is capped between 0.1% and 1.0% based on account size." | Hardcoding arbitrary risk percentage heuristics replaces dynamic, mathematical position sizing and programmatic R-multiple breakeven arrays. |
-| "I'll use ML-classified confidence scores and RANSAC flat slopes to validate the breakout." | Substituting practical programming concepts with complex ML/math buzzwords diminishes the model's ability to generate unambiguous, deterministic N-bar window execution code. |
+| "Utilize ML-classified flat slopes or RANSAC algorithms to judge FVG strength." | Replaces explicit, actionable array index inequalities and Boolean gates with ambiguous ML buzzwords. |
+| "Place an SL below the structural low and set a TP at the next liquidity void." | Contaminates quantitative logic with retail acronyms instead of enforcing explicit FSM scale-out states and programmatic R-multiple arrays. |
+| "Assess the kinematic variance of the price action vector to confirm the breakout." | Injects meaningless cross-domain physics jargon instead of enforcing concrete ATR thresholds and N-bar window logic. |
+| "Abstract the order block into a stateful object-oriented array to handle memory." | Replaces precise mathematical operations and direct array indexing with superficial, non-computable programming filler. |
+| "Scale memory arrays strictly using bidirectional Zero-Phase Filters or KNN." | Over-constrains the architecture to hyper-specific indicator mandates instead of utilizing generalized deterministic Boolean logic. |
+| "Cap structural exposure mathematically between 0.1% and 1.0% per trade." | Hardcodes arbitrary risk heuristics instead of building dynamic, programmatic position sizing formulas. |
 
 ## Quick Reference
 
-| Concept | Deterministic Implementation |
+| Structural Concept | Deterministic Implementation Rule |
 | :--- | :--- |
-| **FVG Array Detection** | Implement via 3-candle index arrays: `np.where((high.shift(1) < low.shift(-1)))`. |
-| **Volatility Scaling** | Store valid FVG boundaries in dynamic arrays scaled by an ATR threshold multiplier. |
-| **Market Structure Break** | Trigger Boolean state inversions strictly when price breaches N-bar rolling thresholds. |
-| **Position Containment** | Execute programmable risk boundaries governed by R-multiple breakeven state arrays. |
-| **Signal Validation** | Require absolute price differentials and standard deviation bounds to confirm displacement. |
-| **Lifecycle Execution** | Map all signal generations and invalidations directly into closed-loop Finite State Machines. |
+| **FVG Formation** | Compute via explicit 3-candle array index inequalities (e.g., high[i-2] < low[i]). |
+| **FVG Invalidation** | Delete entries from memory matrices upon strict N-bar structural price intersection. |
+| **Breakout Execution** | Gate triggers using an FSM synchronized explicitly with N-period rolling min/max arrays. |
+| **Volatility Filtering** | Multiply structural generation bounds by baseline ATR thresholds to suppress flat-market logic. |
+| **Target Acquisition** | Compute exact Consequent Encroachment (50% midpoint) of the absolute structural array bounds. |
+| **Fractal Containment** | Gated boolean logic where major-timeframe arrays must lock true before minor-array evaluation. |
+| **Risk Execution** | Trigger FSM state closures linked directly to R-multiple statistical metrics. |
