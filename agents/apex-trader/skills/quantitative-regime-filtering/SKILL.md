@@ -1,40 +1,41 @@
 ---
 name: quantitative-regime-filtering
-description: Use when determining algorithm activation states, toggling execution logic between mean-reverting and trend-following environments, mapping Gamma Exposure (GEX) thresholds, calculating Vol-of-Vol (VoV) Z-Scores for circuit breakers, or implementing Zero-Phase Filter (ZPF) baseline tracking.
-filePattern: "**/*.py"
+description: Use when determining mathematical frameworks for algorithm state switching based on macro and microstructure conditions, gating execution logic using Gamma Exposure (GEX), VoV Z-Scoring, explicit ATR thresholds, and Programmatic OI Divergence.
 ---
 
 ## The Iron Law
+
 ```text
-Always govern trade lifecycle Finite State Machines (FSM) through computable array matrices; require strict Boolean gates derived from Gamma Exposure (GEX) polarity and Volatility-of-Volatility (VoV) standard deviation bounds to deterministically route execution logic before any signal sequence initiates.
+You must strictly gate all algorithmic execution logic using deterministic boolean arrays, exact array index inequalities, and explicit standard deviation or ATR thresholds; never abstract regime state switching into subjective descriptors, superficial machine learning jargon, or retail trading heuristics.
 ```
 
 ## Behavioral Rules
 
-*   Route execution logic strictly to mean-reversion arrays and range-midpoint targeting formulas if Gamma Exposure is positive (`GEX > 0`), initializing a "STICKY" FSM state.
-*   Route execution logic strictly to breakout and trend-following N-bar arrays if Gamma Exposure is negative (`GEX < 0`), initializing a "SLIPPERY" FSM state.
-*   Halt all algorithmic entry signals and trigger closed-state rollback logic if the Vol-of-Vol (VoV) Z-Score exceeds a +1.5σ threshold (`vov_zscore > 1.5`).
-*   Compute structural baseline states using Zero-Phase Filters (ZPF) running bidirectionally across time-series arrays to eliminate phase lag and supply synchronized, zero-distortion Boolean inputs.
-*   Dictate position sizing and risk constraints exclusively via ATR volatility thresholds and strict R-multiple breakeven state definitions, never utilizing arbitrary fixed percentage heuristics.
-*   Formulate Time-Series Momentum (TSMOM) inputs into rigid programmatic thresholds backed strictly by continuous out-of-sample walk-forward validation arrays.
-*   Validate all structural baseline shifts by verifying Relative Volume (RVOL) exceeds 1.5x at the precise array index breakpoint.
+*   If Gamma Exposure (GEX) evaluates to a positive numerical value, assign boolean state toggles to activate range equilibrium retest algorithms.
+*   If Gamma Exposure (GEX) evaluates to a negative numerical value, trigger boolean arrays that activate directional breakout algorithms.
+*   Hardcode a systemic programmatic halt across all execution logic if the Volatility of Volatility (VoV) Z-Score exceeds a +1.5 standard deviation bound.
+*   Define all regime boundaries and state switches using explicit array index inequalities, N-bar window logic, and absolute price differentials.
+*   Trigger structural exhaustion sweep logic strictly when exact array inequalities detect a programmatic divergence between Open Interest (OI) destruction matrices and spot price stability.
+*   Enforce regime-agnostic edge by calculating dynamic volatility memory arrays explicitly scaled against continuous N-period ATR thresholds.
+*   Govern trade states and scaling logic using deterministically closed finite state machine (FSM) transitions and programmatic R-multiple arrays.
+*   Reject any algorithm state definition that substitutes computable mathematical thresholds for generic technical indicators or subjective chart reading.
 
 ## Red Flags
 
-| Domain-Specific Rationalizations | Why Wrong |
+| Rationalization | Why Wrong |
 | :--- | :--- |
-| "Use RSI > 70 to detect the overbought regime." | Relies on lagging retail indicators instead of Order Flow Imbalance (OFI), VoV Z-Scoring, or empirical GEX metrics. |
-| "Set the SL to 1% for trend regimes and TP to 2% for range regimes." | Uses brittle retail jargon (SL/TP) and arbitrary heuristics instead of explicit ATR volatility threshold bounds and programmatic R-multiple state transitions. |
-| "The regime changed because of a kinematic variance event detected by the RANSAC ML slope." | Contaminates code with irrelevant physics jargon and over-engineered ML buzzwords instead of relying on explicit array index inequalities and Boolean gates. |
-| "Trigger a structural decay phase change in the object-oriented state manager." | Replaces precise mathematical operations and N-bar array tracking with superficial object-oriented programming buzzwords. |
-| "Execute the trade if the regime feels choppy or sentiment implies reversion." | Injects non-formalized, subjective human judgment and non-deterministic text inputs into an environment requiring zero ambiguity. |
+| "Implementing kinematic validation to confirm the regime shift." | Contaminates the model with meaningless physics terminology instead of relying on explicit array index inequalities and standard deviation bounds. |
+| "Setting SL and TP parameters for the regime breakout." | Replaces deterministically closed FSM state transitions and programmatic R-multiple arrays with brittle, subjective retail trading concepts. |
+| "Using machine learning confidence scores to dictate execution state." | Obscures explicit, executable deterministic code and boolean gates behind black-box probability abstraction. |
+| "Capping regime trade risk between 0.1% and 1.0%." | Hardcodes arbitrary heuristics instead of relying on programmatic mathematical position sizing and strict fixed risk encoding. |
+| "Deploying a stateful object-oriented sanitization protocol." | Replaces precise mathematical operations and computable arrays with superficial programming filler. |
 
 ## Quick Reference
 
-| Regime Trigger / Condition | Programmatic Logic & Output State |
-| :--- | :--- |
-| **Positive GEX** (`GEX > 0`) | **STICKY State FSM**: Activate mean-reversion array matrices and compute range-midpoint retest logic. |
-| **Negative GEX** (`GEX < 0`) | **SLIPPERY State FSM**: Activate breakout array matrices, trend-following logic, and trailing ATR stop limits. |
-| **VoV Z-Score** (`vov_z > 1.5`) | **Circuit Breaker Gate**: Force True; halt all new execution states and lock current capital exposure. |
-| **Relative Vol** (`RVOL > 1.5x`) | **Baseline Shift Gate**: Force True; validate structural breaks at the current array index breakpoint. |
-| **Structural Baseline Sync** | **ZPF Computation**: Execute Zero-Phase Filter bidirectionally across N-bar windows to output zero-lag logic states. |
+| Regime Metric | Deterministic Evaluation Logic | State Transition |
+| :--- | :--- | :--- |
+| **VoV Z-Score** | Value > +1.5 standard deviations | Global Programmatic Execution Halt |
+| **GEX (Positive)** | Numeric evaluation > 0 | Boolean switch to Range Equilibrium |
+| **GEX (Negative)** | Numeric evaluation < 0 | Boolean switch to Directional Breakout |
+| **OI Divergence** | OI Destruction Matrix > Spot Stability Array | Initiate Exhaustion Sweep Target |
+| **Volatility Bounds** | Array indices bounded by absolute ATR thresholds | FSM Regime Memory Validation |
