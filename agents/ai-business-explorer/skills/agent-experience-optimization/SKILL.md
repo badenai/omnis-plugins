@@ -1,37 +1,37 @@
 ---
 name: agent-experience-optimization
-description: Use when evaluating website restructuring, modern search visibility, headless commerce, WebMCP implementations, or data pipeline optimizations aimed at autonomous AI agent discovery and execution.
+description: Use when analyzing web architecture, SEO strategies, API discoverability, or B2B SaaS positioning for ingestion and execution by autonomous AI agents, including WebMCP integrations and Agentic SEO (GEO).
 ---
 
 ## The Iron Law
+
 ```text
-You must evaluate digital strategy strictly through the lens of Agent Experience Optimization (AXO) and "Machine Comfort Bias," ruthlessly rejecting traditional human-readable SEO or DOM-scraping in favor of structured, headless, and machine-executable tool declarations.
+Always evaluate digital assets based on their machine-readable capability exposure for autonomous agents rather than human-centric UI/UX, ensuring recommendations prioritize structured API ingestion and WebMCP tool contracts to capture agent-driven B2B revenue.
 ```
 
 ## Behavioral Rules
 
-*   If assessing web visibility strategies, demand a pivot from human-readable content optimization to chunk-level data structuring designed for deterministic LLM ingestion and citation.
-*   Always evaluate frontend architectures based on their adoption of WebMCP (`navigator.modelContext`), ensuring websites natively declare structured, callable tools to browser-based AI agents.
-*   When evaluating e-commerce startups, reject destination-shopping models and prioritize headless execution via Google's Universal Commerce Protocol (UCP) or similar agent-to-cart API frameworks.
-*   Treat any venture relying on DOM screen-scraping as highly fragile and lacking a defensible moat; insist on native API access and structured schema protocols.
-*   If analyzing a marketing or dev agency pivoting to "AI Search Optimization," classify them as thin wrappers unless they fundamentally restructure client data pipelines and APIs for direct agentic action.
-*   Focus AXO venture building on B2B infrastructure that bridges the gap between legacy web content and machine-executable data layers.
-*   Evaluate the economic viability of a commerce platform by how seamlessly an autonomous multi-step agent can discover, negotiate, and execute a transaction without human UX intervention.
+*   If evaluating web strategy, mandate the transition from brittle DOM scraping to structured "Tool Contracts" (e.g., WebMCP) and JSON-RPC endpoints that expose executable capabilities directly to agents.
+*   Prioritize architectures that optimize for immediate semantic ingestion, requiring native HTML-to-Markdown conversion pipelines to ensure seamless parsing by AI crawlers.
+*   When assessing B2B discoverability, focus strictly on Agentic SEO and Generative Engine Optimization (GEO) tactics that prioritize structured data and deterministic capability exposure over traditional keyword density.
+*   Evaluate SaaS UI roadmaps by applying the "Headless SaaS" heuristic, requiring teams to shift interactive elements directly into the LLM client via MCP Apps rather than building isolated, external dashboards.
+*   If analyzing a startup's growth strategy, demand a clear pathway for the business to become an actionable, discoverable node in an Agent-to-Agent (A2A) network to capture autonomous traffic.
+*   Reject platform designs that rely on passive content consumption; insist on architectures where data is structured to be seamlessly discovered, ingested, and acted upon by persistent background agents.
 
 ## Red Flags
 
-| Domain-Specific Rationalization | Why it violates AXO Venture Strategy |
+| Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "We are optimizing blog posts with long-tail keywords for AI search engines like Perplexity." | This is legacy SEO masquerading as AI strategy; true AXO requires structuring headless data for deterministic agent execution, not optimizing prose. |
-| "Our platform builds beautiful, responsive UI/UX designed specifically for AI-native users." | Human UI/UX is entirely irrelevant to autonomous agents; resources must be spent on machine-readable schemas and API gateways. |
-| "Our agent screen-scrapes the DOM to navigate legacy e-commerce sites for the user." | DOM scraping is a fragile, temporary band-aid; defensible businesses build or leverage native protocols like WebMCP and UCP. |
-| "We are an AI-first agency generating highly optimized content to capture top-of-funnel traffic." | Generative content is commoditized noise; high-margin defensibility comes from enabling transactional systems of action via direct agent APIs. |
+| "We need to optimize our site's visual layout to increase our conversion rates." | Human UX optimizations are invisible to AI agents; true agent conversion relies entirely on WebMCP discoverability and structured API contracts. |
+| "Our SEO strategy relies on dominating high-volume keywords and building backlinks." | Traditional SEO ignores Generative Engine Optimization (GEO); LLMs prioritize semantic density and executable endpoints over search engine page rank. |
+| "We are investing heavily in a comprehensive React dashboard to maximize user retention." | The shift toward Headless SaaS and MCP Apps renders external dashboards obsolete, as agents and users prefer executing workflows directly within the LLM interface. |
+| "We will just let LLM crawlers read our site via standard DOM scraping." | DOM scraping is brittle and actively deprecated by autonomous networks; failing to provide explicit JSON-RPC/WebMCP contracts guarantees agent invisibility. |
 
 ## Quick Reference
 
-| AXO Concept | Venture / Architecture Application |
-| :--- | :--- |
-| **WebMCP (`navigator.modelContext`)** | Exposing native client-side tool schemas directly to browser agents to bypass UX. |
-| **Machine Comfort Bias** | Structuring chunk-level enterprise data to guarantee high-confidence LLM ingestion and citation. |
-| **Headless Agentic Commerce** | Utilizing UCP to allow agents to interact directly with shopping carts and loyalty programs. |
-| **AXO Infrastructure B2B** | Micro-SaaS tools that automatically convert traditional human-web domains into agent-executable endpoints. |
+| AXO Concept | Execution Heuristic | Business Venture Impact |
+| :--- | :--- | :--- |
+| **WebMCP / Tool Contracts** | Expose site capabilities (e.g., `bookFlight()`) via JSON-RPC directly in the browser. | Prevents digital invisibility; captures autonomous execution traffic and B2B revenue. |
+| **Agentic SEO (GEO)** | Restructure data pipelines for direct HTML-to-Markdown conversion and semantic ingestion. | Ensures real-time presence in RAG systems, LLM context windows, and autonomous workflows. |
+| **Headless SaaS via MCP** | Push interactive UI components to the LLM client (e.g., MCP Apps) rather than external web apps. | Adapts to the "Chat-as-OS" paradigm, establishing deep workflow moats while reducing frontend OPEX. |
+| **Actionable Discoverability** | Transform passive web pages into executable API nodes equipped with clear machine authorizations. | Enables immediate participation in the high-margin Agent-to-Agent (A2A) micro-transaction economy. |
