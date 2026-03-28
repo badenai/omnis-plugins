@@ -1,45 +1,42 @@
 ---
 name: execution-architecture-fsm
-description: Use when designing or debugging high-frequency algorithmic trade execution, event-driven backtesting, Finite State Machine (FSM) trade lifecycles, Numba/Rust-compiled microstructure queue simulations, and programmatic order flow state logic.
+description: Use when designing event-driven trading systems, high-frequency execution architectures, finite state machines (FSM) for trade lifecycles, or translating quantitative signals into deterministic order management using HftBacktest, NautilusTrader, Numba, or explicit array logic.
 filePattern: "**/*.py"
+bashPattern: "pytest"
 ---
 
 ## The Iron Law
 
 ```text
-You must design all trade execution lifecycles as mathematically closed Finite State Machines (FSM) utilizing explicit computational structures—such as array index inequalities, absolute price differentials, and ATR-scaled volatility thresholds—to govern every state transition, entry, and scale-out event without relying on abstract machine learning buzzwords or subjective retail heuristics.
+You must encode every execution lifecycle as a strictly closed Finite State Machine (FSM) governed by explicit array index inequalities, absolute price differentials, and Boolean gates. Never decouple mathematical signal generation from execution state transitions; you must mathematically define both the deterministic structural arrays (e.g., ATR volatility bounds) and the programmable error-aware rollbacks that manage asynchronous order flow without look-ahead leakage.
 ```
 
 ## Behavioral Rules
 
-*   **State Machine Execution:** If designing an order execution system, implement a closed-loop Finite State Machine (e.g., utilizing NautilusTrader architectures) where every pending, filled, partial, dropped, or cascading event maps to an explicit transition with error-aware rollback logic.
-*   **Computational Structure Gating:** Govern all FSM breakout and entry states using strict programmatic logic, incorporating explicit array index inequalities (e.g., `np.where`), absolute price differentials, and N-period rolling thresholds.
-*   **Volatility-Scaled Boundaries:** Constrain system states by dynamically scaling validation boundaries using Average True Range (ATR) threshold multipliers, ensuring state transitions (e.g., bullish to bearish control) execute instantly upon absolute mathematical breach of the ATR-scaled array.
-*   **Microstructure Imbalance:** Calculate Order Flow Imbalance (OFI) regression strictly at a book depth of 5 levels (L=5) to compute deterministic state-change triggers, aggressively discarding top-of-book (L=1) spoofing noise.
-*   **High-Frequency Simulation:** If building backtest frameworks, mandate high-fidelity Level-3 (Market-By-Order) reconstruction and queue simulation frameworks (e.g., HftBacktest) to account for feed/order latencies mathematically.
-*   **Vectorized Acceleration:** Accelerate raw asynchronous trade arrays and microstructure features strictly via Numba JIT compilation or Rust integrations, actively bypassing non-deterministic and high-latency Pandas aggregations.
-*   **Programmatic Risk States:** Define all risk and trade closures using hardcoded R-multiple breakeven state definitions, absolute volatility scale-outs, and Correlation Elasticity tracking arrays.
-*   **Microstructure Liquidation Logic:** Trigger liquidity sweep state transitions by computing Open Interest (OI) destruction divergences against localized standard deviation bounds of exchange reserves.
-*   **Volume State Verification:** Require algorithmic verification of volume for displacement states, specifically demanding localized Volume Z-Score acceleration and programmatic highest-volume-node (HVN) absolute arrays before validating structural regime shifts.
+1. **Design deterministic trade lifecycles.** Construct all order execution modules as closed-loop finite state machines with explicitly mapped transitions (e.g., PENDING, PARTIAL_FILL, FILLED) and programmed error-aware rollbacks to prevent asynchronous deadlocks.
+2. **Compute explicit mathematical signals.** Drive FSM state transitions utilizing precise algorithmic thresholds, including array index inequalities, absolute price differentials, and Boolean gates, completely ignoring subjective charting or lagging technical indicators.
+3. **Compile tick-level microstructure.** Process intra-bar order flow imbalances and dynamic liquidity vectors using Numba-compiled machine code over raw array structures to guarantee low-latency execution and eliminate non-deterministic Pandas overhead.
+4. **Enforce programmable risk and position sizing.** Calculate risk parameters using dynamic R-multiple breakeven states, ATR-scaled volatility arrays, and explicit mathematical sizing formulas rather than relying on fixed percentage heuristics.
+5. **Gate execution via array synchronization.** Trigger state transitions only when an N-period dynamic rolling min/max breakout matrix mathematically synchronizes with structural generation arrays, ensuring unambiguous market structure containment.
+6. **Implement robust temporal execution.** Utilize high-performance, event-driven backtesting engines (e.g., NautilusTrader, HftBacktest) to enforce precise temporal alignment of asynchronous L2 snap/tick data streams without introducing look-ahead bias.
+7. **Validate logic out-of-sample.** Subject every formulated FSM architecture to strict walk-forward validation and continuous out-of-sample testing to mathematically verify risk-adjusted statistical expectancy.
 
 ## Red Flags
 
-| Flag | Domain-Specific Rationalization | Why Wrong |
-| :--- | :--- | :--- |
-| SL/TP Acronyms | "The system sets an SL at 0.5% and a TP at 1.5% for risk management." | Relies on brittle retail jargon and arbitrary heuristics instead of programmatic R-multiple state definitions and ATR-scaled scale-out logic. |
-| ML/Math Buzzwords | "The FSM utilizes RANSAC flat slopes and ML-classified confidence for structure." | Abstracts away the required concrete computational structures (array inequalities, boolean gates) needed for executable code. |
-| Physics Jargon | "Execute upon kinematic validation of the price vector." | Contaminates execution code with meaningless cross-domain phrasing; logic must rely on numeric absolute price differentials. |
-| Pure FSM without Signal Math | "The state machine moves from IDLE to ACTIVE based on a stateful object-oriented array." | Over-specializes architectural flow while starving the model of exact mathematical market structure parameters and array logic. |
-| Latency Agnosticism | "Assume instant fills upon signal crossover." | Fails to incorporate queue probability modeling and L3 depth simulation, creating an invalid mathematical expectancy. |
+| Discretionary / Flawed Concept | Why it violates strict Execution Architecture FSM principles |
+| :--- | :--- |
+| Implementing retail "SL" or "TP" parameters | Replaces explicitly programmed FSM state transitions and calculated scale-out arrays with brittle, non-computable retail abstractions. |
+| Referencing "kinematic validation" or "structural decay" | Contaminates programmable execution vocabulary with unactionable, cross-domain physics jargon instead of using concrete boolean gates. |
+| Capping risk using arbitrary heuristics (e.g., "0.5% per trade") | Abandons deterministic, algorithmically derived position sizing models based on exact statistical expectancy and dynamic programmatic constraints. |
+| Designing "stateful object-oriented sanitization protocols" | Obfuscates precise mathematical operations and explicit array indexing behind bloated, superficial programming buzzwords. |
+| Abstracting execution states away from quantitative signals | Fails to physically link the mathematical arrays (e.g., ATR standard deviation bounds) to the actionable triggers required for closed-loop FSM trade lifecycles. |
 
 ## Quick Reference
 
-| Execution Component | Programmatic Implementation | Target Architecture |
+| Architecture Component | Implementation Directive | Enforcement Standard |
 | :--- | :--- | :--- |
-| **Trade Lifecycle** | Closed-loop FSM with rollback handlers | NautilusTrader / Event-Driven |
-| **Signal Gating** | Array index inequalities & Boolean logic | `np.where` / Absolute Differentials |
-| **Microstructure Speed** | Raw asynchronous array vectorization | Numba JIT / Rust |
-| **Order Flow Imbalance** | Depth 5 (L=5) volumetric regression | Level 3 / Market-By-Order |
-| **Queue Simulation** | Latency modeling & fill probability | HftBacktest Frameworks |
-| **Boundary Logic** | Dynamic ATR-scaled absolute thresholding | Time-Series Arrays |
-| **Risk/Position Sizing** | R-multiple scale-out state transitions | Exposure Compression Arrays |
+| **Trade Lifecycle** | Closed-Loop Finite State Machine | Program exact state transition arrays and error-aware rollbacks. |
+| **Signal Generation** | Array Index Inequalities | Require absolute price differentials and synchronized Boolean gates. |
+| **Microstructure Logic** | Numba-Compiled Machine Code | Process tick flows via explicit multidimensional data arrays. |
+| **Risk Encoding** | Programmatic Sizing Matrices | Calculate absolute constraints via ATR boundaries and R-multiples. |
+| **Execution Engine** | Asynchronous Event-Driven Parsers | Mandate deterministic temporal alignment via NautilusTrader/HftBacktest. |
