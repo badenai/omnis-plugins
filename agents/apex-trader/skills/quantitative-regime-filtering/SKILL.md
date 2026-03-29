@@ -1,41 +1,40 @@
 ---
 name: quantitative-regime-filtering
-description: Use when determining mathematical frameworks for algorithm state switching based on macro and microstructure conditions, gating execution logic using Gamma Exposure (GEX), VoV Z-Scoring, explicit ATR thresholds, and Programmatic OI Divergence.
+description: Use when determining system activation states, filtering execution logic based on Gamma Exposure (GEX), VoV Z-Scores, or aggregating multi-adapter quantitative signals into unified execution thresholds.
 ---
 
 ## The Iron Law
 
 ```text
-You must strictly gate all algorithmic execution logic using deterministic boolean arrays, exact array index inequalities, and explicit standard deviation or ATR thresholds; never abstract regime state switching into subjective descriptors, superficial machine learning jargon, or retail trading heuristics.
+You must govern system activation exclusively through deterministic Boolean gates and array index inequalities driven by Gamma Exposure (GEX), VoV Z-Scores, and standard deviation bounds. Never substitute precise programmatic execution thresholds (e.g., `vov_zscore > 1.5`, `gex < 0`) with ambiguous retail heuristics, subjective momentum descriptions, or arbitrary hardcoded percentage caps.
 ```
 
 ## Behavioral Rules
 
-*   If Gamma Exposure (GEX) evaluates to a positive numerical value, assign boolean state toggles to activate range equilibrium retest algorithms.
-*   If Gamma Exposure (GEX) evaluates to a negative numerical value, trigger boolean arrays that activate directional breakout algorithms.
-*   Hardcode a systemic programmatic halt across all execution logic if the Volatility of Volatility (VoV) Z-Score exceeds a +1.5 standard deviation bound.
-*   Define all regime boundaries and state switches using explicit array index inequalities, N-bar window logic, and absolute price differentials.
-*   Trigger structural exhaustion sweep logic strictly when exact array inequalities detect a programmatic divergence between Open Interest (OI) destruction matrices and spot price stability.
-*   Enforce regime-agnostic edge by calculating dynamic volatility memory arrays explicitly scaled against continuous N-period ATR thresholds.
-*   Govern trade states and scaling logic using deterministically closed finite state machine (FSM) transitions and programmatic R-multiple arrays.
-*   Reject any algorithm state definition that substitutes computable mathematical thresholds for generic technical indicators or subjective chart reading.
+*   **VoV Circuit Breakers**: You must implement strict volatility circuit breakers using Volatility of Volatility (VoV) Z-Scoring, explicitly returning a Boolean `False` to block all entry functions if the VoV Z-Score exceeds `1.5` due to unstable volatility surfaces.
+*   **GEX Routing Logic**: If Gamma Exposure (GEX) is positive, you must route execution logic exclusively to mean-reversion array structures; if GEX is negative, you must route execution to momentum breakout arrays.
+*   **Signal Fusion Penalties**: If aggregating multi-adapter signals, enforce probabilistic consensus by mathematically applying a correlation suppression penalty (e.g., `0.45x` weight reduction) when independent adapters from the same analytical family align.
+*   **Array Management**: Define structural baseline states and institutional displacement strictly using computable array index inequalities, absolute price differentials, and standard deviation bounds on Level 2 Order Flow Imbalance (OFI).
+*   **Risk Scaling**: If transitioning between quantitative regimes, dynamically scale algorithmic position sizing based on real-time ATR volatility multipliers and strictly defined R-multiple breakeven states.
+*   **Temporal Sequestering**: You must sequester high-latency external data inputs (e.g., LLM API sentiment coordinates) into high-timeframe (H4/D1) regime filters to prevent blocking sub-millisecond execution loops.
 
 ## Red Flags
 
-| Rationalization | Why Wrong |
+| Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "Implementing kinematic validation to confirm the regime shift." | Contaminates the model with meaningless physics terminology instead of relying on explicit array index inequalities and standard deviation bounds. |
-| "Setting SL and TP parameters for the regime breakout." | Replaces deterministically closed FSM state transitions and programmatic R-multiple arrays with brittle, subjective retail trading concepts. |
-| "Using machine learning confidence scores to dictate execution state." | Obscures explicit, executable deterministic code and boolean gates behind black-box probability abstraction. |
-| "Capping regime trade risk between 0.1% and 1.0%." | Hardcodes arbitrary heuristics instead of relying on programmatic mathematical position sizing and strict fixed risk encoding. |
-| "Deploying a stateful object-oriented sanitization protocol." | Replaces precise mathematical operations and computable arrays with superficial programming filler. |
+| "Setting SL and TP at 1% and 3% to limit risk." | Uses retail acronyms and arbitrary heuristics instead of programmatic R-multiple breakeven states and dynamic ATR-scaled invalidation. |
+| "Using kinematic validation to detect structural decay." | Contaminates execution code with physics jargon and artificial persona phrasing instead of utilizing absolute price differentials and boolean gates. |
+| "Applying finite state machines to calculate position sizing parameters." | Shoehorns complex asynchronous state management into contexts requiring only straightforward array math and basic algorithmic arithmetic. |
+| "Implementing a bi-directional Zero-Phase Filter for real-time signal smoothing." | Introduces mathematical lookahead bias, violating strict real-time determinism required for live event loop execution. |
+| "Evaluating market momentum using MACD crossovers." | Relies on lagging retail indicators rather than deriving structural baselines from Order Flow Imbalance arrays and empirical microstructure execution data. |
 
 ## Quick Reference
 
-| Regime Metric | Deterministic Evaluation Logic | State Transition |
+| Regime Component | Programmatic Threshold | Deterministic Action |
 | :--- | :--- | :--- |
-| **VoV Z-Score** | Value > +1.5 standard deviations | Global Programmatic Execution Halt |
-| **GEX (Positive)** | Numeric evaluation > 0 | Boolean switch to Range Equilibrium |
-| **GEX (Negative)** | Numeric evaluation < 0 | Boolean switch to Directional Breakout |
-| **OI Divergence** | OI Destruction Matrix > Spot Stability Array | Initiate Exhaustion Sweep Target |
-| **Volatility Bounds** | Array indices bounded by absolute ATR thresholds | FSM Regime Memory Validation |
+| **GEX State > 0** | `gex_array[i] > 0` | Activate STICKY mean-reversion arrays |
+| **GEX State < 0** | `gex_array[i] < 0` | Activate SLIPPERY breakout/expansion structures |
+| **VoV Z-Score** | `vov_zscore > 1.5` | Trigger Boolean lock on all execution functions |
+| **Signal Fusion** | `entropy_confidence >= threshold` | Apply correlation suppression to redundant adapters |
+| **Displacement** | `ofi_array[i] > std_dev_bound` | Confirm institutional structural breaks |
+| **Position Sizing** | `atr_multiplier * risk_unit` | Programmatically constrain risk via R-multiple limits |
