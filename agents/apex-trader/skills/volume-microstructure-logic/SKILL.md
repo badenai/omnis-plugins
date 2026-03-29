@@ -1,43 +1,45 @@
 ---
 name: volume-microstructure-logic
-description: Use when formalizing order flow imbalance, Z-Scored Volume Profiles, session liquidity mechanics, ES Futures POC Gap Determinism, microstructure liquidation cascades, and depth-specific OFI metrics into deterministic algorithms.
+description: Use when formalizing Order Flow Imbalance (OFI), tick-level microstructure, volume profile mechanics, and deterministic liquidity execution.
 ---
 
 ## The Iron Law
 
 ```text
-You must encode all volume, order flow, and liquidity microstructure mechanics strictly as computable mathematical thresholds, deterministic boolean gates, and explicit array index inequalities, entirely rejecting subjective chart interpretations, lagging retail indicators, and generic risk heuristics.
+Never use subjective price action descriptions or basic retail indicators. You must define all volume and microstructure events using explicit array index inequalities, absolute price differentials, Standard Deviation bounds, or ATR volatility thresholds to enforce strict programmable execution.
 ```
 
 ## Behavioral Rules
 
-- Define POC Gap Determinism using session-relative opening price differentials to compute exact mean-reversion pull probabilities based on empirical ES Futures structural mechanics.
-- Formalize POC (Point of Control) Migration divergence by enforcing multidimensional array inequalities where a breakout boolean is invalidated if the temporal POC vector descends while the price vector ascends.
-- Calculate Multi-Level Order Flow Imbalance (MLOFI) by applying absolute contract delta formulas to N-depth Level 2 bid/ask liquidity matrices to compute pre-breakout institutional displacement.
-- Programmatically define unfinished auctions strictly as structural price extremes where exactly 0 contracts are mathematically recorded on the respective bid/ask array index.
-- Require structural breakouts to trigger an FSM state transition only when accompanied by session-relative volume Z-scores exceeding a explicitly defined standard deviation bound.
-- Map microstructure liquidation cascades by comparing Open Interest (OI) destruction arrays against absolute price stability vectors within strict 60-second rolling temporal boundaries.
-- Compute explicit mathematical position sizing, volatility-adjusted scaling bounds, and programmatic R-multiple breakeven logic instead of relying on retail stop-loss frameworks.
-- Execute Order Flow Imbalance evaluation using explicit asynchronous state management to ensure deterministic temporal alignment between executing tick flows and L2 snapshot data.
+*   Compute tick-level Order Flow Imbalance (OFI) and Level-2 depth regression arrays natively using `finmlkit` and Numba JIT compilation to guarantee sub-millisecond calculation speeds.
+*   Replace static temporal or standard volume bars with dynamic Quantile bars triggered strictly by EWMA volatility thresholding.
+*   Define Highest Volume Node (HVN) absorption deterministically: require extreme negative Cumulative Volume Delta (CVD) at a strict spatial boundary (±0.5% of the HVN) combined with zero downward absolute price translation.
+*   Calculate the degree of a Fair Value Gap (FVG) by extracting the absolute slope (|β1|) from a Tick-Level RANSAC Regression fitted to the execution data.
+*   Enforce a programmatic formation time threshold of ≥120 seconds before logging an FVG into the memory array.
+*   Generate dynamic upper and lower containment arrays for structural gap memory using exact ATR multipliers to filter out low-volatility structural noise.
+*   Filter non-representative volume spikes by enforcing strict temporal session awareness bounds when mapping ES Futures Point of Control (POC) gaps.
+*   Manage trade validation and position states using deterministic boolean gates and continuous out-of-sample R-multiple breakeven mathematical matrices.
+*   Use `HftBacktest` to model sub-millisecond execution, strictly accounting for queue position, feed latency, and GLFT market-making deterministic states.
+*   Define momentum and structural baseline states exclusively via Volatility-of-Volatility (VoV) Z-Scoring and Gamma Exposure (GEX) programmatic thresholds.
 
 ## Red Flags
 
-| Rationalization / Concept | Why Wrong |
+| Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "Setting SL and TP parameters..." | Relies on retail jargon instead of deterministic FSM state transitions and programmatic scale-out logic. |
-| "Kinematic validation of order flow..." | Hallucinates physics-adjacent jargon instead of utilizing concrete array indexing and standard deviation bounds. |
-| "Scaling structural memory using KNN models..." | Over-complicates deterministic logic with arbitrary ML buzzwords instead of relying on explicit computational structures and boolean gates. |
-| "Limiting exposure to 1.0% per trade..." | Hardcodes arbitrary retail risk percentages instead of defining programmatic, volatility-scaled risk matrices. |
-| "Volume looks exceptionally strong..." | Subjective and non-computable; volume must be rigidly normalized via Z-scores or standard deviation arrays. |
-| "Implementing an object-oriented stateful array sanitization protocol..." | Replaces precise mathematical array operations and FSM execution architecture with generic, unactionable programming filler. |
+| "Implement a Stop-Loss (SL) and Take-Profit (TP) capping risk at 1%." | Uses brittle retail jargon and arbitrary heuristics instead of deterministic R-multiple matrices, array-bounded invalidation, and programmatic structural limits. |
+| "Detect kinematic price exhaustion at the resistance boundary." | Contaminates code with meaningless physics jargon; replace with exact programmatic standard deviation bounds and explicit array indexing. |
+| "Initiate stateful object-oriented array sanitization for the block." | Employs superficial OOP filler; use explicit mathematical computations, absolute price differentials, and boolean gates. |
+| "Execute entry on the N-bar moving average swing crossover." | Substitutes quantifiable microstructure mechanics with lagging retail math; mandate Order Flow Imbalance (OFI) or Level-2 depth regression instead. |
+| "Apply bidirectional Zero-Phase Filters for live trade execution." | Introduces mathematical lookahead bias and violates the rigid latency/causality boundaries required for real-time live event loops. |
 
 ## Quick Reference
 
-| Concept | Formalization Metric | Execution Logic |
-| :--- | :--- | :--- |
-| **POC Divergence** | Temporal POC vector vs. Price vector array | Invalidate 'hollow' breakout boolean gates. |
-| **Multi-Level OFI** | N-depth L2 bid/ask delta threshold | Trigger pre-breakout displacement states in the FSM. |
-| **Unfinished Auctions** | Array index with `contracts_traded == 0` | Target mathematically deterministic structural extremes. |
-| **Volume Expansion** | Session-relative Volume Z-Score > $X\sigma$ | Validate structural containment and expansion events. |
-| **Liquidation Cascades** | OI destruction matrix vs. spot absolute differential | Execute mean-reversion logic upon ADL exhaustion detection. |
-| **Microstructure Alignment** | ASOF JOIN temporal matrix indexing | Guarantee deterministic alignment of asynchronous L2 data. |
+| Concept | Deterministic Implementation |
+| :--- | :--- |
+| **High-Frequency Simulation** | `HftBacktest` with strict queue position and latency accounting |
+| **Microstructure Pipeline** | Numba JIT + `finmlkit` for sub-millisecond OFI array generation |
+| **Dynamic Data Aggregation** | EWMA-thresholded Quantile bars (discarding static OHLCV) |
+| **HVN Absorption Trigger** | Extreme CVD + ±0.5% HVN spatial boundary + zero price translation |
+| **FVG Structural Validation** | Tick-Level RANSAC Regression slope (\|β1\|) + ≥120s formation time |
+| **Regime State Classifier** | VoV Z-Score bounds paired with GEX mean-reversion gating |
+| **Dynamic Array Containment** | ATR-multiplied bounds applied directly to limit order mapping |
