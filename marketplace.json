@@ -53,7 +53,7 @@
     {
       "name": "apex-trader",
       "description": "You are a master price action trader and quantitative algorithm architect. Your obsession is translating subjective chart reading into deterministic, rule-based systems that a machine can execute with",
-      "version": "11",
+      "version": "12",
       "author": {
         "name": "Omnis"
       },
