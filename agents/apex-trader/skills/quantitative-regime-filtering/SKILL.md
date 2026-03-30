@@ -1,40 +1,44 @@
 ---
 name: quantitative-regime-filtering
-description: Use when determining system activation states, filtering execution logic based on Gamma Exposure (GEX), VoV Z-Scores, or aggregating multi-adapter quantitative signals into unified execution thresholds.
+description: Use when building algorithmic regime classifiers, integrating Gamma Exposure (GEX) filters, calculating Vol-of-Vol (VoV) Z-scores, evaluating signal entropy, or programmatic system activation state switching.
+filePattern: "**/*.py"
 ---
 
 ## The Iron Law
 
 ```text
-You must govern system activation exclusively through deterministic Boolean gates and array index inequalities driven by Gamma Exposure (GEX), VoV Z-Scores, and standard deviation bounds. Never substitute precise programmatic execution thresholds (e.g., `vov_zscore > 1.5`, `gex < 0`) with ambiguous retail heuristics, subjective momentum descriptions, or arbitrary hardcoded percentage caps.
+Every quantitative regime classification must be mathematically derived from absolute array index inequalities and standard deviation bounds (e.g., VoV Z-scores, GEX polarity, signal entropy); never activate an execution state machine without evaluating its strictly defined Boolean regime gate.
 ```
 
 ## Behavioral Rules
 
-*   **VoV Circuit Breakers**: You must implement strict volatility circuit breakers using Volatility of Volatility (VoV) Z-Scoring, explicitly returning a Boolean `False` to block all entry functions if the VoV Z-Score exceeds `1.5` due to unstable volatility surfaces.
-*   **GEX Routing Logic**: If Gamma Exposure (GEX) is positive, you must route execution logic exclusively to mean-reversion array structures; if GEX is negative, you must route execution to momentum breakout arrays.
-*   **Signal Fusion Penalties**: If aggregating multi-adapter signals, enforce probabilistic consensus by mathematically applying a correlation suppression penalty (e.g., `0.45x` weight reduction) when independent adapters from the same analytical family align.
-*   **Array Management**: Define structural baseline states and institutional displacement strictly using computable array index inequalities, absolute price differentials, and standard deviation bounds on Level 2 Order Flow Imbalance (OFI).
-*   **Risk Scaling**: If transitioning between quantitative regimes, dynamically scale algorithmic position sizing based on real-time ATR volatility multipliers and strictly defined R-multiple breakeven states.
-*   **Temporal Sequestering**: You must sequester high-latency external data inputs (e.g., LLM API sentiment coordinates) into high-timeframe (H4/D1) regime filters to prevent blocking sub-millisecond execution loops.
+*   Evaluate Gamma Exposure (GEX) polarity to set the Boolean regime state: mandate `sticky_regime = True` (mean-reversion logic enabled) for positive GEX and `slippery_regime = True` (breakout/trend logic enabled) for negative GEX.
+*   Calculate Volatility-of-Volatility (VoV) Z-scores using standard deviation bounds over an N-bar window array.
+*   Implement a hard Boolean circuit breaker that overrides all signals and halts execution when the VoV Z-score exceeds +1.5.
+*   Apply a 0.45 correlation suppression multiplier to mathematical weights when aggregating array signals from identical analytical families.
+*   Calculate absolute system confidence using the arithmetic ratio `1 - (Signal Entropy / Max Entropy)`.
+*   Output probability uncertainty metrics alongside every signal matrix to prevent mirage reasoning in Out-of-Distribution (OOD) environments.
+*   Scale position sizing leverage arrays inversely to the calculated correlation elasticity threshold across asset classes.
+*   Trigger parameter switching exclusively through verifiable mathematical thresholds and array index inequalities rather than relying on object-oriented abstractions.
+*   Derive all momentum metrics strictly from Order Flow Imbalance (OFI), VoV arrays, or empirical execution data, completely ignoring lagging retail indicator crossovers.
 
 ## Red Flags
 
 | Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "Setting SL and TP at 1% and 3% to limit risk." | Uses retail acronyms and arbitrary heuristics instead of programmatic R-multiple breakeven states and dynamic ATR-scaled invalidation. |
-| "Using kinematic validation to detect structural decay." | Contaminates execution code with physics jargon and artificial persona phrasing instead of utilizing absolute price differentials and boolean gates. |
-| "Applying finite state machines to calculate position sizing parameters." | Shoehorns complex asynchronous state management into contexts requiring only straightforward array math and basic algorithmic arithmetic. |
-| "Implementing a bi-directional Zero-Phase Filter for real-time signal smoothing." | Introduces mathematical lookahead bias, violating strict real-time determinism required for live event loop execution. |
-| "Evaluating market momentum using MACD crossovers." | Relies on lagging retail indicators rather than deriving structural baselines from Order Flow Imbalance arrays and empirical microstructure execution data. |
+| "Pause the strategy if price action is choppy or moving sideways." | Relies on vague visual interpretation; regime halts must use strict VoV Z-Score thresholds and Boolean circuit breakers. |
+| "Implement a stateful object-oriented sanitization protocol to filter out kinematic variance." | Over-engineered, cross-domain vocabulary contamination; use concrete array index inequalities and standard deviation bounds. |
+| "Filter the market regime by confirming if the 50-period moving average crosses the 200-period." | Uses lagging retail indicators; momentum and regime states must derive from Gamma Exposure (GEX) and Order Flow Imbalance (OFI). |
+| "Calculate a 1.0% stop-loss and take-profit heuristic to cap exposure during high volatility." | Contaminated by retail trading jargon; requires R-multiple risk encoding and deterministic matrix exposure scaling. |
+| "Return the fusion signal simply as a 1 or 0 binary execution trigger." | Fails to account for epistemic uncertainty; the system must output probabilistic uncertainty alongside the structural signal array. |
 
 ## Quick Reference
 
-| Regime Component | Programmatic Threshold | Deterministic Action |
-| :--- | :--- | :--- |
-| **GEX State > 0** | `gex_array[i] > 0` | Activate STICKY mean-reversion arrays |
-| **GEX State < 0** | `gex_array[i] < 0` | Activate SLIPPERY breakout/expansion structures |
-| **VoV Z-Score** | `vov_zscore > 1.5` | Trigger Boolean lock on all execution functions |
-| **Signal Fusion** | `entropy_confidence >= threshold` | Apply correlation suppression to redundant adapters |
-| **Displacement** | `ofi_array[i] > std_dev_bound` | Confirm institutional structural breaks |
-| **Position Sizing** | `atr_multiplier * risk_unit` | Programmatically constrain risk via R-multiple limits |
+| Action | Computable Implementation Rule |
+| :--- | :--- |
+| **GEX Matrix Logic** | Positive = Mean-Reversion array enabled; Negative = Breakout array enabled. |
+| **VoV Circuit Breaker** | `if vov_zscore_array[i] > 1.5:` trigger systemic execution halt. |
+| **Signal Entropy Check** | System Confidence = `1 - (Signal Entropy / Max Entropy)`. |
+| **Correlation Penalty** | Multiply signal weights by 0.45x if sourced from identical analytical families. |
+| **Risk Elasticity** | Scale down position sizing leverage arrays deterministically upon breaching the correlation elasticity limit. |
+| **Execution Gating** | Enforce strict Boolean verification (`True`/`False`) of the active macro regime before passing parameters to the execution engine. |
