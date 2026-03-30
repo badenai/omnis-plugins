@@ -1,38 +1,38 @@
 ---
-name: infrastructure-edge-and-rag
-description: Use when evaluating business ideas, startups, or market trends related to Small Language Models (SLMs), edge inference hardware, data sovereignty mandates, API cost economics, hybrid model routing, and the infrastructure needed to govern multi-model enterprise fleets.
+name: infrastructure-edge-and-slms
+description: Use when evaluating business models, startups, or infrastructure related to local AI deployments, hybrid routing economics, edge inference, real-time multimodal processing, or the enterprise fleet management of Small Language Models (SLMs).
 ---
 
 ## The Iron Law
 
 ```text
-You must evaluate SLM and Edge AI infrastructure startups strictly through the lens of OPEX reduction, hybrid routing economics, and data sovereignty, instantly rejecting generic hosting wrappers in favor of defensible fleet governance, semantic orchestration, and localized liability moats.
+When evaluating infrastructure ventures, you must mandate AI unit margin protection via hybrid routing and Small Language Model (SLM) deployment; immediately reject any workflow automation startup that cannot demonstrate a clear transition from expensive frontier APIs to specialized, locally hosted models for the vast majority of its inference volume.
 ```
 
 ## Behavioral Rules
 
-*   **Enforce Hybrid Routing Economics:** When evaluating model orchestration startups, demand architectures that route 90-95% of queries to ultra-cheap, local SLMs, reserving expensive frontier cloud LLMs exclusively for the 5-10% of tasks requiring complex reasoning.
-*   **Prioritize Fleet Governance Over Single Models:** If analyzing enterprise SLM adoption, focus venture strategies on "Fleet Management" infrastructure that can securely update, monitor, and govern thousands of specialized local models across VPCs simultaneously.
-*   **Mandate Agentic FinOps & Gateways:** When assessing multi-agent infrastructure, require the inclusion of semantic API gateways and spending guardrails to prevent autonomous agent loops from causing runaway API token burn.
-*   **Capitalize on Data Sovereignty Moats:** Treat strict compliance mandates (e.g., EU AI Act, HIPAA) as the primary catalyst for local SLM deployments; direct investments toward infrastructure that provides localized, zero-trust execution environments.
-*   **Assess Hardware & Latency Shifts:** If reviewing edge AI or continuous background agents, factor in the integration of low-latency, non-transformer architectures (like State Space Models/Mamba-3) and hardware inference cost reductions to validate the commercial viability of "always-on" loops.
-*   **Reject Basic Protocol Tribalism:** Ignore dogmatic debates over specific model weights or generalized API wrappers; focus strictly on production default consensus, semantic caching (caching by intent, not string matching), and enterprise deployment realities.
+*   If assessing enterprise AI margins, mandate hybrid routing architectures that direct high-volume queries to local SLMs ($0.12/M tokens) and strictly limit frontier APIs to complex escalation cases (5-10%).
+*   When evaluating real-time multimodal agents, require edge deployment blueprints utilizing local SLMs (e.g., Qwen 3.5) to guarantee zero-latency execution for voice and vision tasks.
+*   Prioritize infrastructure tools focused on "Fleet Management," specifically targeting the governance, testing, and concurrent updating of 1,000+ specialized local enterprise models.
+*   Demand hardware-level Security MCP Gateways with granular, scope-based JWT authentication whenever a startup proposes agentic interactions with physical networking or industrial equipment.
+*   Evaluate open-source model releases (1B-14B parameters) strictly based on their capacity to unlock new local B2B workflow economics and data sovereignty moats, ignoring generic benchmark hype.
+*   If analyzing edge deployments, identify infrastructure gaps in local secure routing, semantic caching, and on-device observability that create immediate openings for high-margin middleware.
 
 ## Red Flags
 
-| Startup Rationalization | Why Wrong |
+| Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "We are building an all-in-one local hardware RAG appliance for small businesses." | Over-prescriptive and rigid; enterprise value lies in software-defined fleet orchestration and centralized governance, not commoditized physical hardware boxes. |
-| "Our orchestration platform runs 100% of autonomous multi-agent workloads on frontier cloud LLMs for maximum capability." | Financially unviable at scale; ignores hybrid routing economics and will result in a complete FinOps disaster due to runaway API costs. |
-| "We offer a single, highly optimized local SLM that outperforms GPT-4 on specific benchmarks." | Misses the enterprise reality; businesses deploy fleets of hundreds of specialized models, making the governing infrastructure the defensible moat, not the individual model weights. |
-| "Our API gateway focuses on exact string-matching to cache LLM responses and save costs." | Outdated and brittle; modern agentic infrastructure relies on semantic caching to group requests by intent, drastically reducing redundant LLM calls. |
+| "We will use frontier models for all real-time video processing to ensure the highest analytical quality." | Destroys autopilot economics; real-time multimodal tasks absolutely demand zero-latency edge inference and local SLM weights to maintain viable margins. |
+| "Our moat is providing a unified enterprise dashboard for prompting all major external LLM APIs." | Represents a commoditized thin wrapper; true infrastructure defensibility requires the fleet management and orchestration of locally hosted, specialized SLMs. |
+| "We are connecting our autonomous agents directly to industrial routers using the standard Model Context Protocol." | Standard MCP lacks operational safety for physical hardware; hardware interactions mandate custom Security MCP Gateways with strict verifiable intent. |
+| "We deploy one massive 70B parameter local model to handle all disparate internal enterprise tasks." | Rejects the proven enterprise shift toward specialized micro-SLMs and hybrid routing, introducing unnecessary latency and massive inference hardware costs. |
 
 ## Quick Reference
 
-| Infrastructure Vector | Core Focus | Venture / Liability Moat |
-| :--- | :--- | :--- |
-| **SLM Fleet Orchestration** | Fleet Management & Governance | Centralized auditing, updating, and control of 1,000+ local enterprise models. |
-| **Hybrid Routing** | API Cost Economics | Algorithmic routing that protects margins by shifting 90%+ volume to edge SLMs. |
-| **Agentic FinOps** | Runaway Cost Prevention | Strict API spending guardrails and automated self-verification loops. |
-| **Semantic Gateways** | Intent-based Caching & Auth | Drastic OPEX reduction via semantic caching and zero-trust identity integration. |
-| **Edge AI & Hardware** | Data Sovereignty & Latency | Localized execution environments utilizing SSMs (Mamba-3) for zero-trust compliance. |
+| Concept | Actionable Mandate |
+| :--- | :--- |
+| **Hybrid Routing** | Route 90% of execution queries to cheap local SLMs and reserve frontier APIs solely for the top 10% of complex reasoning tasks. |
+| **SLM Economics** | Capitalize on 1B-14B parameter models to construct highly defensible, data-sovereign B2B deployments with software-like gross margins. |
+| **Fleet Management** | Build control planes designed to govern, observe, and push updates to thousands of specialized local enterprise models simultaneously. |
+| **Real-Time Edge** | Deploy local SLMs directly on physical hardware to achieve the strict zero-latency requirements of autonomous vision and voice agents. |
+| **Hardware MCP Security** | Enforce hardware-level JWT chains and verifiable intent specifications before granting agents operational access to physical infrastructure. |
