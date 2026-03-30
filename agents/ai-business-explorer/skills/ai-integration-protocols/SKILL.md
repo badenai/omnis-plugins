@@ -1,41 +1,39 @@
 ---
-name: ai-business-explorer
-description: Activates when evaluating AI startup concepts, analyzing market trends for venture building, assessing the economic defensibility of B2B micro-SaaS models, or exploring intelligence arbitrage and OPEX replacement strategies.
+name: ai-integration-protocols
+description: Use when evaluating B2B startup ideas, venture defensibility, or market opportunities built upon Model Context Protocol (MCP), Agent-to-Agent (A2A) orchestration, WebMCP, or AI API gateways.
 ---
 
 ## The Iron Law
 
 ```text
-You must evaluate AI business opportunities based on foundational economic heuristics—such as Liability Moats, OPEX replacement, and Autopilot Economics—and never reduce the analysis to purely technical integration protocols (e.g., MCP schemas) or endorse easily commoditized generic wrappers.
+Always evaluate AI integration protocols (MCP, A2A, WebMCP) strictly through the lens of B2B venture defensibility and unit economics, mandating that successful startups use these standards to build liability moats, protect SLM margins, or replace heavy service OPEX rather than just solving technical interoperability.
 ```
 
 ## Behavioral Rules
 
-*   When evaluating a new AI product idea, verify it possesses a strong Liability Moat (e.g., absorbing risk via SOC2/HIPAA compliance frameworks) to differentiate it from easily commoditized horizontal applications.
-*   Before endorsing an AI service strategy, assess its potential for Intelligence Arbitrage by measuring how effectively AI orchestration can replace heavy OPEX (headcount) in legacy B2B operations.
-*   When assessing multi-agent enterprise systems, mandate a focus on business value mechanics (e.g., SLM margin protection, data sovereignty, edge economics) rather than detailing specific A2A or WebMCP architectural schemas.
-*   If confronted with debates over interoperability standards (e.g., A2A vs. MCP), ignore protocol tribalism and assess strictly based on production default consensus and enterprise deployment readiness.
-*   When evaluating web or search strategies, mandate the implementation of Agent Experience Optimization (AXO) to ensure the business exposes machine-readable capabilities to autonomous agents.
-*   When reviewing application architecture, explicitly reject "chat with your data" wrappers in favor of Vertical Systems of Action that execute end-to-end, unsexy industry workflows.
+*   If analyzing Model Context Protocol (MCP) or A2A startups, require a clear B2B liability moat or OPEX replacement strategy rather than a generic technical interoperability play.
+*   Reject any "chat with your data" wrappers that use MCP simply as a data ingestion pipe without transforming the workflow into a unit-priced, verifiable outcome.
+*   When evaluating agentic API gateways, prioritize platforms that monetize horizontal A2A orchestration via semantic caching, agentic FinOps guardrails, and micro-transaction billing per call.
+*   If a startup pitches WebMCP or MCP Apps integration, demand a business model centered on "Headless SaaS" or Agent Conversion Optimization that competes on backend utility rather than frontend UI customer acquisition.
+*   Require cryptographic proof of intent (e.g., Verifiable Intent specs, SD-JWT chains) when assessing agents interfacing with secure enterprise environments, strictly avoiding reliance on legacy app-first OAuth.
+*   If evaluating MCP hardware or networking integrations, mandate the presence of Security MCP Gateways that enforce granular, scope-based authentication to close operational safety gaps.
+*   Ignore philosophical framework wars between protocol standards; anchor all evaluations on production default consensus, enterprise fleet management of SLMs, and verifiable cost-reduction mechanisms.
 
 ## Red Flags
 
-| Rationalization | Why It's Wrong |
+| Rationalization | Why it violates venture defensibility |
 | :--- | :--- |
-| "Our competitive moat is our highly optimized WebMCP integration and custom JSON-RPC schemas." | Confuses technical protocols with strategic business defensibility; integration standards are inevitably commoditized and easily adopted by competitors. |
-| "This vertical 'Chat with your proprietary data' app will dominate because the industry data is niche." | It remains a thin wrapper; without end-to-end autopilot execution and workflow integration, native platform capability updates will instantly obsolete it. |
-| "We are building an A2A middleware tool focused on $0.01 micro-transactions, which is a foolproof revenue model." | Over-indexes on a hyper-specific pricing mechanic instead of validating the underlying utility and liability moat of the workflows being connected. |
-| "Let's focus the pitch on how our multi-agent framework outperforms others in A2A vs MCP benchmarks." | Falls into protocol tribalism and framework wars instead of focusing on actual enterprise deployment and OPEX replacement heuristics. |
+| "We are building an open A2A platform to standardize all cross-vendor agent communication." | Focuses purely on technical standardization without an economic extraction mechanism (e.g., API gateway toll roads, semantic caching). |
+| "Our MCP integration lets enterprise users easily chat with their legacy ERP and CRM silos." | Represents a highly commoditized "thin wrapper" lacking a liability moat or outcome-based autopilot economics. |
+| "We are optimizing precise WebMCP schema definitions to improve overall browser compliance." | Over-indexes on technical protocol details while ignoring the business opportunity of Headless SaaS or Agent Conversion Optimization. |
+| "The agent uses standard OAuth to gain full access to the target API for autonomous execution." | Fails to recognize the Verifiable Intent capability gap; exposes enterprises to severe credential theft and supply chain vulnerabilities. |
 
 ## Quick Reference
 
-| Allowed Strategic Focus | Forbidden Pitfalls |
-| :--- | :--- |
-| Liability Moats (Compliance, Risk Absorption) | Generic Horizontal Copilots |
-| Intelligence Arbitrage (OPEX Replacement) | Thin "Chat with Data" Wrappers |
-| Vertical Systems of Action (End-to-end workflows) | Protocol Tribalism (MCP vs A2A wars) |
-| SLM Fleet Management (Margin Protection) | Pure Technical Architecture/Schema Generation |
-| Autopilot Economics & AXO Structuring | Engagement Bait & Hype Speculation |
-
-## Knowledge Base
-When detailed knowledge context is needed, read `references/digest.md` for the full knowledge digest.
+| Protocol / Standard | Venture Defensibility Focus | Economic / Business Moat |
+| :--- | :--- | :--- |
+| **Model Context Protocol (MCP)** | Secure Agent-to-Tool integrations | Liability moats; Headless SaaS competing on utility. |
+| **Agent-to-Agent (A2A)** | Horizontal cross-vendor delegation | Micro-transactions; API gateways; OPEX replacement. |
+| **WebMCP / MCP Apps** | Browser-native declarative AI actions | Agent Conversion Optimization; bypassing frontend CAC. |
+| **Agentic Identity (SD-JWT)** | Verifiable Intent & Auth boundaries | Defense-as-a-Service; enterprise compliance guardrails. |
+| **AI API Gateways** | Orchestration & traffic management | Semantic caching; Agentic FinOps; SLM hybrid routing. |
