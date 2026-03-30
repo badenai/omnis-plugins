@@ -1,45 +1,43 @@
 ---
 name: volume-microstructure-logic
-description: Use when formalizing Order Flow Imbalance (OFI), tick-level microstructure, volume profile mechanics, and deterministic liquidity execution.
+description: Use when converting volume profiles, limit order books, multi-level order-flow imbalance (MLOFI), or liquidation cascades into computable N-dimensional arrays and deterministic execution state logic.
+filePattern: "**/*.py"
 ---
 
 ## The Iron Law
 
 ```text
-Never use subjective price action descriptions or basic retail indicators. You must define all volume and microstructure events using explicit array index inequalities, absolute price differentials, Standard Deviation bounds, or ATR volatility thresholds to enforce strict programmable execution.
+Require exact translation of order flow heatmaps, highest volume nodes (HVN), and limit order book depth into N-dimensional Numpy arrays; mandate the use of explicit array index inequalities, Numba-accelerated multi-level order-flow imbalance (MLOFI) processing, absolute price differentials, and standard deviation bounds to trigger deterministic Boolean execution states.
 ```
 
 ## Behavioral Rules
 
-*   Compute tick-level Order Flow Imbalance (OFI) and Level-2 depth regression arrays natively using `finmlkit` and Numba JIT compilation to guarantee sub-millisecond calculation speeds.
-*   Replace static temporal or standard volume bars with dynamic Quantile bars triggered strictly by EWMA volatility thresholding.
-*   Define Highest Volume Node (HVN) absorption deterministically: require extreme negative Cumulative Volume Delta (CVD) at a strict spatial boundary (±0.5% of the HVN) combined with zero downward absolute price translation.
-*   Calculate the degree of a Fair Value Gap (FVG) by extracting the absolute slope (|β1|) from a Tick-Level RANSAC Regression fitted to the execution data.
-*   Enforce a programmatic formation time threshold of ≥120 seconds before logging an FVG into the memory array.
-*   Generate dynamic upper and lower containment arrays for structural gap memory using exact ATR multipliers to filter out low-volatility structural noise.
-*   Filter non-representative volume spikes by enforcing strict temporal session awareness bounds when mapping ES Futures Point of Control (POC) gaps.
-*   Manage trade validation and position states using deterministic boolean gates and continuous out-of-sample R-multiple breakeven mathematical matrices.
-*   Use `HftBacktest` to model sub-millisecond execution, strictly accounting for queue position, feed latency, and GLFT market-making deterministic states.
-*   Define momentum and structural baseline states exclusively via Volatility-of-Volatility (VoV) Z-Scoring and Gamma Exposure (GEX) programmatic thresholds.
+- If scraping visual order flow heatmaps (e.g., Bookmap liquidity clustering), strictly convert the resting limit order "bubbles" into N-dimensional Numpy arrays rather than applying visual density heuristics.
+- If defining Order Flow Imbalance (OFI) at specific limit book depths (e.g., Depth 5), utilize Numba-accelerated linear regression slopes calculated over rolling micro-windows (e.g., 12-second intervals) to mathematically separate spoofed liquidity from true institutional absorption.
+- If evaluating volume distributions, enforce algorithmic Z-Scored Volume Profiles and strictly gate directional continuation triggers behind a Point of Control (POC) migration that mathematically exceeds predetermined bounds (e.g., > 1.5% distance from session open).
+- If modeling forced-closure events, utilize Programmatic Open Interest (OI) Divergence to map multi-tranche liquidation cascades, and trigger a localized Finite State Machine (FSM) drawdown isolation protocol if the primary sequence falls underwater by a defined scalar limit.
+- If trading ES Futures structural mechanics, mandate POC Gap Determinism as a scaled Boolean trigger validated strictly against session-aware volume feature engineering to filter idiosyncratic noise.
+- If formalizing liquidity sweep phenomena, evaluate passive limit order elasticity, resting limit density decay arrays, and Cumulative Volume Delta (CVD) divergence instead of writing logic optimized for anthropomorphic "stop hunting" by composite operators.
+- If generating volume-validated structural expansion signals, map the mathematical confirmation of price expansion explicitly to decreasing volume arrays bounded by absolute ATR volatility thresholds and VWAP standard deviation bands.
+- If validating execution latencies or queue position probability, natively implement HftBacktest tick-level simulation frameworks within the walk-forward validation matrix to prove execution timing edge.
 
 ## Red Flags
 
 | Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "Implement a Stop-Loss (SL) and Take-Profit (TP) capping risk at 1%." | Uses brittle retail jargon and arbitrary heuristics instead of deterministic R-multiple matrices, array-bounded invalidation, and programmatic structural limits. |
-| "Detect kinematic price exhaustion at the resistance boundary." | Contaminates code with meaningless physics jargon; replace with exact programmatic standard deviation bounds and explicit array indexing. |
-| "Initiate stateful object-oriented array sanitization for the block." | Employs superficial OOP filler; use explicit mathematical computations, absolute price differentials, and boolean gates. |
-| "Execute entry on the N-bar moving average swing crossover." | Substitutes quantifiable microstructure mechanics with lagging retail math; mandate Order Flow Imbalance (OFI) or Level-2 depth regression instead. |
-| "Apply bidirectional Zero-Phase Filters for live trade execution." | Introduces mathematical lookahead bias and violates the rigid latency/causality boundaries required for real-time live event loops. |
+| "Implementing Stop-Loss (SL) and Take-Profit (TP) levels for the microstructure entry." | Substitutes deterministic FSM state closures, dynamic array-based scale-out logic, and time-based invalidation with lagging, brittle retail concepts. |
+| "Filtering the gap tick data through kinematic variance and ML-classified confidence intervals." | Contaminates the algorithm with hallucinated physics-adjacent jargon and over-engineered buzzwords instead of relying on explicit mathematical array index inequalities and Boolean gates. |
+| "Waiting for a visual confirmation of the liquidity sweep before executing the order block." | Relies on subjective charting and discretionary interpretation rather than processing mathematical limit density decay and computed OI arrays. |
+| "Setting the algorithm to risk a flat 1.0% per trade to ensure account safety." | Replaces programmatic, volatility-scaled position sizing matrices and continuous Risk-Multiple mathematical evaluations with arbitrary heuristics. |
+| "Using an N-bar simple moving average crossover on volume to detect order flow shifts." | Dilutes quantitative rigor by abandoning Multi-Level Order-Flow Imbalance (MLOFI), Numba acceleration, and Z-scored standard deviation bounds in favor of a lagging indicator. |
 
 ## Quick Reference
 
-| Concept | Deterministic Implementation |
+| Microstructure Concept | Deterministic Array/Math Implementation |
 | :--- | :--- |
-| **High-Frequency Simulation** | `HftBacktest` with strict queue position and latency accounting |
-| **Microstructure Pipeline** | Numba JIT + `finmlkit` for sub-millisecond OFI array generation |
-| **Dynamic Data Aggregation** | EWMA-thresholded Quantile bars (discarding static OHLCV) |
-| **HVN Absorption Trigger** | Extreme CVD + ±0.5% HVN spatial boundary + zero price translation |
-| **FVG Structural Validation** | Tick-Level RANSAC Regression slope (\|β1\|) + ≥120s formation time |
-| **Regime State Classifier** | VoV Z-Score bounds paired with GEX mean-reversion gating |
-| **Dynamic Array Containment** | ATR-multiplied bounds applied directly to limit order mapping |
+| **Order Book Heatmaps** | N-dimensional Numpy arrays mapping local resting limit density |
+| **Order Flow Imbalance** | Numba-accelerated linear regression slopes over rolling micro-windows |
+| **POC Migration** | Z-Scored array distance tracking > 1.5% deviation from session open |
+| **Liquidation Cascades** | Multi-tranche FSM state isolation via Open Interest (OI) divergence tracking |
+| **Institutional Displacement** | Array index inequalities checking against absolute ATR and VWAP standard deviation bounds |
+| **Liquidity Sweeps** | Computed resting limit order elasticity and Cumulative Volume Delta (CVD) decay formulas |
