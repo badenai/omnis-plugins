@@ -1,43 +1,41 @@
 ---
 name: structural-formalization
-description: Use when translating subjective price action, market structure, liquidity sweeps, or chart patterns into deterministic programming logic, exact array computations, and boolean conditions.
+description: Use when formalizing subjective price action concepts, defining market structure breaks, encoding Fair Value Gaps (FVG), mapping Zones of Previous Failure (ZPF), validating Point of Control (POC) Gaps, or translating visual charting into deterministic mathematical arrays, boolean gates, and Finite State Machines.
 ---
 
 ## The Iron Law
 
 ```text
-You must translate every subjective price action concept into strictly computable definitions using explicit array index inequalities, absolute price differentials, Order Flow Imbalance (OFI) processing, and ATR-qualified boolean gates, completely eliminating all visual chart interpretation and retail heuristics.
+You must strictly translate all subjective price action concepts into deterministic, computable mathematics utilizing explicit array index inequalities, boolean gates, absolute price differentials, and standard deviation bounds; never output visual charting descriptions, retail heuristics, or ungrounded machine-learning buzzwords.
 ```
 
 ## Behavioral Rules
 
-*   **Displacement Qualification:** Qualify Market Structure Shifts (MSS) programmatically by demanding the absolute difference between close and open exceeds an Average True Range multiplier threshold (`abs(Close[i] - Open[i]) > ATR(10) * BodyMultiplier`).
-*   **Order Block Mitigation:** Construct order blocks as rigid boolean mitigation states bounded by exact price arrays, invalidating the active state only upon a terminal candle close beyond the defined array boundary constraint.
-*   **Gap Validation:** Define Fair Value Gaps (FVG) and structural imbalances using absolute price differentials and linear regression slopes applied to high-frequency tick arrays, stripping out high-velocity exhaustion gaps unless explicitly validated by multi-level OFI computations.
-*   **Order Flow Imbalance:** Process market microstructure strictly through Numba-accelerated arrays computing Order Flow Imbalance (OFI) across specific Limit Order Book depths (e.g., Depth 5-10) to map institutional displacement.
-*   **Volume-Validated Breakouts:** Validate expanding price vectors programmatically by calculating Price-Volume Interaction metrics, strictly comparing current volume against a Simple Moving Average (SMA) baseline array.
-*   **Position Sizing & Risk:** Enforce position sizing and risk management natively through computable R-multiple breakeven state definitions and deterministic scale-out arrays rather than static retail percentage heuristics.
-*   **State Management:** Govern trade lifecycles using closed-loop Finite State Machines (FSM) linked directly to array-driven signal thresholds to prevent deadlock during partial fills or missing exchange data.
-*   **Liquidity Profiling:** Programmatically distinguish resting liquidity from spoofing by calculating cancellation velocity and queue positioning over rolling time windows via array iteration, never relying on visual depth density.
+*   **FVG Array Construction:** Calculate Fair Value Gaps (FVGs) using explicit array index inequalities and scale them strictly via ATR volatility thresholds to programmatically filter low-volatility algorithmic noise.
+*   **Structural Regression:** Quantify FVG determinism by extracting 1-second tick data within the macro gap and computing the absolute slope coefficient via linear regression, enforcing the Inverse Hypothesis where mathematically flatter slopes dictate higher retest probability.
+*   **Structural Failure FSMs:** Formalize a Zone of Previous Fail (ZPF) strictly as an n-touch Finite State Machine (FSM); mandate that touches 1 and 2 act purely as state transitions, triggering execution only on touch 3 if the current price array mathematically fails to exceed the origin pivot array concurrently with a declining Cumulative Volume Delta (CVD).
+*   **HVN Absorption Matrices:** Encode anomalous institutional absorption as a deterministic boolean gate that triggers only when volume expands `>= 150%` into a historical High Volume Node (HVN) while the CVD delta flattens and absolute price differentials contract.
+*   **POC Gap Anchoring:** Establish ES Futures Point of Control (POC) gaps as programmatic mean-reversion anchors, utilizing session-aware structural filtering via arrays to mathematically isolate valid gaps from idiosyncratic wash-trade volume spikes.
+*   **Deterministic Trade Lifecycles:** Govern all algorithmic executions using closed-loop Finite State Machines that define exact programmatic risk constraints and R-multiple breakeven state definitions, explicitly rejecting retail acronyms like "SL", "TP", or arbitrary percentage heuristics.
+*   **Institutional Displacement:** Measure structural market shifts exclusively through Multi-Level Order Flow Imbalance (MLOFI) array aggregation and programmatic standard deviation bounds, rejecting basic moving averages or simplistic N-bar swing logic.
 
 ## Red Flags
 
-| Domain-Specific Rationalization | Why It Violates Structural Formalization |
+| Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "Use an N-bar swing logic to detect the pivot points and market structure breaks." | Replaces robust Order Flow Imbalance (OFI) and standard deviation displacement metrics with lagging retail logic. |
-| "Set the SL to the swing low and the TP at a fixed 1.5% profit." | Employs banned retail acronyms (SL/TP) and arbitrary percentage heuristics instead of dynamic R-multiple states and scale-out arrays. |
-| "The kinematic variance of the RANSAC flat slope mathematically confirms the void." | Contaminates execution code with physics buzzwords instead of relying on explicit array indexing and clear boolean logic. |
-| "Trigger a stateful object-oriented sanitization protocol for the LOB arrays." | Uses superficial programming jargon rather than detailing the precise mathematical operations required for multi-level depth processing. |
-| "Check if the absolute value is $\ge$ the threshold to enter the state." | Utilizes LaTeX math formatting which abstracts away exact, copy-pasteable code-level directives like `>=`. |
-| "Deploy a Finite State Machine to calculate the position size." | Shoehorns complex execution architecture into simple arithmetic calculations, diluting both the FSM's purpose and the math. |
+| "Set a 1% SL below the swing low." | Violates the mandate for programmatic FSM state transitions and strict microstructure invalidation logic; utilizes forbidden retail jargon. |
+| "Look for aggressive footprint imbalances on the DOM." | Fails to translate visual liquidity into computable L2 arrays or objective Multi-Level Order Flow Imbalance (MLOFI) thresholds. |
+| "Use a kinematic ML classifier to detect flat slopes." | Introduces forbidden cross-domain physics jargon and vague abstractions instead of utilizing explicit array regression and absolute mathematical slopes. |
+| "Define the trend using an N-bar swing logic crossover." | Dilutes quantitative market structure mapping; fails to implement standard deviation bounds or volatility-scaled ATR arrays. |
+| "Wait for price to show rejection at the resistance zone." | Completely lacks computability; structural failures must be encoded as explicit n-touch FSM sequences governed by strict array inequalities. |
 
 ## Quick Reference
 
-| Concept | Computable Implementation | Execution Logic |
-| :--- | :--- | :--- |
-| **Displacement** | `abs(Close - Open) > ATR(10) * BodyMultiplier` | Trigger boolean state inversion |
-| **Order Blocks** | Strict boundary array assignment (High/Low) | Terminal close invalidation gate |
-| **Momentum** | Depth 5-10 MLOFI / Volume-Price Interaction | Standard deviation threshold breach |
-| **Gap (FVG) Retest** | Absolute price differential + Slope threshold (`abs(slope) <= max_val`) | Asynchronous array intersection |
-| **Risk Encoding** | Base risk amount * R-multiple scale-out tiers | FSM rollback on limit violation |
-| **Baseline Filtering** | Zero-Phase Filter bidirectional arrays | Cross-track error computation |
+| Subjective Concept | Deterministic Encoding |
+| :--- | :--- |
+| **Fair Value Gap (FVG)** | Volatility-Scaled ATR arrays + 1-second absolute slope linear regression. |
+| **Retention Failure (ZPF)** | 3-touch closed-loop FSM + origin pivot array index inequalities + CVD divergence. |
+| **Institutional Absorption** | Historical HVN intersection + Volume `>= 150%` + Flattened CVD boolean gate. |
+| **Macro Liquidation** | Limit Order Book (LOB) depth depletion `< 20%` + Cross-venue CVD deviation metric. |
+| **Risk / Invalidation** | Microstructure-driven FSM state closure + Programmatic R-multiple breakeven transitions. |
+| **Displacement Vector** | MLOFI multi-dimensional array aggregation + Flow toxicity standard deviation bounds. |
