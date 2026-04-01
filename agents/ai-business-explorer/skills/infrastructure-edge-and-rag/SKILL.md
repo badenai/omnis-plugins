@@ -1,38 +1,37 @@
 ---
-name: infrastructure-edge-and-slms
-description: Use when evaluating business models, startups, or infrastructure related to local AI deployments, hybrid routing economics, edge inference, real-time multimodal processing, or the enterprise fleet management of Small Language Models (SLMs).
+name: infrastructure-edge-and-rag
+description: Use when evaluating B2B startup ideas, venture strategies, or market trends involving local AI deployment, hybrid routing, Sovereign RAG, hardware inference economics, or managing fleets of specialized Small Language Models (SLMs) at the edge.
 ---
 
 ## The Iron Law
 
 ```text
-When evaluating infrastructure ventures, you must mandate AI unit margin protection via hybrid routing and Small Language Model (SLM) deployment; immediately reject any workflow automation startup that cannot demonstrate a clear transition from expensive frontier APIs to specialized, locally hosted models for the vast majority of its inference volume.
+Never evaluate edge AI, Sovereign RAG, or SLM fleets purely on technical performance benchmarks; you must strictly enforce that these technologies are deployed to protect venture unit margins against API burn rates and to establish a "Liability Moat" via on-premise data control in regulated industries.
 ```
 
 ## Behavioral Rules
 
-*   If assessing enterprise AI margins, mandate hybrid routing architectures that direct high-volume queries to local SLMs ($0.12/M tokens) and strictly limit frontier APIs to complex escalation cases (5-10%).
-*   When evaluating real-time multimodal agents, require edge deployment blueprints utilizing local SLMs (e.g., Qwen 3.5) to guarantee zero-latency execution for voice and vision tasks.
-*   Prioritize infrastructure tools focused on "Fleet Management," specifically targeting the governance, testing, and concurrent updating of 1,000+ specialized local enterprise models.
-*   Demand hardware-level Security MCP Gateways with granular, scope-based JWT authentication whenever a startup proposes agentic interactions with physical networking or industrial equipment.
-*   Evaluate open-source model releases (1B-14B parameters) strictly based on their capacity to unlock new local B2B workflow economics and data sovereignty moats, ignoring generic benchmark hype.
-*   If analyzing edge deployments, identify infrastructure gaps in local secure routing, semantic caching, and on-device observability that create immediate openings for high-margin middleware.
+*   **Enforce Hybrid Routing Economics:** When analyzing enterprise AI architectures, mandate hybrid routing models that push 90-95% of queries to self-hosted Small Language Models (SLMs) to eliminate catastrophic API burn rates and preserve gross margins.
+*   **Target Fleet Management Infrastructure:** Treat the orchestration, updating, and governance of 1,000+ domain-specific enterprise models as a primary venture opportunity, explicitly rejecting startup pitches focused on training a single "better" foundation model.
+*   **Prioritize the Liability Moat:** Position local AI deployment and Sovereign RAG strictly as compliance and security moats; evaluate how keeping data entirely on-premise unlocks unsexy, highly regulated B2B verticals (e.g., healthcare triage, defense, legal discovery).
+*   **Anchor in OPEX Replacement:** If evaluating real-time multimodal edge agents (e.g., local computer vision for logistics), demand proof that the hardware inference costs collapse enough to directly replace human labor OPEX without eroding the startup's unit economics.
+*   **Monitor Architectural Efficiency Shifts:** Track emerging local architectures (like State Space Models or Mamba-3) exclusively through the lens of economic efficiency gains for high-frequency, always-on agentic telemetry tasks, ignoring purely academic or philosophical AI debates.
+*   **Reject Rigid Hardware Lock-in:** Ignore venture ideas that rely on hyper-specific, turnkey hardware appliances with proprietary schemas; demand flexible, standard-agnostic fleet management software that thrives regardless of underlying hardware changes.
 
 ## Red Flags
 
-| Domain-Specific Rationalization | Why Wrong |
+| Domain-Specific Rationalization | Why it is Wrong (Venture Perspective) |
 | :--- | :--- |
-| "We will use frontier models for all real-time video processing to ensure the highest analytical quality." | Destroys autopilot economics; real-time multimodal tasks absolutely demand zero-latency edge inference and local SLM weights to maintain viable margins. |
-| "Our moat is providing a unified enterprise dashboard for prompting all major external LLM APIs." | Represents a commoditized thin wrapper; true infrastructure defensibility requires the fleet management and orchestration of locally hosted, specialized SLMs. |
-| "We are connecting our autonomous agents directly to industrial routers using the standard Model Context Protocol." | Standard MCP lacks operational safety for physical hardware; hardware interactions mandate custom Security MCP Gateways with strict verifiable intent. |
-| "We deploy one massive 70B parameter local model to handle all disparate internal enterprise tasks." | Rejects the proven enterprise shift toward specialized micro-SLMs and hybrid routing, introducing unnecessary latency and massive inference hardware costs. |
+| "This platform routes all enterprise operational data through a massive frontier model API." | Ignores the economic reality of catastrophic API token burn rates, latency constraints, and the lack of a secure liability moat. |
+| "Our open-source SLM scores 3% higher on generic MMLU benchmarks than the incumbent." | Focuses on easily commoditized technical performance instead of the B2B infrastructure required to govern, update, and safely deploy models at scale. |
+| "We are building a proprietary hardware box to run local RAG with our own custom connection schema." | Pigeonholes the business into a hyper-specific, rigid architecture instead of targeting the broader, scalable software economics of SLM fleet management. |
+| "Our edge deployment is a chat-with-your-PDF tool hosted locally." | Fails to target vertical 'autopilot economics'; a local generic wrapper has zero B2B defensibility against incumbent enterprise software updates. |
 
 ## Quick Reference
 
-| Concept | Actionable Mandate |
-| :--- | :--- |
-| **Hybrid Routing** | Route 90% of execution queries to cheap local SLMs and reserve frontier APIs solely for the top 10% of complex reasoning tasks. |
-| **SLM Economics** | Capitalize on 1B-14B parameter models to construct highly defensible, data-sovereign B2B deployments with software-like gross margins. |
-| **Fleet Management** | Build control planes designed to govern, observe, and push updates to thousands of specialized local enterprise models simultaneously. |
-| **Real-Time Edge** | Deploy local SLMs directly on physical hardware to achieve the strict zero-latency requirements of autonomous vision and voice agents. |
-| **Hardware MCP Security** | Enforce hardware-level JWT chains and verifiable intent specifications before granting agents operational access to physical infrastructure. |
+| Strategic Focus | Economic Driver | Venture Defensibility / Moat | Discard Immediately |
+| :--- | :--- | :--- | :--- |
+| **SLM Fleet Management** | Unit margin protection (bypassing API token costs) | Scale of governance, specialized model updates | Single monolithic foundation model wrappers |
+| **Sovereign RAG** | Unlocking regulated procurement budgets | The "Liability Moat" (strict data residency) | Cloud-only apps handling sensitive vertical data |
+| **Hybrid Routing Logic** | Drastic OPEX reduction at the edge | Proprietary enterprise data integration & latency reduction | Purely academic model benchmark chasing |
+| **Edge Multimodal Agents** | Replacing legacy human labor overhead | Executing end-to-end unsexy B2B physical workflows | Generic horizontal 'chat' copilots |
