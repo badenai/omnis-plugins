@@ -1,43 +1,44 @@
 ---
 name: quantitative-regime-filtering
-description: Use when designing algorithmic regime switches, fusing multi-variable market states (GEX, VoV Z-Scores, TSMOM), or building probabilistic weighting arrays for signal activation.
+description: Use when architecting logic for algorithmically dictating trading system activation, parameter switching, and trade lifecycle constraints using explicit metrics like GEX, VoV Z-Scoring, and TSMOM.
 ---
 
 ## The Iron Law
 
 ```text
-You must strictly define market regimes as mutually exclusive Boolean states derived from mathematically computable thresholds (e.g., GEX polarity arrays, VoV Z-Scores > +1.5σ), utilizing explicit array indexing and conditional gates to dictate system activation, and you must never rely on visual trend interpretation or lagging retail indicators.
+Never hardcode static strategy parameters; you must explicitly define regime-filtering Boolean gates, Average True Range (ATR) thresholds, and array index inequalities driven by Gamma Exposure (GEX), Vol-of-Vol (VoV) Z-Scoring, and Time-Series Momentum (TSMOM) to algorithmically dictate system activation, parameter switching, and exposure compression.
 ```
 
 ## Behavioral Rules
 
-- Assign positive Gamma Exposure (GEX) array values to a `True` Boolean state to instantiate a "STICKY" regime, strictly routing execution logic to mean-reverting Highest Volume Node (HVN) and Point of Control (POC) tracking models.
-- Assign negative Gamma Exposure (GEX) array values to a `False` Boolean state to instantiate a "SLIPPERY" regime, strictly routing execution logic to trend-following Fair Value Gap (FVG) and structural breakout arrays.
-- Implement a definitive Volatility-of-Volatility (VoV) circuit breaker where `VoV_ZScore > +1.5` triggers an absolute Boolean `False` across all execution modules, deterministically freezing the state machine.
-- Calculate dynamic probabilistic weights for the 11-adapter signal aggregation engine using a precise power-law decay function (`weight = i^-1.2`) across order book depth index levels.
-- Apply a strict `0.45x` correlation suppression multiplier to highly correlated modules within the fusion engine if their cross-track error falls below predefined statistical bounds, mathematically preventing feature overweighting.
-- Execute Zero-Phase Filters (ZPF) bidirectionally across time-series data arrays to compute baseline structural states if you must eliminate the latency inherent in standard Exponential Moving Averages (EMAs).
-- Restrict algorithmic activation to specific deterministic trading sessions by utilizing binary-temporal representations and strictly gated time-series arrays aligned via `ASOF JOIN` logic.
-- Size positions deterministically by computing the exact absolute price differential between the entry node and the structural invalidation boundary array, scaling capital mathematically against an ATR volatility threshold rather than hardcoding arbitrary retail percentages.
-- Govern all execution logic and regime transitions through Finite State Machines (FSM) that strictly demand programmatic closed-loop trade lifecycles, error-aware rollbacks, and mathematically defined R-multiple breakeven states.
+*   If Gamma Exposure (GEX) is mathematically positive, set Boolean gates to route execution arrays to mean-reversion logic.
+*   If Gamma Exposure (GEX) is low or negative, toggle execution states to activate breakout logic algorithms.
+*   Program a hard-coded circuit breaker to instantly halt all trade lifecycle Finite State Machines (FSMs) if the Vol-of-Vol (VoV) Z-Score strictly exceeds a +1.5 threshold.
+*   Update Time-Series Momentum (TSMOM) parameters exclusively at the end-of-day temporal boundary to prevent tick-level execution loop latency from API calls or intensive recalibrations.
+*   If asset correlation elasticity breaches its pre-calculated historical baseline array, proportionally compress risk-per-trade limits across the entire portfolio exposure matrix.
+*   Implement Automated Pause Gates (The Kitchen Loop) using explicit structural boundary arrays to detect Out-of-Distribution (OOD) regime drift prior to hitting lagging equity curve drawdowns.
+*   Define specific absolute price differentials and Average True Range (ATR) volatility thresholds when calculating deterministic regime boundaries.
+*   Extract quantitative regime baseline states using specific programmatic math (e.g., standard deviation bounds, array index inequalities) rather than utilizing generic machine learning classifiers or visual heuristics.
+*   Reserve Finite State Machines (FSM) strictly for asynchronous trade lifecycle management and execution state handling; use basic computational arithmetic and array indexing for simple indicator or Z-score calculations.
 
 ## Red Flags
 
 | Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "Implement SL and TP orders based on the SLIPPERY regime trend." | Never use retail trading acronyms (SL/TP); you must define deterministically closed FSM state transitions and scale-out array logic. |
-| "Cap regime exposure to 1.0% per trade to manage drawdown risk." | Do not hardcode arbitrary risk heuristics; you must implement programmatic position sizing driven by ATR thresholds and absolute array differentials. |
-| "Define state changes via kinematic variance in the order flow." | Never contaminate logic with physics jargon; you must strictly utilize computable multi-dimensional arrays, vector computations, and Boolean gates. |
-| "Use a 50-period EMA to track the macro baseline filter." | Do not rely on lagging retail indicators; you must extract structural baselines exclusively from Order Flow Imbalance (OFI), GEX, or VoV data. |
-| "Scale memory explicitly against ATR using a bi-directional ZPF." | Do not enforce hyper-specific indicator mandates; you must allow the structural mathematical formulation to generalize across execution environments. |
+| "I will use a standard Take-Profit (TP) and Stop-Loss (SL) to handle regime shifts." | Violates deterministic state closure mandates; relies on retail jargon instead of programmatic risk encoding, state transitions, and volatility-scaled structural invalidation. |
+| "The strategy reduces position size to 0.5% during high volatility." | Hardcodes arbitrary retail percentage heuristics instead of enforcing dynamic, mathematically defined exposure compression based on Correlation Elasticity and VoV Z-scores. |
+| "I will apply a generic Deep Learning LSTM to predict the market regime." | Obscures deterministic market structure and lacks strict programmatic invalidation constraints; regime filters must use explicit computable logic like GEX thresholds and array index inequalities. |
+| "I added an FSM to calculate the Vol-of-Vol Z-score." | Over-engineers simple arithmetic; Finite State Machines must govern complex, multi-stage trade lifecycles and asynchronous order routing, not basic variable calculation. |
+| "I will calculate kinematic variance to validate the breakout regime." | Contaminates the codebase with irrelevant physics jargon instead of using concrete microstructure metrics like Order Flow Imbalance (OFI), ATR boundaries, and Absolute Price Differentials. |
+| "Calculate the regime $\ge$ $1.5\sigma$ utilizing object-oriented stateful arrays." | Utilizes forbidden LaTeX formatting and abstract generic programming buzzwords instead of explicit code-level directives and simple exact mathematical operators. |
 
 ## Quick Reference
 
-| Regime Variable | Computable Threshold / Logic | Execution Routing Directive |
+| Regime Metric | Deterministic Condition | Programmatic Action |
 | :--- | :--- | :--- |
-| **GEX Polarity (Positive)** | `GEX > 0` (Boolean True) | Activate STICKY Regime (Mean-reverting POC/HVN models). |
-| **GEX Polarity (Negative)** | `GEX < 0` (Boolean False) | Activate SLIPPERY Regime (Trend-following FVG/Breakout logic). |
-| **VoV Circuit Breaker** | `VoV_ZScore > +1.5σ` | Trigger absolute Boolean False (Freeze all state machine execution). |
-| **Signal Fusion Weighting** | `weight = i^-1.2` | Apply power-law decay across multi-level OFI index depths. |
-| **Correlation Penalty** | `0.45x` Multiplier | Suppress redundant feature weights in the 11-adapter probabilistic system. |
-| **Baseline Filtration** | Bidirectional ZPF | Extract zero-latency structural states across time-series arrays. |
+| **Gamma Exposure (GEX)** | Positive | Activate mean-reversion logic arrays |
+| **Gamma Exposure (GEX)** | Low / Negative | Toggle Boolean gates for breakout logic |
+| **Vol-of-Vol (VoV) Z-Score** | > +1.5 | Halt FSM execution (Circuit Breaker) |
+| **TSMOM** | End-of-Day Boundary | Recalculate and update system parameters |
+| **Correlation Elasticity** | > Historical Baseline | Compress portfolio risk arrays proportionally |
+| **OOD Drift Control** | Structural Boundary Breach | Trigger Automated Pause Gates |
