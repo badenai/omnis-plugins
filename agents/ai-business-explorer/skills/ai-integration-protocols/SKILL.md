@@ -1,39 +1,38 @@
 ---
 name: ai-integration-protocols
-description: Use when evaluating B2B startup ideas, venture defensibility, or market opportunities built upon Model Context Protocol (MCP), Agent-to-Agent (A2A) orchestration, WebMCP, or AI API gateways.
+description: Use when evaluating B2B defensibility, venture mechanics, or startup ideas related to agent interoperability, Model Context Protocol (MCP), Agent-to-Agent (A2A) networks, agent identity, verifiable intent, decentralized trust, WebMCP, or AI API Gateways.
 ---
 
 ## The Iron Law
 
 ```text
-Always evaluate AI integration protocols (MCP, A2A, WebMCP) strictly through the lens of B2B venture defensibility and unit economics, mandating that successful startups use these standards to build liability moats, protect SLM margins, or replace heavy service OPEX rather than just solving technical interoperability.
+You must evaluate AI integration protocols (MCP, A2A) and identity standards strictly as venture-building mechanisms to establish liability moats, protect unit margins, and unlock vertical autopilot economics, never analyzing them purely as abstract technical specifications.
 ```
 
 ## Behavioral Rules
 
-*   If analyzing Model Context Protocol (MCP) or A2A startups, require a clear B2B liability moat or OPEX replacement strategy rather than a generic technical interoperability play.
-*   Reject any "chat with your data" wrappers that use MCP simply as a data ingestion pipe without transforming the workflow into a unit-priced, verifiable outcome.
-*   When evaluating agentic API gateways, prioritize platforms that monetize horizontal A2A orchestration via semantic caching, agentic FinOps guardrails, and micro-transaction billing per call.
-*   If a startup pitches WebMCP or MCP Apps integration, demand a business model centered on "Headless SaaS" or Agent Conversion Optimization that competes on backend utility rather than frontend UI customer acquisition.
-*   Require cryptographic proof of intent (e.g., Verifiable Intent specs, SD-JWT chains) when assessing agents interfacing with secure enterprise environments, strictly avoiding reliance on legacy app-first OAuth.
-*   If evaluating MCP hardware or networking integrations, mandate the presence of Security MCP Gateways that enforce granular, scope-based authentication to close operational safety gaps.
-*   Ignore philosophical framework wars between protocol standards; anchor all evaluations on production default consensus, enterprise fleet management of SLMs, and verifiable cost-reduction mechanisms.
+*   If an idea relies on basic MCP or A2A connectivity, require a clear "liability moat" (such as Just-In-Time credentialing, TACACS+ routing, or strict regulatory compliance) to prove defensibility against immediate commoditization.
+*   Structure Agent-to-Agent (A2A) venture proposals around micro-transaction economics, focusing on B2B API gateways that route, cache, and bill ($0.01 to $0.05) for autonomous machine-to-machine interactions.
+*   Demand "Agentic Authentication" architectures—specifically SD-JWT chains (Selective Disclosure JSON Web Tokens) and the Verifiable Intent specification—whenever evaluating startups automating cross-platform, multi-agent enterprise workflows.
+*   Treat WebMCP and MCP Apps UI orchestration strictly as enablers for "Headless SaaS," evaluating how they bypass traditional frontend DOM friction to aggressively replace human OPEX in legacy, low-margin B2B service industries.
+*   Prioritize AI API Gateways that implement Semantic Caching to defend unit economics against unconstrained LLM API burn rates when assessing enterprise agent deployments.
+*   Ignore protocol tribalism or framework wars (e.g., A2A HTTP/gRPC vs. MQTT message brokers); judge integration infrastructure purely by its ability to capture value and maintain gross margins in production enterprise deployments.
 
 ## Red Flags
 
-| Rationalization | Why it violates venture defensibility |
+| Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "We are building an open A2A platform to standardize all cross-vendor agent communication." | Focuses purely on technical standardization without an economic extraction mechanism (e.g., API gateway toll roads, semantic caching). |
-| "Our MCP integration lets enterprise users easily chat with their legacy ERP and CRM silos." | Represents a highly commoditized "thin wrapper" lacking a liability moat or outcome-based autopilot economics. |
-| "We are optimizing precise WebMCP schema definitions to improve overall browser compliance." | Over-indexes on technical protocol details while ignoring the business opportunity of Headless SaaS or Agent Conversion Optimization. |
-| "The agent uses standard OAuth to gain full access to the target API for autonomous execution." | Fails to recognize the Verifiable Intent capability gap; exposes enterprises to severe credential theft and supply chain vulnerabilities. |
+| "Standard MCP connectivity creates our product moat." | Basic protocol integration is a free commodity; true venture defensibility requires proprietary secure routing, compliance barriers, or a strict liability moat. |
+| "Our autonomous enterprise agents use standard OAuth 2.0." | Legacy OAuth is app-first and fails to cryptographically scope permissions for agent-first autonomy, lacking essential 'Verifiable Intent' proofs. |
+| "We monetize by selling traditional SaaS seats for our A2A orchestration tool." | Per-seat pricing is collapsing; infrastructure startups must capture value via autopilot economics, intelligence arbitrage, or transaction-based API micro-billing. |
+| "We are building a horizontal A2A workflow builder for everyone." | Saturated horizontal markets have collapsed into free features; scalable ventures require deep Vertical Systems of Action targeted at unsexy B2B niches. |
 
 ## Quick Reference
 
-| Protocol / Standard | Venture Defensibility Focus | Economic / Business Moat |
+| Protocol Vector | Venture Defensibility Focus | Core Technology / Standard |
 | :--- | :--- | :--- |
-| **Model Context Protocol (MCP)** | Secure Agent-to-Tool integrations | Liability moats; Headless SaaS competing on utility. |
-| **Agent-to-Agent (A2A)** | Horizontal cross-vendor delegation | Micro-transactions; API gateways; OPEX replacement. |
-| **WebMCP / MCP Apps** | Browser-native declarative AI actions | Agent Conversion Optimization; bypassing frontend CAC. |
-| **Agentic Identity (SD-JWT)** | Verifiable Intent & Auth boundaries | Defense-as-a-Service; enterprise compliance guardrails. |
-| **AI API Gateways** | Orchestration & traffic management | Semantic caching; Agentic FinOps; SLM hybrid routing. |
+| **Vertical Integration** | Secure Routing & Compliance Moats | MCP Gateways, Tool-level JWTs, JIT |
+| **Horizontal Networks** | B2B Micro-Transaction Toll Roads | A2A JSON-RPC, Agent Cards, Event Brokers |
+| **Autonomous Identity** | Agentic Authentication & Cryptographic Trust | Verifiable Intent, SD-JWT Chains |
+| **Frontend Automation**| Headless SaaS & Human OPEX Replacement | WebMCP, MCP Apps UI Orchestration |
+| **Margin Protection** | Unconstrained API Burn Rate Mitigation | Semantic Caching, Local SLM Fleets |
