@@ -1,44 +1,42 @@
 ---
 name: quantitative-regime-filtering
-description: Use when architecting logic for algorithmically dictating trading system activation, parameter switching, and trade lifecycle constraints using explicit metrics like GEX, VoV Z-Scoring, and TSMOM.
+description: Use when determining algorithm state transitions, dynamic parameter switching, or strategy activation using Time-Series Momentum (TSMOM), Gamma Exposure (GEX), and Volatility-of-Volatility (VoV) Z-Scoring thresholds.
+filePattern: "**/*.py"
 ---
 
 ## The Iron Law
 
-```text
-Never hardcode static strategy parameters; you must explicitly define regime-filtering Boolean gates, Average True Range (ATR) thresholds, and array index inequalities driven by Gamma Exposure (GEX), Vol-of-Vol (VoV) Z-Scoring, and Time-Series Momentum (TSMOM) to algorithmically dictate system activation, parameter switching, and exposure compression.
+```python
+# All regime filters must strict-evaluate to boolean states derived from mathematically defined array index inequalities and absolute statistical thresholds; never substitute programmable standard deviation bounds with subjective trend bias or lagging retail technicals.
 ```
 
 ## Behavioral Rules
 
-*   If Gamma Exposure (GEX) is mathematically positive, set Boolean gates to route execution arrays to mean-reversion logic.
-*   If Gamma Exposure (GEX) is low or negative, toggle execution states to activate breakout logic algorithms.
-*   Program a hard-coded circuit breaker to instantly halt all trade lifecycle Finite State Machines (FSMs) if the Vol-of-Vol (VoV) Z-Score strictly exceeds a +1.5 threshold.
-*   Update Time-Series Momentum (TSMOM) parameters exclusively at the end-of-day temporal boundary to prevent tick-level execution loop latency from API calls or intensive recalibrations.
-*   If asset correlation elasticity breaches its pre-calculated historical baseline array, proportionally compress risk-per-trade limits across the entire portfolio exposure matrix.
-*   Implement Automated Pause Gates (The Kitchen Loop) using explicit structural boundary arrays to detect Out-of-Distribution (OOD) regime drift prior to hitting lagging equity curve drawdowns.
-*   Define specific absolute price differentials and Average True Range (ATR) volatility thresholds when calculating deterministic regime boundaries.
-*   Extract quantitative regime baseline states using specific programmatic math (e.g., standard deviation bounds, array index inequalities) rather than utilizing generic machine learning classifiers or visual heuristics.
-*   Reserve Finite State Machines (FSM) strictly for asynchronous trade lifecycle management and execution state handling; use basic computational arithmetic and array indexing for simple indicator or Z-score calculations.
+*   If calculating the underlying market regime, extract Gamma Exposure (GEX) boolean states to dictate array selection: strictly route to mean-reverting execution logic when `GEX > 0`, and enable directional breakout threshold arrays when `GEX < 0`.
+*   If the rolling Volatility-of-Volatility (VoV) Z-Score evaluates to `> 1.5`, instantly trigger programmatic circuit breakers to halt algorithm execution and enforce strict mathematical doubt via out-of-distribution (OOD) penalty matrices.
+*   Construct Time-Series Momentum (TSMOM) filters by evaluating explicit absolute price differentials against dynamic standard deviation bounds across rolling `N`-period continuous arrays, strictly avoiding basic retail "N-bar swing" logic.
+*   Require system activation parameters to dynamically shift based on mathematical structural baseline states mapped via True/False boolean gates, never through curve-fit visual lookbacks.
+*   Penalize concurrent structural signals across overlapping regimes by actively multiplying the fused signal array by a `0.45` Correlation Suppression factor to neutralize redundant feature weighting.
+*   Design position sizing and leverage logic within defined regimes using explicit programmatic R-multiple limits and Average True Range (ATR) array boundaries instead of arbitrary percentage-based retail heuristics.
+*   Validate all regime switching logic via continuous out-of-sample walk-forward validation arrays to mathematically detect threshold degradation in transitioning volatility environments.
 
 ## Red Flags
 
 | Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "I will use a standard Take-Profit (TP) and Stop-Loss (SL) to handle regime shifts." | Violates deterministic state closure mandates; relies on retail jargon instead of programmatic risk encoding, state transitions, and volatility-scaled structural invalidation. |
-| "The strategy reduces position size to 0.5% during high volatility." | Hardcodes arbitrary retail percentage heuristics instead of enforcing dynamic, mathematically defined exposure compression based on Correlation Elasticity and VoV Z-scores. |
-| "I will apply a generic Deep Learning LSTM to predict the market regime." | Obscures deterministic market structure and lacks strict programmatic invalidation constraints; regime filters must use explicit computable logic like GEX thresholds and array index inequalities. |
-| "I added an FSM to calculate the Vol-of-Vol Z-score." | Over-engineers simple arithmetic; Finite State Machines must govern complex, multi-stage trade lifecycles and asynchronous order routing, not basic variable calculation. |
-| "I will calculate kinematic variance to validate the breakout regime." | Contaminates the codebase with irrelevant physics jargon instead of using concrete microstructure metrics like Order Flow Imbalance (OFI), ATR boundaries, and Absolute Price Differentials. |
-| "Calculate the regime $\ge$ $1.5\sigma$ utilizing object-oriented stateful arrays." | Utilizes forbidden LaTeX formatting and abstract generic programming buzzwords instead of explicit code-level directives and simple exact mathematical operators. |
+| "Using a 50-SMA crossover to define the bullish trend regime." | Replaces standard deviation bounds and Order Flow Imbalance (OFI) processing with a lagging retail indicator, destroying microstructure precision. |
+| "Halting trading when the market feels too choppy." | Substitutes computable Volatility-of-Volatility (VoV) Z-Score array limits with untestable human discretionary bias. |
+| "Setting fixed 1% Stop-Loss (SL) and 3% Take-Profit (TP) targets for trending markets." | Contaminates deterministic execution architecture with brittle retail acronyms instead of programmatic R-multiple arrays and structural invalidation limits. |
+| "Measuring the kinematic variance of the price trajectory to switch states." | Hallucinates physics-adjacent jargon, eliminating the strict programmatic vocabulary required for executable boolean gates and array index inequalities. |
+| "Regime tracking operates through stateful object-oriented smoothing." | Obscures precise mathematical operations with superficial OOP buzzwords, failing to yield computable vector arrays. |
 
 ## Quick Reference
 
-| Regime Metric | Deterministic Condition | Programmatic Action |
+| Regime Metric | Programmatic Condition | Execution Action / Output |
 | :--- | :--- | :--- |
-| **Gamma Exposure (GEX)** | Positive | Activate mean-reversion logic arrays |
-| **Gamma Exposure (GEX)** | Low / Negative | Toggle Boolean gates for breakout logic |
-| **Vol-of-Vol (VoV) Z-Score** | > +1.5 | Halt FSM execution (Circuit Breaker) |
-| **TSMOM** | End-of-Day Boundary | Recalculate and update system parameters |
-| **Correlation Elasticity** | > Historical Baseline | Compress portfolio risk arrays proportionally |
-| **OOD Drift Control** | Structural Boundary Breach | Trigger Automated Pause Gates |
+| **VoV Z-Score** | `vov_z > 1.5` | Circuit breaker halt; invoke OOD penalty |
+| **GEX State (+)** | `gex_array > 0` | Activate mean-reversion boundary logic |
+| **GEX State (-)** | `gex_array < 0` | Activate breakout threshold logic |
+| **TSMOM Variance** | `array_diff >= std_dev_bound` | Toggle time-series momentum boolean |
+| **Signal Fusion** | Overlapping signal vectors | Apply `0.45x` correlation suppression |
+| **Sizing Logic** | Regime validation confirmed | Scale via programmatic R-multiple arrays |
