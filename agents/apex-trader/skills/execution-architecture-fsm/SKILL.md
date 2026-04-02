@@ -1,41 +1,45 @@
 ---
 name: execution-architecture-fsm
-description: Use when designing or debugging high-performance algorithmic execution pipelines, NautilusTrader finite state machines, HftBacktest tick-level simulations, or QuestDB time-series data architectures to guarantee backtest-to-live parity.
+description: Use when designing, debugging, or deploying high-frequency execution pipelines, event-driven trade lifecycle finite state machines (FSM), HftBacktest/NautilusTrader integrations, or handling tick-data streams and Numba-accelerated microstructure arrays.
+filePattern: "**/*.py"
+bashPattern: "pytest|nautilus"
 ---
 
 ## The Iron Law
 
 ```text
-Every state transition within the execution architecture must be strictly gated by computable array index inequalities, absolute price differentials, and ATR-derived volatility thresholds. Programmatic trade lifecycles must execute as Finite State Machines (FSM) driven by deterministic market microstructure metrics (e.g., standard deviation bounds of Order Flow Imbalance), strictly prohibiting subjective heuristics, retail acronyms (SL/TP), or physics-adjacent abstraction.
+Every execution state and trade lifecycle must be governed by a mathematically closed, event-driven Finite State Machine (FSM) that guarantees absolute deterministic parity between HftBacktest tick-level simulations and NautilusTrader live environments. Execution logic must rely exclusively on computable array index inequalities, strict Boolean gates, Order Flow Imbalance (OFI) thresholds, and precise absolute price differentials. You shall never utilize retail trading simplifications, discretionary logic, generic OOP abstractions, or black-box predictive models to govern market state transitions.
 ```
 
 ## Behavioral Rules
 
-- When synchronizing asynchronous multi-timeframe tick data, enforce QuestDB `ASOF JOIN` queries to align multi-dimensional Level 2 arrays and eliminate lookahead bias.
-- If assessing strategy viability, execute tick-level validation via HftBacktest utilizing Numba JIT arrays and Guéant–Lehalle–Fernandez-Tapia (GLFT) models to mathematically enforce simulated latency, partial fills, and queue position dynamics.
-- When architecting the NautilusTrader execution pipeline, define every trade lifecycle event—including entries, programmatic scale-outs, and strict invalidations—as a closed Finite State Machine (FSM) transition triggered by exact Boolean gates.
-- If calculating structural invalidation parameters, derive risk boundaries exclusively from ATR array values and absolute mathematical price differentials, actively discarding arbitrary percentage-based heuristics or retail risk terminology.
-- When gating FSM breakouts, require deterministic validation through Multi-Level Order Flow Imbalance (MLOFI) standard deviation bound crossings and computable VPIN thresholds, completely bypassing simplified N-bar swing logic.
-- If designing adaptive tempo state machines, utilize binary-temporal representations indexed to the immediately preceding tick event rather than relying on fixed-time loop thresholding.
-- When managing high-throughput order flow matrices, process limit order book depletion metrics using explicit Numba-accelerated array math to trigger programmatic Liquidation Risk Exposure (LCE) state pullbacks.
+*   Construct trade lifecycles strictly as Finite State Machines (FSM) utilizing `NautilusTrader`, enforcing explicit event-driven transitions, absolute state closures, and mathematically verifiable error-aware rollbacks.
+*   Guarantee absolute Backtest-to-Live Parity by validating execution logic natively inside `HftBacktest` Level-2 and Level-3 order book simulations, accounting deterministically for network latency, queue position, and partial fills.
+*   Define system activation and validation states explicitly via standard deviation bounds, Vol-of-Vol (VoV) Z-Scores, and Order Flow Imbalance arrays rather than generic technical crossover mechanics.
+*   Enforce fixed position sizing and programmatic trade invalidation using strictly computable array index inequalities, absolute price differentials, and dynamically updating ATR volatility bounds instead of generic percentage-based limits.
+*   Synchronize asynchronous tick-trades and multi-depth LOB snapshots utilizing `QuestDB` 2D Multi-Dimensional Arrays natively executing `ASOF JOIN` logic to eliminate sampling gaps and lookahead bias.
+*   Accelerate all microstructural mathematical calculations—including Multi-Level Order-Flow Imbalance (MLOFI) processing and Chu-Stinchcombe-White CUSUM statistical tests—strictly via `Numba` JIT-compiled functions within the `finmlkit` framework.
+*   Govern execution pacing via the Adaptive State Model in Binary-Temporal Representation (ASMBTR) framework to process relative tick velocity shifts, replacing arbitrary fixed-time limits with deterministic tick-event tempo encoding.
+*   Compute cross-track validation natively within arrays using strict Boolean gates to process aggregated consensus signals, mathematically penalizing redundant order flow features via defined correlation suppression constraints.
+*   Design every algorithmic component to output its own intrinsic failure mode parameter, mandating strict walk-forward validation schemas to benchmark out-of-sample systemic degradation continuously.
 
 ## Red Flags
 
-| Domain-Specific Rationalization | Why Wrong |
+| Rationalization / Anti-Pattern | Why it is Wrong (Execution Architecture Domain) |
 | :--- | :--- |
-| "Implement a Stop-Loss (SL) and Take-Profit (TP) at 1.5%." | Replaces exact FSM state transitions, programmatic scale-out logic, and array-based risk boundaries with brittle retail jargon and arbitrary heuristics. |
-| "Validate the kinematic momentum of the sequence." | Contaminates executable programmatic logic with meaningless physics-adjacent buzzwords instead of concrete computational array index inequalities. |
-| "Assume fill at the bar midpoint for simplicity." | Violates the absolute requirement for backtest-to-live parity and destroys structural edge by bypassing GLFT queue position physics. |
-| "Use an N-bar swing moving average to define the baseline." | Dilutes quantitative precision by substituting rigorous Multi-Level Order Flow Imbalance (OFI) processing with lagging retail simplifications. |
-| "Apply stateful object-oriented sanitization protocols." | Abstracts away the concrete Boolean gates, explicit thresholding, and n-dimensional array math required for deterministic execution. |
+| "Implementing Stop-Loss (SL) and Take-Profit (TP) parameters at 1% logic bounds." | Contaminates code with retail trading jargon; abandons exact programmatic R-multiple state definitions, ATR thresholds, and event-driven FSM scale-out logic. |
+| "Replacing finite state structures with generic object-oriented flag updates." | Fails to close loops programmatically; introduces severe risk of execution state drift, ambiguous transitions, and orphaned limit orders during live exchange routing. |
+| "Using kinematic variance or momentum acceleration terminology to describe fills." | Vocabulary contamination; introduces irrelevant physical science jargon that obfuscates the explicit time-series math, array indexing, and order book reconstruction requirements. |
+| "Replacing LOB Order Flow Imbalance arrays with N-bar swing indicator logic." | Strips out critical microstructure dimensions; downgrades institutional standard deviation displacement detection into lagging, retail-level geometry abstraction. |
+| "Synchronizing tick data streams using standard DataFrame merge algorithms." | Guaranteed to introduce lookahead bias and significant computational latency; deterministic ultra-high-frequency modeling mandates strict time-aware `ASOF JOIN` synchronization. |
 
 ## Quick Reference
 
-| Architecture Component | Implementation Mandate | Mathematical / Data Anchor |
-| :--- | :--- | :--- |
-| **Data Synchronization** | `ASOF JOIN` strictly | Zero lookahead bias temporal array matching |
-| **Microstructure Simulation** | `HftBacktest` + GLFT | Numba-accelerated latency & queue positioning |
-| **Lifecycle Management** | `NautilusTrader` FSM | Boolean gates & absolute price differentials |
-| **State Validation** | MLOFI & VPIN | Multi-level order flow standard deviations |
-| **Risk / Invalidation** | Programmatic boundary math | Exact volatility-scaled (ATR) array indexes |
-| **Event Timing** | Adaptive Tempo arrays | Binary-temporal tick-event indexing |
+| Component | Deterministic Implementation Standard |
+| :--- | :--- |
+| **Execution Framework** | Strict event-driven Finite State Machines (FSM) utilizing `NautilusTrader` for trade lifecycles. |
+| **Simulation Parity** | `HftBacktest` arrays simulating Level-2/Level-3 queue execution latency with mathematical exactness. |
+| **Pipelining / Storage** | `QuestDB` for 8M+ rows/s ingestion utilizing `SAMPLE BY ... FILL(PREV)` and `ASOF JOIN` for tick alignment. |
+| **Computational Velocity** | `finmlkit` and `Numba` JIT compilation for real-time Order Flow Imbalance (OFI) processing and structural math. |
+| **Programmatic Risk** | Absolute price differentials, computable array index inequalities, and dynamically scaled ATR logic. |
+| **State Triggers** | Strict Boolean gates governed by Volume-of-Volume Z-scoring and multi-depth LOB statistical standard deviations. |
