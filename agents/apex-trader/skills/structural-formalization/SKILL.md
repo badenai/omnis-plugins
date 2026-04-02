@@ -1,41 +1,45 @@
 ---
 name: structural-formalization
-description: Use when formalizing subjective price action concepts, defining market structure breaks, encoding Fair Value Gaps (FVG), mapping Zones of Previous Failure (ZPF), validating Point of Control (POC) Gaps, or translating visual charting into deterministic mathematical arrays, boolean gates, and Finite State Machines.
+description: Use when formalizing subjective price action, Fair Value Gaps, structural containment, or translating chart patterns into deterministic array inequalities and boolean state logic.
+filePattern: "**/*.py"
 ---
 
 ## The Iron Law
 
 ```text
-You must strictly translate all subjective price action concepts into deterministic, computable mathematics utilizing explicit array index inequalities, boolean gates, absolute price differentials, and standard deviation bounds; never output visual charting descriptions, retail heuristics, or ungrounded machine-learning buzzwords.
+You must define all subjective market structures strictly through computable N-bar array index inequalities, absolute price differentials, and explicit boolean logic gates; never substitute concrete programmatic boundaries with visual abstractions, generic ML buzzwords, or retail heuristics.
 ```
 
 ## Behavioral Rules
 
-*   **FVG Array Construction:** Calculate Fair Value Gaps (FVGs) using explicit array index inequalities and scale them strictly via ATR volatility thresholds to programmatically filter low-volatility algorithmic noise.
-*   **Structural Regression:** Quantify FVG determinism by extracting 1-second tick data within the macro gap and computing the absolute slope coefficient via linear regression, enforcing the Inverse Hypothesis where mathematically flatter slopes dictate higher retest probability.
-*   **Structural Failure FSMs:** Formalize a Zone of Previous Fail (ZPF) strictly as an n-touch Finite State Machine (FSM); mandate that touches 1 and 2 act purely as state transitions, triggering execution only on touch 3 if the current price array mathematically fails to exceed the origin pivot array concurrently with a declining Cumulative Volume Delta (CVD).
-*   **HVN Absorption Matrices:** Encode anomalous institutional absorption as a deterministic boolean gate that triggers only when volume expands `>= 150%` into a historical High Volume Node (HVN) while the CVD delta flattens and absolute price differentials contract.
-*   **POC Gap Anchoring:** Establish ES Futures Point of Control (POC) gaps as programmatic mean-reversion anchors, utilizing session-aware structural filtering via arrays to mathematically isolate valid gaps from idiosyncratic wash-trade volume spikes.
-*   **Deterministic Trade Lifecycles:** Govern all algorithmic executions using closed-loop Finite State Machines that define exact programmatic risk constraints and R-multiple breakeven state definitions, explicitly rejecting retail acronyms like "SL", "TP", or arbitrary percentage heuristics.
-*   **Institutional Displacement:** Measure structural market shifts exclusively through Multi-Level Order Flow Imbalance (MLOFI) array aggregation and programmatic standard deviation bounds, rejecting basic moving averages or simplistic N-bar swing logic.
+* Calculate Fair Value Gap (FVG) structural arrays by running tick-level RANSAC regression across the formation window to explicitly map the algorithmic slope.
+* Implement the Inverse Hypothesis by programming lower-degree (flatter slope) FVG arrays to trigger high-probability equilibrium magnetism states.
+* Define Zones of Previous Fail (ZPF) through strict N-bar rolling windows and explicit 1-2-3 touch exhaustion sequences mapped to exact array coordinates.
+* Trigger a Retention Failure boolean state exclusively when the current closing price array element computes strictly outside the absolute price boundaries of a retained box constraint following a displacement.
+* Filter structural displacement and calculate dynamic trailing invalidation vectors using absolute Average True Range (ATR) volatility thresholds.
+* Validate execution triggers at Consequent Encroachment by asserting boolean logic precisely at the mathematically derived 50% midpoint of an FVG or Order Block array.
+* Structure Multi-Timeframe Recursive Fractal Mapping as concurrent state queries where higher-timeframe directional arrays act as strict boolean gates for lower-timeframe execution triggers.
+* Govern trade lifecycles using dynamic R-multiple equations and deterministic risk array constraints instead of retail Stop-Loss (SL) or Take-Profit (TP) concepts.
+* Enforce walk-forward validation parameters dynamically to calibrate the maximum allowable absolute price deviation for structural sweep arrays.
 
 ## Red Flags
 
-| Domain-Specific Rationalization | Why Wrong |
+| Domain-Specific Rationalization | Why It Is Wrong |
 | :--- | :--- |
-| "Set a 1% SL below the swing low." | Violates the mandate for programmatic FSM state transitions and strict microstructure invalidation logic; utilizes forbidden retail jargon. |
-| "Look for aggressive footprint imbalances on the DOM." | Fails to translate visual liquidity into computable L2 arrays or objective Multi-Level Order Flow Imbalance (MLOFI) thresholds. |
-| "Use a kinematic ML classifier to detect flat slopes." | Introduces forbidden cross-domain physics jargon and vague abstractions instead of utilizing explicit array regression and absolute mathematical slopes. |
-| "Define the trend using an N-bar swing logic crossover." | Dilutes quantitative market structure mapping; fails to implement standard deviation bounds or volatility-scaled ATR arrays. |
-| "Wait for price to show rejection at the resistance zone." | Completely lacks computability; structural failures must be encoded as explicit n-touch FSM sequences governed by strict array inequalities. |
+| "The script will set SL and TP levels below the recent structural swing low." | Replaces programmatic R-multiple breakeven states and algorithmic scale-out logic with forbidden retail terminology. |
+| "We track kinematic structural variance to confirm the breakout momentum." | Contaminates the model with meaningless physics-adjacent jargon instead of using concrete array index inequalities. |
+| "Risk is hardcoded to a 1.0% heuristic based on the structure size." | Submits to arbitrary percentage heuristics instead of enforcing mathematical, volatility-adjusted position sizing equations. |
+| "The AI model visually detects the support retention failure." | Abstracts away the required N-bar window logic, absolute price differentials, and strictly computable boolean state transitions. |
+| "Use a generic ML classifier to predict structural confidence." | Obscures deterministic market structure boundaries behind unexplainable machine learning layers lacking strict programmatic invalidation constraints. |
 
 ## Quick Reference
 
-| Subjective Concept | Deterministic Encoding |
+| Concept | Programmatic Implementation |
 | :--- | :--- |
-| **Fair Value Gap (FVG)** | Volatility-Scaled ATR arrays + 1-second absolute slope linear regression. |
-| **Retention Failure (ZPF)** | 3-touch closed-loop FSM + origin pivot array index inequalities + CVD divergence. |
-| **Institutional Absorption** | Historical HVN intersection + Volume `>= 150%` + Flattened CVD boolean gate. |
-| **Macro Liquidation** | Limit Order Book (LOB) depth depletion `< 20%` + Cross-venue CVD deviation metric. |
-| **Risk / Invalidation** | Microstructure-driven FSM state closure + Programmatic R-multiple breakeven transitions. |
-| **Displacement Vector** | MLOFI multi-dimensional array aggregation + Flow toxicity standard deviation bounds. |
+| **FVG Containment** | Tick-level RANSAC regression mapped to boundary arrays |
+| **Equilibrium Magnetism** | Inverse Hypothesis (lower-degree slope prioritization) |
+| **Displacement Validation** | Absolute ATR volatility thresholds & boolean gates |
+| **Consequent Encroachment** | Strict 50% mathematical midpoint of a structural array |
+| **Retention Failure** | Close array element computes explicitly outside box bounds |
+| **Zones of Previous Fail (ZPF)** | N-bar 1-2-3 touch exhaustion count via array coordinates |
+| **Execution Scaling** | R-multiple array tracking and state-based invalidation |
