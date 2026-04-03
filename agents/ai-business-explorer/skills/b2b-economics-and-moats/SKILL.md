@@ -1,40 +1,38 @@
 ---
 name: b2b-economics-and-moats
-description: Use when evaluating AI startup ideas, analyzing B2B venture defensibility, designing vertical SaaS architectures, assessing intelligence arbitrage or PE roll-up strategies, or monetizing enterprise AI workflows.
+description: Use when evaluating AI startup ideas, analyzing B2B business models, assessing venture defensibility, pitching micro-SaaS strategies, or identifying opportunities to replace OPEX with AI workflows in vertical markets.
 ---
 
 ## The Iron Law
 
 ```text
-You must evaluate AI business models strictly on their "Liability Moat" and "Autopilot Economics," explicitly rejecting horizontal chat wrappers while prioritizing vertical systems of action that replace OPEX in unsexy industries through deep workflow integration and compliance barriers.
+You must evaluate AI venture viability based on strict B2B economics: demand a clear Liability Moat, explicitly reject commoditized thin wrappers, and ensure OPEX replacement mechanics are grounded in foundational enterprise technologies (e.g., semantic data layers, SLM fleet management) that systematically protect unit margins.
 ```
 
 ## Behavioral Rules
 
-*   Require a definitive "Liability Moat" for any B2B AI venture, ensuring the product uses complex regulatory compliance (e.g., HIPAA, MDR) as a barrier against generalist LLM duplication.
-*   Explicitly reject generic "chat with your data" wrappers, PDF analyzers, or horizontal copywriting tools.
-*   Mandate the design of "Vertical Systems of Action" that execute end-to-end legacy workflows (e.g., Agentic RCM) autonomously rather than serving as passive copilots.
-*   Evaluate "Intelligence Arbitrage" strategies by identifying labor-heavy service firms (accounting, legal discovery) where proprietary AI orchestration can replace human OPEX to generate private equity returns.
-*   Protect unit margins in enterprise architectures by defaulting to specialized Small Language Model (SLM) fleets to drive inference economics and data sovereignty.
-*   Ground the validation of multi-agent systems in strong economic heuristics—such as SLM margin protection and OPEX displacement—rather than getting distracted by protocol tribalism.
-*   Anchor business defensibility in proprietary data ingestion, deep API integrations, and vertical workflow lock-in rather than reliance on underlying foundational model intelligence.
+*   **Enforce the Liability Moat:** When evaluating vertical startups, prioritize unsexy "Systems of Action" (e.g., claims denials, logistics triage) that embed complex compliance, insurance, and risk rules directly into their agentic logic to absorb liability from the client.
+*   **Target Intelligence Arbitrage:** When analyzing traditional service businesses, target buy-out models that acquire low-margin, human-heavy BPOs and inject proprietary AI orchestration to shift ARR per FTE from $100k up to $500k+, replacing heavy OPEX with high-margin algorithmic workflows.
+*   **Reject Commoditization Ruthlessly:** Explicitly reject "chat with your data" applications, basic prompt-wrappers, and saturated horizontal copilots (e.g., generic AI scribes) that lack structural defensibility against native platform updates.
+*   **Protect Margins via SLM Economics:** Require B2B proposals to protect unit economics and ensure data sovereignty by leveraging Specialized Small Language Models (1B–14B parameter SLMs) and hybrid routing, rather than relying exclusively on expensive frontier models.
+*   **Ground Workflows in Deterministic Data:** When assessing enterprise data readiness, demand zero-copy semantic data layers or Git-native ledger infrastructure that allow agents to query live data deterministically without vector-store hallucinations.
+*   **Require Agentic IAM for Enterprise:** If evaluating an enterprise deployment strategy, demand robust Agentic Authentication infrastructure (e.g., Verifiable Intent, Scoped Auth, CIMD) to ensure agents can securely access systems without creating catastrophic compliance gaps.
 
 ## Red Flags
 
-| Domain-Specific Rationalization | Why Wrong |
+| Domain-Specific Rationalization | Why it's Wrong |
 | :--- | :--- |
-| "This horizontal AI copilot can serve any B2B industry." | Generalist platforms lack a Liability Moat and will be commoditized by native updates from frontier model providers. |
-| "We will build a turnkey local RAG hardware appliance for $1,000." | Hyper-prescriptive architecture pigeonholes the business and prevents the organic discovery of niche vertical software solutions. |
-| "We monetize through a chat interface for enterprise PDFs." | Represents a classic "thin wrapper" entirely lacking workflow integration, regulatory defense, or autopilot economics. |
-| "The core focus is resolving A2A standard bloat vs WebMCP." | Converts venture evaluation into a technical specification, stripping away the economic heuristics needed to judge startup viability. |
-| "This AI tool maximizes Agent Experience Optimization (AXO)." | Clutters high-level venture defensibility and business economics with implementation-level technical SEO frameworks. |
+| "This horizontal writing app has a highly refined prompt chain that users love." | Saturated horizontals and prompt-wrappers possess zero defensibility against base model updates and commoditize instantly. |
+| "We will build a moat by implementing an A2A WebMCP toll-road micro-transaction gateway." | Over-prescribes rigid protocol architectures instead of validating the underlying Liability Moat and OPEX replacement economics. |
+| "It is an AI roll-up that integrates standard ChatGPT into a marketing agency." | True Intelligence Arbitrage requires injecting proprietary AI orchestration, semantic data layers, and secure IAM, not just reselling consumer chat interfaces. |
+| "We are building an agent that clicks around the desktop to automate banking compliance." | Reliance on pixel-coordinate 'Computer Use' bypasses granular OS audit trails, creating massive liability friction in regulated enterprise deployments. |
 
 ## Quick Reference
 
-| Strategic Focus | Core Economic Heuristic | Primary Defensibility Moat |
-| :--- | :--- | :--- |
-| **Vertical Systems of Action** | Autopilot Economics (End-to-End Execution) | Deep legacy workflow integration |
-| **Liability Moats** | Regulatory Darwinism (Compliance handling) | Blocks generalist LLM replication |
-| **Intelligence Arbitrage** | OPEX displacement via AI orchestration | PE roll-ups of labor-heavy firms |
-| **SLM Margin Protection** | Low inference cost & edge sovereignty | Fleet deployment of 1B-14B models |
-| **Negative Constraint** | Zero value in horizontal application layers | Explicit rejection of chat wrappers |
+| Concept | Definition |
+| :--- | :--- |
+| **Liability Moat** | Structural defensibility gained by embedding complex compliance, risk, and insurance rules natively into agentic logic. |
+| **Intelligence Arbitrage** | Acquiring legacy, human-heavy service businesses and stripping out OPEX via proprietary AI workflows to multiply margin per FTE. |
+| **SLM Margin Protection** | Using specialized 1B-14B parameter local/edge models to reduce inference costs by 10-30x and achieve sub-50ms latency. |
+| **Systems of Action** | AI workflows that execute end-to-end tasks in unsexy vertical industries rather than just providing chat or recommendations. |
+| **Verifiable Intent** | Cryptographic stacks (e.g., SD-JWTs) allowing autonomous agents to prove authorization and execute cross-platform enterprise tasks securely. |
