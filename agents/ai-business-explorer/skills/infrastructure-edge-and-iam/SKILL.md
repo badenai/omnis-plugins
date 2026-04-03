@@ -1,42 +1,39 @@
 ---
 name: infrastructure-edge-and-iam
-description: Use when evaluating B2B startup ideas, venture pitches, or AI architectures related to local SLM deployments, data sovereignty, hardware edge inference, or enterprise agent identity (IAM, Verifiable Intent, secure gateways).
+description: Use when evaluating B2B AI startups, edge inference economics, SLM fleet management, hybrid routing architectures, or enterprise agent identity, security, and access management (IAM/Verifiable Intent).
 ---
 
 ## The Iron Law
 
 ```text
-Always evaluate edge infrastructure and agent identity startups by their ability to generate a "Liability Moat" or protect unit margins, strictly prioritizing secure SLM fleets and cryptographic authorization over general-purpose cloud integrations.
+Never evaluate enterprise AI infrastructure or IAM tools based purely on technical benchmarks; always mandate that the solution explicitly protects unit margins (via SLM edge routing) or establishes a verifiable "Liability Moat" (via cryptographic agent authorization) to enable secure B2B autopilot economics.
 ```
 
 ## Behavioral Rules
 
-*   When evaluating enterprise AI deployments, mandate architectures that deploy specialized Small Language Models (SLMs) on local edge hardware to achieve strict data sovereignty and zero cloud egress.
-*   Assess edge infrastructure startups by their ability to protect unit margins using efficient sequence modeling (e.g., State Space Models/Mamba-3) over traditional Transformers.
-*   If reviewing agent authentication workflows, reject standard "app-first" OAuth in favor of "Verifiable Intent" stacks that utilize SD-JWT chains to issue scoped, cryptographic proofs of authority.
-*   Evaluate autonomous agent management tools strictly on their inclusion of AI-specific gateway infrastructure (e.g., Zuplo, MCP Manager) that provides semantic caching and agent-specific rate limiting.
-*   When auditing "Computer Use" or GUI-based agents, demand OS-level cryptographic event logging to explicitly distinguish autonomous actions from human employee actions, preserving the enterprise Liability Moat.
-*   Reject orchestration or infrastructure tools that connect Model Context Protocol (MCP) to critical endpoints without native JWT integration and tool-level access controls.
-*   If analyzing developer tooling for autonomous workflows, prioritize solutions that enforce secure, schema-driven secret injection for remote agents (e.g., Varlock) over traditional environment variable files.
-*   Filter out any API gateway or middleware pitch that does not actively solve for autonomous machine-to-machine security and strict behavioral evaluation.
+*   **Enforce SLM Margin Protection:** When analyzing AI unit economics, mandate hybrid routing architectures that shift 90-95% of workloads to local or edge-based Small Language Models (1B–14B parameters) to reduce OPEX and slash API inference costs by 10-30x.
+*   **Demand Fleet Management Economics:** If assessing enterprise agent deployments, evaluate startups based on their capability to govern, update, and monitor thousands of decentralized, specialized SLMs at scale.
+*   **Require Verifiable Intent for IAM:** When evaluating agentic security startups, reject legacy app-first OAuth models and explicitly require decentralized trust infrastructure utilizing "Verifiable Intent" stacks (e.g., SD-JWT chains, CIMD) for autonomous execution.
+*   **Mandate Zero-Trust for Orchestration:** If reviewing Model Context Protocol (MCP) or tool deployments for high-stakes enterprise operations, block "naked" deployments and demand Zero-Trust gateways utilizing Just-In-Time (JIT) credentials and scope-based JWTs.
+*   **Protect the Liability Moat:** When a platform utilizes "Computer Use" or vision-driven desktop automation in regulated sectors, require strict OS-level audit trails that cryptographically differentiate an autonomous agent's actions from human clicks.
+*   **Ignore Protocol Tribalism:** Always ground infrastructure ideas in their capacity to drive tangible OPEX reduction and data sovereignty, completely ignoring framework dogmatism or speculative crypto-token hype.
 
 ## Red Flags
 
-| Domain Rationalization | Why Wrong (Venture & Market Reality) |
+| Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "Our agents seamlessly authenticate using standard enterprise OAuth." | Fails to solve the Verifiable Intent problem; grants blank-check permissions instead of cryptographic, scoped execution authority. |
-| "We route all enterprise data through a centralized frontier LLM for maximum intelligence." | Violates enterprise data sovereignty requirements and ignores the market shift toward specialized, edge-deployed SLM fleets. |
-| "Our desktop agent uses standard GUI automation to log into legacy systems as the user." | Bypasses Role-Based Access Control (RBAC) and destroys the audit trail, creating an uninsurable compliance risk without OS-level logging. |
-| "We are building an open MCP server to connect any agent to our SaaS." | Exposes infrastructure to catastrophic vulnerabilities without a "Secure-by-Design MCP Gateway" enforcing tool-level access controls. |
-| "We rely on standard API management tools for our multi-agent traffic." | Misses the economic necessity of AI-specific routing, semantic caching, and strict agent-specific rate limiting to control runaway inference costs. |
+| "Our agents integrate seamlessly into enterprise workflows using standard OAuth." | Legacy OAuth is app-first, not agent-first; it lacks the cryptographic Verifiable Intent (SD-JWT) required to secure a true B2B liability moat. |
+| "We route all reasoning through flagship OpenAI/Anthropic APIs for maximum intelligence." | Ignores edge inference economics; fails to protect unit margins via hybrid routing and fundamentally violates strict enterprise data sovereignty. |
+| "Our MCP implementation connects instantly to your database to give agents full context." | "Naked" MCP deployments introduce catastrophic supply chain vulnerabilities; enterprise requires Zero-Trust gateways and Just-In-Time (JIT) scoped certs. |
+| "We are launching a Web3 utility token to decentralize agent-to-agent trust." | Conflates valid cryptographic Identity and Access Management (IAM) infrastructure with speculative blockchain hype, abandoning core B2B defensibility. |
+| "Our visual agent automates the desktop perfectly by mimicking coordinate clicks." | Bypasses granular application-level tracking; current OS audit logs cannot differentiate human vs. agent clicks, destroying the compliance moat. |
 
 ## Quick Reference
 
-| Infrastructure Component | Venture / Moat Application |
+| Concept | Strategic Venture Definition |
 | :--- | :--- |
-| **Local SLM Fleets** | Establishes a zero-egress Liability Moat for industries requiring extreme data sovereignty. |
-| **Verifiable Intent (SD-JWT)** | Secures B2B cross-domain agent authorization and eliminates blank-check permission risks. |
-| **Secure MCP Gateways** | Prevents unauthenticated infrastructure access by enforcing tool-level access controls. |
-| **OS-Level Event Logging** | Restores enterprise audit compliance for "Computer Use" agents bypassing traditional RBAC. |
-| **SSMs on Edge (e.g., Mamba)** | Protects SLM unit margins via high-efficiency hardware inference. |
-| **Semantic Caching Gateways** | Enforces agent-specific rate limiting to mitigate autonomous spending and API exhaustion. |
+| **Hybrid Routing** | Directing 90-95% of queries to edge SLMs (1B-14B parameters) to protect unit margins and slash API inference OPEX. |
+| **Fleet Management** | Infrastructure required to securely deploy, govern, update, and maintain standardized decentralized enterprise SLMs at scale. |
+| **Verifiable Intent** | Cryptographic proof (via SD-JWT chains) validating exactly what cross-domain actions a human authorized an autonomous agent to execute. |
+| **Zero-Trust MCP** | Securing agentic context protocols with JIT credentials and scope-based authorization to prevent orchestration middleware breaches. |
+| **Agentic Audit Trails** | System-level logging infrastructure that cryptographically separates autonomous workflow execution from human actions to preserve a liability moat. |
