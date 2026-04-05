@@ -1,43 +1,45 @@
 ---
 name: execution-architecture-fsm
-description: Use when designing live trading engines, time-series data pipelines, event-driven execution systems, NautilusTrader components, tick data ingestion, Finite State Machine (FSM) trade lifecycle management, QuestDB ASOF JOIN temporal alignment, or Numba-accelerated microstructure processing.
+description: Use when architecting event-driven trading execution, designing Finite State Machines (FSM) for trade lifecycles, configuring NautilusTrader or HftBacktest, managing tick-level limit order book simulation, or ensuring mathematical backtest-to-live parity via QuestDB data pipelines.
 filePattern: "**/*.py"
-bashPattern: "pytest"
+bashPattern: "pytest|nautilus|hftbacktest"
 ---
 
 ## The Iron Law
 
 ```text
-Every execution pipeline must seamlessly bind programmable market structure mathematics (precise array index inequalities, absolute price differentials, ATR volatility thresholds) to rigid event-driven execution architecture, ensuring all trade lifecycles are governed strictly as closed-loop Finite State Machines (FSMs) with mathematically guaranteed Backtest-to-Live parity.
+Every trade lifecycle must be explicitly managed as a deterministic Finite State Machine (FSM) where simulated order execution strictly mirrors live production dynamics. You must define all entry, partial fill, cancellation, and exit states using absolute mathematical thresholds, precise array index inequalities, and ATR-derived standard deviation bounds, refusing any abstract state transition that lacks concrete programmatic price and order flow logic.
 ```
 
 ## Behavioral Rules
 
-*   Implement trade lifecycles strictly as Finite State Machines (FSMs) using frameworks like `NautilusTrader`, guaranteeing closed loops, deterministic asynchronous event parsing, error-aware rollbacks, and explicit transition states.
-*   Enforce Numba JIT compilation for generating tick-level footprints, CUSUM monitors, Order Flow Imbalance (OFI), and multi-dimensional L2/L3 array operations to eliminate `Pandas` DataFrame slicing latency bottlenecks.
-*   Utilize `ASOF JOIN` logic within high-throughput time-series databases (e.g., QuestDB) for deterministic temporal alignment of disjointed multi-timeframe limit order book (LOB) ticks and asynchronous trade events.
-*   Map structural price action boundaries explicitly into absolute numerical arrays, index inequalities, and boolean logic gates to trigger state transitions, completely avoiding abstract object-oriented wrappers that obfuscate mathematical operations.
-*   Standardize execution topologies to ensure mathematical equivalence between `HftBacktest` queue simulation (explicitly modeling probabilistic queue positioning and network latency) and production NautilusTrader state machines.
-*   Calculate position sizing and execution invalidation using dynamic array variables like ATR volatility scalars and R-multiple structural breakeven points rather than fixed-percentage retail logic.
-*   Design continuous out-of-sample generation and walk-forward validation testing environments to autonomously handle drift attenuation and execution metric calculation natively within the pipeline.
+*   Construct every trade lifecycle using strict Finite State Machine (FSM) execution frameworks (e.g., NautilusTrader or project-x-py) to manage asynchronous external trade events and error-aware rollbacks.
+*   Enforce absolute backtest-to-live parity by requiring historical simulations in HftBacktest to mathematically match production environments, explicitly accounting for Market-By-Price (MBP), Market-By-Order (MBO), network latency, and simulated queue position dynamics.
+*   Define invalidation logic and state transitions using computable array index inequalities, concrete mathematical definitions, and absolute price differentials.
+*   Calculate algorithmic position sizing and risk boundaries using strictly computed R-multiples and mathematical breakeven state definitions.
+*   Execute time-series vectorization and limit order book (LOB) multi-dimensional arrays utilizing QuestDB `ASOF JOIN` and `SAMPLE BY` SQL extensions to mathematically eliminate look-ahead bias and lagless structural reconstruction.
+*   Incorporate time-based invalidation metrics (e.g., Mean Time To Violation/MTTV) natively within FSM failure loops to close stale trade states.
+*   Compute order queue positioning and reservation prices dynamically using the Guéant–Lehalle–Fernandez-Tapia (GLFT) model to adjust for inventory risk skewing during microstructure simulation.
+*   Process multi-timeframe structural mapping deterministically, passing validated multi-level Order Flow Imbalance (OFI) and VoV limits as immutable boundary parameters into the execution engine.
+*   Formalize DeFi AMM structural logic via DeFiPy down to the tick level, utilizing Q64.96 machine precision arithmetic to prevent floating-point desyncs during simulated concentrated liquidity execution.
 
 ## Red Flags
 
-| Domain-Specific Rationalization | Why Wrong |
+| Rationalization | Why it's wrong |
 | :--- | :--- |
-| "Implement simple Stop-Loss (SL) and Take-Profit (TP) parameters to limit exposure risk." | Contaminates execution architecture with retail concepts; fails to implement dynamically closed FSM state transitions and programmatic scale-out structures based on array bounds. |
-| "A generic OOP stateful object protocol handles the execution abstraction." | Obscures necessary computational mechanisms; replaces precise mathematical constraints like array index inequalities and ATR bounds with unactionable buzzwords. |
-| "Use standard Pandas DataFrame merges to align the tick data streams." | Introduces severe execution latency and temporal phase lag; mandates Numba-acceleration and asynchronous `ASOF JOINs` for rigorous multi-timeframe alignment. |
-| "The FSM architecture handles lifecycle progression, so we can omit explicit price differentials in the trigger definition." | Over-specializes architectural design; starves the algorithm of the concrete, quantitative market structure logic required to drive those state transitions. |
-| "Integrate an LSTM model to predict limit order book state changes in the pipeline." | Violates prohibitions against generic black-box predictive models; introduces Out-Of-Distribution (OOD) regime brittleness into a system requiring strict mathematical determinism. |
+| "Setting SL and TP handles the trade logic." | Introduces retail trading acronyms; algorithmic architecture demands exact mathematical scaling logic, deterministic FSM state closures, and R-multiple breakeven programming. |
+| "The state machine manages the logic, so we don't need exact price arrays." | Over-abstracts execution and deletes mathematical formulation; FSMs must bind directly to structural baseline states using computable array inequalities. |
+| "We can use simple N-bar swings or moving averages to trigger the backtest execution." | Strips out quantitative architecture; execution must rely on full L2 depth reconstruction, tick-level Order Flow Imbalance (OFI), and ATR standard deviation bounds. |
+| "Use 'kinematic momentum' to validate the breakout and transition trade states." | Contaminates execution code with irrelevant physics jargon; structural validation must exclusively utilize deterministic volumetric or programmatic price-per-second regression logic. |
+| "We will use stateful object-oriented arrays to handle the sanitization protocol for signals." | Replaces precise computational directives with generic programming jargon; requires exact mathematical operations and vector management. |
 
 ## Quick Reference
 
-| System Component | Implementation Mandate | Output Target |
-| :--- | :--- | :--- |
-| **Pipeline Ingestion** | QuestDB `ASOF JOIN` asynchronous alignment | Deterministic multi-timeframe synchronization |
-| **Microstructure Logic** | Numba JIT compilation for LOB arrays | Ultra-low latency footprint extraction & math |
-| **Lifecycle Management** | `NautilusTrader` Event-Driven FSMs | Zero-ambiguity trade state closures |
-| **Execution Simulation** | `HftBacktest` with GLFT queue positioning | Mathematical Backtest-to-Live Parity |
-| **Condition Triggers** | Boolean gates, exact array index inequalities | Definitive state transition activation |
-| **Risk & Scaling Rules** | Dynamic ATR scalars + absolute price deltas | Programmatic Mean Time To Violation (MTTV) |
+| System / Component | Deterministic Implementation Mandate |
+| :--- | :--- |
+| **Execution Architecture** | Event-Driven FSM (`NautilusTrader`, `project-x-py`) with strict state transitions |
+| **Simulation Parity** | `HftBacktest` (MBO/MBP, latency simulation, GLFT inventory modeling) |
+| **Data Ingestion** | `QuestDB` utilizing `ASOF JOIN` for ultra-high throughput async tick parsing |
+| **DeFi Parity** | `DeFiPy` Q64.96 precision bounds for Uniswap V3 concentrated liquidity execution |
+| **State Triggers** | Array Index Inequalities, Absolute Price Differentials, ATR standard deviations |
+| **Invalidation Rules** | Programmatic Risk Bounds, FSM Rollbacks, Mean Time To Violation (MTTV) |
