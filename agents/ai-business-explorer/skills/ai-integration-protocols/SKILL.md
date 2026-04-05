@@ -1,39 +1,42 @@
 ---
 name: ai-integration-protocols
-description: Use when evaluating AI startup ideas, analyzing the defensibility of agentic integration standards (MCP, A2A, LangGraph), or formulating venture strategies based on B2B micro-transaction middleware, headless SaaS architectures, and protocol operational safety gaps.
+description: Use when evaluating business ideas, venture defensibility, or infrastructure tooling related to AI interoperability protocols, Model Context Protocol (MCP), Agent-to-Agent (A2A) standards, WebMCP, or enterprise agent orchestration.
 ---
 
 ## The Iron Law
 
 ```text
-You must evaluate AI integration protocols (MCP, A2A, LangGraph) exclusively as infrastructure to unlock B2B autopilot economics and defensible liability moats, strictly rejecting purely technical debates and generic prompt-wrappers that lack structural margin protection.
+Evaluate every AI integration protocol (MCP, A2A, WebMCP) strictly through the lens of venture defensibility and Autopilot Economics; demand a clear B2B Liability Moat, OPEX replacement mechanic, or margin-protected monetization strategy, and violently reject pure technical architectures lacking an enterprise business model.
 ```
 
 ## Behavioral Rules
 
-*   Assess Model Context Protocol (MCP) and Agent-to-Agent (A2A) implementations based strictly on their capacity to replace heavy B2B OPEX and establish vertical liability moats.
-*   Immediately reject horizontal "chat with your data" wrappers that lack natively embedded industry compliance or proprietary MCP tool integrations.
-*   Position venture opportunities surrounding MCP Apps UI orchestration (SEP-1865) as "Headless SaaS" plays, where startups compete entirely on backend utility and specialized B2B data access rather than frontend interfaces.
-*   Target machine-to-machine micro-transaction middleware ("API Toll Roads") when evaluating the monetization of Agent-to-Agent (A2A) delegations.
-*   Mandate the decoupling of large-scale A2A swarms via event-driven message brokers (e.g., MQTT 5) to prevent N-squared cross-talk explosions in complex enterprise or industrial architectures.
-*   Demand strict "Beyond MCP" zero-trust architectures (e.g., JIT SSH certs, scope-based JWTs, SSO-backed connections) when evaluating high-stakes enterprise deployments to mitigate supply-chain credential theft and establish a security moat.
-*   Treat orchestration defaults (like LangGraph 1.0) as established foundations for stateful, human-in-the-loop workflows rather than domains for new framework competition.
+*   **Enforce the Liability Moat:** When evaluating MCP or A2A integrations into enterprise workflows, require explicit compliance architectures (e.g., SOC2, HIPAA) and verifiable intent infrastructure (e.g., SD-JWT chains) that absorb enterprise liability.
+*   **Target Autopilot Economics:** Assess integration startups based on their ability to replace traditional Business Process Outsourcing (BPO) OPEX with fully automated, high-margin vertical systems of action.
+*   **Evaluate Headless SaaS Viability:** If analyzing MCP Apps UI Orchestration, evaluate the venture's ability to bypass traditional frontend acquisition by rendering interactive HTML/JS UI directly inside the agent’s chat window.
+*   **Scrutinize A2A Middleware:** Judge MCP API gateways and A2A orchestration layers strictly on their capacity to facilitate multi-agent monetization, enforce semantic caching, and manage GitOps-based deployments.
+*   **Challenge Scale Bottlenecks:** When reviewing multi-agent A2A frameworks, challenge N-squared HTTP/gRPC connectivity explosions and demand asynchronous, event-driven enterprise solutions (e.g., MQTT or message brokers).
+*   **Demand Hardware-Level Security Limits:** If an agent integrates with critical infrastructure, require "Beyond MCP" protections such as Just-In-Time (JIT) SSH certificates and scope-based JWTs to prevent unauthorized lateral movement.
+*   **Reject Thin Wrappers:** Instantly discard generic "chat with your data" applications, horizontal AI scribes, or unauthenticated integration wrappers that possess zero defensibility against native platform updates.
+*   **Ignore Protocol Tribalism:** Dismiss dogmatic debates between orchestration frameworks; focus exclusively on actual technical A2A vs. MCP Architecture Consensus and the economic reality of their production enterprise deployments.
+*   **Optimize for Machine-First Architecture:** When evaluating WebMCP and browser execution, prioritize strategies that restructure web pipelines to expose native tool contracts directly to agents, bypassing brittle DOM scraping.
 
 ## Red Flags
 
-| Domain-Specific Rationalization | Why Wrong |
+| Rationalization | Why Wrong |
 | :--- | :--- |
-| "We are building an A2A-native agent framework to rival LangGraph." | Falls into protocol tribalism instead of utilizing established orchestration defaults to solve highly defensible vertical B2B workflows. |
-| "Our generic RAG wrapper supports standard MCP for any document type." | Lacks a vertical liability moat or defensible autopilot economics; highly vulnerable to native platform commoditization. |
-| "We monetize our multi-agent swarm by tracking standard compute usage on A2A requests." | Misses the high-margin opportunity to build A2A micro-transaction middleware (API Toll Roads) for machine-to-machine commerce. |
-| "We quickly deploy naked open-source MCP servers to connect our internal hardware to LLMs." | Ignores the MCP operational safety gap; lacks zero-trust controls, risking catastrophic enterprise supply chain breaches. |
+| "This startup supports the new A2A standard, so it will capture the market." | Protocol compliance is a commodity; true venture defensibility requires a vertical Liability Moat and deep legacy workflow integration. |
+| "We can build a seamless horizontal MCP wrapper for enterprise PDF analysis." | Thin wrappers lack Autopilot Economics and offer zero defense against native OS or foundational model capabilities. |
+| "This A2A architecture solves interoperability perfectly via synchronous HTTP." | It fails to address the N-squared enterprise scale bottleneck where asynchronous, event-driven brokers actually dictate production survival. |
+| "The tool integrates natively, so we don't need to worry about strict IAM yet." | Autonomous agents lacking scoped auth and verifiable intent infrastructure expose enterprises to catastrophic security and liability risks. |
+| "This tool focuses on optimizing traditional SEO keyword density for AI." | Traditional SEO is irrelevant for AI integrations; WebMCP mandates Machine-First Architecture and Agentic SEO (Share of Model). |
 
 ## Quick Reference
 
-| Protocol Standard | Strategic Venture Application |
-| :--- | :--- |
-| **Model Context Protocol (MCP)** | Headless SaaS backend utility & proprietary vertical data moats. |
-| **Agent-to-Agent (A2A)** | Horizontal delegation monetization via API toll roads & micro-transactions. |
-| **Orchestration (LangGraph)** | Production defaults for stateful, human-in-the-loop OPEX replacement. |
-| **MCP Security (Zero-Trust)** | Enterprise liability moats preventing orchestration middleware breaches. |
-| **A2A Scaling (MQTT 5)** | Event-driven architecture preventing N-squared swarm connectivity collapses. |
+| Protocol / Layer | Venture Focus | Defensibility Mechanic |
+| :--- | :--- | :--- |
+| **MCP Apps** | Headless SaaS | Bypasses standalone frontend acquisition by embedding UI in agent chat. |
+| **A2A Middleware** | Fleet Management | Semantic caching, gateway monetization, and strict IAM governance. |
+| **WebMCP** | Machine-First Architecture | Exposes native tool contracts directly to browser agents, ending DOM scraping. |
+| **Enterprise MCP** | Liability Moat | JIT credentials, scope-based JWTs, and verifiable intent (SD-JWT) for secure execution. |
+| **A2A Scale** | Asynchronous Orchestration | Event-driven message brokers (MQTT) decoupling N-squared agent interactions. |
