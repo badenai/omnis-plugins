@@ -1,47 +1,50 @@
 ---
-name: microstructure-order-flow-logic
-description: Use when formalizing high-frequency limit order book (LOB) dynamics, Multi-Level Order Flow Imbalance (MLOFI) vectorization, flow toxicity metrics (VPIN, Kyle's Lambda), spatial-temporal density matrices, or integrating HftBacktest and GLFT models.
+name: microstructure-lob-analytics
+description: Use when engineering Limit Order Book (LOB) features, Multi-Level Order-Flow Imbalance (MLOFI), Numba-accelerated footprint extraction, programmatic order flow heatmaps, or translating tick-level liquidity into deterministic mathematical arrays.
 filePattern: "**/*.py"
-bashPattern: "pytest"
+bashPattern: "numba|finmlkit|hftbacktest"
 ---
 
 ## The Iron Law
 
 ```text
-Never substitute explicit computational data structures with discretionary analysis, retail jargon, physics analogies, or superficial architectural buzzwords; you must translate all order flow and microstructure dynamics into strictly computable, zero-ambiguity N-dimensional arrays using explicit programmatic logic (e.g., exact array index inequalities, absolute price differentials, ATR thresholds, and boolean FSM gates) to ensure backtest-to-live parity.
+You must strictly translate all order flow and Limit Order Book (LOB) liquidity dynamics into deterministic, N-dimensional mathematical arrays and computable numerical thresholds. Never use subjective tape-reading logic, visual heatmap heuristics, lagging retail indicators, or physics-adjacent buzzwords; all microstructure features must be explicitly constructed using exact array index inequalities, standard deviation limits, Multi-Level Order-Flow Imbalance (MLOFI) formulas, and programmatic volumetric aggregations tightly bound to concrete execution logic.
 ```
 
 ## Behavioral Rules
 
-*   Transform Limit Order Book (LOB) visual clustering strictly into N-dimensional spatial-temporal density matrices.
-*   Compute Multi-Level Order Flow Imbalance (MLOFI) as a mathematical vector across defined LOB depths (e.g., L=5) utilizing precise array slicing rather than single-level static depth.
-*   Integrate Volume-Synchronized Probability of Informed Trading (VPIN) and map Kyle's Lambda into deterministic arrays to explicitly calculate price impact per unit of volume before permitting execution.
-*   Enforce HftBacktest framework parameters to mathematically simulate order feed latencies, probabilistic queue positioning, and Guéant–Lehalle–Fernandez-Tapia (GLFT) market-making models for exact backtest-to-live parity.
-*   Dictate trade lifecycle execution via Finite State Machines (FSM) utilizing explicit boolean gates and array index state transitions for deterministic entry, scale-out, and invalidation.
-*   Apply Average True Range (ATR) scalar arrays and exact standard deviation bounds to filter out noise; explicitly reject static percentage risk heuristics.
-*   Gate system activation using binary Gamma Exposure (GEX) states and apply Volatility-of-Volatility (VoV) Z-Score thresholds as strict circuit breakers (e.g., unconditionally halt arrays if VoV Z > 1.5).
-*   Structure time-series pipelines using Numba JIT-compiled functions for tick-level generation and QuestDB ASOF JOINs to guarantee asynchronous alignment without phase lag.
-*   Map 60-second liquidation cascade zones computationally and validate true absorption over simple sweeps by mandating flat Open Interest (OI) divergence arrays.
-*   Restrict all machine learning integrations strictly to interpretable linear algebra (e.g., PCA for MLOFI dimensionality reduction) or robust statistical fitting (e.g., Tick-Level RANSAC Regression); categorically reject black-box predictive models.
+*   Compute Limit Order Book depth by constructing Multi-Level Order-Flow Imbalance (MLOFI) across minimum 5-level arrays rather than relying on static top-of-book volume.
+*   Accelerate footprint extraction and volumetric calculations (e.g., High/Low Volume Node absorption) strictly using Numba Just-In-Time (JIT) routines and continuous internal array reconstruction.
+*   Define institutional displacement and flow toxicity mathematically by implementing precise thresholds for Volume-Synchronized Probability of Informed Trading (VPIN) and Kyle's Lambda (market impact per unit traded).
+*   Process asynchronous tick-level execution data using high-throughput vectorized operations (e.g., explicit ASOF JOIN commands) to synchronize multi-dimensional L2/L3 order book snapshots without look-ahead bias.
+*   Bind all microstructure signal arrays directly to deterministic execution logic using concrete arithmetic price differentials, boolean gates, and Average True Range (ATR) standard deviation boundaries.
+*   Enforce structural trade lifecycle closures explicitly via dynamic R-multiple scale-out arrays and ATR-based invalidation logic, explicitly rejecting all arbitrary percentage-based heuristics or manual retail targets.
+*   Filter spoofing and artificial order flow spikes by computing programmatic multi-exchange Open Interest (OI) divergence and measuring localized LOB array decay.
+*   Identify structural baseline shifts mathematically by measuring Cumulative Volume Delta (CVD) divergence against Numba-accelerated order flow imbalance thresholds.
+*   Determine market regime states by computing Gamma Exposure (GEX) binary state flags combined with Volatility-of-Volatility (VoV) Z-Score bounds (> +1.5σ) before instantiating algorithmic triggers.
 
 ## Red Flags
 
-| Rationalization / Anti-Pattern | Why Wrong |
+| Domain-Specific Rationalization | Why It Violates Algorithmic Parity |
 | :--- | :--- |
-| "We will use an LSTM to predict the LOB imbalance shift." | Generic black-box prediction violates deterministic transparency; restrict AI/ML entirely to interpretable linear algebra (e.g., PCA, RANSAC). |
-| "The kinematic variance of the LOB slope dictates entry." | Physics-adjacent jargon contaminates programmatic vocabulary; dictate boundaries using exact array index inequalities and absolute price math. |
-| "Set a Stop-Loss (SL) at 1% and Take-Profit (TP) at 3%." | Retail jargon and arbitrary percentage heuristics destroy dynamic risk sizing; encode invalidations using programmatic FSM state closures and ATR bounds. |
-| "Create stateful object-oriented array layers to sanitize the tape." | Superficial algorithmic over-engineering obscures the actual math; use concrete mathematical array slicing and boolean operations. |
-| "Confirm momentum with MACD crossovers or RSI exhaustion." | Lagging retail indicators are mathematically inferior; momentum must be derived exclusively from vectorized MLOFI, VoV, or direct tick footprint execution data. |
+| Using terms like "kinematic variance" or "RANSAC flat slopes" | Physics-adjacent jargon and ML buzzwords obscure the standard programmatic array indexing and boolean gates required for deterministic code. |
+| Formatting instructions with LaTeX math (e.g., `\le`, `\rightarrow`) | Replaces exact code-level operator syntax (`<=`, `->`) needed for executable, compilable risk constraints and variable assignment. |
+| Using "Stop-Loss (SL)" or "Take-Profit (TP)" concepts | Retail jargon replaces the required programmable mathematical breakeven states and strict R-multiple array invalidation metrics. |
+| Substituting exact math with "stateful object-oriented wrappers" | Superficial programming buzzwords destroy the concrete mathematical linear algebra required for vectorizing L2/L3 order book depth snapshots. |
+| Filtering momentum with MACD, RSI, or standard moving averages | Relies on fundamentally flawed, phase-delayed lagging logic instead of Zero-Phase Filtered (ZPF) raw tick/volume arrays. |
+| Hardcoding fixed risk boundaries like "0.1% to 1.0% risk" | Brittle retail heuristics override the required dynamically computed, ATR-scaled position sizing and structural volatility thresholding. |
+| Over-abstracting logic solely into Finite State Machine (FSM) states | Decouples signal generation from execution; algorithms must explicitly detail the raw arithmetic arrays and index inequalities driving the state change. |
 
 ## Quick Reference
 
-| Concept | Programmatic Implementation | Core Constraint |
-| :--- | :--- | :--- |
-| **MLOFI Mapping** | Numba-accelerated N-dimensional L=5 array vectorization | Must compute net flow across deep levels prior to price displacement |
-| **Microstructure Toxicity** | VPIN arrays and Kyle's Lambda | Require explicit mathematical price impact per volume thresholds |
-| **Execution Validation** | HftBacktest + GLFT Models | Must simulate network latency and queue position arrays |
-| **System Gates** | GEX binary gate + VoV Z-score | Strict halt if VoV exceeds computed standard deviation limits |
-| **Liquidation Avoidance** | Rolling 60-second Open Interest (OI) divergence | Require flat OI metrics to mathematically validate absorption |
-| **Data Synchronization** | QuestDB ASOF JOINs + Numba JIT | Dictate deterministic temporal alignment and sub-millisecond footprint parsing |
-| **Trade Lifecycle** | NautilusTrader Finite State Machine (FSM) | Absolute mathematical containment utilizing explicit boolean transitions |
+| Microstructure Concept | Deterministic Implementation Array / Metric |
+| :--- | :--- |
+| **LOB Depth Analytics** | Multi-Level Order-Flow Imbalance (MLOFI) 5-level vectors |
+| **Flow Toxicity Measurement** | Volume-Synchronized Probability of Informed Trading (VPIN) |
+| **Market Resilience/Impact** | Deterministic formulas of Kyle's Lambda |
+| **Volumetric Feature Processing** | Numba-Accelerated JIT footprint parsing and continuous state arrays |
+| **Regime Outlier Suppression** | Volatility-of-Volatility (VoV) Z-Scoring bound rules |
+| **Structural Breakdown Modeling** | Chu-Stinchcombe-White CUSUM tests |
+| **Data Pipeline Synchronization** | ASOF JOIN vectorized operations for tick/book alignment |
+| **Signal/Execution Smoothing** | Zero-Phase Filters (ZPF) applied across dual-directional raw arrays |
+| **Risk Containment** | Volatility-Scaled Average True Range (ATR) limit indexing |
