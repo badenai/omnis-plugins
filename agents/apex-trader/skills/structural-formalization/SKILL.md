@@ -1,46 +1,42 @@
 ---
 name: structural-formalization
-description: Use when formalizing price action concepts, Fair Value Gaps (FVGs), liquidity sweeps, order blocks, and market structure containment into exact mathematical code and array logic.
+description: Use when translating subjective price action (FVGs, order blocks, trend lines, liquidity sweeps) into deterministic algorithms, executable array logic, or programmatic market structure rules.
+filePattern: "**/*.py"
 ---
 
 ## The Iron Law
 
 ```text
-Never translate market structure concepts into discretionary visual analysis or basic N-bar swing logic; you must strictly mandate structural formalization through computable n-dimensional array index inequalities, absolute price differentials, Multi-Level Order Flow Imbalance (MLOFI) limits, finite state machine (FSM) state closures, and Average True Range (ATR) volatility thresholds.
+Never accept or generate subjective visual price action descriptions; you must strictly translate every structural concept (e.g., FVGs, sweeps, order blocks) into executable N-bar window logic, computable array index inequalities, absolute price differentials, ATR volatility thresholds, and rigid Boolean gates.
 ```
 
 ## Behavioral Rules
 
-*   If defining a Fair Value Gap (FVG), compute its Tick-Level RANSAC linear regression degree using explicit programmatic parameters (duration >= 120s, tick count >= 100, R2 >= 0.75, outlier ratio <= 0.15).
-*   Apply Volatility-Scaled FVG Dynamic Trailing Logic by decrementing the Time-To-Live (TTL) integer of continuous structural memory arrays inversely against the recent Average True Range (ATR).
-*   When evaluating structural containment invalidation, mandate that price close vectors breach the moving average of active gap arrays using exact programmatic index inequalities.
-*   Validate Order Blocks strictly by confirming a boolean FVG detection within a 3-bar sequence following the origin displacement vector.
-*   Set Order Block entry execution limits strictly at the mathematically calculated 50 percent Mean Threshold array value of the block.
-*   If price closes through a liquidity sweep Order Block accompanied by volumetric displacement, instantly transition its finite state machine execution variable to a Breaker Block.
-*   Construct liquidity sweep detection using Level 2 order book depth regression and Numba-accelerated Multi-Level Order Flow Imbalance (MLOFI) standard deviation bounds rather than simple candlestick wick differentials.
-*   Halt all structural execution state machines algorithmically if the Volatility-of-Volatility (VoV) Z-Score array exceeds a +1.5 standard deviation limit.
-*   Compute time-based invalidation metrics (Mean Time To Violation) to close stale structural states natively within the event-driven execution architecture.
-*   Calculate risk sizing programmatically using R-multiple breakeven array logic and ATR thresholds rather than fixed account percentages.
+- If defining Fair Value Gaps (FVGs) or order blocks, mandate deterministic mathematical boundaries using absolute price differentials and maintain active zones in ATR-penalized Time-to-Live (TTL) memory arrays.
+- When formalizing liquidity sweeps, mandate explicit localized structural breaks (e.g., Boolean CHoCH triggers via array index comparisons) and Volume Z-Score > +1.5σ validation to algorithmically falsify manufactured liquidity voids.
+- If mapping multi-timeframe support or resistance, enforce recursive fractal trees by computing the exact 50% midpoint (`Consequent Encroachment = (High + Low) / 2`) of valid displacement nodes using N-bar window arrays.
+- Dictate trend containment and structural invalidation exclusively as deterministic state transitions triggered when continuous closing prices violate a dynamically averaged, volatility-scaled containment band.
+- Always couple signal generation logic directly with risk execution logic by providing both the deterministic array inequalities for the setup and the programmatic mathematical position sizing (e.g., R-multiple breakeven logic).
+- Reject lagging retail indicator simplifications (like MACD or generic EMAs); enforce Zero-Phase Filter (ZPF) smoothing and real-time Order Flow Imbalance (OFI) extraction for institutional displacement tracking.
+- If testing or validating structural logic, natively encode walk-forward validation parameters and continuous out-of-sample data partitioning directly into the quantitative architecture.
 
 ## Red Flags
 
 | Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "Implementing a Take-Profit (TP) and Stop-Loss (SL) using a 0.5% buffer above the resistance." | Injects forbidden retail trading terminology (SL/TP) and arbitrary percentage heuristics instead of enforcing R-multiple array definitions and FSM scale-out logic. |
-| "The strategy tracks kinematic variance across RANSAC flat slopes to classify breakout strength." | Contaminates structural rules with hallucinated physics terminology ('kinematic variance') instead of applying explicit Boolean gates and programmatic array indexing. |
-| "We encapsulate stateful object-oriented array sanitization protocols for position monitoring." | Replaces precise mathematical operations and explicit quantitative data structures with generic object-oriented buzzwords. |
-| "We locate support boundaries by looking for inside bars and engulfing patterns over an N-bar window." | Relies on standard OHLC abstractions without validating structural displacement via Numba-accelerated order flow imbalance matrices or standard deviation bounds. |
-| "The execution system uses a Finite State Machine to track absolute price differences for basic fixed lot calculations." | Shoehorns complex FSM architectural frameworks into simple arithmetic contexts instead of utilizing them for rigorous, closed-loop trade lifecycle management. |
+| "Implement a 3-bar FVG entry with standard SL/TP targets and a 1% risk cap." | Reject retail jargon and static percentages; you must define risk via programmatic dynamic R-multiples derived from absolute price differentials and current ATR arrays. |
+| "Measure the kinematic variance and momentum decay to find structural reversals." | Avoid cross-domain physics jargon; you must rely on strict computable variables like standard deviation boundaries, discrete array indices, and Boolean logic gates. |
+| "Use an object-oriented stateful sanitization array to classify the market trend." | Eradicate generic programming buzzwords; you must provide explicit mathematical array manipulations and concrete logic for baseline structural state tracking. |
+| "Feed the raw, unadjusted LOB sequence directly into a standard LSTM predictor." | Never use unstationary raw data in black-box models; you must enforce strict differencing, Z-scoring, or dimensional reduction (e.g., PCA) before model ingestion. |
+| "Deploy a Finite State Machine (FSM) to calculate the fixed position size." | Never shoehorn complex architectural frameworks into simple arithmetic operations; you must reserve FSMs for asynchronous tick data parsing and strict state closures. |
 
 ## Quick Reference
 
-| Structural Concept | Deterministic Formalization Constraint |
+| Subjective Concept | Programmatic Formalization Directive |
 | :--- | :--- |
-| **FVG Validation** | Tick-Level RANSAC regression array (duration >= 120s, R2 >= 0.75, outlier ratio <= 0.15) |
-| **Structural Memory** | Continuous arrays tracking TTL decay calculated inversely against recent ATR |
-| **Order Block Validity** | FVG boolean condition confirmation within the subsequent 3-candle array segment |
-| **OB Mean Threshold** | Entry boundary strict equality set at exactly 50 percent of origin displacement |
-| **Containment Breach** | Price close vector index > Active gap array moving average limit |
-| **Breaker Block Pivot** | FSM state transition triggered strictly upon volumetric close through OB coordinates |
-| **Execution Halt** | Structural algorithms suspend if VoV Z-Score array value > +1.5 standard deviations |
-| **Liquidity Sweeps** | Quantified via Numba-accelerated MLOFI matrices and L2 depth regression metrics |
+| **Trend / Bias** | Compute continuous CUSUM (Cumulative Sum) structural breaks with explicit Boolean array invalidation. |
+| **Fair Value Gap (FVG)** | Track absolute price differentials stored in ATR-penalized arrays with specific N-bar containment window logic. |
+| **Liquidity Sweep** | Code a price excursion beyond an N-bar local extremum followed by Volume Z-score > 1.5σ and a reverse Boolean CHoCH. |
+| **Support / Resistance** | Map recursive fractal node displacements and trigger at the exact `(High + Low) / 2` Consequent Encroachment midpoint. |
+| **Market Regime** | Evaluate Gamma Exposure (GEX) combined with Volatility-of-Volatility (VoV) Z-scoring to gate Boolean execution states. |
+| **Risk / Stop Loss** | Define Mean Time To Violation (MTTV) constraints and R-multiple scale-out matrices based on deterministic tick velocity. |
