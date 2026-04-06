@@ -1,37 +1,39 @@
 ---
 name: infrastructure-edge-and-iam
-description: Use when evaluating AI startup infrastructure, edge AI computing strategies, Small Language Model (SLM) deployment economics, or enterprise Identity and Access Management (IAM) for autonomous agents.
+description: Use when evaluating AI startup defensibility regarding SLM fleet management, local/edge inference economics, enterprise agentic authorization (IAM), hardware security, or Agentic FinOps observability.
+filePattern: "**/*.md"
 ---
 
 ## The Iron Law
 
 ```text
-Never evaluate agent identity, SLM deployment, or edge AI infrastructure solely on technical specifications; you must mandate that every architecture defends unit margins (replacing $30/1M LLM token costs with $0.12/1M local SLM costs) and utilizes cryptographic Verifiable Intent (e.g., SD-JWTs) to build an enterprise compliance moat based on strict data sovereignty.
+Never evaluate AI infrastructure or IAM startups purely on technical architecture; always judge viability through the economic heuristics of margin protection (via SLM local deployment), deployment governance (fleet management within secure VPCs), and liability mitigation (cryptographic intent and financial guardrails).
 ```
 
 ## Behavioral Rules
 
-*   Prioritize startups building "Fleet Management" infrastructure that dynamically governs, routes, and updates thousands of specialized 1B-14B parameter SLMs (e.g., Llama 3.2, Mamba-3 SSMs) to capture enterprise data sovereignty budgets.
-*   If an enterprise workflow relies on massive cloud LLMs for high-volume repetitive tasks, immediately challenge its viability against SLM API economics to ensure the startup protects its unit margins.
-*   Mandate Decentralized Trust infrastructure (e.g., SD-JWT chains) when evaluating agent IAM to ensure autonomous actors can mathematically prove verifiable human intent and establish a liability moat.
-*   Reject traditional "app-first" OAuth for autonomous systems; require scoped authentication (CIMD protocols, SSO-backed MCP) to prevent catastrophic lateral movement within enterprise firewalls.
-*   Demand local edge execution (e.g., hardware NPUs, local GPUs via NemoClaw) or secure VPC isolation for agentic deployments to bypass cloud credential sharing vulnerabilities and enforce zero-trust policies.
-*   If evaluating hardware-level agentic orchestration, strictly require "Beyond MCP" protections like Just-In-Time (JIT) SSH certificates and scope-based JWTs to mitigate infrastructure security flaws.
+*   **Enforce SLM Edge Economics:** When evaluating local AI and edge deployments, require strong margin protection strategies that decouple unit costs from expensive foundation model API token economics.
+*   **Target Fleet Management Gaps:** If assessing enterprise model infrastructure, prioritize solutions solving the scaling gap of SLM Fleet Management (routing, versioning, and dynamically updating 1,000+ specialized models within secure VPCs) over basic model hosting.
+*   **Validate Agentic Authorization:** When reviewing identity infrastructure for autonomous execution, reject legacy app-first OAuth flows and demand implementations utilizing Verifiable Intent (e.g., SD-JWT chains, EUDI/W3C Verifiable Credentials) to establish cryptographic cross-domain trust.
+*   **Mandate Hardware Safety Guardrails:** If analyzing AI deployment on critical hardware, require strict operational safety constraints such as Just-In-Time (JIT) SSH certificates and Open Policy Agent (OPA) guardrails to prevent catastrophic AI-driven infrastructure outages.
+*   **Demand Agentic FinOps:** When evaluating always-on autonomous agent workflows, enforce the necessity of an observability layer that implements deterministic self-verification loops and strict financial guardrails to prevent runaway token expenditure.
+*   **Prioritize Gateway Monetization:** If assessing AI orchestration middleware or Agentic Gateways, validate micro-SaaS blueprints that focus on B2B micro-transactions, JWT-secured rate limiting, and cost-reduction mechanisms like semantic caching.
 
 ## Red Flags
 
-| Domain-Specific Rationalization | Why Wrong |
+| Rationalization | Why wrong |
 | :--- | :--- |
-| "We are using a frontier cloud LLM for all enterprise orchestration tasks." | Brutal API economics ($30/1M tokens) and strict data sovereignty mandates are driving enterprises toward localized fleets of specialized SLMs ($0.12/1M tokens). |
-| "Our agents use standard OAuth 2.0 to access secure enterprise systems." | Traditional OAuth cannot mathematically prove human intent for autonomous, long-running actions; Verifiable Intent (SD-JWT chains) is strictly required for enterprise IAM. |
-| "Agents will securely share cloud credentials to perform autonomous administrative tasks." | Cloud credential sharing introduces severe lateral movement vulnerabilities; secure edge execution on user hardware or secure VPCs is the compliance standard. |
-| "We connect our autonomous agents directly to critical infrastructure via standard MCP." | Standard MCP lacks the hardware-level security required for autonomous telecom/network control, demanding scope-based JWTs and JIT provisioning to prevent firewall breaches. |
+| "This platform simplifies foundational model deployment for enterprise chatting." | Ignores the true infrastructure gap: SLM Fleet Management and workload-specific routing of specialized models within secure VPCs. |
+| "We secure agent-to-platform connections using standard OAuth 2.0 flows." | Fails to address the complex requirements of autonomous, cross-domain agent execution which requires Verifiable Intent and scoped cryptographic authentication. |
+| "The hardware AI agent is granted direct access to optimize network routing seamlessly." | Exposes massive operational safety vulnerabilities by ignoring the necessity of JIT SSH and explicit Open Policy Agent (OPA) guardrails. |
+| "Our autonomous agent loops indefinitely to ensure the complex coding task is completed." | Completely disregards spiraling API token economics and the critical need for an Agentic FinOps layer with financial stop-loss controls. |
 
 ## Quick Reference
 
-| Concept | Infrastructure Mechanism | Business Moat / Venture Value |
-| :--- | :--- | :--- |
-| **SLM Fleet Management** | Dynamic routing & governing of 1B-14B models | Protects unit margins (arbitraging token costs) & enables data sovereignty sales. |
-| **Verifiable Intent** | SD-JWT (Selective Disclosure JWT) Chains | Creates cryptographic liability absorption for enterprise trust. |
-| **Local Edge Execution** | NPUs (Snapdragon 80+ TOPS) / Local GPUs | Bypasses credential risks and ensures zero-trust compliance for highly regulated clients. |
-| **Agentic Scoped Auth** | CIMD protocols & SSO-backed MCP authentication | Prevents lateral network movement, turning strict security compliance into a product feature. |
+| Concept | Venture Builder Application |
+| :--- | :--- |
+| **SLM Fleet Management** | Monetizing the routing, versioning, and updating of 1,000+ specialized local models within secure enterprise VPCs. |
+| **Verifiable Intent** | Replacing legacy IAM with SD-JWT chains and W3C Verifiable Credentials to enable secure, autonomous cross-platform agent execution. |
+| **Agentic FinOps** | Building strict observability tools and financial stop-loss guardrails to prevent runaway spending in always-on autonomous systems. |
+| **Edge Economics** | Protecting unit margins and driving predictable OPEX by shifting from heavy API dependencies to local GPU/NPU inference. |
+| **Agentic Gateways** | Selling infrastructure that enforces semantic caching, rate limiting, and machine-to-machine commerce for AI consumers. |
