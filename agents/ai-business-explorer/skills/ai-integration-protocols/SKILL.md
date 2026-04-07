@@ -1,40 +1,40 @@
 ---
-name: ai-integration-protocols
-description: Use when evaluating B2B startup ideas, micro-SaaS opportunities, or technical architectures related to A2A vs. MCP standards, machine-to-machine micro-transactions, WebMCP browser integration, Agent Experience Optimization (AXO), and agentic API gateways.
-filePattern: "**/*.md"
+name: ai-protocols-enterprise-stack
+description: Use when evaluating B2B startup ideas, enterprise AI architectures, MCP/A2A integrations, Agentic IAM, or assessing the business viability and venture defensibility of AI infrastructure and middleware.
 ---
 
 ## The Iron Law
 
 ```text
-Always evaluate AI interoperability startups through the lens of "Toll Road" micro-economics; mandate prioritizing infrastructure that routes, secures, or monetizes A2A/MCP traffic via micro-transactions over applications that simply build or host individual agents.
+Evaluate all AI protocols (MCP, A2A, WebMCP) and enterprise architectures strictly through the lens of venture defensibility; you must always translate technical integration standards into economic moats, prioritizing architectures that establish a Liability Moat, slash OPEX, or enable high-margin B2B Intelligence Arbitrage over pure technical novelty.
 ```
 
 ## Behavioral Rules
 
-*   If assessing enterprise AI orchestration frameworks, enforce the Agentic AI Foundation (AAIF) dual-protocol consensus: mandate MCP strictly for vertical tool/database connections and A2A exclusively for horizontal peer-to-peer agent delegation.
-*   When evaluating multi-agent ecosystem scaling, prioritize event-driven message broker architectures (e.g., Kafka, MQTT) over brittle HTTP/gRPC models to prevent A2A N-squared connectivity collapse.
-*   If analyzing B2B micro-SaaS opportunities, target "A2A Toll Roads"—semantic caching API gateways or MCP managers that monetize machine-to-machine commerce via $0.01 micro-transactions.
-*   When developing SaaS growth strategies, optimize for Machine-First Architecture (AXO) and WebMCP "Tool Contracts" to bypass DOM scraping and capture Share of Model.
-*   If designing or evaluating MCP deployments for critical hardware infrastructure, mandate Just-In-Time (JIT) SSH certificates and Open Policy Agent (OPA) guardrails to mitigate the operational hardware security vacuum.
-*   When evaluating conversational AI integrations, prioritize headless SaaS models utilizing MCP Apps UI orchestration to return sandboxed interactive HTML/JS components directly into agent environments.
-*   If analyzing API management startups, focus on "Agentic Gateways" that explicitly implement real-time rate limiting, agent observability, and JWT-secured MCP management.
+*   **Enforce Framework Consensus:** If evaluating enterprise AI deployments, mandate the Model Context Protocol (MCP) for vertical data access and the Agent-to-Agent (A2A) standard for horizontal multi-agent coordination.
+*   **Reject Horizontal Wrappers:** Always reject generic "chat-with-data" wrappers, broad horizontal copilots, and bespoke API integrations; demand compliance-bound vertical solutions that offer guaranteed task outcomes.
+*   **Evaluate SLM Margin Protection:** Assess Small Language Model (SLM) deployments (1B-14B range) strictly on their capacity to protect unit margins, ensure edge/VPC data sovereignty, and execute deterministic actions via Universal Semantic Layers.
+*   **Monetize Orchestration:** When analyzing multi-agent systems, isolate the micro-transaction middleware ("A2A Toll Roads") and secure MCP Gateways that act as highly defensible enterprise control planes.
+*   **Demand Agentic IAM:** Require "Verifiable Intent" identity architectures (Client ID Metadata, SD-JWT, Just-In-Time OPA guardrails) in any autonomous workflow to bridge the operational safety gap and mitigate MCP supply chain vulnerabilities.
+*   **Optimize for Machine-First Architectures:** If addressing product discovery or SEO, immediately pivot to Agent Experience Optimization (AXO) and WebMCP standards, structuring product pipelines for autonomous agent ingestion rather than human web traffic. 
+*   **Assess Asynchronous Vulnerabilities:** When reviewing massive A2A multi-agent deployments, audit the architecture for point-to-point fragility and demand decoupled, event-driven message brokers (MQTT/Kafka) to prevent N-squared enterprise network explosions.
 
 ## Red Flags
 
-| Rationalization | Why Wrong |
+| Domain-Specific Rationalization | Why It Fails the Venture Framework |
 | :--- | :--- |
-| "This generic prompt-wrapper uses the A2A protocol, giving it a strong technical moat." | Protocol adoption alone provides zero defensibility; value accrues to the middleware gateway, routing economics, or compliance boundaries, not the end-node wrapper. |
-| "We are building a unified protocol standard to replace both A2A and MCP." | Fails to acknowledge the established enterprise standardization where MCP (vertical) and A2A (horizontal) serve distinct, non-competing architectural roles. |
-| "Our agentic SEO platform scrapes legacy DOMs to build an intelligence dashboard." | Ignores the release of WebMCP and Machine-First Architecture, which natively expose structured tool contracts and render visual DOM scraping obsolete. |
-| "We are building an A2A platform relying purely on HTTP/gRPC for enterprise multi-agent coordination." | Triggers A2A N-squared connectivity collapse; ignores the required pivot toward decoupled, event-driven message brokers for asynchronous coordination. |
+| "This AI tool has a great chat UI for querying enterprise PDFs." | Lacks a Liability Moat; generic application layers are instantly commoditized by native platform updates. |
+| "We should build a proprietary API routing layer to connect our agents to Salesforce." | Ignores enterprise protocol consensus; bespoke API wrappers are dead, replaced by standardized MCP integration. |
+| "Let's deploy a generalized 100B+ parameter model for all automated enterprise tasks." | Violates Enterprise SLM Standardization; destroys unit margins and introduces critical data-in-place compliance risks. |
+| "Our autonomous agent framework relies on standard OAuth and persistent API keys." | Fails the Verifiable Intent standard; unmanaged autonomous execution creates massive spending and security liabilities. |
+| "We are optimizing our startup's blog with long-tail keywords to capture AI search traffic." | Applies outdated Web 2.0 growth hacks; ignores the enterprise shift toward WebMCP, Universal Commerce Protocols (UCP), and machine-readable data pipelines. |
 
 ## Quick Reference
 
-| Architecture / Standard | Business Application | Defensibility & B2B Moat |
+| Integration Layer | Standard / Technology | Business Defense & Moat |
 | :--- | :--- | :--- |
-| **MCP (Model Context Protocol)** | Vertical agent-to-tool connections | MCP Managers, Semantic Caching, OPA Hardware Guardrails |
-| **A2A (Agent-to-Agent)** | Horizontal multi-agent delegation | API Gateways, Event-driven routing, Micro-transaction Toll Roads |
-| **WebMCP / AXO** | Machine-First website structuring | Agentic SEO tools, Headless SaaS Tool Contracts |
-| **MCP Apps UI** | Sandboxed HTML/JS in chat interfaces | UI-as-a-service, pure backend utility competition |
-| **Verifiable Intent (SD-JWT)** | Agentic Authentication across domains | Cryptographic trust stacks, enterprise cross-platform IAM |
+| **Vertical Access** | Model Context Protocol (MCP) | Legacy system integration & compliance moat |
+| **Agent Coordination** | Agent-to-Agent (A2A) Protocol | Micro-transaction API gateways / Toll roads |
+| **Enterprise Compute** | Specialized SLMs (1B-14B) & Semantic Layers | Margin protection & hallucination prevention |
+| **Operational Safety** | Verifiable Intent, JIT/OPA, MCP Gateways | Liability absorption & execution governance |
+| **Market Discovery** | WebMCP, AXO, Machine-First Architecture | Machine-readable endpoint monopolies |
