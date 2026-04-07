@@ -1,40 +1,36 @@
 ---
 name: b2b-economics-and-moats
-description: Use when evaluating AI startup ideas, analyzing defensible business models, assessing AI buyouts, BPO disruption, vertical systems of action, liability moats, or intelligence arbitrage in B2B markets.
-filePattern: "**/*.md"
+description: Use when evaluating AI startup ideas, analyzing B2B venture defensibility, designing micro-SaaS business models, or assessing vertical AI market opportunities. Triggered by queries about AI moats, intelligence arbitrage, automated OPEX replacement, SLM unit margins, or unsexy B2B workflow automation. Do not use for technical implementations.
 ---
 
 ## The Iron Law
-
 ```text
-You must evaluate AI venture viability through strict economic heuristics—demanding a foundational Liability Moat, SLM margin protection, or Intelligence Arbitrage—and explicitly reject easily commoditized "thin wrappers" without over-prescribing technical protocols or relying on re-branded jargon.
+Evaluate every AI venture solely on its economic defensibility: demand Liability Moats, OPEX replacement via Intelligence Arbitrage, and strict SLM margin protection, aggressively rejecting horizontal wrappers and protocol tribalism.
 ```
 
 ## Behavioral Rules
 
-*   Require a definitive Liability Moat (e.g., assuming risk or managing strict compliance like HIPAA/SOC2) when evaluating defensibility, rather than accepting basic prompt wrapping or foundational model reliance.
-*   Explicitly reject horizontal "chat with your data" applications, generic AI scribes, and broad copilots due to their lack of defensibility against native platform updates.
-*   Focus on Intelligence Arbitrage when analyzing BPO disruption, assessing how legacy service businesses are acquired to replace heavy human labor OPEX with scalable AI orchestration workflows.
-*   Validate unit economics by demanding Small Language Model (SLM) margin protection strategies, ensuring brutal frontier API token costs are mitigated through specialized local or edge deployments.
-*   Prioritize Vertical Systems of Action that execute end-to-end, high-stakes tasks in unsexy industries (e.g., Agentic Revenue Cycle Management) over saturated horizontal markets.
-*   Ground business and pricing proposals in practical technological reality (incorporating concepts like semantic caching or MCP where relevant) to validate execution, but never let technical architecture or framework debates distract from core economic viability.
-*   Enforce foundational terminology (e.g., "Liability Moat") and avoid pigeonholing models with hyper-specific product architectures (e.g., "turnkey RAG appliances") that prevent the organic discovery of niche vertical solutions.
+*   **Enforce Liability Moats:** If assessing a startup's defensibility, demand a clear Liability Moat (e.g., absorbing risk in HIPAA, SOC2, or specialized compliance workflows) rather than relying on basic proprietary data or generic prompt engineering.
+*   **Target Intelligence Arbitrage:** When designing business models, prioritize the acquisition or disruption of low-margin legacy service businesses (e.g., BPOs, accounting, QA testing) where human OPEX can be aggressively replaced by autonomous workflows to expand gross margins.
+*   **Protect Unit Margins:** Evaluate AI unit economics by strictly applying SLM Margin Protection principles; require the deployment of specialized, narrow models (1B-14B parameters) over expensive flagship LLM API calls to ensure sustainable profitability.
+*   **Require Vertical Systems of Action:** If generating micro-SaaS blueprints, target unsexy, end-to-end B2B executions (e.g., automated QA self-healing, RCM processing) that guarantee task outcomes, completely ignoring generic advice-giving or content-drafting copilots.
+*   **Ignore Protocol Specifications in Business Evaluation:** When analyzing market positioning, ignore underlying protocol debates (e.g., A2A vs. MCP interoperability specs, WebMCP schemas) and focus strictly on how the technology unlocks foundational venture defensibility and customer value.
+*   **Track Horizontal Collapses:** Treat the market failure of generic, saturated horizontal applications (e.g., AI scribes) as validation to double down on deep, vertical-specific autopilot economics.
 
 ## Red Flags
 
 | Rationalization | Why Wrong |
 | :--- | :--- |
-| "The moat is Regulatory Darwinism via a turnkey local RAG hardware appliance monetized by $0.01 micro-transactions." | Obfuscates the foundational framework (Liability Moat) with re-branded jargon and hyper-specific, rigid product architectures. |
-| "This generic legal contract analyzer is defensible because it integrates the latest WebMCP and A2A schemas." | Converts a business model evaluation into a technical specification, stripping away the necessary economic heuristics for defensibility. |
-| "We are building an AI scribe to capture horizontal market share across all administrative back-offices." | The market ruthlessly punishes horizontal application layers lacking a compliance moat; capital demands Vertical Systems of Action. |
-| "We don't need to worry about edge deployment; we will just rely on frontier models via API to handle all complex reasoning." | Ignores SLM margin protection and exposes the venture to brutal API token economics, destroying long-term OPEX viability. |
+| "This horizontal copilot will win by capturing a massive TAM across all industries." | Fails to establish a Liability Moat; generic application layers are easily commoditized by native flagship model updates. |
+| "The venture is defensible because it uses cutting-edge A2A protocol schemas and WebMCP implementation." | Confuses technical infrastructure and integration protocols with foundational economic business moats. |
+| "We must use the largest, most expensive flagship models to ensure our enterprise tool is accurate." | Destroys unit economics; enterprise production requires SLM Margin Protection to scale profitably and manage OPEX. |
+| "We are creating a new SaaS platform to sell AI chatbots to traditional accounting firms." | Misses the Intelligence Arbitrage opportunity; the high-margin play is acquiring the firm and replacing its OPEX, not selling them cheap SaaS. |
 
 ## Quick Reference
 
-| Concept | Business Driver | Moat / Defensibility |
+| Core Strategy | Execution Focus | Primary Economic Driver |
 | :--- | :--- | :--- |
-| **Intelligence Arbitrage** | BPO Disruption / AI Buyouts | Decoupling venture revenue from human headcount via AI workflow OPEX replacement |
-| **Vertical Systems of Action** | End-to-end unsexy industry workflows | Liability Moat (Navigating EU AI Act, HIPAA, SOC2 compliance) |
-| **Enterprise SLM Deployment** | Margin Protection / Edge Execution | Insulating unit economics from unpredictable, brutal frontier API token costs |
-| **Agentic RCM** | Back-office legacy portal automation | Operating without native APIs in highly regulated, high-stakes verticals |
-| **A2A Middleware Gateways** | Machine-to-machine commerce | Structuring infrastructure to capture B2B micro-transactions at scale |
+| **Liability Moat** | Navigating and absorbing complex compliance workflows | Customer lock-in & pricing power |
+| **Intelligence Arbitrage** | Acquiring legacy BPOs/agencies to inject AI automation | Gross margin expansion (OPEX to COGS) |
+| **Vertical Systems of Action** | End-to-end execution of unsexy B2B workflows | Guaranteed task outcome value |
+| **SLM Margin Protection** | Deploying 1B-14B models for narrow, specialized tasks | High unit profitability per inference |
