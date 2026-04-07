@@ -1,42 +1,43 @@
 ---
 name: structural-formalization
-description: Use when translating subjective price action (FVGs, order blocks, trend lines, liquidity sweeps) into deterministic algorithms, executable array logic, or programmatic market structure rules.
+description: Use when formalizing subjective price action into deterministic algorithms, defining market structure breaks via array inequalities, building multi-timeframe fractal maps, or quantifying fair value gaps using tick-level regressions and volatility-scaled memory arrays.
 filePattern: "**/*.py"
 ---
 
 ## The Iron Law
 
 ```text
-Never accept or generate subjective visual price action descriptions; you must strictly translate every structural concept (e.g., FVGs, sweeps, order blocks) into executable N-bar window logic, computable array index inequalities, absolute price differentials, ATR volatility thresholds, and rigid Boolean gates.
+Every structural market concept must be translated into explicit mathematical vectors, computable array index inequalities, spatial-temporal density matrices, and absolute price differentials; entirely eliminating visual heuristic interpretation in favor of deterministic, machine-readable logic.
 ```
 
 ## Behavioral Rules
 
-- If defining Fair Value Gaps (FVGs) or order blocks, mandate deterministic mathematical boundaries using absolute price differentials and maintain active zones in ATR-penalized Time-to-Live (TTL) memory arrays.
-- When formalizing liquidity sweeps, mandate explicit localized structural breaks (e.g., Boolean CHoCH triggers via array index comparisons) and Volume Z-Score > +1.5σ validation to algorithmically falsify manufactured liquidity voids.
-- If mapping multi-timeframe support or resistance, enforce recursive fractal trees by computing the exact 50% midpoint (`Consequent Encroachment = (High + Low) / 2`) of valid displacement nodes using N-bar window arrays.
-- Dictate trend containment and structural invalidation exclusively as deterministic state transitions triggered when continuous closing prices violate a dynamically averaged, volatility-scaled containment band.
-- Always couple signal generation logic directly with risk execution logic by providing both the deterministic array inequalities for the setup and the programmatic mathematical position sizing (e.g., R-multiple breakeven logic).
-- Reject lagging retail indicator simplifications (like MACD or generic EMAs); enforce Zero-Phase Filter (ZPF) smoothing and real-time Order Flow Imbalance (OFI) extraction for institutional displacement tracking.
-- If testing or validating structural logic, natively encode walk-forward validation parameters and continuous out-of-sample data partitioning directly into the quantitative architecture.
+- Quantify Fair Value Gaps (FVG) utilizing Tick-Level RANSAC Regression to extract the absolute slope (|β1|) in price units per second, mathematically verifying imbalance degree.
+- Formulate structural breaks using continuous internal state reconstruction, spatial-temporal density arrays, and CUSUM (Cumulative Sum) filters for deterministic structural shift detection.
+- Implement Volatility-Scaled Dynamic Memory Arrays to store active structural voids, applying precise ATR thresholds and VoV Z-scores to purge invalidated levels computationally.
+- Define multi-timeframe market structure as a nested recursive tree of pivot arrays, enforcing higher-timeframe boundaries strictly as boolean filters for lower-timeframe execution triggers.
+- Calculate structural market constraints using computable array indexing and absolute price differentials instead of abstract OOP paradigms or generic object-oriented sanitization protocols.
+- Map "Change of Character" events using concurrent Finite State Machine (FSM) triggers anchored at mathematically defined 50% Consequent Encroachment zones.
+- Track Highest Volume Node (HVN) absorption natively using session-aware volume feature engineering and Z-scored Session Volume Profile Migration to achieve strict POC Gap Determinism.
+- Apply programmatically bounded trade lifecycles using dynamic Mean Time To Violation (MTTV) logic rather than static retail risk metrics.
 
 ## Red Flags
 
-| Domain-Specific Rationalization | Why Wrong |
+| Rationalization | Why Wrong |
 | :--- | :--- |
-| "Implement a 3-bar FVG entry with standard SL/TP targets and a 1% risk cap." | Reject retail jargon and static percentages; you must define risk via programmatic dynamic R-multiples derived from absolute price differentials and current ATR arrays. |
-| "Measure the kinematic variance and momentum decay to find structural reversals." | Avoid cross-domain physics jargon; you must rely on strict computable variables like standard deviation boundaries, discrete array indices, and Boolean logic gates. |
-| "Use an object-oriented stateful sanitization array to classify the market trend." | Eradicate generic programming buzzwords; you must provide explicit mathematical array manipulations and concrete logic for baseline structural state tracking. |
-| "Feed the raw, unadjusted LOB sequence directly into a standard LSTM predictor." | Never use unstationary raw data in black-box models; you must enforce strict differencing, Z-scoring, or dimensional reduction (e.g., PCA) before model ingestion. |
-| "Deploy a Finite State Machine (FSM) to calculate the fixed position size." | Never shoehorn complex architectural frameworks into simple arithmetic operations; you must reserve FSMs for asynchronous tick data parsing and strict state closures. |
+| "A standard 3-bar candlestick pattern defines the FVG." | Relies on unvalidated retail OHLC heuristics instead of tick-level volume validation and RANSAC regression. |
+| "The algorithm will use a fixed 1% Stop-Loss and Take-Profit." | Replaces programmatic position sizing, R-multiple breakeven state models, and dynamic volatility-scaled matrices with brittle retail jargon. |
+| "We will map the kinematic variance to track structural decay." | Injects irrelevant physics-adjacent jargon, degrading the required strict boolean gates and exact array index mathematics. |
+| "Use stateful object-oriented data classes to sanitize the levels." | Abstracts away explicit computational LOB structures and raw n-dimensional array matrix logic with superficial programming buzzwords. |
+| "Feed the raw limit order book snapshot into an LSTM." | Feeds non-stationary data into generic black-box models without mandatory prior strict differencing, Z-scoring, or PCA LOB dimensionality reduction. |
 
 ## Quick Reference
 
-| Subjective Concept | Programmatic Formalization Directive |
+| Concept | Deterministic Implementation |
 | :--- | :--- |
-| **Trend / Bias** | Compute continuous CUSUM (Cumulative Sum) structural breaks with explicit Boolean array invalidation. |
-| **Fair Value Gap (FVG)** | Track absolute price differentials stored in ATR-penalized arrays with specific N-bar containment window logic. |
-| **Liquidity Sweep** | Code a price excursion beyond an N-bar local extremum followed by Volume Z-score > 1.5σ and a reverse Boolean CHoCH. |
-| **Support / Resistance** | Map recursive fractal node displacements and trigger at the exact `(High + Low) / 2` Consequent Encroachment midpoint. |
-| **Market Regime** | Evaluate Gamma Exposure (GEX) combined with Volatility-of-Volatility (VoV) Z-scoring to gate Boolean execution states. |
-| **Risk / Stop Loss** | Define Mean Time To Violation (MTTV) constraints and R-multiple scale-out matrices based on deterministic tick velocity. |
+| **FVG Quantification** | Tick-Level RANSAC Regression extracting absolute slope (\|β1\|). |
+| **Structural Containment** | Volatility-Scaled Dynamic Memory Arrays filtered by ATR and VoV Z-scores. |
+| **Structural Shifts** | CUSUM filters and FSM boolean boundaries executed at 50% Consequent Encroachment. |
+| **Microstructure Representation** | Multi-dimensional spatial-temporal density arrays and MLOFI Vectorization. |
+| **State Invalidation** | Computable array index inequalities triggering dynamic MTTV (Mean Time To Violation) closures. |
+| **Volume Validation** | POC Gap Determinism utilizing Z-Scored Session Volume Profile Migration. |
