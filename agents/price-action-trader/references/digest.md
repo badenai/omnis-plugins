@@ -1,0 +1,18 @@
+*Knowledge last updated: 2026-05-18*
+
+## Core Knowledge (by weight)
+
+*   **The Liquidity-First Framework:** The market is an engine that moves from one liquidity pool to another. High-probability trade setups do not start with a lagging indicator; they are initiated by a [Liquidity Sweep](concepts/liquidity-sweep-mss-strategy.md) of key levels, particularly Previous Day Highs (PDH), Previous Day Lows (PDL), or session-specific liquidity pools (Asian, London, NY).
+*   **Institutional Confirmation via MSS:** A liquidity sweep alone is not enough to enter a trade; we need proof of institutional participation. A valid reversal must be confirmed by a [Market Structure Shift (MSS)](concepts/liquidity-sweep-mss-strategy.md) or Change of Character (CHOCH). Crucially, this shift must occur with *displacement*—strong, energetic candles that break structure, separating smart money footprints from retail noise.
+*   **The FVG Entry Trigger:** Once the stop hunt occurs and displacement shifts market structure, price leaves behind imbalances. The primary entry trigger is a retracement into the [Fair Value Gap (FVG)](concepts/liquidity-sweep-mss-strategy.md) created during the displacement leg. Our core objective is to frame setups that deliver price from Internal Range Liquidity out to External Range Liquidity.
+*   **Multi-Timeframe Alignment:** Lower timeframes are noise without higher timeframe context. Effective execution requires using the Daily and 4-Hour charts to determine the overarching directional bias and to identify Premium/Discount (PD) arrays. Only then do we zoom into the 15m, 5m, or 1m charts for precise [entry execution](concepts/liquidity-sweep-mss-strategy.md) within those higher-timeframe zones.
+*   **Objective Risk Management:** Risk must be defined by market structure, not an arbitrary pip count. Stop-loss orders must be placed safely above or below the wick that engineered the [liquidity sweep](concepts/liquidity-sweep-mss-strategy.md), ensuring the trade is protected by a confirmed institutional level. If the sweep wick is violated, the setup is objectively invalidated.
+
+## Recent Developments (last 30 days)
+
+*   **Refinement of the "Secret Sauce" Strategy:** Recent documentation as of May 18, 2026, has explicitly formalized the optimal mechanical sequence for elite execution: **Identify Liquidity (PDH/PDL) -> Wait for Purge -> Confirm MSS with Displacement -> Enter on [FVG](concepts/liquidity-sweep-mss-strategy.md) Retracement.** This precise sequence has been codified as a top-tier strategy for mitigating chop and reacting purely to institutional order flow.
+
+## Open Questions / Counter-Evidence
+
+*   **Choppy/Low-Volume Conditions:** While the [Liquidity Sweep and MSS](concepts/liquidity-sweep-mss-strategy.md) model is highly effective in trending or actively expanding markets, how does its win rate hold up during prolonged, low-volatility summer ranges? Is displacement during these periods merely algorithmic ping-pong rather than true institutional sponsorship?
+*   **Double-Sided Sweeps (News Volatility):** During heavy macro-economic data releases (e.g., FOMC, CPI), price frequently engineers double-sided sweeps, running both the PDH and PDL in rapid succession. At what point does a high-timeframe [Market Structure Shift (MSS)](concepts/liquidity-sweep-mss-strategy.md) become reliable following tier-1 news, and how wide should the structural invalidation level adapt to account for extreme volatility wicks?
