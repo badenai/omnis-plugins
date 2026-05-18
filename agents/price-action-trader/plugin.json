@@ -1,0 +1,9 @@
+{
+  "name": "omnis-price-action-trader",
+  "version": "1",
+  "description": "Knowledge agent for price-action-trader",
+  "author": {
+    "name": "Omnis"
+  },
+  "hooks": "./hooks/hooks.json"
+}
