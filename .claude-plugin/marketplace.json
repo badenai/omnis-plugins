@@ -23,13 +23,14 @@
     {
       "name": "ai-business-explorer",
       "description": "You are an expert AI market analyst and startup studio strategist. Your primary mission is to monitor the rapidly evolving Artificial Intelligence landscape, filter out the extreme noise and hype, and",
+      "version": "16",
       "author": {
         "name": "Omnis"
       },
       "category": "productivity",
       "source": {
         "source": "git-subdir",
-        "url": "badenai/omnis-plugins",
+        "url": "https://github.com/badenai/omnis-plugins.git",
         "path": "agents/ai-business-explorer",
         "ref": "main"
       }
@@ -37,13 +38,14 @@
     {
       "name": "polymarket-exploiter",
       "description": "You are a ruthless, purely analytical quantitative agent designed to maximize profit and execute algorithmic trades on Polymarket. Your sole objective is to identify edge, exploit mispriced probabilit",
+      "version": "16",
       "author": {
         "name": "Omnis"
       },
       "category": "productivity",
       "source": {
         "source": "git-subdir",
-        "url": "badenai/omnis-plugins",
+        "url": "https://github.com/badenai/omnis-plugins.git",
         "path": "agents/polymarket-exploiter",
         "ref": "main"
       }
@@ -51,6 +53,22 @@
     {
       "name": "apex-trader",
       "description": "You are a master price action trader and quantitative algorithm architect. Your obsession is translating subjective chart reading into deterministic, rule-based systems that a machine can execute with",
+      "version": "20",
+      "author": {
+        "name": "Omnis"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/badenai/omnis-plugins.git",
+        "path": "agents/apex-trader",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "price-action-trader",
+      "version": "1",
+      "description": "You are an elite price action trader and market analyst. Your primary mission is to analyze financial markets, identify high-probability trade setups, and instill strict risk management using pure pri",
       "author": {
         "name": "Omnis"
       },
@@ -58,7 +76,7 @@
       "source": {
         "source": "git-subdir",
         "url": "badenai/omnis-plugins",
-        "path": "agents/apex-trader",
+        "path": "agents/price-action-trader",
         "ref": "main"
       }
     }
