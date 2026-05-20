@@ -1,39 +1,41 @@
 ---
-name: trade-execution-fvg
-description: Use when framing trade entries, placing stop-losses, identifying Fair Value Gaps (FVG) for execution, or applying the mechanical execution sequence of liquidity purge, market structure shift, and multi-timeframe entry alignment.
+name: trade-execution-imbalances
+description: Use when validating mechanical Order Blocks (OB), trading Fair Value Gaps (FVG), executing the Unicorn Model, or defining exact entry triggers and stop placements in price action setups.
 ---
 
 ## The Iron Law
 
 ```text
-Never execute a trade without first confirming a higher-timeframe liquidity sweep followed by a lower-timeframe Market Structure Shift (MSS) with displacement, and always mandate entry at the resulting Fair Value Gap (FVG) with the stop-loss strictly placed beyond the sweep wick.
+Never execute a trade without observing violent institutional displacement that leaves behind a Fair Value Gap (FVG); if price action does not create a clear imbalance, the move lacks institutional sponsorship and the setup is invalid.
 ```
 
 ## Behavioral Rules
 
-*   Establish higher-timeframe (Daily/4H) directional bias and Premium/Discount (PD) arrays before evaluating lower-timeframe (15m/5m/1m) execution setups.
-*   Execute entries using only the strict mechanical sequence: Identify Liquidity (PDH/PDL/Session pools) -> Wait for Purge -> Confirm MSS with Displacement -> Enter on FVG Retracement.
-*   Demand energetic displacement candles that break structure to confirm an MSS; ignore structural breaks that lack strong volume or momentum footprints.
-*   Place stop-loss orders objectively beyond the absolute wick that engineered the liquidity sweep, never relying on fixed or arbitrary pip counts.
-*   Cancel entry limit orders or exit manually if the sweep wick is violated before or during the trade execution, as the institutional setup is objectively invalidated.
-*   Frame trade setups exclusively to deliver price from Internal Range Liquidity out to External Range Liquidity.
-*   If trading around heavy macroeconomic data (e.g., FOMC, CPI), wait for double-sided sweeps to clear and rely solely on a post-volatility higher-timeframe MSS for entry confirmation.
+*   Execute entries exclusively within 15m, 5m, or 1m Premium/Discount arrays that strictly align with the Daily/4H narrative bias.
+*   Validate an Order Block (OB) using three mechanical criteria: it must form within a liquidity-sweeping BOS/CHOCH leg, it must immediately precede aggressive displacement that leaves an FVG, and it must remain 100% unmitigated.
+*   Discard any Order Block that has been previously wicked into; treat the first touch as the only valid institutional entry.
+*   If a Fair Value Gap (FVG) directly overlays a Higher Timeframe OB or Breaker Block (Unicorn Model), execute mechanically upon return to this stacked zone without waiting for secondary lower-timeframe confirmations.
+*   Place stop-loss orders rigidly beyond the original liquidity sweep wick to protect capital against algorithmic deep mitigations.
+*   Target a minimum 1:2 or 1:3 Risk-to-Reward (RR) ratio on all mechanical executions.
+*   Employ the Institutional Order Flow Entry Drill (IOFED) by placing limit orders at the proximal edge of an FVG only when higher-timeframe alignment is flawless.
+*   Wait for price to retrace to the 50% Equilibrium (EQ) of the FVG if the algorithmic environment suggests a deeper mitigation is required before continuation.
 
 ## Red Flags
 
-| Rationalization | Why wrong |
+| Rationalization | Why it's a Trap |
 | :--- | :--- |
-| "I'm entering early on the sweep to get a better price." | A sweep without an MSS and displacement is merely a stop hunt; entering without institutional confirmation is gambling. |
-| "I'll use a fixed 10-pip stop loss to keep my risk-reward high." | Risk must be defined by market structure (the specific sweep wick), not an arbitrary pip count. |
-| "The 1-minute chart shows a bullish FVG, so I am buying immediately." | Lower timeframes are pure noise when divorced from a higher-timeframe (Daily/4H) directional bias and PD array context. |
-| "Price is sweeping the high during FOMC, I'm shorting right now." | News volatility frequently engineers double-sided sweeps; entering before the post-news structure shifts exposes you to immediate stop-outs. |
+| "This Order Block was already tested, but it looks strong." | Institutional orders are exhausted on the first touch; mitigated zones are high-risk. |
+| "The candle is green, so it serves as a valid bullish OB." | An OB is entirely invalid unless it sweeps internal liquidity and directly causes FVG displacement. |
+| "I will wait for a 1-minute CHOCH inside this Unicorn setup." | Unicorn setups represent high-conviction overlapping arrays; waiting for LTF confirmation causes missed entries. |
+| "Price didn't leave an FVG, but the breakout looks aggressive." | No FVG means no proven institutional order imbalance; you are buying into a retail breakout trap. |
+| "I'll trail my stop tightly inside the FVG to reduce risk." | Premature trailing ignores algorithmic repricing; stops must remain safely beyond the originating sweep wick. |
 
 ## Quick Reference
 
-| Phase | Action | Condition |
+| Execution Concept | Validation Criteria | Mechanical Rule |
 | :--- | :--- | :--- |
-| **1. HTF Context** | Establish bias and Premium/Discount arrays | Must use Daily/4H charts |
-| **2. Liquidity Purge** | Wait for price to sweep external liquidity | Target PDH, PDL, or Session Highs/Lows |
-| **3. Institutional MSS**| Confirm Market Structure Shift | Requires energetic displacement candles |
-| **4. Mechanical Entry**| Set limit order at FVG retracement | Must frame Internal to External Range delivery |
-| **5. Risk Placement** | Place hard stop-loss | Strictly above/below the exact sweep wick |
+| **Mechanical OB** | Unmitigated, swept internal liquidity, caused FVG | Enter strictly on the first touch; invalidate if wicked. |
+| **Unicorn Model** | FVG perfectly overlapping a HTF OB / Breaker | Execute immediately upon price return into the stacked zone. |
+| **IOFED Entry** | Flawless HTF alignment, aggressive momentum | Enter at the proximal edge of the FVG. |
+| **EQ Entry** | Standard FVG mitigation phase | Enter at the 50% Equilibrium of the FVG. |
+| **Invalidation (Stop)** | Valid MSS and FVG creation identified | Place stop rigidly beyond the initiating liquidity sweep wick. |
