@@ -1,38 +1,40 @@
 ---
 name: market-structure-liquidity
-description: Use when analyzing pure price action to validate Market Structure Shifts (MSS), distinguish a true CHOCH from liquidity sweeps (inducement), track session liquidity cycles (AMD / Power of 3), or map volume-backed Wyckoff manipulation phases.
+description: Use when analyzing price action, identifying trend direction, mapping structural breaks, hunting liquidity pools, and distinguishing true reversals from inducement traps.
 ---
 
 ## The Iron Law
 
 ```text
-Never classify a structural break as a true Change of Character (CHOCH) without a full candle body close and violent displacement beyond a major external swing level; treat all wicks and minor internal breaks strictly as engineered liquidity sweeps and inducement traps.
+Never validate a Change of Character (CHOCH) or Break of Structure (BOS) unless it directly originates from a sweep of external liquidity; structural breaks without prior liquidity absorption are algorithmic traps (Inducement).
 ```
 
 ## Behavioral Rules
 
-*   Require a definitive Liquidity Sweep of Previous Day High/Low (PDH/PDL) or specific session boundaries before validating any institutional reversal setup.
-*   Confirm algorithmic participation by mandating a Market Structure Shift (MSS) accompanied by violent displacement immediately following a liquidity sweep.
-*   Distinguish Wyckoff events mathematically: map a "Spring" exclusively as a Sell-Side Liquidity (SSL) sweep and an "Upthrust" exclusively as a Buy-Side Liquidity (BSL) sweep.
-*   Filter out false sweeps by requiring Tick Volume expansion during the external purge to validate institutional effort (Cause).
-*   Execute intraday setups strictly through the Power of 3 (AMD) framework: identify Accumulation in the Asian session, fade the London Manipulation (Judas Swing), and ride the New York Distribution.
-*   Disregard sub-minute body closes as valid structural shifts if they lack higher timeframe (H4/Daily) Point of Interest (POI) alignment, treating them instead as deep algorithmic inducement traps.
-*   Place stop losses rigidly beyond the defining sweep wick to invalidate the setup immediately if breached.
+*   Identify sweeps of external liquidity strictly at Previous Day Highs/Lows (PDH/PDL) or established session boundaries before mapping reversal structures.
+*   Require a candle body to close with aggressive displacement past a major external swing level to validate a True CHOCH or BOS.
+*   Treat wick penetrations of structural levels as liquidity sweeps (stop hunts/Wyckoff Springs/Upthrusts), never as true structural breaks.
+*   Categorize internal, minor structural breaks as Inducement (IDM) engineered to wipe out early breakout traders.
+*   Map the Manipulation phase (Judas Swing) to time-based sweeps of Asian session Accumulation boundaries during London or New York Killzones.
+*   Validate liquidity sweeps by confirming that subsequent price action creates a Market Structure Shift (MSS) leaving a Fair Value Gap (FVG).
+*   Always align low-timeframe structural shifts (e.g., 1-minute or 3-minute killzone sweeps) with the Higher-Timeframe (HTF) directional bias.
+*   Place stop losses strictly beyond the extreme wick of the liquidity sweep to mechanically protect the structural level.
 
 ## Red Flags
 
-| Domain-Specific Rationalization | Why Wrong |
+| Rationalization | Why wrong |
 | :--- | :--- |
-| "This hourly wick through the high is a break of structure." | Wicks do not break higher-timeframe structure; wicks purge resting liquidity and induce early breakout traders. |
-| "London is breaking aggressively out of the Asian range, I must follow the trend." | The initial London expansion is typically the Manipulation phase (Judas Swing) engineered to sweep Asian accumulation before true Distribution. |
-| "The 1-minute chart shows a CHOCH, so I am entering a reversal." | Low-timeframe structure changes divorced from Daily/H4 liquidity arrays are meaningless algorithmic noise and retail traps. |
-| "The CHOCH occurred but displacement is weak, I'll take the entry anyway." | True algorithmic participation leaves a distinct footprint of violent displacement and Fair Value Gaps; weak moves signal lack of institutional backing. |
+| "Price broke this minor high, so the trend has changed." | Minor internal breaks are Inducement (IDM); true reversals require a sweep of major external liquidity first. |
+| "The wick went past the previous high, that is a Break of Structure." | Wicks represent liquidity sweeps (stop hunts); valid BOS/CHOCH requires a solid body close with displacement. |
+| "I am trading this 1-minute structural shift because the killzone just started." | Low-timeframe shifts divorced from higher-timeframe alignment degrade edge and lead to volatile stop-outs. |
+| "There is a massive Order Block here, I will enter immediately." | An OB is invalid unless it originates a structural break that sweeps internal liquidity and leaves an FVG. |
 
 ## Quick Reference
 
-| Concept | Diagnostic Criteria | Execution Mandate |
+| Concept | Mechanical Definition | Action |
 | :--- | :--- | :--- |
-| **True CHOCH** | Full candle body close + violent displacement past major external swing. | Enter on retracement to the newly formed structural FVG; ignore minor internal breaks. |
-| **Liquidity Sweep** | Wick penetration of PDH, PDL, or session boundary. | Anticipate an MSS in the opposite direction; place stop exactly beyond the sweep wick. |
-| **AMD (Power of 3)** | Asian consolidation -> London false breakout -> NY directional expansion. | Wait for the London Judas Swing to sweep Asian liquidity, then enter the NY reversal. |
-| **Wyckoff / VSA** | External SSL/BSL sweep accompanied by Tick Volume expansion. | Use volume to confirm institutional effort before entering the subsequent markup/markdown phase. |
+| **True CHOCH / BOS** | Candle body closes past major external swing with violent displacement. | Validate reversal or continuation bias. |
+| **Liquidity Sweep** | Wick penetrates PDH/PDL or Session extreme and immediately rejects. | Anticipate reversal; wait for MSS and FVG creation. |
+| **Inducement (IDM)** | Minor, internal structural break before major liquidity is swept. | Do not enter; wait for the IDM pool itself to be swept. |
+| **Judas Swing** | Time-based sweep of Asian session boundaries during London/NY open. | Execute in the opposite direction of the manipulation. |
+| **Wyckoff Sweep** | BSL sweep (Upthrust) or SSL sweep (Spring) with tick volume expansion. | Use as a mechanical filter to confirm institutional intent. |
