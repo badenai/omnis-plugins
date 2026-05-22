@@ -1,40 +1,38 @@
 ---
 name: market-structure-liquidity
-description: Use when analyzing price action, identifying trend direction, mapping structural breaks, hunting liquidity pools, and distinguishing true reversals from inducement traps.
+description: Use when mapping internal vs external market structure, evaluating Break of Structure (BOS) vs Change of Character (CHOCH), or identifying Buy-Side/Sell-Side liquidity sweeps (stop hunts) and inducement (IDM) traps.
 ---
 
 ## The Iron Law
 
 ```text
-Never validate a Change of Character (CHOCH) or Break of Structure (BOS) unless it directly originates from a sweep of external liquidity; structural breaks without prior liquidity absorption are algorithmic traps (Inducement).
+Never validate a structural Change of Character (CHOCH) without a preceding algorithmic sweep of a major liquidity pool (Buy-Side/Sell-Side) and subsequent aggressive displacement closing past a true external swing level. Treat all wicks or internal minor structure breaks as Inducement (IDM) traps.
 ```
 
 ## Behavioral Rules
 
-*   Identify sweeps of external liquidity strictly at Previous Day Highs/Lows (PDH/PDL) or established session boundaries before mapping reversal structures.
-*   Require a candle body to close with aggressive displacement past a major external swing level to validate a True CHOCH or BOS.
-*   Treat wick penetrations of structural levels as liquidity sweeps (stop hunts/Wyckoff Springs/Upthrusts), never as true structural breaks.
-*   Categorize internal, minor structural breaks as Inducement (IDM) engineered to wipe out early breakout traders.
-*   Map the Manipulation phase (Judas Swing) to time-based sweeps of Asian session Accumulation boundaries during London or New York Killzones.
-*   Validate liquidity sweeps by confirming that subsequent price action creates a Market Structure Shift (MSS) leaving a Fair Value Gap (FVG).
-*   Always align low-timeframe structural shifts (e.g., 1-minute or 3-minute killzone sweeps) with the Higher-Timeframe (HTF) directional bias.
-*   Place stop losses strictly beyond the extreme wick of the liquidity sweep to mechanically protect the structural level.
+*   **Prioritize Liquidity Sweeps:** Require algorithms to purge critical Buy-Side Liquidity (BSL) or Sell-Side Liquidity (SSL) pools (e.g., Previous Day Highs/Lows, Equal Highs/Lows) before validating any structural reversal bias.
+*   **Validate True CHOCH:** Classify a structural shift as a Change of Character (CHOCH) if and only if price closes *with displacement* past a major external swing level.
+*   **Identify Inducement (IDM):** Label any price action that merely wicks past a structural level or breaks an internal minor structure as Inducement (IDM); use this to map where algorithms are trapping early retail stop losses.
+*   **Filter Internal vs. External Structure:** Differentiate explicitly between internal price legs (minor structure) and external macro swings (major structure) to avoid getting trapped by lower-timeframe noise.
+*   **Demand a Catalyst:** Invalidate any trade setup that appears in a vacuum; ensure every high-probability structure shift is initiated by the algorithmic harvesting of external liquidity.
+*   **Align Timeframes:** Reject low-timeframe structural shifts if they directly contradict the higher-timeframe external liquidity draw, unless executing purely within a hyper-specific intra-session liquidity sweep.
 
 ## Red Flags
 
-| Rationalization | Why wrong |
+| Rationalization | Why Wrong |
 | :--- | :--- |
-| "Price broke this minor high, so the trend has changed." | Minor internal breaks are Inducement (IDM); true reversals require a sweep of major external liquidity first. |
-| "The wick went past the previous high, that is a Break of Structure." | Wicks represent liquidity sweeps (stop hunts); valid BOS/CHOCH requires a solid body close with displacement. |
-| "I am trading this 1-minute structural shift because the killzone just started." | Low-timeframe shifts divorced from higher-timeframe alignment degrade edge and lead to volatile stop-outs. |
-| "There is a massive Order Block here, I will enter immediately." | An OB is invalid unless it originates a structural break that sweeps internal liquidity and leaves an FVG. |
+| "Price broke the nearest higher low, so the macro trend has changed." | Breaking an internal minor low is Inducement (IDM) designed to trap early direction traders before the macro trend continues. |
+| "The wick crossed the previous day's high, confirming a Break of Structure." | A wick without candle body displacement constitutes a liquidity sweep (stop hunt), not a valid structural break. |
+| "There is a clean structural CHOCH here without a prior liquidity sweep." | Institutional reversals do not occur in a vacuum; they strictly require the purging of BSL or SSL pools to acquire positional liquidity. |
+| "I am executing a reversal solely based on this 1-minute structural shift." | Low-timeframe structural shifts act as algorithmic noise and traps when divorced from higher-timeframe external liquidity targets. |
 
 ## Quick Reference
 
-| Concept | Mechanical Definition | Action |
+| Concept | Mechanical Definition | Actionable Trigger |
 | :--- | :--- | :--- |
-| **True CHOCH / BOS** | Candle body closes past major external swing with violent displacement. | Validate reversal or continuation bias. |
-| **Liquidity Sweep** | Wick penetrates PDH/PDL or Session extreme and immediately rejects. | Anticipate reversal; wait for MSS and FVG creation. |
-| **Inducement (IDM)** | Minor, internal structural break before major liquidity is swept. | Do not enter; wait for the IDM pool itself to be swept. |
-| **Judas Swing** | Time-based sweep of Asian session boundaries during London/NY open. | Execute in the opposite direction of the manipulation. |
-| **Wyckoff Sweep** | BSL sweep (Upthrust) or SSL sweep (Spring) with tick volume expansion. | Use as a mechanical filter to confirm institutional intent. |
+| **CHOCH** | Displacement body close past a major external swing level. | Validate true state shift; look for institutional entry models. |
+| **IDM** | Internal minor structure break or a simple wick past a level. | Ignore reversal signals; wait for algorithmic sweep of early trapped traders. |
+| **BSL/SSL Sweep** | Wick piercing Previous Day High/Low (PDH/PDL) or Equal Highs/Lows. | Anticipate immediate reversal targeting opposing liquidity pools. |
+| **External Structure** | Macro Higher High / Higher Low swing points. | Map as absolute higher-timeframe bias and ultimate take-profit targets. |
+| **Internal Structure** | Minor price legs contained inside the current macro leg. | Monitor exclusively to identify Inducement (IDM) timing traps. |
