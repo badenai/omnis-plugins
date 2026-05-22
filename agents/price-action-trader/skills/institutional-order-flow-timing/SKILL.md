@@ -1,39 +1,38 @@
 ---
 name: institutional-order-flow-timing
-description: Use when analyzing market session boundaries, AMD (Accumulation, Manipulation, Distribution) cycles, Killzone setups, DOM/Footprint order absorption, volume spread analysis (VSA), or executing IOFED/Judas CHOCH strategies based on time and algorithmic order flow.
+description: Use when analyzing algorithmic market timing, session killzones, AMD (Accumulation, Manipulation, Distribution) cycles, or footprint order flow dynamics.
 ---
 
 ## The Iron Law
 
 ```text
-Never execute a structural setup without confirming session timing (AMD Killzones) and verifying institutional volume absorption or displacement at the swept liquidity boundaries.
+Never execute a trade based solely on price levels without first aligning with institutional session timing (Killzones) and verifying algorithmic involvement via order flow absorption or initiation. Time dictates price delivery.
 ```
 
 ## Behavioral Rules
 
-* Map the algorithmic Power of 3 (AMD) cycle strictly by defining Asian session Accumulation, London session Manipulation (Judas Swing), and New York session Distribution.
-* If trading a Judas CHOCH, wait for a specific Killzone to sweep established session boundaries before anticipating a reversal.
-* Require violent lower-timeframe displacement immediately following a time-based sweep to validate institutional footprint.
-* Confirm structural sweeps by checking DOM or Footprint data to identify heavy institutional limit orders (liquidity walls) absorbing aggressive retail market orders.
-* Validate Wyckoff Springs (Sell-Side Liquidity sweeps) and Upthrusts (Buy-Side Liquidity sweeps) exclusively when accompanied by tick volume expansion.
-* Execute Institutional Order Flow Entry Drill (IOFED) entries strictly at the proximal edge of an unmitigated Fair Value Gap (FVG) to enforce highly asymmetric Risk-to-Reward.
-* Abandon pure price action setups if they occur outside of high-volume session Killzones.
+*   **AMD Validation:** Require a clear Accumulation phase (typically Asian session), wait for Manipulation (London Judas Swing) to sweep resting liquidity, and trade only the subsequent Distribution phase (New York expansion).
+*   **Macro Window Execution:** Restrict active charting and trade execution to specific 60-minute high-volatility "Macro" windows (e.g., London Open, NY AM) to capture pure algorithmic displacement.
+*   **Footprint Confirmation:** Validate Order Blocks and Balanced Price Ranges (BPR) using Level 2 footprint data by confirming Absorption (heavy bid/ask volume failing to advance price) immediately followed by Initiation (Delta divergence in the reversal direction).
+*   **Judas CHOCH Application:** If a perfect, time-aligned liquidity sweep and 1-minute displacement setup occurs strictly within a Killzone macro window, execute the setup mechanically even if it conflicts with higher-timeframe structural bias.
+*   **Wyckoff Volume Verification:** Utilize tick volume as a Volume Spread Analysis (VSA) proxy to confirm institutional effort and validate Spring (SSL sweep) or Upthrust (BSL sweep) mechanics during session transitions.
+*   **Avoid Blind Limits:** Abandon predictive standard limit orders at standard Order Blocks; transition entirely to reactive entries triggered by real-time order flow shifts at the Point of Interest (POI).
 
 ## Red Flags
 
 | Domain-Specific Rationalization | Why Wrong |
 | :--- | :--- |
-| "This structure looks perfect, even though we are in the middle of the Asian session." | Algorithms operate on specific time-based Killzones; out-of-session moves lack institutional backing and volume. |
-| "I will wait for the FVG 50% Equilibrium (EQ) to enter safely." | IOFED mechanics dictate proximal edge execution; waiting for EQ sacrifices high R:R and often results in entirely missed entries. |
-| "Price swept the Previous Day High, so I am shorting the immediate tick." | Entering without confirming DOM absorption or immediate displacement invites getting crushed by true structural breakouts. |
-| "Volume data is just secondary lagging noise." | Classical VSA and order flow footprint validate true institutional intent during sweeps, filtering out fake CHOCHs (Inducements). |
+| "This Order Block is perfectly formed, I am placing a blind limit order here." | Blind limits ignore real-time order flow; elite execution requires footprint absorption validation to prevent being run over by algorithmic drawdowns. |
+| "I am taking the Asian session breakout because momentum is building." | The Asian session is algorithmically programmed for order accumulation; breakouts are engineered traps designed to build liquidity for the London manipulation sweep. |
+| "The structural FVG is clean, so the time of day does not matter." | Price patterns devoid of session Killzone alignment lack the algorithmic volume injections required for sustained structural distribution. |
+| "The footprint shows massive buy volume at the highs, I must go long." | Heavy volume at a high that fails to push price forward is Absorption (retail limit orders trapped by institutional sellers), signaling a short reversal. |
 
 ## Quick Reference
 
-| Concept | Required Action |
-| :--- | :--- |
-| **AMD Framework** | Bracket Asian Accumulation limits; target London Manipulation sweeps; ride New York Distribution. |
-| **Judas CHOCH** | Fade the initial Killzone breakout that targets prior session external liquidity pools. |
-| **DOM Absorption** | Inspect footprint charts for massive limit order walls trapping retail market orders at sweep levels. |
-| **Wyckoff Confluence** | Demand tick volume expansion on all Spring (SSL) and Upthrust (BSL) events. |
-| **IOFED Execution** | Set aggressive limit entries precisely at the proximal edge of the displacement FVG. |
+| Institutional Concept | Timing / Condition | Required Action |
+| :--- | :--- | :--- |
+| **Accumulation (A)** | Asian Session | Map resting liquidity boundaries; do not trade breakouts. |
+| **Manipulation (M)** | London Open Killzone | Wait for the "Judas Swing" to sweep Asian liquidity pools. |
+| **Distribution (D)** | New York Session | Execute in the direction of post-sweep displacement toward unmitigated external liquidity. |
+| **Footprint Reversal** | Price hits structural POI | Wait for Absorption (trapped volume) + Initiation (Delta divergence) before entry. |
+| **Macro Execution** | 60-min High-Vol Windows | Scan exclusively for mechanical "Judas CHOCH" setups and execute without hesitation. |
