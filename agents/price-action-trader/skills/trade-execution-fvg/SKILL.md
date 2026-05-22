@@ -1,38 +1,39 @@
 ---
 name: trade-execution-fvg
-description: Use when analyzing trade entry points, placing limit orders at Fair Value Gaps (FVG), Balanced Price Ranges (BPR), Order Blocks (OB), or determining execution mechanics within the Unicorn Model and IOFED frameworks.
+description: Use when identifying and executing trades at Points of Interest (POIs) such as Order Blocks, Fair Value Gaps (FVGs), Balanced Price Ranges (BPRs), or applying the Unicorn/Venom models and footprint absorption analysis.
 ---
 
 ## The Iron Law
 
 ```text
-Never execute a trade without violent structural displacement that leaves a clear price vacuum (FVG); you must mechanically align your entry with an unmitigated institutional defense zone (OB, BPR, or Breaker) and place your stop loss strictly beyond the originating invalidation wick.
+Never execute blindly at a Point of Interest (POI) using static limit orders; you must strictly await localized algorithmic validation via displacement (FVG/BPR creation) or order flow absorption to confirm institutional defense.
 ```
 
 ## Behavioral Rules
 
-*   **Mechanical Order Block Validation:** If labeling an Order Block (OB), strictly require three conditions before executing: it must originate a structural break that sweeps internal liquidity, be followed immediately by displacement leaving an FVG, and remain 100% unmitigated. 
-*   **Unicorn Model Execution:** When a Higher Timeframe Breaker Block or Order Block overlaps directly with a newly formed FVG, execute aggressively at this double-confirmation zone; do not wait for secondary lower-timeframe confirmation.
-*   **BPR (Balanced Price Range) Exploitation:** If price forms overlapping bullish and bearish FVGs (an immediate aggressive reversal), treat the resulting BPR as a zero-drawdown defense zone; execute your limit order directly on the retest of the BPR edge.
-*   **IOFED (Institutional Order Flow Entry Drill) Protocol:** If executing for maximum Risk-to-Reward, enter strictly at the proximal edge of the FVG rather than waiting for 50% Equilibrium (EQ); accept the higher rate of missed fills in exchange for highly asymmetric R:R.
-*   **Strict Invalidation Placement:** When executing any FVG or OB setup, place your stop loss strictly beyond the absolute extreme wick of the originating liquidity sweep; never widen the stop if price draws deeper into the zone.
-*   **Ignore Unaligned Vacuums:** If an FVG appears on a lower timeframe (e.g., 1-minute) but lacks Higher Timeframe directional alignment or does not originate from a major liquidity sweep, ignore it entirely; treat it as an algorithmic inducement trap.
+*   Validate an Order Block ONLY if it meets three mechanical criteria: it initiates a structural break sweeping internal liquidity, creates aggressive displacement leaving a Fair Value Gap (FVG), and remains completely unmitigated.
+*   Invalidate any Order Block immediately once price wicks into it; treat the institutional edge as permanently exhausted.
+*   Execute the Venom Model strictly by waiting for a Killzone liquidity sweep followed immediately by the formation of a Balanced Price Range (BPR).
+*   Execute the Unicorn Model only when price pulls back into a Mitigation/Breaker Block that perfectly aligns with an FVG.
+*   Require footprint confirmation—specifically heavy order flow Absorption that fails to push price, followed by Delta Initiation in the reversal direction—before executing at any established POI.
+*   Define your FVG entry mechanics prior to execution: use the IOFED model (executing exactly at the proximal edge) to maximize Risk-to-Reward, or wait for the standard 50% Equilibrium (EQ) fill to prioritize strike rate.
+*   Treat an overlapping bullish and bearish FVG strictly as a Balanced Price Range (BPR); use this zone as a near-zero-drawdown defense level once price returns to it.
 
 ## Red Flags
 
-| Domain-Specific Rationalization | Why Wrong |
+| Rationalization | Why Wrong |
 | :--- | :--- |
-| "Any opposite-colored candle before a big move is a valid Order Block to trade from." | Retail trap; valid OBs must explicitly sweep internal liquidity, leave an FVG via displacement, and remain entirely unmitigated. |
-| "I will wait for a lower-timeframe CHOCH inside this HTF Unicorn setup to be safe." | Unicorn setups (OB/Breaker + FVG) are inherently double-confirmed; waiting for low-timeframe noise causes missed entries and ruins R:R. |
-| "Price broke the sweep wick, but I will scale into this FVG because the HTF trend is strong." | Once the structural invalidation wick is breached, the institutional premise is void; scaling in turns mechanical risk management into a gamble. |
-| "I will wait for the FVG to hit 50% Equilibrium to ensure I get a better average price." | For aggressive displacement, price often only taps the proximal edge (IOFED); demanding the EQ fill guarantees missed high-momentum executions. |
+| "This large opposing candle looks like a perfect Order Block." | Without sweeping internal liquidity, causing displacement (FVG), and remaining unmitigated, it is merely retail noise, not an institutional footprint. |
+| "I will leave a blind limit order at the 50% EQ of this FVG." | Blind limits ignore real-time footprint absorption and Delta initiation, exposing the execution to unchecked algorithmic continuation. |
+| "Price returned to this previously tested OB, I will buy the double bottom." | An institutional Order Block is exhausted the exact moment it is wicked into; secondary touches lack algorithmic backing and act as inducement. |
+| "I am executing this Venom Model setup because a BPR just formed." | The Venom model is invalid if the BPR formation was not immediately preceded by a Killzone liquidity sweep. |
 
 ## Quick Reference
 
-| Execution Framework | Execution Criteria & Mechanical Action |
-| :--- | :--- |
-| **Mechanical Order Block** | Require liquidity sweep + displacement + FVG + 100% unmitigated state. Enter on first touch. |
-| **Unicorn Model** | Identify HTF Breaker/OB overlapping with a fresh FVG. Execute aggressively at the overlap edge. |
-| **Balanced Price Range** | Identify overlapping opposing FVGs. Execute limit order at the external edge of the neutralized zone. |
-| **IOFED Approach** | Enter precisely at the proximal edge of the FVG to prioritize asymmetric Risk-to-Reward. |
-| **Invalidation Rule** | Place hard stop strictly beyond the wick of the originating liquidity sweep. |
+| POI / Execution Model | Validation Criteria | Execution Trigger |
+| :--- | :--- | :--- |
+| **High-Probability OB** | Sweeps internal liquidity, creates displacement (FVG), completely unmitigated. | Footprint Absorption and Delta Initiation upon first touch. |
+| **Balanced Price Range** | Overlapping bullish and bearish FVGs creating a neutralized price vacuum. | Price returns to the BPR zone after a Killzone sweep. |
+| **Unicorn Model** | A Mitigation/Breaker Block physically overlaps/aligns with an FVG. | Price taps the aligned Breaker + FVG zone. |
+| **FVG Entry (IOFED)** | Institutional displacement leaves an unmitigated gap in price delivery. | Execute at the proximal edge for maximum R:R. |
+| **FVG Entry (EQ)** | Institutional displacement leaves an unmitigated gap in price delivery. | Execute at the 50% Equilibrium mark for higher strike rate. |
