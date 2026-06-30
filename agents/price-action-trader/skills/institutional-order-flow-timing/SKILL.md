@@ -1,40 +1,44 @@
 ---
 name: institutional-order-flow-timing
-description: Use when analyzing market structure shifts, identifying session liquidity sweeps (Asian, London, NY), executing during macro timing windows (Silver Bullet, London/NY Open), or mapping AMD/AMDX price delivery cycles.
+description: Use when analyzing market structure, mapping daily AMD cycles, tracking session Killzones (London/New York), evaluating SMT Divergence, or identifying high-probability institutional entry models (Unicorn, Venom, IOFED).
 ---
 
 ## The Iron Law
 
-```text
-NEVER execute any trade entry unless price is inside a designated session macro timing window (London Open 2-5 AM EST, NY Open 7-10 AM EST, or Silver Bullet windows) AND has swept liquidity from a major session range extreme (Asian Range, London High/Low, or Previous Day High/Low).
+```
+NEVER execute any trade entry outside of designated session Killzones (London 2 AM–5 AM EST or New York 7 AM–12 PM EST), nor without a verified higher-timeframe liquidity sweep or SMT divergence confirmation.
 ```
 
 ## Behavioral Rules
 
-*   If analyzing the Asian session (8 PM - 12 AM EST), map the high and low boundaries as accumulation ranges; do not trade breakout patterns within this zone.
-*   If price approaches the London Open (2 AM - 5 AM EST), anticipate the Judas Swing to sweep Asian range extremes before seeking structural reversals.
-*   If executing during the New York AM Session (7 AM - 12 PM EST), trade strictly in the direction of the daily bias targeting unmitigated high-timeframe liquidity pools.
-*   If utilizing the AMDX framework, identify the 'X' phase to govern late-session execution and prevent trading into exhausted daily trends.
-*   If trading modern prop firm evaluations, restrict all active executions to 60-minute macro windows (e.g., London Open, NY Open, Silver Bullet) to minimize exposure and preserve drawdown.
-*   If a liquidity sweep occurs outside of key session timing windows, classify it as a low-probability manipulation and refuse execution until a valid session window opens.
-*   If price wicks through a structural level during high-volatility news releases, classify the movement as a liquidity sweep rather than a Market Structure Shift until a session-based candle body closes past the boundary.
+*   **Asian Range Assessment:** If the Asian range (8 PM–12 AM EST) does not compress into a clear, tight consolidation, abort execution plans for the subsequent London session Judas Swing.
+*   **London Judas Swing Verification:** Monitor the London open (2 AM–5 AM EST) for an engineered false expansion (manipulation) that sweeps the Asian range highs or lows before looking for reversal setups.
+*   **New York Distribution Execution:** Trade the true distribution expansion trend during the New York AM session (7 AM–12 PM EST), targeting the opposing HTF liquidity pools.
+*   **SMT Divergence Confirmation:** Compare highly correlated assets (e.g., EUR/USD vs. GBP/USD, or S&P 500 vs. Nasdaq) at key structural swings; if one asset sweeps a key high/low while the other fails to do so, execute strictly in the direction of the sweeping asset's displacement.
+*   **Breaker Block Validation:** Never trade a mitigation block lacking a prior liquidity sweep; only select breaker blocks that actively cleared resting stop orders before breaking market structure with high displacement.
+*   **Unicorn Model Execution:** Place limit orders only at the exact horizontal intersection of a validated Breaker Block and an unfilled Fair Value Gap (FVG) situated within a premium or discount pricing array.
+*   **Venom Model Execution:** Upon a major external liquidity sweep (PDH/PDL or session extremes), immediately monitor the lower timeframes and execute a limit order directly at the boundary of the newly formed Balanced Price Range (BPR).
+*   **IOFED Entry Protocols:** When trading high-momentum trends using the Institutional Order Flow Entry Drill (IOFED), enter limit orders directly at the proximal edge of the FVG, and adjust risk to account for potential drawdowns to the Consequent Encroachment (50% midpoint) level.
+*   **Order Flow Absorption:** When price reaches a key HTF Point of Interest (POI), verify passive institutional absorption using a low-timeframe (1m/3m) footprint chart to confirm a cumulative delta divergence before executing.
+*   **60-Minute Macro Windows:** Restrict active entry executions strictly to the designated high-volatility 60-minute algorithmic macro windows within the session Killzones.
 
 ## Red Flags
 
-| Retail/Incorrect Practice (Why wrong) | Rationalization used to justify it |
+| Domain-Specific Rationalizations | Why Wrong |
 | :--- | :--- |
-| Trading breakouts of the Asian range immediately without waiting for a manipulation sweep. | "The volume is expanding, and this momentum breakout is a clear trend continuation." |
-| Executing trades during the lunch hour doldrums (12 PM - 1 PM EST). | "Price is retracing to a key FVG, so this is a cheap entry for the PM session." |
-| Treating a late-session, low-volume sweep as a valid reversal setup. | "A key daily high was swept at 3:30 PM EST, so a massive reversal must be starting." |
-| Taking counter-trend setups during the distribution phase of a strong NY session. | "The moves are overextended on the 5-minute chart and due for a pullback." |
-| Relying on standard lagging indicators to determine momentum shifts during session transitions. | "RSI is oversold at the London Open, confirming the market has hit a structural bottom." |
+| "I'll enter a reversal trade at this order block during the late afternoon session because the setup looks perfect." | Late afternoon (post-NY AM) is characterized by low institutional volume and algorithmic flatlining, leading to choppy stop-outs and spread expansions. |
+| "This mitigation block will hold because it represents a clear change of character on the 15-minute chart." | Mitigation blocks lack a preceding liquidity sweep (stop hunt) to engineer the required fuel, resulting in a low-probability structure that is easily breached. |
+| "I should buy this bullish breakout above the Asian high during the London open." | The initial move during the London open is typically the Judas Swing (manipulation) designed to sweep Asian range liquidity and trap breakout traders before reversing. |
+| "Both EURUSD and GBPUSD broke their previous daily highs, so the uptrend is strongly confirmed." | Symmetrical sweeps indicate a standard trend move; look for non-symmetrical SMT divergence where one fails to sweep to confirm true institutional accumulation/distribution. |
+| "This single FVG is deep, so I will set my limit order at the very bottom and wait." | Standard single FVGs act as magnets and can drag price deep into their voids; use Balanced Price Ranges (BPRs) for low-drawdown entries since orders there are already neutralized. |
 
 ## Quick Reference
 
-| Session / Cycle Phase | Key Time Window (EST) | Algorithmic Function | Execution Action |
-| :--- | :--- | :--- | :--- |
-| **Asian Accumulation** | 8:00 PM - 12:00 AM | Engineers liquidity pools on both sides of a tight range. | Mark high/low extremes; do NOT trade breakouts. |
-| **London Manipulation** | 2:00 AM - 5:00 AM | Executes the Judas Swing; sweeps Asian range/PDH/PDL. | Look for CHOCH/MSS after a confirmed liquidity sweep. |
-| **NY AM Distribution** | 7:00 AM - 12:00 PM | Expands price aggressively toward high-timeframe targets. | Trade aligned with daily bias using FVGs and Order Blocks. |
-| **PM Continuation/Reversal (X)** | 1:00 PM - 4:00 PM | Resolves the AMDX cycle; completes or reverses daily trend. | Restrict trade size; target local pools; avoid late-day chasers. |
-| **Silver Bullet (AM)** | 10:00 AM - 11:00 AM | Rapidly delivers price to local liquidity pools via FVG. | Enter at first FVG validation with strict 10-15 pip targets. |
+| Phase / Setup | Session Window (EST) | Action / Execution Protocol |
+| :--- | :--- | :--- |
+| **Asian Accumulation** | 8 PM – 12 AM EST | Do not trade; define and map range high/low boundaries. |
+| **London Manipulation** | 2 AM – 5 AM EST | Watch for the Judas Swing (Asian range sweep); target SMT divergence. |
+| **NY Distribution** | 7 AM – 12 PM EST | Enter with the true expansion trend towards HTF liquidity targets. |
+| **Unicorn Setup** | Killzone Specific | Execute at the horizontal overlap of a Breaker Block and an FVG. |
+| **Venom Setup** | Post-HTF Sweep | Enter limit directly at the Balanced Price Range (BPR) boundary. |
+| **IOFED Setup** | Strong HTF Trend | Enter at the proximal edge of the FVG; set stop loss beyond structural swing. |
