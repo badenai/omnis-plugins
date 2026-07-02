@@ -1,39 +1,39 @@
 ---
 name: trade-execution-fvg
-description: Use when analyzing market structure shifts, identifying Fair Value Gaps (BISI/SIBI), determining Premium/Discount pricing arrays, and executing orders via Unicorn, Venom, or Balanced Price Range (BPR) entry models.
+description: Use when validating, filtering, and executing trade entries based on algorithmic market imbalances, Fair Value Gaps (FVG), Balanced Price Ranges (BPR), and specific execution models including the Unicorn, Venom, and IOFED setups.
 ---
 
 ## The Iron Law
 
 ```
-Never execute a buy-side entry in Premium pricing or a sell-side entry in Discount pricing, and instantly invalidate any Fair Value Gap (FVG) entry if price closes a candle body past its Consequent Encroachment (50% midpoint).
+Never validate, map, or execute trades on any FVG, BPR, or associated entry setup if the displacement candles forming the imbalance possess a body-to-wick ratio below 70%.
 ```
 
 ## Behavioral Rules
 
-*   **Determine Pricing Arrays First:** Always calculate the dealing range using a Fibonacci retracement from swing low to swing high before plotting entries. Limit buy executions strictly to the Discount zone (<50%) and sell executions strictly to the Premium zone (>50%).
-*   **Validate the FVG Sequence:** Classify bullish imbalances as BISI (Buyside Imbalance Sellside Inefficiency) and bearish imbalances as SIBI (Sellside Imbalance Buyside Inefficiency) only when a three-candle sequence shows rapid displacement.
-*   **Enforce Consequent Encroachment:** Plot the exact 50% midpoint (Consequent Encroachment) of every targeted FVG. Set alert notifications at this level and treat a candle body close past it as an automatic invalidation signal.
-*   **Execute the Unicorn Model:** Trigger entries only at the horizontal overlap of a Breaker Block and an FVG. Place the entry at the proximal boundary of the FVG, position the stop loss behind the Breaker's structural swing extreme, and reject the setup if the block failed to sweep liquidity (Mitigation Block).
-*   **Map Balanced Price Ranges (BPR):** Identify BPRs only where a displaced FVG in one direction is immediately overrun by an opposing FVG over the exact same price zone. Execute limit orders at the BPR equilibrium during session Killzones for near-zero-drawdown entries.
-*   **Filter Order Blocks (OB):** Validate an OB for execution only if it originated the move creating a BOS/CHOCH, left an immediate FVG, and remains completely unmitigated. Instantly reject any second-touch mitigation setups.
-*   **Align Execution with Killzones:** Restrict all execution triggers to the London session (2 AM - 5 AM EST) or New York AM session (7 AM - 12 PM EST). Invalidate any setups that form during low-volume Asian or off-session hours.
+*   **Apply the 70% Candle Filter:** Measure the body-to-wick ratio of the displacement candle forming the FVG or BPR. If the ratio is below 70%, immediately discard the setup as it indicates poor institutional sponsorship and reduces expected value to 1.3R.
+*   **Execute the Unicorn Setup:** Enter only when a high-volume FVG horizontally overlaps with a validated Breaker Block. You must confirm that this confluence occurs after a liquidity sweep of a major swing high/low and an aggressive Market Structure Shift (MSS).
+*   **Filter Out Mitigation Overlaps:** Reject any "Unicorn" variation that uses a Mitigation Block. You must verify a clear liquidity sweep (stop hunt) prior to the structural shift to ensure the block is a true Breaker Block.
+*   **Execute the Venom Setup:** Limit Venom model entries strictly to defined session Killzones. You must confirm an immediate liquidity sweep followed instantly by the formation of a Balanced Price Range (BPR).
+*   **Validate the Balanced Price Range (BPR):** Map a BPR only when an aggressive displacement move is immediately neutralized by an aggressive opposing displacement move, creating a clean horizontal overlap of a bullish FVG and a bearish FVG.
+*   **Execute the IOFED Setup:** Place limit orders precisely at the proximal edge of the FVG when trading the Institutional Order Flow Entry Drill (IOFED) to capture high-momentum expansions.
+*   **Enforce IOFED Invalidation:** Cancel the IOFED limit order immediately if price closes beyond the 50% consequent encroachment level of the FVG before triggering your entry.
+*   **Align with Premium/Discount Arrays:** Only execute long entries at FVGs/BPRs residing within a discount of the current structural range, and short entries at FVGs/BPRs residing within a premium of the current structural range.
 
 ## Red Flags
 
-| Red Flag (Retail Rationalization) | Why It Is Wrong |
+| Domain-Specific Rationalization | Why It Is Wrong |
 | :--- | :--- |
-| "Entering a long inside a BISI in the upper 30% of the dealing range because the trend is extremely strong." | Violates the premium/discount rule; buying in premium exposes the account to deep institutional stop hunts. |
-| "Executing a Unicorn model entry using a Mitigation Block because no Breaker Block is available." | Mitigation blocks do not sweep liquidity and lack the cleared stop-loss "fuel," leading to high failure rates. |
-| "Keeping an FVG entry active after a high-timeframe candle closes past its Consequent Encroachment." | A body close past the 50% midpoint of an FVG indicates structural invalidation and an institutional failure to defend the imbalance. |
-| "Re-entering an Order Block on its second or third touch because it held beautifully the first time." | Mitigated blocks have already cleared their resting institutional orders; subsequent touches have a severely compromised edge. |
-| "Executing FVG entries outside of defined London or New York session Killzones." | Low-volume hours lack institutional algorithmic delivery, turning FVGs into retail traps. |
+| "This FVG is massive and highly visible, so it should act as strong magnetic support even though the candle is mostly wicks." | Candles with less than 70% body-to-wick ratios signify weak displacement and retail participation, dropping trade expectancy significantly. |
+| "I am executing a Unicorn setup on a Mitigation Block overlap because the structural shift was clean." | Mitigation blocks represent trend fatigue and failure swings without a liquidity sweep. A true Unicorn setup strictly requires a Breaker Block to guarantee swept resting liquidity. |
+| "I will leave my IOFED limit order open because a deeper pullback into the FVG gives me a better risk-to-reward ratio." | IOFED relies on extreme institutional momentum that must respect the proximal edge. Pulling deeper than 50% (consequent encroachment) invalidates the momentum thesis of the drill. |
+| "Trading a Venom setup during the late-day quiet hours since the BPR is perfectly formed on the 5-minute chart." | Venom models are highly dependent on algorithmic volatility. Trading them outside of primary session Killzones exposes you to low-volume consolidation and market maker manipulation. |
 
 ## Quick Reference
 
-| Setup / Array | Execution Trigger | Stop Loss Placement | Validation Key |
+| Setup / Concept | Core Validation Filter | Execution Trigger | Invalidation Level |
 | :--- | :--- | :--- | :--- |
-| **BISI (Bullish FVG)** | Entry at proximal boundary inside Discount zone (<50%) | Just below Candle 1 low of the FVG sequence | Must not close a candle body below Consequent Encroachment (50%) |
-| **SIBI (Bearish FVG)** | Entry at proximal boundary inside Premium zone (>50%) | Just above Candle 1 high of the FVG sequence | Must not close a candle body above Consequent Encroachment (50%) |
-| **Unicorn Model** | Entry at the horizontal overlap of Breaker Block and FVG | Tucked behind the Breaker's structural swing extreme | Breaker must have successfully swept liquidity |
-| **Venom / BPR** | Entry at the horizontal overlap of the dual opposing FVGs | Just past the invalidation level of the BPR zone | Execution must occur within London/NY Killzones |
+| **Unicorn Model** | FVG overlaps a Breaker Block + HTF liquidity sweep + MSS. | Touch of the horizontal FVG-Breaker overlap zone. | Close beyond the opposite boundary of the Breaker Block. |
+| **Venom Model** | BPR formation + session Killzone + immediate counter-displacement. | Direct entry on the horizontal overlap of the bullish/bearish FVGs. | Close outside the outer boundary of the BPR. |
+| **IOFED** | Displacement candle body-to-wick ratio > 70% + strong momentum trend. | Limit order resting at the proximal edge of the FVG. | Candle close past the 50% consequent encroachment level. |
+| **Balanced Price Range (BPR)** | Successive, overlapping opposing FVGs neutralizing each other. | First return to the shared horizontal overlap area. | A body close outside the extreme wick of the overlapping candles. |
