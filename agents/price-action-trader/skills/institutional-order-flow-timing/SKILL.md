@@ -1,46 +1,44 @@
 ---
 name: institutional-order-flow-timing
-description: Use when analyzing institutional order flow, tracking session killzones, mapping AMD cycles, and executing precise timeframe alignment entries (e.g., Unicorn Model, BPR, IOFED, HOB).
+description: Use when analyzing market structure shifts, institutional order blocks, liquidity sweeps, fair value gaps, and execution timing within London, New York, or Asian session Killzones.
 ---
 
 ## The Iron Law
 
 ```
-Never execute an entry unless there is direct alignment between a High-Timeframe (HTF) Point of Interest (POI) and a Lower-Timeframe (LTF) structural shift occurring strictly within a designated Session Killzone (London or New York). No Killzone, no trade.
+Never execute a trade position unless the setup resides within an active, session-specific Killzone (London, NY, Asia) and is triggered by a direct manipulation of liquidity (sweep or failure swing) at a high-timeframe Point of Interest.
 ```
 
 ## Behavioral Rules
 
-*   **Validate BPR Quality:** You must reject any Balanced Price Range (BPR) or Fair Value Gap (FVG) where the displacement candles exhibit a body-to-wick ratio below 70%. Ratios below 60% must be ignored due to degraded expectancy.
-*   **Differentiate Structural Blocks:** When evaluating structural flips, categorize a failed Order Block as a high-probability **Breaker Block** only if it swept a key extreme (stop hunt) prior to the Market Structure Shift (MSS). Categorize it as a lower-probability **Mitigation Block** if it formed during a failure swing.
-*   **Enforce IOFED Parameters:** When executing the Institutional Order Flow Entry Drill (IOFED), place limit orders strictly at the proximal edge of the FVG. You must cancel the order if price penetrates past the 50% consequent encroachment level without filling you.
-*   **Map HOB to LTF:** When identifying a Hidden Order Block (HOB) via overlapping wicks on a High Timeframe (HTF), you must drill down to the Lower Timeframe (LTF) to confirm and map the exact boundaries of the clean order block before setting execution limits.
-*   **Execute AMD and AMDX Cycle Analysis:** 
-    *   Map the **Asian Session** as Accumulation (A). Do not execute entries here; treat this range as a liquidity generator.
-    *   Monitor the **London Session** for the Judas Swing/Manipulation (M) to sweep Asian extremes.
-    *   Execute during the **New York Session** for Distribution (D) once London manipulation is confirmed and swept.
-*   **Confirm Liquidity Sweeps via Volume and Footprint:**
-    *   Do not treat an external swing break as a Change of Character (CHOCH) unless the candle delivers a clean body close past the level with aggressive displacement.
-    *   Classify any wick-only break or minor internal break as **Inducement (IDM)** and wait for a deeper sweep.
-    *   Verify structural absorption at key HTF levels using a 30m-to-5m-to-1m footprint sequence, confirming entry only when aggressive diagonal delta imbalances are absorbed and accompanied by a 1m Cumulative Volume Delta (CVD) divergence.
-*   **Apply the Three-Mistake Circuit Breaker:** You must mandate the immediate closure of all execution platforms if three operational errors are committed in a single session (e.g., trading outside Killzones, manual stop-loss adjustments, size violations).
+*   **Enforce Time-of-Day Parameters:** If price action develops outside of designated Killzone windows (London: 02:00–05:00 EST, New York: 07:00–10:00 EST, Asia: 20:00–00:00 EST), you must treat the movement as low-probability consolidation or retail bait and decline execution.
+*   **Evaluate Order Flow Over Refinement:** You must prioritize the broader Order Flow (the entire corrective leg preceding a BOS) over highly refined, single-candle Order Blocks to prevent missing institutional entry windows.
+*   **Verify Unicorn Model Overlaps:** When executing a Unicorn setup, you must confirm that the Fair Value Gap (FVG) horizontally overlaps the exact price boundary of the newly formed Breaker Block.
+*   **Analyze Breaker vs. Mitigation Context:** You must classify a structural block as a high-probability Breaker Block *only* if it is preceded by a completed liquidity sweep (stop hunt). If a block forms from a failure swing without sweeping liquidity, you must classify it as a Mitigation Block and enforce tighter risk parameters due to its lower structural reliability.
+*   **Apply the Displacement Quality Filter:** You must measure the body-to-wick ratio of the displacement candle forming a FVG or Balanced Price Range (BPR). If the body-to-wick ratio is below 70%, you must reduce the setup's target projection to 1.3R (compared to 2.1R for ratios above 70%) or skip the entry.
+*   **Confirm Sweeps with Volumetric Footprints:** When utilizing footprint charts to confirm a liquidity sweep, you must verify the presence of a diagonal bid/ask imbalance ratio exceeding 3:1 alongside a clear delta divergence (e.g., price closing bullish while net Delta is highly negative) to confirm institutional absorption.
+*   **Execute the IOFED with Momentum Bias:** When applying the Institutional Order Flow Entry Drill (IOFED), you must place limit orders at the proximal boundary of the FVG (filling no more than 50% consequent encroachment) *only* during high-momentum trends where immediate continuation is statistically supported.
+*   **Identify Hidden Order Blocks (HOB):** You must drill down to lower timeframes to locate fully formed, high-probability order blocks within the overlapping candle wicks of higher-timeframe charts.
+*   **Integrate Wyckoff and Volume Profile:** You must align Wyckoff phases (Accumulation/Distribution) with Volume Profile Point of Control (POC) and High-Volume Nodes (HVNs) to establish structural targets.
+*   **Apply the Process-Oriented Three-Mistake Rule:** You must immediately close execution platforms for the day if you commit three distinct operational errors (e.g., trading out-of-session, widening a stop-loss, or violating contract sizing).
 
 ## Red Flags
 
-| Red Flag | Why It Is Wrong | Correct Action |
-| :--- | :--- | :--- |
-| **Trading FVGs/BPRs with long wicks** | Displacement candles with < 70% body-to-wick ratios yield poor expectancy (1.3R vs 2.1R). | Only execute when displacement candles show strong body dominance (>70%). |
-| **Treating failure swings as Breakers** | Mitigation Blocks lack the momentum of swept resting liquidity, resulting in a low win-rate. | Require a clear liquidity sweep (stop hunt) before classifying the zone as a high-probability Breaker. |
-| **Trading outside Killzones** | Algorithmic delivery algorithms (AMD/AMDX) operate on time-of-day filters; out-of-session moves are low-probability. | Stand flat during the Asian session; execute strictly within London and New York session windows. |
-| **Chasing IOFED beyond 50% encroachment** | If the algorithm penetrates past the 50% level of the FVG, the immediate momentum model is invalidated. | Cancel proximal limit orders immediately if consequent encroachment (50%) is breached before execution. |
-| **Executing on automated SMC indicators blindly** | Static automated scripts curve-fit historical data and fail to map real-time institutional liquidity transitions. | Manually verify structural shifts, sweeps, and footprint delta absorption on live charts. |
+| Red Flag | Why it is Wrong |
+| :--- | :--- |
+| **Out-of-Session Execution** | Executing setups during low-volume mid-day doldrums, where algorithmic delivery targets are absent and spread widening occurs. |
+| **Extreme OB Over-Refinement** | Demanding price tap a single lower-timeframe candle extreme, resulting in missing the broader, valid Order Flow mitigation. |
+| **Blind Mitigation Block Entries** | Treating Mitigation Blocks as high-probability reversals without acknowledging that the absence of a liquidity sweep makes them prime targets for stop runs. |
+| **Trading Low-Body Displacement** | Entering FVGs or BPRs formed by weak, wick-heavy candles (under 70% body ratio) that indicate lack of institutional displacement. |
+| **Relying on "AI" Broker Alerts** | Substituting raw price and volume footprint analysis with lagging, retail-focused indicators rebranded as automated AI signals. |
 
 ## Quick Reference
 
-| Model / Pattern | Key Trigger Conditions | Execution Zone / Method |
-| :--- | :--- | :--- |
-| **ICT Unicorn Model** | HTF Liquidity Sweep + MSS + Overlapping Breaker Block & FVG | Entry limit within the overlapping horizontal zone of the Breaker and FVG. |
-| **Venom Model** | Session Killzone + Liquidity Sweep + Immediate Balanced Price Range (BPR) | Execution on BPR horizontal boundary with tight invalidation past the sweep high/low. |
-| **IOFED Precision** | High-momentum trend + FVG formation | Limit order at the proximal edge of the FVG; invalidation past 50% consequent encroachment. |
-| **Hidden Order Block (HOB)** | Overlapping HTF wicks | Refine to LTF standard Order Block; execute on first touch of the refined zone. |
-| **AMDX Cycle** | Accumulation (Asia) -> Manipulation (London) -> Distribution (New York) | Enter New York reversal entries after London sweeps the Asian range extremes. |
+| Session / Concept | Time Window (EST) / Metric | Core Structural Trigger | Target/Risk Action |
+| :--- | :--- | :--- | :--- |
+| **London Killzone** | 02:00 – 05:00 | Liquidity sweep of Asian session range extreme or PDH/PDL. | Target opposite liquidity pool. |
+| **New York Killzone** | 07:00 – 10:00 | Reversal or continuation of London trend via Breaker/FVG overlap. | Target London session extreme or Daily bias. |
+| **Asia Killzone** | 20:00 – 00:00 | Tactical range-bound sweeps; lower-volatility setups. | Enforce tight targets and trailing stops. |
+| **The Unicorn Model** | Session-independent | Horizontal overlap of FVG and Breaker Block after a liquidity sweep. | Stop-loss placed past Breaker swing extreme. |
+| **BPR Quality Filter** | Setup-dependent | Displacement candle body-to-wick ratio > 70%. | Target 2.1R minimum; reduce to 1.3R if ratio < 60%. |
+| **IOFED Entry** | High-momentum trend | Immediate reversal upon tapping the proximal edge of an FVG (respects 50% CE). | Immediate entry at FVG boundary; tight stops. |
