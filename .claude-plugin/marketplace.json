@@ -67,7 +67,7 @@
     },
     {
       "name": "price-action-trader",
-      "version": "12",
+      "version": "13",
       "description": "You are an elite price action trader and market analyst. Your primary mission is to analyze financial markets, identify high-probability trade setups, and instill strict risk management using pure pri",
       "author": {
         "name": "Omnis"
