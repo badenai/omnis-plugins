@@ -1,57 +1,50 @@
 ---
 name: trade-execution-fvg
-description: Use when validating, refining, and executing trade setups using advanced price action entry models including the ICT Unicorn Model, Balanced Price Ranges (BPR), Inverse Fair Value Gaps (IFVG), and Institutional Order Flow Entry Drills (IOFED).
+description: Use when analyzing or executing trades based on Advanced PD Arrays, including Fair Value Gaps (FVG), Inverse FVGs (IFVG), Balanced Price Ranges (BPR), Suspension Blocks, the Institutional Order Flow Entry Drill (IOFED), and advanced entry models (Unicorn, Reaper Inversion).
 ---
 
 ## The Iron Law
 
 ```
-NEVER execute an FVG, BPR, or Unicorn setup if the displacement candle body-to-wick ratio is below 70%, or if the setup forms without a confirmed higher-timeframe liquidity sweep.
+NEVER EXECUTE AN ENTRY OUTSIDE OF A DESIGNATED KILL ZONE (LONDON OPEN: 2:00-5:00 AM ET, NY OPEN/SILVER BULLET: 8:30-11:00 AM ET, NY PM: 1:30-4:00 PM ET) OR WITHOUT AN ACTIVE HIGH-PROBABILITY PD ARRAY INTERACTION.
 ```
 
 ## Behavioral Rules
 
-*   **Enforce Body-to-Wick Ratios:** Only execute setups where the displacement candle body-to-wick ratio is 70% or greater. If the ratio is under 60%, reject the setup immediately due to statistically degraded reward outcomes (1.3R vs. 2.1R average).
-*   **Execute the ICT Unicorn Model:** 
-    *   Verify a liquidity sweep has occurred, followed by an aggressive displacement leg causing a Market Structure Shift (MSS).
-    *   Isolate the exact horizontal overlap where the newly formed FVG sits within the boundaries of the Breaker Block.
-    *   Place limit orders directly at this overlapping dual-pressure boundary.
-    *   Set the stop-loss strictly beyond the FVG-forming candle body or the Breaker swing extreme.
-*   **Map Balanced Price Ranges (BPR):** 
-    *   Locate where a bullish FVG and a bearish FVG overlap horizontally.
-    *   Treat this zone as an immediate algorithmic rebalance. 
-    *   Place limit entries on the first retest of this overlap zone, anticipating instant price rejection.
-*   **Validate Inverse FVGs (IFVGs):** 
-    *   Wait for a candle body to close completely past the boundary of a traditional FVG to confirm its inversion.
-    *   Once confirmed, flip the bias of the zone (support turns to resistance, or vice versa).
-    *   Set invalidation levels strictly behind the candle body that closed past and invalidated the original FVG.
-*   **Execute Institutional Order Flow Entry Drills (IOFED):**
-    *   Enter trades directly at the proximal edge of the FVG in high-momentum conditions.
-    *   Invalidate the trade immediately if price prints a candle body close past 50% consequent encroachment (CE) of the FVG.
-*   **Identify Hidden Order Blocks (HOB):**
-    *   Scan higher-timeframe (HTF) charts for overlapping candle wicks.
-    *   Refine down to lower-timeframe (LTF) charts to identify the fully-formed order block hidden within those wicks.
-    *   Use the LTF OB boundaries for surgical entry placement.
-*   **Differentiate Breakers vs. Mitigation Blocks:**
-    *   Prioritize Breaker Blocks because they are anchored by a high-velocity liquidity sweep.
-    *   If trading a Mitigation Block, reduce position sizing by 50% and apply tighter stop-losses to protect capital against trend fatigue and subsequent stop-runs.
+*   **Validate Fair Value Gaps (FVG):** Identify a three-candle price imbalance where the wicks of the first and third candles do not overlap.
+*   **Flip Invalidated FVGs to Inverse FVGs (IFVG):** When a candle closes completely past an FVG boundary, immediately treat that level as a structural support/resistance flip.
+*   **Map Balanced Price Ranges (BPR):** Mark overlapping bullish and bearish FVGs horizontally to establish algorithmic equilibrium. Treat BPRs as highly reactive, tight targets expecting minimal drawdown.
+*   **Identify Suspension Blocks:** Look for a specialized candlestick suspended between an upper and lower volume imbalance, where the body is completely overlapped by the wick of the prior candle on its left. Treat the body-and-twin-imbalance zone as a high-probability institutional re-load area.
+*   **Execute the Institutional Order Flow Entry Drill (IOFED):** Place limit orders directly at the proximal edge of an FVG rather than waiting for a 50% consequent encroachment fill when trading fast-moving, high-momentum trends.
+*   **Classify Failed Order Blocks:**
+    *   **Breaker Blocks:** Require a successful sweep of a key liquidity extreme (stop hunt) followed by a Market Structure Shift (MSS) before executing on the failed order block.
+    *   **Mitigation Blocks:** Identify trend exhaustion via a failure swing (failing to sweep the previous extreme) before executing on the failed order block, applying tighter risk parameters.
+*   **Uncover Hidden Order Blocks (HOB):** When analyzing overlapping wicks of consecutive same-color candles on a higher timeframe (HTF), drill down to a lower timeframe (LTF) inside that wick-overlap zone to locate the unmitigated traditional order block.
+*   **Execute the ICT Unicorn Model:** Enter only when an ICT Breaker Block horizontally overlaps an energetic ICT Fair Value Gaps (FVG) where the FVG resides directly within the price range of the breaker block.
+*   **Execute the ICT Reaper Inversion FVG:** Align the Inversion FVG precisely inside the impulsive price leg of a breaker block. Validate that the "Reaper" sits in the discount portion for bullish setups, or the premium portion for bearish setups.
+*   **Execute the Venom Model:** Trigger immediate market or limit entries at the boundary of a newly formed Balanced Price Range (BPR) following a major liquidity sweep strictly within session Kill Zones.
+*   **Confirm Liquidity Sweeps Volumetrically:** Verify true institutional sweeps on a footprint chart via diagonal bid/ask imbalances exceeding a 3:1 ratio (absorption) accompanied by passive limit orders and immediate price rejection.
+*   **Validate Structural Shifts vs. Inducement:** Confirm Breaks of Structure (BOS) or Changes of Character (CHOCH) only when accompanied by aggressive, high-delta volume. Classify breakouts with neutral or exhausted volume delta as Inducement (IDM) traps and avoid early entries.
 
 ## Red Flags
 
-| Red Flag | Why It Is Wrong |
+| Red Flag | Why it is Wrong |
 | :--- | :--- |
-| **Trading low-displacement FVGs** | Candles with wicks exceeding 30% of their total range represent low institutional interest and drop average returns to 1.3R. |
-| **Placing limit orders outside Breaker/FVG overlaps** | Entering outside the Unicorn overlap zone forfeits the dual-pressure structural cushion, increasing execution drawdown. |
-| **Allowing IOFED to violate Consequent Encroachment** | If price closes past 50% of the FVG, the trend lack urgency; holding the trade violates the core assumption of strong institutional order flow. |
-| **Trading Mitigation Blocks with standard risk** | Mitigation blocks lack a prior liquidity sweep (failure swing), making them highly vulnerable to being run over during subsequent liquidity grabs. |
-| **Entering IFVGs on wick-only breaches** | Wicks past an FVG are liquidity grabs, not structural invalidations; only a full candle body close confirms an Inverse FVG flip. |
+| **Entering trades mid-session outside Kill Zones** | Retail algorithms hunt liquidity and generate choppy, non-directional noise outside of institutional hours, leading to papercuts. |
+| **Using lagging indicators to confirm FVG reactions** | RSI, MACD, or Bollinger Bands diverge from immediate transactional order flow and lag behind raw price-delivery algorithms. |
+| **Treating an invalidated FVG as a loss of bias** | Failing to recognize an Inverse FVG (IFVG) role-reversal causes traders to miss immediate institutional support/resistance flips. |
+| **Applying footprint volume profiles blindly to OTC Spot Forex** | Spot FX lacks a centralized exchange; localized broker tick-volume data acts as a proxy and can generate false absorption signals. |
+| **Ignoring the discount/premium rule for the Reaper Inversion FVG** | Entering a bearish Reaper setup in a discount array (or bullish in premium) results in poor risk-to-reward ratios and high drawdown. |
 
 ## Quick Reference
 
-| Model | Key Trigger Criteria | Stop-Loss / Invalidation |
+| PD Array / Setup | Structural Core | Target / Entry Mechanic |
 | :--- | :--- | :--- |
-| **Unicorn Model** | Liquidity sweep + MSS + FVG overlapping a Breaker Block. | Beyond the FVG-forming candle or the Breaker extreme. |
-| **Balanced Price Range (BPR)** | Horizontally overlapping bullish & bearish FVGs (body-to-wick > 70%). | Beyond the boundary of the opposing FVG candle. |
-| **Inverse FVG (IFVG)** | HTF/LTF candle body closes completely past an existing FVG zone. | Beyond the high/low of the invalidating candle. |
-| **IOFED** | Entry at the proximal FVG edge during high-momentum trends. | Any candle body close past 50% Consequent Encroachment (CE). |
-| **Hidden Order Block (HOB)** | Overlapping wicks on HTF that resolve to clean OBs on LTF. | Beyond the HTF wick extreme. |
+| **Fair Value Gaps (FVG)** | 3-candle price imbalance (no wick overlap) | Magnetic draw; Entry at proximal boundary or 50% CE |
+| **Inverse FVG (IFVG)** | FVG invalidated by a complete candle close past its boundary | Role-reversed boundary acts as a support/resistance flip |
+| **Balanced Price Range (BPR)** | Horizontally overlapping bullish and bearish FVGs | High-precision entry/target; absolute algorithmic equilibrium |
+| **Suspension Block** | Body suspended between dual volume imbalances, overlapped by prior wick | High-probability institutional re-load zone |
+| **IOFED Drill** | High-momentum directional trend | Immediate limit order at proximal edge of FVG (no CE wait) |
+| **ICT Unicorn Model** | Horizontal overlap of a Breaker Block and an FVG | Dual-pressure confirmation zone for highly asymmetric R:R |
+| **Reaper Inversion FVG** | Inversion FVG inside a breaker block's impulsive leg | Entry at the Inversion FVG (must align with Premium/Discount) |
+| **Venom Model** | Session Kill Zone + Liquidity Sweep + BPR formation | Execution directly at the BPR boundary targeting HTF liquidity |
