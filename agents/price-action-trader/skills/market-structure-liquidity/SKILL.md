@@ -1,48 +1,45 @@
 ---
 name: market-structure-liquidity
-description: Use when analyzing market structure, defining trend transitions, evaluating liquidity sweeps, determining order blocks, fair value gaps, or identifying precise price action entry models like the Unicorn or Venom.
+description: Use when analyzing market structure (BOS, CHOCH, IDM), identifying institutional liquidity pools (BSL, SSL, sweeps), or evaluating price delivery models (FVG, OB, BPR, Breaker Blocks) to define trade setups.
 ---
 
 ## The Iron Law
 
 ```
-Never map a Market Structure Shift (MSS), Change of Character (CHOCH), or Break of Structure (BOS) without verifying whether the price closed past the swing level with structural volume displacement, or merely swept liquidity. A wick-only breach of a key swing level is a liquidity sweep, not a structural breakout.
+A structural shift (BOS, CHOCH, or MSS) is strictly INVALID unless the candle body closes past the structural swing extreme. Wick rejections without body closes must be classified as liquidity sweeps (stop hunts), never as structure breaks.
 ```
 
 ## Behavioral Rules
 
-*   If the price sweeps a key liquidity extreme (stop hunt) and then completes a high-velocity structural shift, classify the resulting failed order block as a Breaker Block.
-*   If the price fails to sweep the previous extreme (failure swing) before reversing through a previous order block, classify the zone as a Mitigation Block and enforce tighter risk parameters.
-*   If analyzing Fair Value Gaps (FVG), verify if a candle has closed completely past its boundary; if so, immediately flip its role to an Inverse Fair Value Gaps (IFVG).
-*   If mapping premium/discount arrays, label overlapping bullish and bearish FVGs as a Balanced Price Range (BPR) and treat it as a high-velocity, low-drawdown algorithmic equilibrium zone.
-*   If a candlestick's body is completely overlapped by the wick of the prior candle on its left and sits suspended between an upper and lower volume imbalance, classify it as a Suspension Block and mark it as an algorithmic reload zone.
-*   If looking for a Hidden Order Block (HOB) on a high-timeframe (HTF) wick-overlap zone, drill down to lower timeframes (LTF) to find the fully formed, unmitigated traditional order block.
-*   If executing the ICT Unicorn Model, ensure the Fair Value Gap (FVG) forms horizontally overlapping with, or directly within, the price range of the validated Breaker Block.
-*   If executing the ICT Reaper Inversion FVG Model, verify that the Inversion FVG resides precisely inside the impulsive price leg of the Breaker Block, ensuring it sits in the discount portion for long setups or the premium portion for short setups.
-*   If executing the Venom Model, execute market entries strictly at the boundary of a newly formed Balanced Price Range (BPR) during session Killzones, targeting high-timeframe external liquidity pools.
-*   If using the Institutional Order Flow Entry Drill (IOFED) on high-momentum trends, place the limit order directly at the proximal edge of the FVG rather than waiting for a 50% consequent encroachment fill.
-*   If confirming a liquidity sweep via order flow/footprint data, require diagonal buy/sell imbalances exceeding a 3:1 ratio (absorption) accompanied by stalling price action.
-*   If a breakout displays neutral or exhausted volume delta, classify it as Inducement (IDM) and treat it as a trap rather than a genuine Break of Structure (BOS).
+*   **Determine Higher Timeframe (HTF) Bias First:** You must always map the HTF trend (Daily/4H) before looking for lower timeframe (LTF) entries. Never execute an LTF trade that goes directly against HTF structural alignment.
+*   **Differentiate CHOCH from Inducement (IDM):** If the price breaks an internal minor structure point without confirming an external HTF swing point, you must label this as Internal Inducement (IDM), not a Change of Character (CHOCH).
+*   **Validate Breakers vs. Mitigation Blocks:** You must only classify a failed order block as a Breaker Block if price swept a liquidity pool (manipulation/stop hunt) prior to the structural shift. If no sweep occurred, you must classify it as a lower-probability Mitigation Block.
+*   **Apply the Unicorn Model Filter:** When evaluating a Unicorn setup, you must confirm that the Fair Value Gap (FVG) overlaps horizontally with the Breaker Block range. If the FVG sits entirely outside the Breaker Block, do not classify it as a Unicorn.
+*   **Enforce Session Killzones:** You must reject any intraday entry pattern that occurs outside of the designated Killzone operating windows: London Open (2:00 AM – 5:00 AM ET), New York Open (8:30 AM – 11:00 AM ET), or New York PM Session (1:30 PM – 4:00 PM ET).
+*   **Apply the Power of Three (AMD) Sequence:** You must look for the three-phase sequence: Accumulation (Asian consolidation), Manipulation (London Judas swing sweeping Asian highs/lows), and Distribution (New York expansion towards HTF targets).
+*   **Filter Entries Using Body-to-Wick Ratios:** When using Balanced Price Ranges (BPR) or FVGs for execution, you must verify that the displacement candles driving the move have a body-to-wick ratio above 70%. If the ratio is under 60%, you must reduce target expectations (maximum 1.3R) or pass on the setup due to poor momentum.
+*   **Locate Reaper Inversion FVGs in Premium/Discount:** In bullish setups, you must verify that the Reaper Inversion FVG resides in the discount portion of the impulsive leg. In bearish setups, you must verify that it resides in the premium portion.
+*   **Require Volumetric Absorption for Sweep Confirmation:** When validating a liquidity sweep on an active chart, you must look for footprint absorption (large market order volume stalls and reverses) or delta-price divergence rather than assuming a sweep guarantees an immediate reversal.
 
 ## Red Flags
 
-| Red Flag | Why It Is Wrong | Correct Action |
+| Red Flag | Real-Time Reality / Why It's Wrong | Correct Market Action |
 | :--- | :--- | :--- |
-| Treating a wick-only breach of a swing high/low as a Break of Structure (BOS). | A wick breach without candle body confirmation represents a liquidity run/stop hunt, not structural expansion. | Classify it as a liquidity sweep and look for a reversal pattern. |
-| Refinement to a single refined Order Block (OB) ignoring structural Order Flow (OF). | Price often mitigates the broader corrective pullback leg (Order Flow) rather than reaching a deep, highly refined OB, leading to missed trades. | Evaluate the entire corrective sequence of candles before the BOS as the mitigation zone. |
-| Treating a Mitigation Block with the same probability as a Breaker Block. | Mitigation blocks do not clear liquidity prior to reversal (failure swing) and represent trend exhaustion, making them more prone to failure. | Enforce tighter risk parameters and wait for additional lower-timeframe structural validation. |
-| Using "volume footprint" and Cumulative Volume Delta (CVD) metrics on retail Forex spot charts without acknowledging OTC limitations. | Forex is non-centralized; retail broker volume is a localized tick proxy and does not represent global institutional transactions. | Treat OTC footprint indicators as auxiliary data; prioritize raw price delivery, HTF structural levels, and centralized futures volume where available. |
-| Automatically placing limit orders at 50% consequent encroachment on every FVG. | In high-momentum, aggressive institutional expansions, the market will often run from the proximal edge without filling deeper bids. | Use the IOFED technique to enter directly at the proximal boundary of the FVG in high-momentum states. |
+| **Wick CHOCH** | Classifying a wick past a swing point as a structural shift, leading to entering trades against the dominant trend. | Classify the wick as a liquidity sweep (stop hunt) and wait for a body close to confirm a true CHOCH/MSS. |
+| **Chasing IDM Breakouts** | Treating internal structural breaks (Inducements) as major trend reversals. | Wait for the market to run the inducement level into an unmitigated HTF PD Array before looking for entries. |
+| **Out-of-Session Execution** | Entering trades during the low-volume Asian session or mid-day lull. | Limit execution strictly to the London Open, New York Open, and New York PM Killzones. |
+| **Improper Breaker Mapping** | Labeling a failed order block as a "Breaker" when the prior leg failed to sweep liquidity. | Downgrade the level to a Mitigation Block, demand higher timeframe alignment, and apply tighter risk parameters. |
+| **Ignoring Displacement** | Entering on FVGs or BPRs formed by small, low-momentum candles with high wick-to-body ratios. | Filter for high-displacement candles (body-to-wick ratio > 70%) to ensure institutional presence. |
 
 ## Quick Reference
 
-| Concept | Structural Trigger | Execution / Target Rule |
+| Concept | Key Mechanics | Validation Rule |
 | :--- | :--- | :--- |
-| **Breaker Block** | Liquidity Sweep + MSS/CHOCH. | High-probability entry zone; highly resilient to deep drawdown. |
-| **Mitigation Block** | Failure Swing + MSS/CHOCH. | Trend exhaustion entry; requires tighter stops and conservative targets. |
-| **Balanced Price Range (BPR)** | Horizontally overlapping bullish & bearish FVGs. | Algorithmic equilibrium; tight target with immediate reaction expected. |
-| **Suspension Block** | Candlestick body overlapped by prior wick between twin volume imbalances. | High-reliability institutional reload zone. |
-| **Unicorn Model** | Horizontal overlap of a Breaker Block and an FVG. | Double-pressure entry model; place stop beyond the breaker swing extreme. |
-| **Reaper Inversion FVG** | Inversion FVG inside the premium (short) / discount (long) of a Breaker's impulsive leg. | Hidden institutional reload zone targeting early breaker-block failures. |
-| **Venom Model** | BPR formation immediately after a liquidity sweep during Killzones. | Rapid execution targeting HTF external liquidity pools. |
-| **Inducement (IDM)** | Structural break with low or exhausted volume delta. | Avoid entry; prepare for a reversal sweep of the breakout participants. |
+| **BOS (Break of Structure)** | Continuation of dominant trend | Requires candle body close past prior swing high/low. |
+| **CHOCH (Change of Character)** | First sign of trend reversal | Requires candle body close past major structural extreme. |
+| **Inducement (IDM)** | Minor internal structural liquidity | Used as bait to trap retail before continuing HTF trend. |
+| **Liquidity Sweep** | Price runs past swing high/low and rejects | Indicated by long wicks and footprint absorption. |
+| **Unicorn Model** | Breaker Block $\cap$ Fair Value Gap | FVG must lie horizontally within the Breaker Block. |
+| **BPR (Balanced Price Range)** | Overlapping bullish & bearish FVGs | Signals immediate algorithmic rebalancing & high-speed support/resistance. |
+| **Consequent Encroachment** | 50% midpoint of FVG or shadow wick | Acts as an algorithmic gravity point for precise entry/defense. |
+| **Power of Three (AMD)** | Accumulation $\rightarrow$ Manipulation $\rightarrow$ Distribution | Wait for manipulation (Judas swing) to sweep retail before entry. |
