@@ -1,62 +1,44 @@
 ---
 name: trade-execution-fvg
-description: Use when executing, validating, or managing trades based on institutional order flow, Fair Value Gaps (BISI/SIBI), Consequent Encroachment, Breaker Blocks, and advanced PD arrays.
+description: Use when executing trades based on Algorithmic Price Delivery, Fair Value Gaps (FVG), Inverse FVGs (IFVG), Balanced Price Ranges (BPR), and nesting strategies within HTF structures.
 ---
 
 ## The Iron Law
 
 ```
-[The Execution Constraint]
-Every execution trigger MUST align with a designated session Killzone (London Open 2:00-5:00 AM ET, NY Open 8:30-11:00 AM ET, or NY PM 1:30-4:00 PM ET) and reside strictly within a Premium (for short entries) or Discount (for long entries) array relative to the dealing range; execution outside these windows or within equilibrium is strictly forbidden.
+NEVER trade an FVG, IFVG, or BPR in isolation; you MUST validate execution through multi-timeframe alignment, ensuring the array nests within a Higher Timeframe (HTF) structure (Order Block, Breaker, or premium/discount boundary) and is swept during an active ICT Kill Zone.
 ```
 
 ## Behavioral Rules
 
-### 1. Market Structure & Displacement Validation
-* If a Break of Structure (BOS) or Change of Character (CHOCH/MSS) occurs, you must verify that the candle closed past the structural swing extreme with a full body; do not classify wick-only breaks as structural shifts, but rather as liquidity sweeps.
-* If evaluating a structural shift, you must analyze the body-to-wick ratio of the displacement candle: if the ratio is above 70%, prioritize immediate execution models; if the ratio is below 60%, demand deeper retracements or reject the setup due to insufficient institutional momentum.
-* If a minor internal structural break occurs without higher timeframe external swing validation, you must classify it as internal inducement (IDM); do not execute trades on these traps.
-
-### 2. Fair Value Gap (FVG) & Consequent Encroachment (CE) Execution
-* If executing at a Fair Value Gap, you must classify the imbalance as either a Buy-side Imbalance Sell-side Inefficiency (BISI) for longs or a Sell-side Imbalance Buy-side Inefficiency (SIBI) for shorts.
-* If trading high-momentum, trend-dominant conditions, you may deploy the Institutional Order Flow Entry Drill (IOFED) by placing limit orders at the proximal edge (outer boundary) of the FVG.
-* If trading standard mean-reverting or structural setups, you must place your execution limits at the exact 50% midpoint of the FVG, representing the Consequent Encroachment (CE).
-* If a bullish FVG and a bearish FVG horizontally overlap in the same price band, you must label this a Balanced Price Range (BPR) and treat it as an immediate high-probability rebalancing entry zone.
-
-### 3. Advanced Entry Model Selection (Unicorn, Venom, and Reaper)
-* If executing the Unicorn Model, you must verify the exact horizontal overlap where a Fair Value Gap (FVG) sits directly inside the price range of a validated Breaker Block following an MSS.
-* If executing the Venom Model, you must restrict entries strictly to the Balanced Price Range (BPR) immediately following a major liquidity sweep during an active session Killzone.
-* If executing the Reaper Inversion FVG model, you must locate an Inversion FVG (invalidated FVG) that resides precisely inside the impulsive leg of a Breaker Block, ensuring it lies in the discount portion for longs or the premium portion for shorts.
-* If analyzing overlapping wicks of consecutive same-color candles on a higher timeframe, you must drill down to a lower timeframe to identify and mark the Hidden Order Block (HOB) hidden within the wick-overlap zone.
-* If a candlestick body is completely overlapped by the wick of the prior candle on its left, preventing a standard FVG, you must map this as a Suspension Block sandwiched between volume imbalances and treat it as a valid support/resistance level.
-
-### 4. Structural Reversal Block Classification
-* If a structural block is broken, you must classify it as a Breaker Block only if price swept liquidity (accomplished a stop hunt) prior to the structural shift.
-* If the broken block failed to sweep the previous extreme before reversing (exhaustion swing), you must classify it as a Mitigation Block and enforce tighter risk parameters due to its lower probability.
-
-### 5. Order Flow & Volumetric Verification
-* If executing at a key POI, you must confirm liquidity sweeps using footprint charts: look for high-volume passive limit order absorption (diagonal delta bids/asks stalling and reversing).
-* If price sweeps a key level and prints a Delta-Price Divergence (e.g., a bullish candle close on highly negative net Delta), you must interpret this as passive institutional absorption and execute the reversal.
+*   **Rule of HTF Alignment:** If an FVG forms on a lower timeframe, you must only execute if it resides inside an unmitigated HTF (e.g., 1H, 4H, Daily) Order Block, Breaker Block, or at key premium/discount boundaries.
+*   **Rule of Displacement:** You must verify that the displacement candle forming the FVG exhibits energetic body expansion. Reject any FVG formed by candles with a body-to-wick ratio of less than 60%.
+*   **Rule of Balanced Price Ranges (BPR):** When executing on a BPR, you must prioritize entries where the displacement candle has a body-to-wick ratio exceeding 70% to ensure high-probability delivery (2.1R average target).
+*   **Rule of Inverse FVGs (IFVG):** When a standard FVG fails to hold price, you must wait for a decisive candle body close past its boundary to validate the structural polarity flip before executing on the retest.
+*   **Rule of the Unicorn Model:** You must execute the Unicorn setup only when an energetic, displacement-induced FVG overlaps horizontally and directly with an active ICT Breaker Block.
+*   **Rule of the Reaper Inversion FVG:** You must place Reaper FVG limit orders exclusively in the discount portion of the impulsive leg for bullish setups, and in the premium portion of the leg for bearish setups, ensuring it lies within the leg executing the initial liquidity sweep and MSS.
+*   **Rule of the Suspension Block:** If a candle's body is fully overlapped by the prior candle's wick to its left, preventing a standard FVG, you must use the body and its twin volume imbalances as a highly precise, low-drawdown support/resistance reload zone.
+*   **Rule of Precision Entry (IOFED):** When executing via the Institutional Order Flow Entry Drill, you must place your limit order precisely at the proximal edge of the FVG, accepting higher potential drawdown in exchange for maximizing risk-to-reward.
+*   **Rule of Consequent Encroachment:** If executing a conservative entry, you must place your entry limit order exactly at the 50% midpoint (Consequent Encroachment) of the FVG and set your stop-loss past the invalidation level of the first candle's wick.
+*   **Rule of Execution Timing:** You must restrict all FVG, IFVG, and BPR execution entries to designated ICT Kill Zones: London Open (2:00 AM – 5:00 AM ET), New York Open / Silver Bullet (8:30 AM – 11:00 AM ET), or New York PM Session (1:30 PM – 4:00 PM ET).
 
 ## Red Flags
 
-| Red Flag | Rationalization | Why Wrong |
-| :--- | :--- | :--- |
-| Wick-Only Break of Structure | "The price swept past the old high, so the trend must be continuing upward." | Wick-only breaks without candle body closes indicate liquidity sweeps, not structural continuation. |
-| Executing at Equilibrium | "The price is cheap enough and is Reacting to a small 5m FVG." | Entering at equilibrium or within the wrong pricing array (buying premium/selling discount) destroys R:R. |
-| Mitigation Block as Breaker Block | "This block reversed the price, so it's a high-probability entry." | Without a prior liquidity sweep, a mitigation block represents trend fatigue and has high failure rates. |
-| Disregarding Killzones | "The pattern is perfect; it doesn't matter that it's 1:00 PM ET." | Institutional algorithms do not distribute price efficiently outside operating Killzones, leading to high slippage and noise. |
-| Ignoring Inversion FVG Location | "The Inversion FVG is valid anywhere on the chart." | A valid Reaper Inversion FVG must sit strictly in discount for bullish setups and premium for bearish setups. |
+| Red Flag | Why it is Wrong |
+| :--- | :--- |
+| **Trading Low-Timeframe FVGs in Isolation** | Causes overtrading and high failure rates because the FVG lacks higher timeframe context and structural backing. |
+| **Executing on Low-Displacement Candles** | Signals low institutional momentum; candles with body-to-wick ratios under 60% represent weak institutional interest and high probability of failure. |
+| **Using Standard FVGs in Premium/Discount Mismatches** | Entering long in premium arrays or short in discount arrays ignores algorithmic pricing rules, leading to immediate drawdowns. |
+| **Treating Wick Rejections as IFVGs** | A wick penetration through an FVG does not constitute a polarity flip; it requires a full candle body close to confirm institutional mitigation. |
+| **Executing Outside of ICT Kill Zones** | Low-volume, off-session price action lacks the algorithmic delivery and liquidity required to sustain HTF target expansion. |
 
 ## Quick Reference
 
-| Term / Setup | Primary Location / Condition | Execution Trigger / Metric |
-| :--- | :--- | :--- |
-| **BISI** | Discount array during Killzone | Entry at proximal edge (IOFED) or 50% Consequent Encroachment (CE) |
-| **SIBI** | Premium array during Killzone | Entry at proximal edge (IOFED) or 50% Consequent Encroachment (CE) |
-| **Unicorn Model** | Overlap: Breaker Block $\cap$ FVG | High displacement MSS body close + FVG inside Breaker range |
-| **Venom Model** | Balanced Price Range (BPR) | Post-liquidity sweep horizontal FVG overlap; >70% body-to-wick |
-| **Reaper Inversion** | Impulsive leg of Breaker Block | Failed FVG (Inversion) aligned in Premium (short) / Discount (long) |
-| **Breaker Block** | Post-Liquidity Sweep + MSS | Reversal key level backed by executed retail stop-loss clusters |
-| **Mitigation Block** | Failure Swing (No Sweep) + MSS | Exhaustion level; requires tighter risk and strict HTF alignment |
-| **Suspension Block** | Sandwich between volume imbalances | Candlestick body completely overlapped by prior candle's wick |
+| Institutional Array | Validation Trigger | Entry Location | Stop-Loss Placement |
+| :--- | :--- | :--- | :--- |
+| **Standard FVG** | Body-to-wick ratio > 60% inside HTF Order Block | Proximal edge (IOFED) or 50% Consequent Encroachment | Beyond the wick of Candle 1 (origin) |
+| **Inverse FVG (IFVG)** | Decisive candle body close past FVG boundary | Re-test of the flipped FVG boundary | Beyond the swing high/low of the breaking candle |
+| **Balanced Price Range (BPR)** | Horizontally overlapping bullish and bearish FVGs with > 70% displacement | Retest of the overlapping boundary zone | Beyond the high/low of the displacement candle |
+| **Unicorn Model** | FVG horizontally nested within a validated Breaker Block | Retest of the Breaker/FVG overlap zone | Beyond the invalidation level of the Breaker Block |
+| **Reaper Inversion FVG** | Sweep + MSS leg; IFVG sits in premium (short) / discount (long) | Flipped boundary within the impulsive sweep leg | Past the high/low of the Breaker Block leg |
+| **Suspension Block** | Candle body fully overlapped by prior wick; twin volume imbalances | Within the suspended candle body | Beyond the high/low of the prior candle's wick |
