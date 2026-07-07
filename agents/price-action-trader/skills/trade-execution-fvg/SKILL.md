@@ -1,44 +1,47 @@
 ---
 name: trade-execution-fvg
-description: Use when executing trades based on Algorithmic Price Delivery, Fair Value Gaps (FVG), Inverse FVGs (IFVG), Balanced Price Ranges (BPR), and nesting strategies within HTF structures.
+description: Use when identifying market imbalances (FVGs, BISI, SIBI), determining Consequent Encroachment (CE), evaluating Balanced Price Ranges (BPR), or executing trades using precise price action entry techniques like IOFED, OTE, the ICT Unicorn, and Venom models.
 ---
 
 ## The Iron Law
 
 ```
-NEVER trade an FVG, IFVG, or BPR in isolation; you MUST validate execution through multi-timeframe alignment, ensuring the array nests within a Higher Timeframe (HTF) structure (Order Block, Breaker, or premium/discount boundary) and is swept during an active ICT Kill Zone.
+Never execute a trade based on a Fair Value Gap (FVG) or Balanced Price Range (BPR) in isolation. Every execution must align with a Higher Timeframe (HTF) Draw on Liquidity, occur strictly within a designated Session Killzone, and be triggered by a confirmed Lower Timeframe (LTF) structural shift or liquidity sweep.
 ```
 
 ## Behavioral Rules
 
-*   **Rule of HTF Alignment:** If an FVG forms on a lower timeframe, you must only execute if it resides inside an unmitigated HTF (e.g., 1H, 4H, Daily) Order Block, Breaker Block, or at key premium/discount boundaries.
-*   **Rule of Displacement:** You must verify that the displacement candle forming the FVG exhibits energetic body expansion. Reject any FVG formed by candles with a body-to-wick ratio of less than 60%.
-*   **Rule of Balanced Price Ranges (BPR):** When executing on a BPR, you must prioritize entries where the displacement candle has a body-to-wick ratio exceeding 70% to ensure high-probability delivery (2.1R average target).
-*   **Rule of Inverse FVGs (IFVG):** When a standard FVG fails to hold price, you must wait for a decisive candle body close past its boundary to validate the structural polarity flip before executing on the retest.
-*   **Rule of the Unicorn Model:** You must execute the Unicorn setup only when an energetic, displacement-induced FVG overlaps horizontally and directly with an active ICT Breaker Block.
-*   **Rule of the Reaper Inversion FVG:** You must place Reaper FVG limit orders exclusively in the discount portion of the impulsive leg for bullish setups, and in the premium portion of the leg for bearish setups, ensuring it lies within the leg executing the initial liquidity sweep and MSS.
-*   **Rule of the Suspension Block:** If a candle's body is fully overlapped by the prior candle's wick to its left, preventing a standard FVG, you must use the body and its twin volume imbalances as a highly precise, low-drawdown support/resistance reload zone.
-*   **Rule of Precision Entry (IOFED):** When executing via the Institutional Order Flow Entry Drill, you must place your limit order precisely at the proximal edge of the FVG, accepting higher potential drawdown in exchange for maximizing risk-to-reward.
-*   **Rule of Consequent Encroachment:** If executing a conservative entry, you must place your entry limit order exactly at the 50% midpoint (Consequent Encroachment) of the FVG and set your stop-loss past the invalidation level of the first candle's wick.
-*   **Rule of Execution Timing:** You must restrict all FVG, IFVG, and BPR execution entries to designated ICT Kill Zones: London Open (2:00 AM – 5:00 AM ET), New York Open / Silver Bullet (8:30 AM – 11:00 AM ET), or New York PM Session (1:30 PM – 4:00 PM ET).
+*   **Determine Imbalance Type:** Classify the market imbalance precisely. Label a buying imbalance as a Buyside Imbalance Sellside Inefficiency (BISI) and a selling imbalance as a Sellside Imbalance Buyside Inefficiency (SIBI).
+*   **Locate Consequent Encroachment (CE):** Calculate and map the exact 50% midpoint of any FVG or BPR. Use this level as your primary reactive execution point for low-risk limit orders.
+*   **Manage Failed FVGs (IFVGs):** If a candle body closes decisively through the boundary of a validated FVG, immediately reclassify the zone as an Inverse Fair Value Gap (IFVG) and flip its structural polarity (support becomes resistance, and vice versa).
+*   **Identify Balanced Price Ranges (BPR):** Locate areas where a bullish FVG and a bearish FVG directly overlap horizontally. Treat this zone as an immediate algorithmic magnet and utilize its outer boundaries as robust invalidation levels.
+*   **Apply the Institutional Order Flow Entry Drill (IOFED):** Under high-momentum conditions where deep retracements to CE are unlikely, execute limit orders directly at the proximal edge of the FVG to prevent missing the expansion leg.
+*   **Filter by Candle Quality:** Only execute setups on FVGs, BPRs, or displacement legs where the candle body-to-wick ratio is at least 70%. Reject any setups formed by weak, high-wick candles (under 60% body ratio).
+*   **Execute the ICT Unicorn Model:** Verify that a session-based liquidity sweep has occurred, confirm a displacement leg creating a Market Structure Shift (MSS), locate the direct horizontal overlap of an ICT Breaker Block and an FVG, and place the entry limit order strictly within a Session Killzone.
+*   **Execute the Venom Model:** Locate a horizontal overlap of a bullish and bearish FVG (BPR) forming immediately after a major liquidity sweep during a predetermined session Killzone. Place entry orders precisely at the boundary of the BPR, targeting HTF external liquidity.
+*   **Align with OTE (Optimal Trade Entry):** Use the Fibonacci tool to map the 0.618 to 0.79 retracement of the most recent impulsive swing leg. Only execute if the OTE zone overlaps directly with a pre-existing HTF PD Array (such as an unmitigated Order Block or FVG) after a clear liquidity sweep.
+*   **Enforce Time Alignment:** Restrict all trade executions to active ICT Killzones (London Open: 2:00 AM – 5:00 AM ET; NY Open/Silver Bullet: 8:30 AM – 11:00 AM ET; NY PM Session: 1:30 PM – 4:00 PM ET). Do not execute new trades outside of these windows.
 
 ## Red Flags
 
-| Red Flag | Why it is Wrong |
-| :--- | :--- |
-| **Trading Low-Timeframe FVGs in Isolation** | Causes overtrading and high failure rates because the FVG lacks higher timeframe context and structural backing. |
-| **Executing on Low-Displacement Candles** | Signals low institutional momentum; candles with body-to-wick ratios under 60% represent weak institutional interest and high probability of failure. |
-| **Using Standard FVGs in Premium/Discount Mismatches** | Entering long in premium arrays or short in discount arrays ignores algorithmic pricing rules, leading to immediate drawdowns. |
-| **Treating Wick Rejections as IFVGs** | A wick penetration through an FVG does not constitute a polarity flip; it requires a full candle body close to confirm institutional mitigation. |
-| **Executing Outside of ICT Kill Zones** | Low-volume, off-session price action lacks the algorithmic delivery and liquidity required to sustain HTF target expansion. |
+| Deficient Action / Belief | Rationalization | Why It Is Wrong |
+| :--- | :--- | :--- |
+| Trading every FVG on the chart | "The price always fills gaps, so this is an easy reversal setup." | FVGs traded without HTF Draw on Liquidity and session alignment have a statistically negative expectancy and result in heavy losses. |
+| Placing stops inside the FVG | "I want a super tight stop-loss to get a massive risk-to-reward ratio." | Algorithmic delivery frequently tests the 50% Consequent Encroachment (CE) or sweeps the outer FVG boundary before expanding. Stops must go beyond structural invalidation levels. |
+| Ignoring candle body closes through FVGs | "It just swept the level and will reverse back in my direction." | A decisive candle body close straight through an FVG invalidates it, converting the zone into an Inverse FVG (IFVG). Ignoring this means trading against order flow. |
+| Executing trades on low-body candles | "The gap is huge, so the displacement is strong." | If the candle body-to-wick ratio is under 60%, the move lacks institutional backing and represents exhaustion rather than true displacement. |
+| Mid-day trading outside Killzones | "The setup looks perfect, I don't need to wait for NY or London Open." | Volume and volatility are thin outside of session Killzones; algorithms consolidate price, leading to stop hunts and failed executions. |
 
 ## Quick Reference
 
-| Institutional Array | Validation Trigger | Entry Location | Stop-Loss Placement |
-| :--- | :--- | :--- | :--- |
-| **Standard FVG** | Body-to-wick ratio > 60% inside HTF Order Block | Proximal edge (IOFED) or 50% Consequent Encroachment | Beyond the wick of Candle 1 (origin) |
-| **Inverse FVG (IFVG)** | Decisive candle body close past FVG boundary | Re-test of the flipped FVG boundary | Beyond the swing high/low of the breaking candle |
-| **Balanced Price Range (BPR)** | Horizontally overlapping bullish and bearish FVGs with > 70% displacement | Retest of the overlapping boundary zone | Beyond the high/low of the displacement candle |
-| **Unicorn Model** | FVG horizontally nested within a validated Breaker Block | Retest of the Breaker/FVG overlap zone | Beyond the invalidation level of the Breaker Block |
-| **Reaper Inversion FVG** | Sweep + MSS leg; IFVG sits in premium (short) / discount (long) | Flipped boundary within the impulsive sweep leg | Past the high/low of the Breaker Block leg |
-| **Suspension Block** | Candle body fully overlapped by prior wick; twin volume imbalances | Within the suspended candle body | Beyond the high/low of the prior candle's wick |
+| Concept | Definition / Formula | Execution Trigger / Action |
+| :--- | :--- | :--- |
+| **BISI** | Buyside Imbalance Sellside Inefficiency | Look for bullish expansion; entry at proximal boundary or CE on retest. |
+| **SIBI** | Sellside Imbalance Buyside Inefficiency | Look for bearish expansion; entry at proximal boundary or CE on retest. |
+| **Consequent Encroachment (CE)** | 50% Midpoint of an FVG or BPR | Place low-risk limit orders at this exact mathematical equilibrium level. |
+| **Inverse FVG (IFVG)** | FVG breached by a decisive candle body close | Flip bias; trade the retest of the boundary as flipped support/resistance. |
+| **BPR** | Horizontally overlapping bullish and bearish FVGs | Immediate entry at the boundaries; highly robust invalidation zones. |
+| **IOFED** | Limit order placed precisely at the proximal edge of FVG | Use during high-momentum runs to capture fast-moving expansion legs. |
+| **ICT Unicorn Model** | Horizontal overlap of a Breaker Block + FVG | Execute in Killzone after a session liquidity sweep and MSS displacement. |
+| **Venom Model** | Horizontally overlapping FVGs (BPR) after a sweep | Execute at the BPR boundary targeting HTF external liquidity pools. |
+| **OTE** | 61.8% – 79.0% Retracement range (70.5% Sweet Spot) | Execute when OTE overlaps an unmitigated HTF FVG/OB after a sweep. |
