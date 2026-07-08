@@ -1,53 +1,43 @@
 ---
 name: market-structure-liquidity
-description: Use when analyzing market structure, identifying structural transitions (BOS, CHOCH, IDM), mapping premium/discount arrays, locating institutional liquidity pools (BSL, SSL), or evaluating liquidity sweep and mechanical entry setups (Unicorn, Venom, OTE).
+description: Use when analyzing market structure, identifying swing points (BOS, CHoCH, MSS), mapping internal vs. external liquidity, evaluating liquidity sweeps, or locating institutional footprints like Order Blocks, Breakers, and Fair Value Gaps.
 ---
 
 ## The Iron Law
 
 ```
-A structural transition (CHOCH/MSS) is valid ONLY if there is a decisive candle body close past the major external swing level. A simple wick through a level or a minor internal break is classified strictly as inducement (IDM) or a liquidity sweep, NEVER a structural break.
+All structural assessments must begin with a top-down HTF sweep-to-MSS alignment; do not execute on LTF structures unless an HTF liquidity sweep or key HTF PD array mitigation has occurred first.
 ```
 
 ## Behavioral Rules
 
-*   **Rule 1: Enforce Top-Down Multi-Timeframe Alignment**
-    *   Do NOT map lower-timeframe (LTF) setups in isolation.
-    *   First, identify the Higher Timeframe (HTF) Draw on Liquidity (DOL) and key Premium/Discount arrays.
-    *   Second, wait for the HTF liquidity pool to be swept or mitigated before zooming down exactly two intervals (e.g., 4H to 15M) for LTF entry execution.
-
-*   **Rule 2: Classify Structural Breaks with Precision**
-    *   Label price continuation moves as Break of Structure (BOS) only after a clean candle body close in the direction of the dominant trend.
-    *   Label trend reversals as Change of Character (CHOCH) or Market Structure Shift (MSS) only when displacement occurs past a major external swing point.
-    *   Classify all sub-structural or non-displaced moves as Inducement (IDM) or liquidity sweeps.
-
-*   **Rule 3: Qualify Liquidity Sweeps and Absorption**
-    *   Confirm structural liquidity grabs (BSL/SSL) using footprint/volumetric delta data when available.
-    *   A true sweep requires passive limit order absorption: look for a massive diagonal delta spike (aggressive market orders exceeding a 3x imbalance ratio) that fails to expand price, resulting in a candle close that opposes the aggressive flow.
-
-*   **Rule 4: Execute Mechanical Entry Models strictly within Killzones**
-    *   Only execute the ICT Unicorn Model (overlapping Breaker Block and FVG) or Venom Model (horizontal overlap of bullish and bearish FVGs establishing a Balanced Price Range) inside designated session windows: London Open (2:00 AM – 5:00 AM ET), NY Open (8:30 AM – 11:00 AM ET), or NY PM (1:30 PM – 4:00 PM ET).
-    *   Set the immediate invalidation level at the outer swing extreme of the initial liquidity sweep.
-
-*   **Rule 5: Grade Imbalances and BPRs by Candle Body Quality**
-    *   Filter out low-momentum imbalances. Only grade Fair Value Gaps (FVGs) and Balanced Price Ranges (BPRs) as high-probability (A+ setups) if the forming displacement candles possess a body-to-wick ratio above 70%.
+*   **Rule on Structural Breaks:** Classify a structural break as a valid Break of Structure (BOS) or Change of Character (CHoCH/MSS) only if the candlestick body closes decisively past the external swing point. If only the wick pierces the level, classify it strictly as a liquidity sweep (stop hunt).
+*   **Rule on Inducement vs. Shift:** Treat minor internal breaks within a swing range as Inducement (IDM) designed to trap retail breakout traders. Do not label internal structural breaks as a true CHoCH/MSS.
+*   **Rule on Execution Timing:** Restrict trade setups and execution entries strictly to established algorithmic Killzones (London Open: 2:00 AM – 5:00 AM ET; New York Open/Silver Bullet: 8:30 AM – 11:00 AM ET; New York PM Session: 1:30 PM – 4:00 PM ET). Do not execute trades outside these daily macro time windows.
+*   **Rule on FVG Validation:** Evaluate Fair Value Gaps (FVGs) using the body-to-wick ratio of the displacement candle. Discard any FVG or Balanced Price Range (BPR) setup if the displacement candle's body-to-wick ratio is under 70%.
+*   **Rule on Reversal Entries (The Unicorn Model):** Validate the ICT Unicorn entry model only when there is a direct horizontal overlap of a Breaker Block (BB) and a Fair Value Gap (FVG) created by the same displacement leg following a liquidity sweep. Invalidate the setup immediately if a candle body closes beyond the outer anchor point of the initial sweep wick.
+*   **Rule on Polarity Flipping (Inverse FVGs):** If price closes decisively beyond a bullish FVG, immediately flip the zone into a bearish Inverse FVG (IFVG) to act as resistance on subsequent retests, and vice versa.
+*   **Rule on Structural Failure (Mitigation vs. Breaker):** Map a failed order block as a Breaker Block only if price swept a key liquidity extreme before breaking the block. If price failed to sweep the extreme before breaking the block (failure swing), map it as a Mitigation Block and enforce tighter risk filters.
+*   **Rule on Risk Management and Errors:** Enforce the Three-Mistake Rule. Shut down the trading platform immediately if you commit three process errors (e.g., trading outside killzones, widening stops, or over-leveraging) before financial daily loss limits are hit.
 
 ## Red Flags
 
 | Red Flag | Rationalization | Why Wrong |
 | :--- | :--- | :--- |
-| Wicking past a swing level labeled as CHOCH/MSS | "It broke the level on the lower timeframe, so the trend has officially reversed." | Wicks only hunt liquidity. Labeling a wick-only sweep as a structural shift leads to trading directly into institutional manipulation. |
-| Trading LTF structures without HTF context | "The 1-minute chart has a clean BOS and FVG, I can trade this trend continuation." | High-frequency noise yields a statistically negative expectancy when traded without parent Order Block or HTF liquidity alignment. |
-| Entering trades mid-range without Premium/Discount mapping | "Price is moving fast, I need to buy now before it leaves without me." | Buying in Premium or selling in Discount zones destroys the risk-to-reward ratio and exposes the account to algorithmically engineered retracements. |
-| Treating every minor break as a trend shift | "Price just took out the previous minor internal low, the trend is now bearish." | This is retail inducement (IDM) designed to trap early breakout traders before the real expansion occurs. |
+| **Wick-only structural break** | "Price broke the level with a wick, confirming a trend continuation/reversal." | **No body close means no structural break.** Wicks represent price rejection and liquidity sweeps, not structural acceptance. |
+| **Trading minor internal breaks** | "The 5m chart broke the nearest internal high, signaling a trend change." | **Inducement trap.** Internal breaks are retail inducement. True trend shifts require HTF external swing point body closes. |
+| **Executing mid-day or off-hours** | "The setup looks perfect at 12:30 PM ET; I must enter now before it moves." | **Low probability manipulation.** Algorithmic order flow and institutional participation occur inside strict Killzones; mid-day price action is random, low-volume noise. |
+| **Ignoring displacement quality** | "An FVG formed, so I am entering on the retest, even though the candle was mostly wicks." | **Low probability imbalance.** Candles with body-to-wick ratios under 70% represent exhaustion, not aggressive institutional displacement, drastically lowering setup win rates. |
+| **Discretionary stop adjustments** | "I will widen my stop loss slightly below this next level to avoid getting wicked out." | **Emotional capital destruction.** Widening stops violates fixed-risk parameters and invalidates the trade's initial probabilistic edge. |
 
 ## Quick Reference
 
-| Concept | Structural Rule / Trigger | Target / Invalidation Zone | Execution Metric |
-| :--- | :--- | :--- | :--- |
-| **BOS (Break of Structure)** | Trend continuation; requires candle body close past swing high/low. | Opposite structural swing low/high is the invalidation point. | Body-to-wick ratio > 70% on breakout candle. |
-| **CHOCH / MSS** | Trend reversal; requires displacement and body close past major external swing. | Invalidation is the swing extreme of the reversal leg. | Exactly two timeframes lower for entry. |
-| **Unicorn Model** | Horizontal overlap of an ICT Breaker Block and an ICT FVG. | Invalidation: candle body close beyond the initial liquidity sweep extreme. | Session Killzones only; limit order at proximal edge. |
-| **Venom Model / BPR** | Horizontal overlap of bullish and bearish FVGs forming equilibrium. | Invalidation: outer boundaries of the BPR. | immediate entry at BPR boundary post HTF sweep. |
-| **Optimal Trade Entry (OTE)** | Retracement of impulse leg into the 0.618 to 0.79 zone (sweet spot: 0.705). | Invalidation: breach of the 1.0 anchor point of the impulse leg. | Confluence with HTF PD Array (OB or FVG). |
-| **Inducement (IDM)** | Minor, internal structural break designed to trap breakout traders. | Traps retail stops; acts as liquidity engine before real move. | Do not trade breakout; wait for sweep of the IDM. |
+| Concept | Identifier | Core Rule / Validation |
+| :--- | :--- | :--- |
+| **BOS** | Break of Structure | Trend continuation; requires a decisive candle **body close** past a prior swing high/low. |
+| **CHoCH / MSS** | Change of Character / Market Structure Shift | Trend reversal; requires a decisive candle **body close** past an external swing point. |
+| **Liquidity Sweep** | Stop Hunt | Wick-only penetration of session highs/lows, equal highs (EQH), or equal lows (EQL) followed by rejection. |
+| **Unicorn Model** | Premium Entry | Horizontal overlap of a **Breaker Block** and an **FVG** following a session liquidity sweep. |
+| **Inverse FVG (IFVG)** | Polarity Flip | A failed FVG that has been closed past by a candle body; acts as support/resistance on retest. |
+| **Consequent Encroachment (CE)** | 50% Midpoint | The exact midpoint of a Fair Value Gap; acts as a highly sensitive algorithmic magnetic level. |
+| **BPR Quality Filter** | Balanced Price Range | Overlapping bullish/bearish FVGs; only valid if displacement candle has a **>70% body-to-wick ratio**. |
