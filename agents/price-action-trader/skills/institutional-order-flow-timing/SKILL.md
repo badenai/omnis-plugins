@@ -1,56 +1,41 @@
 ---
 name: institutional-order-flow-timing
-description: Use when analyzing market structure transitions, locating order block variations (Breakers, Mitigation, Hidden, Suspension Blocks), validating imbalances (FVGs, IFVGs, BPRs), identifying liquidity pools, or timing trade executions within algorithmic session Killzones (London, NY, Silver Bullet, AMD/Quarterly Theory).
+description: Use when analyzing institutional order flow, tracking algorithmic execution timing windows, executing structural setups (Unicorn, Inverse FVGs, Breakers), or evaluating Power of Three (AMD) delivery cycles.
 ---
 
 ## The Iron Law
 
 ```
-All institutional order blocks, fair value gaps, and structural transitions are completely invalid unless they are initiated by a Higher Timeframe (HTF) liquidity sweep and executed strictly within a designated session Killzone (London Open, New York Open/Silver Bullet, or New York PM).
+Never execute a trade outside of the designated institutional timing windows (London Open, New York Open/Silver Bullet, or New York PM Killzones), and never validate structural shifts (MSS/CHoCH) based on candlestick wicks alone; structural shifts require a decisive candle body close past external swing levels.
 ```
 
 ## Behavioral Rules
 
-1. **Verify HTF Liquidity Sweeps First**: Do not look for lower-timeframe entry setups unless the Higher Timeframe (HTF) Draw on Liquidity (BSL or SSL) has been swept or tapped. 
-2. **Apply Two-Timeframe Hierarchy Strictly**: Always define the HTF key zone (e.g., 4-Hour) first, then zoom down exactly two intervals (e.g., 15-Minute) for execution setup identification. Do not jump arbitrarily between random timeframes.
-3. **Validate Structural Breaks by Body Closes Only**: Define a Change of Character (CHOCH) or Market Structure Shift (MSS) strictly by a candle body closing past the major external swing level. If only the wick breaks the level, classify it as Inducement (IDM) or a Liquidity Sweep, and do not execute trend-reversal orders.
-4. **Distinguish Breaker Blocks (BB) from Mitigation Blocks (MB)**: 
-   * *Condition*: If the failed order block swept liquidity before the structural shift, classify it as a Breaker Block (BB) and trade it as a high-velocity, structurally robust level.
-   * *Condition*: If the failed order block was created by a failure swing (exhaustion) without sweeping the extreme, classify it as a Mitigation Block (MB) and apply tighter risk management.
-5. **Classify Order Block Exceptions (HOB & Suspension Blocks)**:
-   * *Condition*: If identifying unmitigated zones on daily/weekly charts that look like standard wicks, drill down to lower timeframes to locate Hidden Order Blocks (HOB) for high-precision entries.
-   * *Condition*: If price is suspended between two volume imbalances with zero wick-to-wick gap but the body is overlapped by the prior wick, trade it as a Suspension Block.
-6. **Classify and Map Imbalances**:
-   * *Condition*: If a standard FVG fails to hold and experiences a decisive candle body close through its boundaries, reclassify it immediately as an Inverse Fair Value Gaps (IFVG) and flip your directional bias.
-   * *Condition*: If a bullish FVG and a bearish FVG overlap horizontally, label the zone as a Balanced Price Range (BPR) and use its outer boundaries as robust invalidation levels.
-7. **Determine Entry Mechanics (IOFED vs. CE)**:
-   * *Condition*: In high-momentum conditions (candle body-to-wick ratio > 70%), utilize the Institutional Order Flow Entry Drill (IOFED) by placing a limit order at the proximal edge of the FVG.
-   * *Condition*: In standard retracements, place the limit entry at the Consequent Encroachment (CE) (the exact 50% midpoint) of the FVG.
-8. **Enforce Temporal Killzones**: Reject any execution setup that occurs outside the algorithmic windows: London Open (2:00 AM – 5:00 AM ET), NY Open/Silver Bullet (8:30 AM – 11:00 AM ET), or NY PM Session (1:30 PM – 4:00 PM ET).
-9. **Apply the Power of Three (AMD)**: Track the daily cycle as Accumulation (Asia range consolidation), Manipulation (London Judas Swing sweeping Asia extremes), and Distribution (NY trend expansion). Apply Quarterly Theory (AMDX) to avoid entering late-session trends during the "X" phase.
-10. **Validate Sweeps via Footprint/DOM Absorption**: Confirm a liquidity sweep in real-time only when a high delta spike is met by passive limit order stacking, resulting in a candle stalling/reversing rather than expanding (e.g., candle closes bullish despite a highly negative net Delta).
-11. **Abide by the Three-Mistake Rule**: Terminate trading and shut down the execution platform immediately upon committing three operational errors (such as trading outside Kill Zones, manually widening a stop, or violating sizing rules).
+*   **Enforce the Timing Hierarchy:** You must only seek trade entries during valid session killzones (London Open: 2:00 AM – 5:00 AM ET; NY Open/Silver Bullet: 8:30 AM – 11:00 AM ET; NY PM Session: 1:30 PM – 4:00 PM ET). If the current chart time falls outside these specific windows, you must advise the trader to sit on their hands.
+*   **Verify Structural Shifts with Body Closes:** You must require a definitive candle body close past a major external swing high or low to confirm a Market Structure Shift (MSS) or Change of Character (CHoCH). Treat any wick-only breaks strictly as liquidity sweeps (stop hunts) and never as structural trend shifts.
+*   **Validate the Power of Three (AMD) Sequence:** When analyzing intraday cycles, you must identify Asian range consolidation as Accumulation, look for London open expansions below/above the Asian range as Manipulation (Judas Swing), and wait for New York to deliver the true directional trend reversal as Distribution.
+*   **Filter FVGs and BPRs by Candle Quality:** You must only recommend entry execution on Fair Value Gaps (FVG) or Balanced Price Ranges (BPR) if the underlying displacement candle has a body-to-wick ratio above 70%. You must reject low-momentum candles with massive wicks as invalid structural imbalances.
+*   **Confirm Breaker Blocks with Liquidity Sweeps:** You must only classify a failed order block as a Breaker Block if price successfully swept a key liquidity extreme prior to delivering the violent, imbalance-leaving Market Structure Shift. If no sweep occurred, classify the level as a weaker Mitigation Block.
+*   **Apply the Inverse FVG (IFVG) Polarity Shift:** When price closes decisively beyond a bullish FVG, you must immediately flip that zone into a bearish resistance level (IFVG) on any subsequent retest, rather than discarding the zone as invalidated.
+*   **Cross-Reference with Consequent Encroachment:** You must identify and map the 50% midpoint (Consequent Encroachment) of every active HTF FVG as the ultimate algorithmic magnet and key structural support/resistance level.
+*   **Apply the Three-Mistake Rule:** You must advise immediate platform shutdown if the trader commits three process violations (such as trading outside killzones, widening stops, or over-leveraging) within a single trading day.
 
 ## Red Flags
 
-| Red Flag | Why Wrong |
-| :--- | :--- |
-| **Trading LTF structure in isolation** | Statistically negative expectancy; the 1m/5m structural changes are noise without HTF parent POI alignment. |
-| **Labeling a wick-only break as CHOCH** | Classic retail trap; wicks represent liquidity sweeps/inducement, not a true market structure shift (which requires body closes). |
-| **Entering trades during the "X" Phase** | Entering late-session distributions during AMDX leads to trading exhausted trends right before reversal. |
-| **Placing orders on low-quality FVGs** | Imbalances with candle body-to-wick ratios below 60% show weak institutional momentum, dropping average performance to 1.3R. |
-| **Using fixed pip/percent risk in high volatility** | Fails to account for dynamic institutional delivery; must adapt leverage using contract-based exposure / floating risk rules. |
+| Red Flag / Retail Trap | Why It Is Wrong | Institutional Price Action Correction |
+| :--- | :--- | :--- |
+| **Executing setups during lunch hour / dead zones** | Volatility and institutional order flow drop off, leading to directionless chop and retail stop hunts. | Restrict trade execution strictly to London, NY Open, and NY PM Killzones. |
+| **Treating wick-only breaks as structural trend shifts** | Wicks indicate liquidity sweeps and immediate rejection, not sustainable market expansion. | Require a full candle body close on the execution timeframe to confirm MSS/CHoCH. |
+| **Buying unmitigated order blocks without HTF alignment** | Low-timeframe order blocks are easily ran over if they align against the HTF order flow. | Only trade LTF order blocks that are nested directly within or adjacent to HTF PD arrays. |
+| **Discarding violated FVGs as useless** | Algorithms defend failed levels; a breached FVG becomes a highly sensitive support/resistance zone. | Flip the breached zone into an Inverse FVG (IFVG) and monitor for polarity-shift retests. |
+| **Trading "reversal patterns" (wedges, double bottoms) in isolation** | Geometric patterns are retail traps designed to build up dense liquidity pools above and below key levels. | Wait for the retail patterns to get swept, then execute in the opposite direction off an OB or FVG. |
 
 ## Quick Reference
 
-### PD Array & Timing Alignment Matrix
-
-| Phase / Concept | Temporal Window (ET) | Primary Structural Focus | Validation Criteria |
+| Institutional Setup | Key Structural Criteria | Primary Target | Invalidation Condition |
 | :--- | :--- | :--- | :--- |
-| **London Open** | 2:00 AM – 5:00 AM | Judas Swing / Manipulation | Sweeps Asian session extremes, forms BB/MB |
-| **New York Open** | 8:30 AM – 11:00 AM | Silver Bullet / Distribution | MSS + displacement FVG or Unicorn Model |
-| **New York PM** | 1:30 PM – 4:00 PM | Late Session Reversal / Expansion | Sweeps NY AM session highs/lows, targets PM liquidity |
-| **Power of Three (AMD)** | Daily Cycle | Accumulation $\rightarrow$ Manipulation $\rightarrow$ Distribution | Daily high/low formed during London; NY distributes |
-| **Balanced Price Range** | Any (during Killzone) | Overlapping Bullish & Bearish FVGs | Immediate horizontal overlap, body-to-wick ratio > 70% |
-| **Unicorn Model** | Session-specific | Breaker Block (BB) + FVG Overlap | MSS displacement leg; invalidation beyond sweep anchor |
-| **Consequent Encroachment**| Any | 50% Midpoint of FVG | Precise mathematical midpoint reaction |
+| **ICT Unicorn Model** | Direct horizontal overlap of a Breaker Block (BB) and a Fair Value Gap (FVG) following a liquidity sweep. | Opposing external liquidity pool (BSL/SSL). | Candle body close beyond the outer anchor point of the initial sweep wick. |
+| **Inverse FVG (IFVG)** | Decisive candle body close past a pre-existing FVG zone, flipping its polarity. | Next unmitigated structural key level. | Retest body close back inside the original invalidation zone. |
+| **Breaker Block** | Failed order block formed *after* a successful liquidity sweep and a violent displacement-driven MSS. | First unmitigated FVG or structural liquidity pool. | Candle body close past the origin of the displacement leg. |
+| **Mitigation Block** | Failed order block formed by a failure swing (failed to sweep the previous structural extreme before reversing). | Near-term internal liquidity pools (lower probability). | Candle body close past the failure swing extreme. |
+| **Balanced Price Range (BPR)** | Direct horizontal overlap of a bullish FVG and a bearish FVG, signaling immediate price equilibrium. | High-volume expansion targets. | Candle body close back inside the opposing extreme of the BPR. |
