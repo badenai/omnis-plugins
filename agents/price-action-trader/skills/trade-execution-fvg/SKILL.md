@@ -1,52 +1,43 @@
 ---
 name: trade-execution-fvg
-description: Use when validating market imbalances, executing Fair Value Gaps (FVG) or Inverse FVGs (IFVG), verifying structural entries (Unicorn model), and configuring risk parameters or position sizing on active trade setups.
+description: Use when identifying, validating, or executing trade setups based on Order Blocks (OB), Breaker Blocks, Mitigation Blocks, and Fair Value Gaps (FVG), including Consequent Encroachment (CE) and multi-timeframe PD array alignment.
 ---
 
 ## The Iron Law
 
 ```
-Never execute a market entry on a Fair Value Gap (FVG) or Balanced Price Range (BPR) unless the displacement candle body-to-wick ratio is strictly above 70%, the setup occurs within a designated session Killzone, and the stop-loss is placed beyond the structural extreme of the displacement leg.
+Never execute a trade off a lower-timeframe FVG or Order Block unless it directly aligns with a higher-timeframe HTF discount/premium array, a major liquidity sweep, or a validated HTF Order Block.
 ```
 
 ## Behavioral Rules
 
-1. **Verify Displacement Intensity:**
-   * **If** a Fair Value Gap (FVG) or Balanced Price Range (BPR) forms with a displacement candle body-to-wick ratio below 70%, **then** invalidate the setup immediately and do not execute an entry.
-   * **If** the candle body-to-wick ratio is 70% or greater, **then** mark the zone as valid for execution on a structural retest.
-
-2. **Execute Strictly Inside Session Killzones:**
-   * **If** a setup triggers outside of the London Open (2:00 AM – 5:00 AM ET), New York Open / Silver Bullet (8:30 AM – 11:00 AM ET), or New York PM Session (1:30 PM – 4:00 PM ET), **then** deny execution. 
-   * **If** the trade setup forms within these exact algorithmic timing windows, **then** proceed to structural confirmation.
-
-3. **Validate the ICT Unicorn Model:**
-   * **If** executing the Unicorn Model, **then** verify the direct horizontal overlap of a Breaker Block (BB) and a Fair Value Gap (FVG) following a session liquidity sweep.
-   * **If** a subsequent candle body closes beyond the outer anchor point of the initial sweep wick, **then** immediately invalidate the entire setup.
-
-4. **Apply Inverse Fair Value Gap (IFVG) Rules:**
-   * **If** price closes decisively beyond a bullish FVG on a candle body close, **then** flip the zone into a bearish IFVG (resistance).
-   * **If** price closes decisively beyond a bearish FVG on a candle body close, **then** flip the zone into a bullish IFVG (support).
-
-5. **Locate Target Midpoints:**
-   * **If** executing an entry at a Fair Value Gap, **then** plot the Consequent Encroachment (CE) at exactly the 50% midpoint of the FVG as a key institutional magnet and limit order placement area.
-
-6. **Enforce the Three-Mistake Circuit Breaker:**
-   * **If** three operational errors are committed in a single session (e.g., executing out of hours, manual stop widening, or over-leveraging), **then** enforce an immediate platform shutdown for the remainder of the day.
+*   **Validate the HTF Trend First:** Map the structural progression (HH/HL or LH/LL) on the higher timeframe (HTF) before looking for lower-timeframe (LTF) entries.
+*   **Filter FVGs by Displacement Quality:** Only select FVGs created by displacement candles with a body-to-wick ratio above 70%. Discard or penalize FVGs created by weak, low-volume candle spreads (under 60% body-to-wick ratio).
+*   **Calculate Consequent Encroachment (CE):** Identify the exact 50% midpoint of the FVG. Set your limit orders at this level for high-probability, algorithmic entries, or use it to validate a reaction (price must respect CE on a closing basis).
+*   **Differentiate Breaker vs. Mitigation Blocks:**
+    *   If the failed Order Block swept liquidity (stop hunt of a previous extreme) before the Market Structure Shift (MSS), categorize it as a **Breaker Block** (high priority).
+    *   If the failed Order Block did not sweep liquidity (exhaustion/failure swing) before the MSS, categorize it as a **Mitigation Block** (lower priority).
+*   **Enforce Golden Zone Entry (OTE):** Ensure the Order Block or FVG aligns with the Optimal Trade Entry (OTE) zone (61.8% to 79.0% Fibonacci retracement) of the structural dealing range. Do not buy in Premium or sell in Discount.
+*   **Apply Polarity Flips (IFVG):** If price closes decisively beyond a bullish FVG, flip its polarity to a bearish Inverse FVG (IFVG) and treat it as resistance on subsequent retests. Apply the same logic inversely to bearish FVGs.
+*   **Validate Liquidity Sweeps with Candle Closes:** Treat a wick through a key level strictly as a liquidity sweep (stop hunt). Require a candle body close past a major external swing level to confirm a true Change of Character (CHOCH) or Break of Structure (BOS).
+*   **Utilize the Unicorn Model:** Search for the horizontal overlap of an ICT Breaker Block and an FVG formed during a high-displacement leg following a liquidity sweep for an A+ setup.
 
 ## Red Flags
 
 | Red Flag | Rationalization | Why Wrong |
 | :--- | :--- | :--- |
-| **Trading Low-Body Candles** | "The FVG is wide, so it must represent strong institutional presence regardless of the wicks." | **Imbalance Failure:** Candles with large wicks and low body ratios (< 70%) indicate high intraday volatility and rejection/absorption, not aggressive single-sided price delivery. |
-| **Executing Outside Killzones** | "The structure is too clean to ignore, even if it is during the lunch hour lull." | **Liquidity Traps:** Volume drops outside session killzones; algorithms hunt low-volume retail liquidity, resulting in high slippage and false structural shifts. |
-| **Widening Stop Losses** | "I will give the trade some room to breathe past the sweep candle wick and move my stop." | **Account Destruction:** Widening stops violates fixed-risk parameters, invalidates the trade's mathematical probability, and fosters toxic emotional trading behavior. |
-| **Treating Sweeps as CHoCH** | "A wick swept the high/low, so we have a structural change of character." | **Fakeout Bias:** A true CHoCH requires a definitive body close past structural levels. Wicks alone are stop hunts/sweeps, which deliver price in the opposite direction. |
+| Trading every LTF FVG | "An FVG is an algorithmic imbalance, so price must react to it immediately." | Up to 84% of LTF FVGs that get filled immediately reverse and break structure if they do not align with HTF context or liquidity sweeps. |
+| Buying OBs in Premium / Selling OBs in Discount | "The Order Block looks clean and strong on the M15 chart." | Institutional order flow operates on premium/discount arrays. Trading against HTF premium/discount leads to high-probability stop outs. |
+| Marking a wick-only break as a structural transition | "Price broke the previous high, so this is a bullish Change of Character." | A wick-only breach is a liquidity sweep (stop hunt) designed to engineer liquidity before a reversal. A true CHOCH requires a body close. |
+| Treating Mitigation Blocks as equal to Breaker Blocks | "Both are failed order blocks, so they carry the same entry weight." | Breaker Blocks contain swept resting liquidity (stop losses) from the previous extreme, making them structurally superior and far more reactive. |
 
 ## Quick Reference
 
-| Setup Model | Required Confluences | Stop-Loss Placement | Profit Target |
-| :--- | :--- | :--- | :--- |
-| **ICT Unicorn** | Breaker Block + FVG overlap + Sweep | Beyond the outer anchor of the sweep wick | Key opposing HTF liquidity pool |
-| **Inverse FVG (IFVG)** | Decisive body close past invalid FVG | Beyond the body close of the inversion candle | Unmitigated HTF Order Block / CE |
-| **BPR Quality Entry** | Overlapping Bull/Bear FVGs + >70% body-to-wick | Beyond the swing high/low of the BPR leg | Nearest major external range liquidity |
-| **Standard FVG (BISI/SIBI)**| HTF alignment + Killzone + Sweep of liquidity | Beyond the displacement candle origin | Consequent Encroachment (CE) or opposing range |
+| PD Array Type | Definition / Key Characteristic | Best Execution / Invalidations |
+| :--- | :--- | :--- |
+| **Order Block (OB)** | Last candle before a decisive, aggressive expansion leg | Invalidation: Candle body close beyond the opening price of the OB. |
+| **Fair Value Gaps (FVG)** | 3-candle imbalance; empty space between candle 1 and candle 3 wicks | Best entry: Consequent Encroachment (50% midpoint). |
+| **Breaker Block** | Failed OB that swept liquidity before the structural shift (MSS) | High-priority entry zone when overlapped with an FVG (Unicorn Model). |
+| **Mitigation Block** | Failed OB that failed to sweep liquidity before the structural shift | Lower-priority entry; requires clear volume confirmation. |
+| **Inverse FVG (IFVG)** | An FVG that was decisively breached on a candle close basis | Retest entry: Flips polarity to act as support/resistance. |
+| **Balanced Price Range (BPR)** | Horizontal overlap of a bullish FVG and a bearish FVG | Ultra-fast delivery zone; acts as a highly reactive, tight entry anchor. |
