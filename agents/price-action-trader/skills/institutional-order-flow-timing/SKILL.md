@@ -1,41 +1,40 @@
 ---
 name: institutional-order-flow-timing
-description: Use when analyzing institutional order flow, tracking algorithmic execution timing windows, executing structural setups (Unicorn, Inverse FVGs, Breakers), or evaluating Power of Three (AMD) delivery cycles.
+description: Use when analyzing market setups based on intra-session timing, session-specific liquidity sweeps, and the Power of Three (Accumulation, Manipulation, Distribution) frameworks. This includes mapping London Open, New York Open/Silver Bullet, and PM session killzones.
 ---
 
 ## The Iron Law
 
-```
-Never execute a trade outside of the designated institutional timing windows (London Open, New York Open/Silver Bullet, or New York PM Killzones), and never validate structural shifts (MSS/CHoCH) based on candlestick wicks alone; structural shifts require a decisive candle body close past external swing levels.
+```text
+TIME FILTER PRECEDES PRICE FILTER: Never analyze or execute a price action setup unless price has entered a designated session Killzone. If a structural break, FVG, or liquidity sweep occurs outside of strict algorithmic time windows, categorize it as low-probability noise and skip the trade.
 ```
 
 ## Behavioral Rules
 
-*   **Enforce the Timing Hierarchy:** You must only seek trade entries during valid session killzones (London Open: 2:00 AM – 5:00 AM ET; NY Open/Silver Bullet: 8:30 AM – 11:00 AM ET; NY PM Session: 1:30 PM – 4:00 PM ET). If the current chart time falls outside these specific windows, you must advise the trader to sit on their hands.
-*   **Verify Structural Shifts with Body Closes:** You must require a definitive candle body close past a major external swing high or low to confirm a Market Structure Shift (MSS) or Change of Character (CHoCH). Treat any wick-only breaks strictly as liquidity sweeps (stop hunts) and never as structural trend shifts.
-*   **Validate the Power of Three (AMD) Sequence:** When analyzing intraday cycles, you must identify Asian range consolidation as Accumulation, look for London open expansions below/above the Asian range as Manipulation (Judas Swing), and wait for New York to deliver the true directional trend reversal as Distribution.
-*   **Filter FVGs and BPRs by Candle Quality:** You must only recommend entry execution on Fair Value Gaps (FVG) or Balanced Price Ranges (BPR) if the underlying displacement candle has a body-to-wick ratio above 70%. You must reject low-momentum candles with massive wicks as invalid structural imbalances.
-*   **Confirm Breaker Blocks with Liquidity Sweeps:** You must only classify a failed order block as a Breaker Block if price successfully swept a key liquidity extreme prior to delivering the violent, imbalance-leaving Market Structure Shift. If no sweep occurred, classify the level as a weaker Mitigation Block.
-*   **Apply the Inverse FVG (IFVG) Polarity Shift:** When price closes decisively beyond a bullish FVG, you must immediately flip that zone into a bearish resistance level (IFVG) on any subsequent retest, rather than discarding the zone as invalidated.
-*   **Cross-Reference with Consequent Encroachment:** You must identify and map the 50% midpoint (Consequent Encroachment) of every active HTF FVG as the ultimate algorithmic magnet and key structural support/resistance level.
-*   **Apply the Three-Mistake Rule:** You must advise immediate platform shutdown if the trader commits three process violations (such as trading outside killzones, widening stops, or over-leveraging) within a single trading day.
+1. **Map the Asian Range First:** You must define the Asian Session range (8:00 PM – 2:00 AM ET) as the Accumulation phase before looking for London or New York setups.
+2. **Execute Only Inside Killzones:** You must restrict active execution and setup hunting to these precise windows:
+   - *London Open Killzone:* 2:00 AM – 5:00 AM ET
+   - *New York Open / Silver Bullet:* 8:30 AM – 11:00 AM ET
+   - *New York PM Session:* 1:30 PM – 4:00 PM ET
+3. **Filter and Validate the Judas Swing:** If price breaks the Asian Range high or low during the London Open Killzone, you must treat it as Manipulation (Judas Swing) and search for a sweep reversal setup, rather than trading the breakout.
+4. **Identify SMT Divergence at Key Times:** During the first 30 minutes of the London or New York Open, you must compare correlated assets (e.g., ES vs. NQ, EURUSD vs. GBPUSD) to identify SMT divergence at key liquidity sweeps to confirm institutional entry.
+5. **Classify Sweeps Outside Killzones as Noise:** If a major liquidity sweep or structural change occurs outside of the designated session Killzones, you must classify it as a low-probability trap and refuse to recommend an entry.
+6. **Apply the Power of Three (AMD):** You must structure daily market analysis under the AMD framework: Accumulation (Asia), Manipulation (London), and Distribution (New York). 
 
 ## Red Flags
 
-| Red Flag / Retail Trap | Why It Is Wrong | Institutional Price Action Correction |
-| :--- | :--- | :--- |
-| **Executing setups during lunch hour / dead zones** | Volatility and institutional order flow drop off, leading to directionless chop and retail stop hunts. | Restrict trade execution strictly to London, NY Open, and NY PM Killzones. |
-| **Treating wick-only breaks as structural trend shifts** | Wicks indicate liquidity sweeps and immediate rejection, not sustainable market expansion. | Require a full candle body close on the execution timeframe to confirm MSS/CHoCH. |
-| **Buying unmitigated order blocks without HTF alignment** | Low-timeframe order blocks are easily ran over if they align against the HTF order flow. | Only trade LTF order blocks that are nested directly within or adjacent to HTF PD arrays. |
-| **Discarding violated FVGs as useless** | Algorithms defend failed levels; a breached FVG becomes a highly sensitive support/resistance zone. | Flip the breached zone into an Inverse FVG (IFVG) and monitor for polarity-shift retests. |
-| **Trading "reversal patterns" (wedges, double bottoms) in isolation** | Geometric patterns are retail traps designed to build up dense liquidity pools above and below key levels. | Wait for the retail patterns to get swept, then execute in the opposite direction off an OB or FVG. |
+| If you see this mistake... | Why it is wrong... |
+| :--- | :--- |
+| **Trading breakouts of the Asian Range during London Open.** | This ignores the Judas Swing mechanics; London specializes in engineering fake runs to sweep resting liquidity before reversing. |
+| **Executing a Silver Bullet strategy setup at 11:30 AM ET.** | Algorithmic order flow drops significantly after 11:00 AM ET; trading here exposes you to low-volume chop and distribution traps. |
+| **Treating a mid-day structural shift (12:30 PM ET) as a high-probability CHOCH.** | Structure shifts during the lunch hour are highly prone to retail manipulation and lack institutional volume support. |
+| **Analyzing price setups without checking the session clock.** | Price without time is a retail trap. Institutional algorithms operate on strict temporal schedules. |
 
 ## Quick Reference
 
-| Institutional Setup | Key Structural Criteria | Primary Target | Invalidation Condition |
+| Session / Killzone | Time Window (Eastern Time) | Primary Algorithmic Behavior | Tactical Focus |
 | :--- | :--- | :--- | :--- |
-| **ICT Unicorn Model** | Direct horizontal overlap of a Breaker Block (BB) and a Fair Value Gap (FVG) following a liquidity sweep. | Opposing external liquidity pool (BSL/SSL). | Candle body close beyond the outer anchor point of the initial sweep wick. |
-| **Inverse FVG (IFVG)** | Decisive candle body close past a pre-existing FVG zone, flipping its polarity. | Next unmitigated structural key level. | Retest body close back inside the original invalidation zone. |
-| **Breaker Block** | Failed order block formed *after* a successful liquidity sweep and a violent displacement-driven MSS. | First unmitigated FVG or structural liquidity pool. | Candle body close past the origin of the displacement leg. |
-| **Mitigation Block** | Failed order block formed by a failure swing (failed to sweep the previous structural extreme before reversing). | Near-term internal liquidity pools (lower probability). | Candle body close past the failure swing extreme. |
-| **Balanced Price Range (BPR)** | Direct horizontal overlap of a bullish FVG and a bearish FVG, signaling immediate price equilibrium. | High-volume expansion targets. | Candle body close back inside the opposing extreme of the BPR. |
+| **Asian Session** | 8:00 PM – 2:00 AM | Accumulation of orders, low volume range | Define high and low liquidity boundaries |
+| **London Open Killzone** | 2:00 AM – 5:00 AM | Manipulation (Judas Swing), runs Asian extremes | Look for sweeps of Asian range to trade reversal |
+| **New York Open / Silver Bullet** | 8:30 AM – 11:00 AM | High-volume expansion, Distribution, trend runs | Look for FVG/OB entries and SMT divergence |
+| **New York PM Session** | 1:30 PM – 4:00 PM | Late-day distribution or macro/reversal setups | Look for sweeps of NY AM session high/low |
