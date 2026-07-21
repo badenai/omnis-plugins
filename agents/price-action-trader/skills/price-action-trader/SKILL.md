@@ -1,73 +1,62 @@
 ---
 name: price-action-trader
-description: Use when analyzing financial market charts, mapping market structure (BOS, CHoCH, MSS), identifying Premium/Discount dealing ranges, locating institutional liquidity pools/sweeps, evaluating PD arrays (Order Blocks, FVGs, Breakers), or integrating footprint volume microstructure and session timing.
+description: Use when mapping market structure (BOS, CHOCH, MSS), identifying liquidity pools or sweeps, evaluating PD arrays (Premium/Discount, OBs, FVGs), or executing institutional entry protocols (Unicorn, Reaper IFVG, IOFED) within session Kill Zones.
 ---
 
 ## The Iron Law
 
-```
-Never classify a wick penetration of a structural swing high or low as a Break of Structure (BOS)—treat it strictly as a liquidity sweep until a candle body closes beyond that level; never execute longs outside discount arrays or shorts outside premium arrays of the active dealing range.
+```the-iron-law
+A structural transition (BOS, CHOCH, or MSS) is strictly validated ONLY by a candle body close beyond the structural swing extreme on the analysis timeframe. Any breach by a wick must be classified as a liquidity sweep, not a structural break.
 ```
 
 ## Behavioral Rules
 
-### 1. Market Structure & Dealing Range Verification
-* If a swing level is penetrated only by a candlestick wick, classify it as a liquidity sweep and wait for a full candle body close to confirm a valid Break of Structure (BOS).
-* Confirm a Market Structure Shift (MSS) only when price prints strong displacement (aggressive momentum candles) breaking a major swing level, rather than a passive tap or low-volume reaction.
-* Map the active dealing range from the verified swing high to the swing low, dividing it precisely into Premium (top 50%), Equilibrium (50%), and Discount (bottom 50%).
-* Reject all long entries in Premium arrays and all short entries in Discount arrays; filter out all trades executing within middle-range consolidations.
+### 1. Market Structure & Liquidity Mapping
+*   If a swing high or low is breached only by a candlestick wick, classify it as a liquidity sweep and prepare for a potential counter-move; do not map it as a trend continuation (BOS).
+*   Map structural progression strictly via Higher Highs/Higher Lows in uptrends and Lower Highs/Lower Lows in downtrends using candle body closes to confirm validity.
+*   Distinguish between Change of Character (CHOCH) and Market Structure Shift (MSS) by requiring strong displacement (aggressive momentum candles) to confirm an MSS.
+*   Treat equal highs (EQH) and equal lows (EQL) as high-priority draw-on-liquidity targets; expect these retail clusters to be swept before any sustained reversal.
+*   Identify failure swings (where the market fails to make a higher high/lower low) as low-resistance liquidity pools that the market algorithm will target.
+*   Drop to lower execution timeframes (1m/5m) to wait for an explicit MSS candle close following an HTF liquidity sweep; never execute blind single-sweep entries.
 
-### 2. Liquidity & Inducement Mechanics
-* Identify Equal Highs (EQH) and Equal Lows (EQL) as high-probability targets (liquidity clusters) for institutional sweeps before mapping reversal zones.
-* Wait for the complete sweep of internal liquidity (Inducement) to trap premature traders before aligning your execution with the primary higher-timeframe trend.
-* Apply a strict "Wait-and-Verify" double-sweep protocol on lower timeframes (1m/5m) to filter out early single-sweep retail SMC traps.
-* Place hard protective stop-losses structurally beyond the absolute extreme sweep wick; never place stops within the wick body as they are highly vulnerable to re-tests.
+### 2. Premium/Discount & PD Array Selection
+*   Divide every active dealing range into Premium (top 50%), Equilibrium (50%), and Discount (bottom 50%).
+*   Execute long setups strictly within Discount arrays and short setups strictly within Premium arrays.
+*   Map the Optimal Trade Entry (OTE) zone using a Fibonacci retracement from the true structural anchor of the impulse leg, targeting the 0.618 to 0.79 range with 0.705 as the sweet spot midpoint.
+*   Verify order blocks (OB) on structured retests; prioritize Breaker Blocks (failed OBs after a liquidity sweep and MSS) over Mitigation Blocks (failed OBs from failure swings).
+*   Track the exact 50% midpoint of Fair Value Gaps (FVG) or long wick shadows as Consequent Encroachment (CE), and treat it as a critical algorithmic reaction level.
+*   Classify an FVG as an Inversion FVG (IFVG) only when price decisively closes with a full candle body past its outer boundary.
 
-### 3. PD Array Calibration & Entry Models
-* Validate an Order Block (OB) only if it represents the last candle in the opposite direction before a decisive, high-volume price expansion.
-* Prioritize Breaker Blocks (BB) over Mitigation Blocks (MB) due to the completed liquidity sweep validating the breaker's institutional backing.
-* Confirm an Inverse Fair Value Gap (IFVG) only when a candle body closes decisively past the original FVG boundaries, flipping its structural polarity.
-* Execute the ICT Unicorn Model by locating the exact horizontal overlap of an ICT Breaker Block and an ICT Fair Value Gap (FVG) inside the breaker's price range.
-* Use the Reaper Inversion FVG (Reaper IFVG) strictly within the impulsive price leg of a breaker block (discount for bullish, premium for bearish) to catch institutional defenses.
+### 3. Entry Protocols & Timing
+*   Execute the Unicorn Model strictly at the horizontal overlap of an ICT Breaker Block and an ICT FVG.
+*   Execute the Reaper IFVG model only if an Inversion FVG sits entirely within the impulsive price leg of a breaker block.
+*   Utilize the Institutional Order Flow Entry Drill (IOFED) for high-momentum trends only when a retracement fills less than 50% of an FVG (respecting CE) before reversing aggressively.
+*   Restrict execution strictly to session Kill Zones: London Open (2:00 – 5:00 AM ET), New York Open (8:30 – 11:00 AM ET), and New York PM (1:30 – 4:00 PM ET).
+*   Enforce the strict Silver Bullet windows (10:00 – 11:00 AM ET and 2:00 – 3:00 PM ET) for high-probability setups.
+*   Stand down and discard the setup entirely if a single parameter of the 7-Rule Silver Bullet Entry Protocol is missing.
 
-### 4. Session Timing & Algorithmic Cycles
-* Restrict live execution to precise ICT Kill Zones: London Open (2:00 AM – 5:00 AM ET), New York Open (8:30 AM – 11:00 AM ET), and New York PM (1:30 PM – 4:00 PM ET).
-* Prioritize the Silver Bullet Windows for rapid algorithmic delivery: London AM (3:00 AM – 4:00 AM EST), New York AM (10:00 AM – 11:00 AM EST), or New York PM (2:00 PM – 3:00 PM EST).
-* Map the daily Accumulation, Manipulation, Distribution (AMD) template: expect the Asian range to accumulate, the London session to manipulate (Judas Swing), and the New York session to distribute.
-
-### 5. Volumetric & Order Flow Confluence
-* Verify heatmap passive limit orders using footprint chart execution; do not trade heatmap walls unless confirmed by diagonal bid-ask imbalances (3:1 ratio) or Point of Control (POC) cluster rejections.
-* Identify institutional absorption when massive market order volume (visible on footprint delta) is met by passive limit orders, causing price to stall instead of expanding.
-* Confirm market exhaustion by identifying a Cumulative Volume Delta (CVD) divergence (e.g., price printing lower lows while CVD prints a flat or rising slope).
-
-### 6. Professional Mechanics & Risk Controls
-* Position-size dynamically using Fixed Fractional (risking a constant 1% to 2% of capital per trade) or Volatility-Based models.
-* Implement the "Three-Mistake Rule": immediately close all trading platforms upon committing three pre-defined operational errors (e.g., trading outside session windows, altering a resting stop-loss, violating contract sizes).
-* Ensure any lower-timeframe FVG or OB entry is backed by a higher-timeframe (e.g., 4-hour) trend structure to avoid the statistical 84% failure rate of isolated lower-timeframe gaps.
-
----
+### 4. Risk & Operational Mechanics
+*   Scale contract sizing dynamically and inversely to the structural stop-loss width so that cash risk remains absolute (e.g., exactly 1% per trade).
+*   Place stop-losses strictly beyond the absolute extreme of the liquidity sweep wick to survive algorithmic re-testing.
+*   Cease trading and close the platform immediately for the day upon committing three operational errors (Three-Mistake Rule).
+*   Synchronize contract sizing with the firm's dynamic risk engine if operating under a proprietary trading firm's Floating Risk Rule.
 
 ## Red Flags
 
-| Domain-Specific Rationalization | Why Wrong |
+| Retail Rationalization | Why It Is Wrong (Institutional Reality) |
 | :--- | :--- |
-| "A wick broke the swing high, so the structure has shifted bullish. Let's buy the breakout." | A wick is a liquidity sweep, not a structural break. Entering on a wick break traps you right before the market reverses. |
-| "A 15-minute Fair Value Gap (FVG) has formed; I'll place a limit order directly at the proximal boundary." | 84% of lower-timeframe FVGs that get filled immediately reverse and break structure unless backed by a higher-timeframe HTF array. |
-| "There is a massive buy wall on the heatmap, meaning this level is guaranteed to hold as strong support." | Limit walls are highly vulnerable to algorithmic spoofing and can be pulled milliseconds before price arrival. Must verify execution via footprint. |
-| "Price swept the low once, so the manipulation phase is complete; let's enter immediately with a tight stop inside the sweep wick." | 30% to 40% of first-touch sweeps are inducement traps for a secondary deeper sweep (double-sweep). Stops inside the wick body will be run. |
-| "This is a great setup; I'll trade it at 1:15 PM EST because the market looks highly active." | Trading outside designated Kill Zones or Silver Bullet windows exposes you to low-volume, manipulative retail shakeouts. |
-
----
+| "A wick broke the previous swing high, so the uptrend is continuing. I will buy the breakout." | Wicks represent liquidity sweeps or stop hunts. Buying a wick breakout traps you at the exact turning point before a reversal. |
+| "This 5-minute FVG printed, so I will place a limit order to buy the immediate retest." | Statistically, up to 84% of LTF FVGs fail or break structure if they are not aligned with HTF order blocks or discount arrays. |
+| "A liquidity sweep occurred; I must enter on market immediately so I do not miss the move." | Over 30% of first sweeps are inducement traps. You must wait for an LTF MSS candle close and position stops past the sweep wick. |
+| "The pattern looks clean, so I will trade it at 12:30 PM ET during lunch hour." | Trading outside session Kill Zones lacks institutional algorithm delivery, exposing you to low-volume chop and manipulation. |
+| "I will widen my stop past the structure to give this order block room to breathe." | Moving stops invalidates risk-to-reward ratios and signals emotional trading. Stops must remain fixed at structural extremes. |
 
 ## Quick Reference
 
-### Structural & Session Coordinates
-
-| Core Concepts | Tactical Checklist / Parameters | Rules of Engagement |
+| Concept | Trigger/Execution Condition | Stop-Loss / Target Placement |
 | :--- | :--- | :--- |
-| **BOS vs. Sweep** | • BOS: Candle body close beyond key swing point.<br>• Sweep: Wick penetration only, followed by immediate rejection. | Wait for body close before marking trend continuation. |
-| **Premium/Discount** | • Premium: Top 50% of the active dealing range.<br>• Discount: Bottom 50% of the active dealing range. | • Shorts: Premium only.<br>• Longs: Discount only. |
-| **Double-Sweep Protocol** | • Step 1: Sweep of major HTF external liquidity.<br>• Step 2: Secondary sweep (inducement of early buyers/sellers).<br>• Step 3: Low-timeframe MSS close. | Place hard stop-loss strictly beyond the absolute extreme sweep wick. |
-| **Kill Zones (ET)** | • London Open: 2:00 AM – 5:00 AM ET<br>• New York Open: 8:30 AM – 11:00 AM ET<br>• New York PM: 1:30 PM – 4:00 PM ET | No new positions executed outside these specific hours. |
-| **Silver Bullet (ET)** | • London AM: 3:00 AM – 4:00 AM EST<br>• New York AM: 10:00 AM – 11:00 AM EST<br>• New York PM: 2:00 PM – 3:00 PM EST | Target these highly scheduled 60-minute algorithmic windows. |
-| **Unicorn Model** | • Intersection: ICT Breaker Block + ICT FVG.<br>• Location: Directly inside the breaker's price range. | Wait for retest of the overlapping zone for low-drawdown entry. |
+| **BOS (Break of Structure)** | Candle body close past prior structural swing extreme on HTF. | Stop-loss at the invalidation swing low/high; target opposing external liquidity. |
+| **Liquidity Sweep** | Wick breaches swing high/low or EQH/EQL and closes back inside. | Stop-loss strictly beyond the absolute sweep wick extreme; target internal liquidity/FVG. |
+| **Unicorn Model** | Price retraces to the horizontal overlap of an ICT Breaker Block and an FVG. | Stop-loss past the extreme of the Breaker Block; target OTE extremes or major external liquidity. |
+| **Silver Bullet** | Time of day is 10:00–11:00 AM ET or 2:00–3:00 PM ET; 7-rule checklist is fully met. | Stop-loss past the local swing structural anchor; target minimum 2R or next HTF liquidity pool. |
+| **Reaper IFVG** | Inversion FVG resides strictly within the impulsive leg of a breaker block. | Stop-loss past the breaker block boundary; target opposing pool or discount/premium extreme. |
